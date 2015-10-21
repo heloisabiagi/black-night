@@ -1,0 +1,64 @@
+#main-header a {
+	color: #FFF;
+}
+
+#navigation-top {
+  font-family: "Dosis", sans-serif;
+  color: #FFF;
+  @include box-sizing("border-box");
+  font-size: 16px;
+  font-weight: 500;
+
+  @media screen and (min-width: $break-large) {
+    font-size: 18px;
+  }
+
+  &.scrolled {
+  	background: $darkest-gray;
+
+  	@media screen and (min-width: $break-large) {
+    font-size: 16px;
+  	}
+  }
+
+  .navbar-nav a {
+  	font-size: 1em;
+  	text-transform: uppercase;
+  }
+
+  .navbar-brand {
+  	font-size: 1.8em;
+  }
+
+
+  .navbar-toggle .icon-bar {
+  	background-color: #FFF;
+  }
+
+  .dropdown-menu {
+  	font-size: inherit;
+  	background-color: $darkest-gray;
+  }
+
+  .dropdown-menu>li>a {
+  		text-transform: none;
+  	}
+
+}
+
+.nav>li>a:focus, 
+.nav>li>a:hover,
+.nav .open>a, 
+.nav .open>a:focus, 
+.nav .open>a:hover {
+  	background-color: $main-color;
+}
+
+.dropdown-menu>li>a {
+	line-height: 1.8em!important;
+}
+
+.dropdown-menu>li>a:focus, 
+.dropdown-menu>li>a:hover {
+	background-color: $medium-gray;
+}

@@ -1,0 +1,11 @@
+a {
+	color: inherit;
+}
+
+img {
+	max-width: 100%;
+}
+
+.transition-fast {
+	@include transition(all 200ms ease-in);
+}

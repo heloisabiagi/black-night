@@ -1,0 +1,16 @@
+#cover {
+	display: table;
+ 	width: 100%;
+ 	height: 100%;
+ 	position: relative;
+ 	background: image-url('city-1532248-1600x1200.jpg') no-repeat center center;
+ 	background-attachment:  scroll;
+
+  	@include background-size('cover');
+
+  	h1 {
+  		margin: 100px;
+  		font-weight: 300;
+  	}
+}
+
