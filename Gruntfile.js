@@ -62,35 +62,7 @@ module.exports = function(grunt) {
       images: {
         files: [{expand: true, flatten: true, src: ['src/images/*'], dest: 'build/images'}]
       },
-      home: {
-        files: [
-          {expand: true, src: ['build/images/bgs/*'], dest: 'exports/home'},
-          {expand: true, src: ['build/images/body/global/*'], dest: 'exports/home'},
-          {expand: true, src: ['build/images/body/home/*'], dest: 'exports/home'},
-          {expand: true, src: ['build/images/body/sku/**'], dest: 'exports/home'},
-          {expand: true, src: ['build/images/sprites/*'], dest: 'exports/home'},
-          {expand: true, src: ['<%= uglify.global.dest %>'], dest: 'exports/home'},
-          {expand: true, src: ['<%= uglify.home.dest %>'], dest: 'exports/home'},
-          {expand: true, src: ['<%= uglify.sku.dest %>'], dest: 'exports/home'},
-          {expand: true, src: 
-            ['build/style/home.css', 
-             'build/style/normalize.css', 
-             'build/style/structure.css',
-             'build/style/sku.css'], 
-             dest: 'exports/home'},
-          {expand: true, src: ['home-with-sku.html'], dest: 'exports/home'},
-             ],
-      }
-    },
-
-    rename: {
-      home: {
-        files: [
-            {src: ['exports/home/home-with-sku.html'], dest: 'exports/home/index.html'},
-            ]
-      }
     }
-
 
   });
 
