@@ -1,3 +1,5 @@
+$bottom-spacing: 25px;
+
 #cover {
 	display: table;
  	width: 100%;
@@ -19,16 +21,24 @@
 	    display: table-cell;
 	    vertical-align: middle;
 	    background: image-url('bg-cover.png') repeat;
+      padding: 0 10%;
+      box-sizing: border-box;
   	}
 
   	h1 {
   		font-weight: 300;
   		font-size: 2em;
-  		margin-bottom: 25px;
+  		margin-bottom: $bottom-spacing;
   	}
 
-  	.cover-disclaimer {
+  	p {
   		font-size: 1em;
+      margin-bottom: ($bottom-spacing * 1.5);
   	}
+
+    .btn-cover {
+        padding: 10px 20px;
+        font-size: 0.75em;
+    }
 }
 

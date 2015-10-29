@@ -1,7 +1,7 @@
 {
 	"concat": {
 		"scripts": [
-			"src/js/starter.js",
+			"src/js/settings.js",
 			"src/js/navbar.js"
 			]
 		},
