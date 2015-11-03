@@ -11,17 +11,9 @@ Write the usage of the mixin
     }
 }
 
-/**
--------Usage
-.classe{
-  width: em(20px);
+@mixin section-dimensions {
+    padding: 0 20px 40px 20px;
 }
-
-The output will be
-.class {
-  width: 1.250em;
-}
-**/
 
 @mixin animation-name($name) {
   -webkit-animation-name: $name;

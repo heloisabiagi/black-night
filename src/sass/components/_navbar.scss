@@ -6,31 +6,28 @@
   font-family: "Dosis", sans-serif;
   color: #FFF;
   @include box-sizing("border-box");
-  font-size: 16px;
   font-weight: 500;
   background: $transparent-black;
 
 
   @media screen and (min-width: $break-large) {
-    font-size: 18px;
     padding: 15px 0px;
   }
 
   &.scrolled {
     border-bottom: solid 1px #666;
   	@media screen and (min-width: $break-large) {
-      font-size: 16px;
+      font-size: 0.875em;
       padding: 10px 0px;
   	}
   }
 
   .navbar-nav a {
-  	font-size: 1em;
   	text-transform: uppercase;
   }
 
   .navbar-brand {
-  	font-size: 1.8em;
+  	font-size: 1.5em;
   }
 
 
@@ -56,7 +53,7 @@
 	}
 
 	.dropdown-menu>li>a {
-		line-height: 1.8em!important;
+		line-height: 1.5em!important;
 	}
 
 	.dropdown-menu>li>a:focus, 
