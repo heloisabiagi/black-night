@@ -2,7 +2,135 @@
 	padding: 0;
 }
 
-#about-us-headgear {
-	background-color: $main-color;
+#about-us-image {
+	overflow: hidden;
+	padding: 0;
+	height: 300px;
+
+	 @media screen and (min-width: $break-tablet) {
+	    height: 400px;
+	  }
+
+	/* Option 1: Head with gears */
+	&.gears {
+		background-color: $lighter-main-color;
+		background-image: radial-gradient(closest-side, transparent 90%, rgba(0,0,0,.1) 99%),
+		radial-gradient(closest-side, transparent 90%, rgba(0,0,0,.1) 99%);
+		background-size:500px 500px;
+		background-position:0 0, 50px 50px;
+
+		.head {
+			position: relative;
+			background: image-url('body/head-profile.png') no-repeat bottom left;
+			width: 275px;
+			height: 400px;
+			margin-left: 40px;
+
+			&.head-reverse {
+				background: image-url('body/head-profile-reverse.png') no-repeat bottom left;
+				margin-left: 0px;
+				margin-right: 40px;
+				color: $dark-gray;
+			}
+
+			.gear-1, .gear-2, .gear-3 {
+				position: absolute;
+			}
+
+			.gear-1 {
+				font-size: 85px;
+			    left: 35px;
+			    top: 70px;
+
+			    span {
+				     -webkit-animation-name: gear-rotation;
+				     -webkit-animation-duration: 20s;
+				     -webkit-animation-iteration-count: infinite;
+				     -webkit-animation-timing-function: linear;
+			     }
+			}
+
+			.gear-2 {	
+				right: 50px;
+			    font-size: 105px;
+			    top: 65px;
+
+			    span {
+				     -webkit-animation-name: gear-rotation;
+				     -webkit-animation-duration: 20s;
+				     -webkit-animation-iteration-count: infinite;
+				     -webkit-animation-direction: reverse;
+				     -webkit-animation-timing-function: linear;
+			     }
+			}
+
+			.gear-3 {
+				font-size: 65px;
+			    top: 150px;
+			    left: 75px;
+
+			    span {
+				     -webkit-animation-name: gear-rotation;
+				     -webkit-animation-duration: 20s;
+				     -webkit-animation-iteration-count: infinite;
+				     -webkit-animation-timing-function: linear;
+			     }
+			}
+
+		}
+
+		.gear-sentence {
+			padding-left:0;
+			position: absolute;
+			font-family: "Georgia", serif;
+		}
+	}
+
+	/* Option 2: */
+	&.bulb {
+		@include background-image(radial-gradient(600px 600px, $lighter-main-color 200px, $main-color 400px));
+
+		.bulb-holder {
+			display: table;
+		 	width: 100%;
+		 	max-width: 710px;
+		 	height: 100%;
+		 	position: relative;
+		 	background: image-url('body/about-bulbs-small.png') no-repeat no-repeat 50% -60px;
+
+		 	@media screen and (min-width: $break-tablet) {
+			    background-position: top center;
+			  }
+
+		 	@media screen and (min-width: $break-large) {
+			    background: image-url('body/about-bulbs.png') no-repeat top center;
+			    background-size: 100%;
+			  }
+		}
+	}
+}
+
+#about-us-description {
+	padding-left: 15px;
+	padding-right: 15px;
+
+	@media screen and (min-width: $break-tablet) {
+		padding-left: 24px;
+		padding-right: 24px;
+	}
+
+	@include section-dimensions;
+
+	 .big-button {
+      	margin-top: ($vertical-spacing * 1.2);
+    }
+}
+
+@-webkit-keyframes gear-rotation {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(90deg); }
+    50% { transform: rotate(180deg); }
+    75% { transform: rotate(270deg); }
+    100% { transform: rotate(360deg); }
 }
 

@@ -60,7 +60,11 @@ module.exports = function(grunt) {
         files: [{expand: true, flatten: true, src: ['<%= concat.cssLibs.dest %>'], dest: 'build/libs'}]
       },*/
       images: {
-        files: [{expand: true, flatten: true, src: ['src/images/*'], dest: 'build/images'}]
+        files: [
+        {expand: true, flatten: true, src: ['src/images/bg/*'], dest: 'build/images/bg'},
+        {expand: true, flatten: true, src: ['src/images/body/*'], dest: 'build/images/body'},
+        {expand: true, flatten: true, src: ['src/fonts/*'], dest: 'build/fonts'}
+        ]
       },
     }
 

@@ -1,25 +1,26 @@
-$bottom-spacing: 25px;
-
 #cover {
 	display: table;
  	width: 100%;
  	height: 100%;
  	position: relative;
- 	background: image-url('city-1532248-1600x1200.jpg') no-repeat center center;
+ 	background: image-url('bg/city-1532248-1600x1200.jpg') no-repeat center center;
  	background-attachment:  scroll;
-  padding: 0;
 
   	@include background-size('cover');
 
+     @media screen and (min-width: $break-tablet) and (max-width: $break-large) {
+      font-size: 1.5em;
+     }
+
   	 @media screen and (min-width: $break-large) {
     	font-size: 1.7em;
-  	}
+  	 }
 
   	.text-box {
-  		text-align: center;
+  		text-align: center; 
 	    display: table-cell;
 	    vertical-align: middle;
-	    background: image-url('bg-cover.png') repeat;
+	    background: image-url('bg/bg-cover.png') repeat;
       padding: 0 10%;
       box-sizing: border-box;
   	}
@@ -27,13 +28,12 @@ $bottom-spacing: 25px;
   	.cover-title {
   		font-weight: 300;
   		font-size: 2em;
-  		margin-bottom: $bottom-spacing;
+  		margin-bottom: $vertical-spacing;
   	}
 
-  	p {
-  		font-size: 1em;
-      margin-bottom: ($bottom-spacing * 1.5);
-  	}
+    .big-button {
+      margin-top: ($vertical-spacing * 2);
+    }
 
 }
 

@@ -36,16 +36,19 @@
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#services">Our Services</a></li>
                     <li><a href="#works">Our Works</a></li>
-                    <li><a href="#">Contact</a></li>
 
+                    <!-- DROPDOWN ITEM -->
                     <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Elements <span class="caret"></span></a>
                       <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
+                        <li><a href="#">Quotes</a></li>
+                        <li><a href="#">Team Members</a></li>
+                        <li><a href="#">Pricing Table</a></li>
                       </ul>
                     </li>
+                    <!-- / DROPDOWN ITEM -->
+
+                    <li><a href="#">Contact</a></li>
                   </ul> 
                 </div>
               </div>
@@ -54,27 +57,44 @@
       <!-- / HEADER -->
 
       <!--========= COVER (BIG IMAGE) ========= -->  
-      <section id="cover">
+      <div id="cover">
           <div class="text-box">
             <h1 class="cover-title">A bohemian <strong>business</strong> theme</h1>
             <p>Check the features and possibilities of this brand new and intense theme, and learn how it's easy to use it in your personal projects.</p>
             <button type="button" class="btn btn-flat big-button"> Get to Know Us </button>
           </div>
-      </section>
+      </div>
       <!-- / COVER -->
 
       <!--========= ABOUT US ========= -->
       <section id="about-us">
           <div class="table-row">
-            <div id="about-us-headgear" class="table-col">
-                <p>Lalalala</p>
+            <!--
+            <div id="about-us-image" class="gears table-col">
+                <div class="head pull-left">
+                    <div class="gear-1"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span></div>
+                    <div class="gear-2"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span></div>
+                    <div class="gear-3"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span></div>
+                </div>
+
+                <div class="head head-reverse pull-right">
+                    <div class="gear-1"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span></div>
+                    <div class="gear-2"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span></div>
+                    <div class="gear-3"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span></div>
+                </div>
+            </div> -->
+              
+            <div id="about-us-image" class="bulb table-col">
+                <div class="bulb-holder center-block"></div>
             </div>
 
             <div id="about-us-description" class="table-col">
               <h2 class="section-title"><a name="about">About Us</a></h2>
-              <p>Lorem ipsum dolor pellentesque sinis ultra. Ipsum dolor pellentesque sinis ultra. Isum dolor pellentesque sinis ultra. Sinis ultra. Ipsum dolor pellentesque sinis ultra. Isum dolor pellentesque sinis ultra.</p>
-              <p>Ipsum dolor pellentesque sinis ultra. Ipsum dolor pellentesque sinis ultra. Isum dolor pellentesque sinis ultra. Sinis ultra. Ipsum dolor pellentesque sinis ultra. Isum dolor pellentesque sinis.</p>
-              <button type="button" class="btn btn-flat big-button"> Get in touch </button>
+              <p>Lorem ipsum dolor pellentesque sinis ultra. Ipsum dolor pellentesque consectuar gravidae sinis ultra. Isum dolor consectuar gravidae pellentesque sinis ultra. Sinis ultra. Ipsum dolor pellentesque sinis ultra. Isum dolor pellentesque sinis ultra.</p>
+              <p>Ipsum dolor pellentesque sinis ultra. Ipsum dolor pellentesque sinis ultra. Isum dolor pellentesque consectuar gravidae sinis ultra. Sinis ultra. Ipsum dolor pellentesque sinis ultra. Isum dolor pellentesque sinis consectuar gravidae.</p>
+              <div class="text-center">
+                <button type="button" class="btn btn-flat big-button"> Get in touch </button>
+              </div>  
             </div>  
           </div>
       </section>
@@ -96,19 +116,83 @@
               </div>
               <div class="row">
                 <div class="col-md-6">
-                  <ul>
-                    <li>Service</li>
-                    <li>Service</li>
-                    <li>Service</li>
-                    <li>Service</li>
+                  <ul class="icon-list icon-list-1">
+                    <li>
+                      <div class="icon-box">
+                        <i class="list-icon">
+                          <!-- This is where you change the icon. See http://getbootstrap.com/components/ for the available options -->
+                          <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                        </i>
+                      </div>
+                      <div class="list-text">
+                        <strong>Customer Relationship</strong>
+                        <p>Ipsum dolor pellentesque sinis ultra. Isum dolor pellentesque sinis ultra.</p>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="icon-box">
+                        <i class="list-icon">
+                          <span class="glyphicon glyphicon-signal" aria-hidden="true"></span>
+                        </i>
+                      </div>
+                      <div class="list-text">
+                        <strong>Performance Study</strong>
+                        <p>Ipsum dolor pellentesque sinis ultra. Isum dolor pellentesque sinis ultra.</p>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="icon-box">
+                        <i class="list-icon">
+                          <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                        </i>
+                      </div>
+                      <div class="list-text">
+                        <strong>Social Media Integration</strong>
+                        <p>Ipsum dolor pellentesque sinis ultra. Isum dolor pellentesque sinis ultra.</p>
+                      </div>
+                    </li>
                   </ul>
                 </div>
                 <div class="col-md-6">
-                  <ul>
-                    <li>Service</li>
-                    <li>Service</li>
-                    <li>Service</li>
-                    <li>Service</li>
+                  <ul class="icon-list icon-list-1">
+                    <li>
+                      <div class="icon-box">
+                        <i class="list-icon">
+                          <span class="glyphicon glyphicon-signal" aria-hidden="true"></span>
+                        </i>
+                      </div>
+                      <div class="list-text">
+                        <strong>Performance Study</strong>
+                        <p>Ipsum dolor pellentesque sinis ultra. Isum dolor pellentesque sinis ultra.</p>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="icon-box">
+                        <i class="list-icon">
+                          <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                        </i>
+                      </div>
+                      <div class="list-text">
+                        <strong>Social Media Integration</strong>
+                        <p>Ipsum dolor pellentesque sinis ultra. Isum dolor pellentesque sinis ultra.</p>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="icon-box">
+                        <i class="list-icon">
+                          <!-- This is where you change the icon. See http://getbootstrap.com/components/ for the available options -->
+                          <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                        </i>
+                      </div>
+                      <div class="list-text">
+                        <strong>Customer Relationship</strong>
+                        <p>Ipsum dolor pellentesque sinis ultra. Isum dolor pellentesque sinis ultra.</p>
+                      </div>
+                    </li>
                   </ul>
                 </div>
               </div>

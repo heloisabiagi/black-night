@@ -4,19 +4,23 @@
 
 #navigation-top {
   font-family: "Dosis", sans-serif;
+  -webkit-font-smoothing: antialiased;
   color: #FFF;
   @include box-sizing("border-box");
   font-weight: 500;
-  background: $transparent-black;
+  background: #000;
 
 
-  @media screen and (min-width: $break-large) {
+  @media screen and (min-width: $break-tablet) {
     padding: 15px 0px;
+    background: transparent;
   }
 
   &.scrolled {
+    background: #000;
     border-bottom: solid 1px #666;
-  	@media screen and (min-width: $break-large) {
+    
+  	@media screen and (min-width: $break-tablet) {
       font-size: 0.875em;
       padding: 10px 0px;
   	}

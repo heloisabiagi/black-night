@@ -12,7 +12,14 @@ Write the usage of the mixin
 }
 
 @mixin section-dimensions {
-    padding: 0 20px 40px 20px;
+    padding-top: 24px;
+    padding-bottom: 48px;    
+}
+
+@mixin el-clearfix {
+    content: "";
+    display: block;
+    clear: both;
 }
 
 @mixin animation-name($name) {
