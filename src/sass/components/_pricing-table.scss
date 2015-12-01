@@ -1,0 +1,67 @@
+$pricing-border-color: #999;
+
+.pricing-item {
+  background-color: #CCC;
+  border-radius: 5px;
+  color: #333;
+  padding: $vertical-spacing 0;
+  margin: $vertical-spacing 0;
+
+  @include box-sizing(border-box);
+
+  &.featured {
+      .pricing-value {
+        background-color: $main-color;
+        color: #FFF;
+      }
+    }
+
+    button { 
+      margin-top: $vertical-spacing;
+      }
+}
+
+.pricing-header, .pricing-features {
+  margin: 0 $vertical-spacing;
+}
+
+.pricing-title {
+  font-family: "Dosis", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  font-size: 1.2em;
+  margin: 0;
+}
+
+.pricing-value {
+  text-align: center;
+  margin: $vertical-spacing/2 0;
+  padding: $vertical-spacing/2 0;
+  background-color: #BBB;
+
+  small {
+    font-size: 1em;
+  }
+
+  .price {
+      font-weight: bold;
+      font-size: 2.4em;
+  }
+}
+
+.pricing-features {
+  padding-left: 0;
+
+  li {
+    text-align: center;
+    padding: 6px;
+    list-style: none;
+    border-bottom: dotted 1px $pricing-border-color;
+
+    &:last-child {
+      border: none;
+    }
+  }
+}

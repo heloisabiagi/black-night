@@ -1,8 +1,4 @@
-#about-us {
-	padding: 0;
-}
-
-#about-us-image {
+.about-us-image {
 	overflow: hidden;
 	padding: 0;
 	height: 300px;
@@ -11,7 +7,7 @@
 	    height: 400px;
 	  }
 
-	/* Option 1: Head with gears */
+	/* Option 1: Gears */
 	&.gears {
 		background-color: $lighter-main-color;
 		background-image: radial-gradient(closest-side, transparent 90%, rgba(0,0,0,.1) 99%),
@@ -86,7 +82,7 @@
 		}
 	}
 
-	/* Option 2: */
+	/* Option 2: Ideas */
 	&.bulb {
 		@include background-image(radial-gradient(600px 600px, $lighter-main-color 200px, $main-color 400px));
 
@@ -110,7 +106,7 @@
 	}
 }
 
-#about-us-description {
+.about-us-description {
 	padding-left: 15px;
 	padding-right: 15px;
 
