@@ -2,27 +2,30 @@ $pricing-border-color: #999;
 
 .pricing-item {
   background-color: #CCC;
-  border-radius: 5px;
   color: #333;
-  padding: $vertical-spacing 0;
-  margin: $vertical-spacing 0;
+  padding: $base-spacing 0;
+  margin: $base-spacing*1.5 0;
 
   @include box-sizing(border-box);
 
   &.featured {
+      margin: $base-spacing 0;
+      font-size: 1.2em; 
+
       .pricing-value {
-        background-color: $main-color;
+        background-color: $lighter-main-color;
         color: #FFF;
+        text-shadow: 0px 3px 10px rgba(0,0,0,0.2);
       }
     }
 
     button { 
-      margin-top: $vertical-spacing;
+      margin-top: $base-spacing;
       }
 }
 
 .pricing-header, .pricing-features {
-  margin: 0 $vertical-spacing;
+  margin: 0 $base-spacing;
 }
 
 .pricing-title {
@@ -37,8 +40,8 @@ $pricing-border-color: #999;
 
 .pricing-value {
   text-align: center;
-  margin: $vertical-spacing/2 0;
-  padding: $vertical-spacing/2 0;
+  margin: $base-spacing/2 0;
+  padding: $base-spacing/2 0;
   background-color: #BBB;
 
   small {

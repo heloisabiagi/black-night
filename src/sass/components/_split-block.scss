@@ -1,4 +1,4 @@
-.about-us-image {
+.split-block-image {
 	overflow: hidden;
 	padding: 0;
 	height: 300px;
@@ -6,6 +6,7 @@
 	 @media screen and (min-width: $break-tablet) {
 	    height: 400px;
 	  }
+
 
 	/* Option 1: Gears */
 	&.gears {
@@ -106,7 +107,7 @@
 	}
 }
 
-.about-us-description {
+.split-block-description {
 	padding-left: 15px;
 	padding-right: 15px;
 
@@ -118,7 +119,7 @@
 	@include section-dimensions;
 
 	 .big-button {
-      	margin-top: ($vertical-spacing * 1.2);
+      	margin-top: ($base-spacing * 1.2);
     }
 }
 

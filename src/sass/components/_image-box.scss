@@ -1,0 +1,30 @@
+.image-box {
+  min-height: 400px;
+  text-align: center;
+  display: table;
+  width: 100%;
+
+  @include cover-background;
+
+  &.box01 {
+    background-image: $image-box-01;
+  }
+
+  &.box02 {
+    background-image: $image-box-02;
+  }
+
+  &.box03 {
+    background-image: $image-box-03;
+  }
+
+  &.box04 {
+    background-image: $image-box-04;
+  }
+
+  &.box05 {
+    background-image: $image-box-05;
+  }
+
+
+}

@@ -1,0 +1,64 @@
+input, select, textarea {
+  color: #333;
+}
+
+button, input[type="submit"] {
+  font-family: "Dosis", sans-serif;
+  text-transform: uppercase;
+}
+
+.btn-flat {
+  background-color: $main-color;
+  color: #FFF;
+  border: none;
+  border-radius: 0;
+  font-weight: 600;
+
+  &:hover {
+    color: #FFF;
+    background-color: $darker-main-color;
+  }
+}
+
+.big-button {
+  @media screen and (min-width: $break-tablet) {
+    font-size: 20px;    
+    padding: 10px 20px;
+  }
+
+  font-size: 18px;
+  padding: 9px 18px;
+} 
+
+/* Fast Form: one field, submit button (Newsletter, Search etc) */
+
+.fast-form {
+    max-width: 480px;
+    position: relative;
+    margin: 0 auto;
+
+  .fast-form-field, .fast-form-submit {
+      padding: 0;
+      margin: 0;
+      height: 40px;
+      line-height: 40px;
+      font-size: 0.9em;
+  }
+
+  .fast-form-field {
+      text-indent: 5px;
+      width: 100%;
+      padding-right: 90px;
+      border: none;
+      @include box-sizing(border-box);
+  }
+
+  .fast-form-submit {
+      width: 80px;
+      text-align: center;
+      position: absolute;
+      top: 0;
+      right: 0;
+  }
+
+}

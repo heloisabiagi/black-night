@@ -9,12 +9,19 @@ $transparent-black: rgba(0,0,0,0.7);
 
 // MEDIA QUERIES BREAKPOINTS 
 
-$break-largest: 1024px;
-$break-large: 960px;
+$break-largest: 1200px;
+$break-large: 992px;
 $break-tablet: 620px;
 $break-mobile: 480px;
 
 // MEASURES
 
-$vertical-spacing: 24px;
+$base-spacing: 24px;
 
+// IMAGES
+$cover-image: image-url('bg/city-1532248-1600x1200.jpg'); /* 'Cover' (Home) section background */
+$image-box-01: image-url('bg/gallery-1526795.jpg'); /* 'Quote' section background */
+$image-box-02: image-url('bg/high-rise-1234517-1599x797.jpg'); ;
+$image-box-03: "";
+$image-box-04: "";
+$image-box-05: "";    

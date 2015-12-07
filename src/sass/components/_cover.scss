@@ -5,7 +5,7 @@
  	position: relative;
   @include cover-background;
   
- 	background-image: image-url('bg/city-1532248-1600x1200.jpg');
+ 	background-image: $cover-image;
 
 
      @media screen and (min-width: $break-tablet) and (max-width: $break-large) {
@@ -19,11 +19,11 @@
   	.cover-title {
   		font-weight: 300;
   		font-size: 2em;
-  		margin-bottom: $vertical-spacing;
+  		margin-bottom: $base-spacing;
   	}
 
     .big-button {
-      margin-top: ($vertical-spacing * 2);
+      margin-top: ($base-spacing * 2);
     }
 
 }
