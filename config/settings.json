@@ -2,7 +2,8 @@
 	"concat": {
 		"scripts": [
 			"src/js/settings.js",
-			"src/js/navbar.js"
+			"src/js/navbar.js",
+			"src/js/portfolio.js"
 			]
 		},
 	"sass": {

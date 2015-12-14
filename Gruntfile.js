@@ -54,18 +54,19 @@ module.exports = function(grunt) {
       }
     },
 
-    copy: {
-      /*
-      libs: {
-        files: [{expand: true, flatten: true, src: ['<%= concat.cssLibs.dest %>'], dest: 'build/libs'}]
-      },*/
+    copy: {      
+      settings: {
+        files: [{expand: true, flatten: true, src: ['src/js/settings.js'], dest: 'build/js'}]
+      },
       images: {
         files: [
         {expand: true, flatten: true, src: ['src/images/bg/*'], dest: 'build/images/bg'},
-        {expand: true, flatten: true, src: ['src/images/body/*'], dest: 'build/images/body'},
-        {expand: true, flatten: true, src: ['src/fonts/*'], dest: 'build/fonts'}
+        {expand: true, flatten: true, src: ['src/images/body/*'], dest: 'build/images/body'}
         ]
       },
+      fonts: {
+        files: [{expand: true, flatten: true, src: ['src/fonts/*'], dest: 'build/fonts'}]
+      }
     }
 
   });
@@ -79,5 +80,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-rename');
 
   // Define tasks
-  grunt.registerTask("default", ["concat", "uglify", "compass", "concat:cssLibs", "copy:images"]);
+  grunt.registerTask("default", ["copy", "concat", "uglify", "compass"]);
+  grunt.registerTask("devJs", ["concat:scripts", "uglify:scripts"]);
 };

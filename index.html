@@ -229,7 +229,6 @@
       <!-- / QUOTE -->
 
       <!--========= WORKS ========= -->
-      <!--
       <section class="portfolio">
           <div class="container">
               <div class="row">
@@ -237,9 +236,41 @@
                   <h2 class="section-title"><a name="works">Our Works</a></h2>
                 </div>
               </div>
+              <!-- Filters -->
+              <div class="row">
+                <div class="col-md-12">
+                    <div id="portfolio-filters" class="button-group">
+                      <button class="button is-checked" data-filter="*">show all</button>
+                      <button class="button" data-filter=".print-design">Print Design</button>
+                      <button class="button" data-filter=".web">Web</button>
+                    </div>
+                </div> <!-- /col=md-12 -->
+              </div><!-- /row -->
+
+              <!-- Works -->
+              <div class="isotope row">
+                  <div class="col-md-4 element-item print-design" data-category="print-design">
+                      <h3>Print Design 1</h3>
+                  </div>
+                  <div class="col-md-4 element-item print-design" data-category="print-design">
+                      <h3>Print Design 2</h3>
+                  </div>
+                  <div class="col-md-4 element-item web" data-category="web">
+                      <h3>Web Design 1</h3>
+                  </div>
+                  <div class="col-md-4 element-item print-design" data-category="print-design">
+                      <h3>Print Design 3</h3>
+                  </div>
+                  <div class="col-md-4 element-item print-design" data-category="print-design">
+                      <h3>Print Design 4</h3>
+                  </div>
+                  <div class="col-md-4 element-item web" data-category="web">
+                      <h3>Web Design 2</h3>
+                  </div>
+              </div>
+
           </div>
       </section>
-      -->
       <!-- / WORKS -->
 
       <!--========= PRICES ========= -->
@@ -438,6 +469,7 @@
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="build/js/vendor.js"></script>
+<script src="build/js/settings.js"></script>
 <script src="build/js/scripts.min.js"></script>
 
 </body>
