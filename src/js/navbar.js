@@ -1,13 +1,22 @@
 blackNight.navbar = (function() {
 
-	var el = $("[data-behavior='navShrink']");
+	var navbar = $("[data-behavior='navShrink']");
 	var scrollAmount = blackNight.scrollToShrink;
+	var links = $(".navbar-right a");
 
 	function manageHeaderScrolling(scrolledTop) {
 		if(scrolledTop > scrollAmount) {
-			el.addClass("scrolled");
+			navbar.addClass("scrolled");
 		} else if(scrolledTop < scrollAmount) {
-			el.removeClass("scrolled");
+			navbar.removeClass("scrolled");
+		}
+	}
+
+	function scrollToSection(link) {
+		var target = link.attr("href").split("#").pop();
+		var elToScroll = $("#" + target);
+		if(target) {
+			$.scrollTo(elToScroll, 400, {offset: -50});
 		}
 	}
 
@@ -17,6 +26,13 @@ blackNight.navbar = (function() {
 			var scrolledTop = $(window).scrollTop();
 			manageHeaderScrolling(scrolledTop);
 		});
+
+		links.not(".dropdown > .dropdown-toggle").on("click", function(){
+			var link = $(this);
+			scrollToSection(link);
+			return false;
+		});
+
 	}
 
 	return {

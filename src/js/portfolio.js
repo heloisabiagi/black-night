@@ -6,7 +6,7 @@ blackNight.portfolio = (function() {
 		 // init Isotope
 		  container.isotope({
 		    itemSelector: '.element-item',
-		    layoutMode: 'fitRows',
+		    layoutMode: blackNight.portfolioLayout,
 		    getSortData: {
 		      category: '[data-category]'
 		    }
@@ -16,10 +16,7 @@ blackNight.portfolio = (function() {
 	function filtersIsotope(){
 		// bind filter button click
 	  filters.on( 'click', 'button', function() {
-	  	console.log("Bla")
 	    var filterValue = $(this).attr('data-filter');
-	    // use filterFn if matches value
-	    // filterValue = filterFns[ filterValue ] || filterValue;
 	    container.isotope({ filter: filterValue });
 	  });
 	}

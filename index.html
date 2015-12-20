@@ -41,9 +41,9 @@
                     <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Elements <span class="caret"></span></a>
                       <ul class="dropdown-menu">
-                        <li><a href="#">Quotes</a></li>
-                        <li><a href="#">Team Members</a></li>
-                        <li><a href="#">Pricing Table</a></li>
+                        <li><a href="#prices">Pricing Table</a></li>
+                        <li><a href="#team">Team Members</a></li>
+                        <li><a href="#signup">Sign Up</a></li>
                       </ul>
                     </li>
                     <!-- / DROPDOWN ITEM -->
@@ -69,7 +69,7 @@
       <!-- / COVER -->
 
       <!--========= ABOUT US ========= -->
-      <section class="split-block full-dimensions">
+      <section id="about" class="split-block full-dimensions">
           <div class="table-row">
               
             <!-- About Us Image -->  
@@ -103,7 +103,7 @@
       <!-- / ABOUT US -->
 
       <!--========= SERVICES ========= -->
-      <section class="services">
+      <section id="services" class="services">
           <div class="container">
               <div class="row">
                 <div class="col-md-12">
@@ -216,6 +216,51 @@
       </section>
       <!-- / SERVICES -->
 
+      <!--========= WORKS ========= -->
+      <section id="works" class="portfolio">
+          <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <h2 class="section-title"><a name="works">Our Works</a></h2>
+                </div>
+              </div>
+              <!-- Filters -->
+              <div class="row">
+                <div class="col-md-12">
+                    <div id="portfolio-filters" class="button-group">
+                      <button class="btn btn-flat is-checked" data-filter="*">show all</button>
+                      <button class="btn btn-flat" data-filter=".print-design">Print Design</button>
+                      <button class="btn btn-flat" data-filter=".web">Web</button>
+                    </div>
+                </div> <!-- /col=md-12 -->
+              </div><!-- /row -->
+
+              <!-- Works -->
+              <div class="isotope row">
+                  <div class="col-sm-12 col-md-4 element-item print-design" data-category="print-design">
+                      <h3>Print Design 1</h3>
+                  </div>
+                  <div class="col-sm-12 col-md-4 element-item print-design" data-category="print-design">
+                      <h3>Print Design 2</h3>
+                  </div>
+                  <div class="col-sm-12 col-md-4 element-item web" data-category="web">
+                      <h3>Web Design 1</h3>
+                  </div>
+                  <div class="col-sm-12 col-md-4 element-item print-design" data-category="print-design">
+                      <h3>Print Design 3</h3>
+                  </div>
+                  <div class="col-sm-12 col-md-4 element-item print-design" data-category="print-design">
+                      <h3>Print Design 4</h3>
+                  </div>
+                  <div class="col-sm-12 col-md-4 element-item web" data-category="web">
+                      <h3>Web Design 2</h3>
+                  </div>
+              </div>
+
+          </div>
+      </section>
+      <!-- / WORKS -->
+
       <!--========= QUOTE========= -->
       <section class="image-box box01 full-dimensions">
         <!-- Class "text-box": mandatory for vertical centering and darkening background -->
@@ -228,53 +273,8 @@
       </section>
       <!-- / QUOTE -->
 
-      <!--========= WORKS ========= -->
-      <section class="portfolio">
-          <div class="container">
-              <div class="row">
-                <div class="col-md-12">
-                  <h2 class="section-title"><a name="works">Our Works</a></h2>
-                </div>
-              </div>
-              <!-- Filters -->
-              <div class="row">
-                <div class="col-md-12">
-                    <div id="portfolio-filters" class="button-group">
-                      <button class="button is-checked" data-filter="*">show all</button>
-                      <button class="button" data-filter=".print-design">Print Design</button>
-                      <button class="button" data-filter=".web">Web</button>
-                    </div>
-                </div> <!-- /col=md-12 -->
-              </div><!-- /row -->
-
-              <!-- Works -->
-              <div class="isotope row">
-                  <div class="col-md-4 element-item print-design" data-category="print-design">
-                      <h3>Print Design 1</h3>
-                  </div>
-                  <div class="col-md-4 element-item print-design" data-category="print-design">
-                      <h3>Print Design 2</h3>
-                  </div>
-                  <div class="col-md-4 element-item web" data-category="web">
-                      <h3>Web Design 1</h3>
-                  </div>
-                  <div class="col-md-4 element-item print-design" data-category="print-design">
-                      <h3>Print Design 3</h3>
-                  </div>
-                  <div class="col-md-4 element-item print-design" data-category="print-design">
-                      <h3>Print Design 4</h3>
-                  </div>
-                  <div class="col-md-4 element-item web" data-category="web">
-                      <h3>Web Design 2</h3>
-                  </div>
-              </div>
-
-          </div>
-      </section>
-      <!-- / WORKS -->
-
       <!--========= PRICES ========= -->
-      <section class="prices">
+      <section id="prices" class="prices">
           <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -358,7 +358,7 @@
       <!-- / PRICES -->
 
       <!--========= NEWSLETTER ========= -->
-      <section class="image-box box02 full-dimensions">
+      <section id="signup" class="image-box box02 full-dimensions">
           <!-- Class "text-box": mandatory for vertical centering and darkening background -->
           <div class="text-box">
                 <h2 class="section-title"><a name="signup">Subscribe to our newsletter</a></h2>
@@ -371,7 +371,7 @@
       <!-- / NEWSLETTER -->
 
       <!--========= TEAM MEMBERS ========= -->
-      <section class="team">
+      <section id="team" class="team">
           <div class="container">
             <div class="row">
                 <div class="col-md-12">

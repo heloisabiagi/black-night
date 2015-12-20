@@ -30,6 +30,9 @@
       height: 42px;
       line-height: 42px;
 
+      @include transition(all 200ms ease-in);
+      @include transform(rotateY(0deg));
+
       @media screen and (min-width: $break-tablet) {
         width: 54px;
         height: 54px;
@@ -37,7 +40,7 @@
       }
 
       &:hover {
-        background-color: $darker-main-color;
+        @include transform(rotateY(180deg));
       }
     }
 
