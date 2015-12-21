@@ -108,4 +108,29 @@ section .section-subtitle {
   	padding: 0 10%;
   	box-sizing: border-box;
 }
+
+.hover-image-item, .hover-zoom {
+	@include transition(all 200ms ease-in);
+}
+
+.hover-zoom {
+	opacity: 1;
+	@media screen and (min-width: $break-large) {
+		opacity: 0;
+	}
+}
+
+.hover-image:hover {
+	.hover-image-item {
+		@media screen and (min-width: $break-large) {
+				opacity: 0.4;
+			}
+	}
+
+	.hover-zoom {
+		@media screen and (min-width: $break-large) {
+				opacity: 1;
+			}
+	}
+}
     

@@ -3,11 +3,6 @@
 	margin-top: $base-spacing;
 
 	&:hover {
-		.member-pic {
-			@media screen and (min-width: $break-large) {
-				opacity: 0.5;
-			}
-		}
 
 		.member-profile {
 			opacity: 1;
@@ -15,7 +10,7 @@
 	}
 			
 	.member-thumbnail {
-		img {
+		.member-pic {
 			width: 100%;
 		}
 	}

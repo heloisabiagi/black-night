@@ -113,7 +113,7 @@
 
               <div class="row">
                 <div class="col-md-12">
-                  <h3 class="section-subtitle">Services</h3>
+                  <h3 class="section-subtitle">What we do best</h3>
                   <p>Lorem ipsum dolor pellentesque sinis ultra. Ipsum dolor pellentesque sinis ultra. Isum dolor pellentesque sinis ultra. Sinis ultra. Ipsum dolor pellentesque sinis ultra. Isum dolor pellentesque sinis ultra.</p>
                 </div> <!-- /col-md-12 -->
               </div> <!-- /row -->
@@ -224,37 +224,73 @@
                   <h2 class="section-title"><a name="works">Our Works</a></h2>
                 </div>
               </div>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <h3 class="section-subtitle">Creativity is our business</h3>
+                  <p>Donec convallis ante dui, a egestas libero consectetur sed. Donec et finibus turpis, sed tincidunt lectus. Aliquam et felis rutrum, varius neque ac, rhoncus velit. Sed aliquet massa ac sem congue, et egestas odio ullamcorper. Etiam pellentesque a leo vel accumsan. Aenean scelerisque tempor massa eu volutpat. Nulla ac nulla arcu. Proin consectetur sapien enim, malesuada molestie neque condimentum vel. Sed suscipit iaculis enim. Donec convallis sollicitudin luctus.</p>
+                </div> <!-- /col-md-12 -->
+              </div> <!-- /row -->
               <!-- Filters -->
               <div class="row">
                 <div class="col-md-12">
-                    <div id="portfolio-filters" class="button-group">
+                    <div id="portfolio-filters" class="isotope-filters button-group">
+                      <span class="filter-by-type">Filter By Type</span>
+                      <!-- Filter Buttons. Change the data-filter parameter to set the button action. Don't forget the "." (class symbol) -->
                       <button class="btn btn-flat is-checked" data-filter="*">show all</button>
-                      <button class="btn btn-flat" data-filter=".print-design">Print Design</button>
+                      <button class="btn btn-flat" data-filter=".photography">Photography</button>
                       <button class="btn btn-flat" data-filter=".web">Web</button>
+                      <button class="btn btn-flat" data-filter=".video">Video</button>
                     </div>
                 </div> <!-- /col=md-12 -->
               </div><!-- /row -->
 
               <!-- Works -->
               <div class="isotope row">
-                  <div class="col-sm-12 col-md-4 element-item print-design" data-category="print-design">
-                      <h3>Print Design 1</h3>
-                  </div>
-                  <div class="col-sm-12 col-md-4 element-item print-design" data-category="print-design">
-                      <h3>Print Design 2</h3>
-                  </div>
-                  <div class="col-sm-12 col-md-4 element-item web" data-category="web">
-                      <h3>Web Design 1</h3>
-                  </div>
-                  <div class="col-sm-12 col-md-4 element-item print-design" data-category="print-design">
-                      <h3>Print Design 3</h3>
-                  </div>
-                  <div class="col-sm-12 col-md-4 element-item print-design" data-category="print-design">
-                      <h3>Print Design 4</h3>
-                  </div>
-                  <div class="col-sm-12 col-md-4 element-item web" data-category="web">
-                      <h3>Web Design 2</h3>
-                  </div>
+                  <!-- ".element-item": the portfolio container div. Add the 'data-filter' parameters set in the buttons as classes for the element -->
+                  <div class="col-md-4 element-item hover-image photography">
+                      <i class="portfolio-icon hover-zoom">
+                          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                      </i>
+                      <div class="hover-image-item">
+                        <img src="build/images/body/freeimages/rock-1577380-1280x960.jpg" />
+                      </div>
+                  </div> <!-- /element-item -->
+                  <div class="col-md-4 element-item hover-image photography web">
+                      <i class="portfolio-icon hover-zoom">
+                          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                      </i>
+                      <div class="hover-image-item">
+                        <img src="build/images/body/freeimages/jellyfish-1188258-1280x960.jpg" />
+                      </div>  
+                  </div> <!-- /element-item -->
+                  <div class="col-md-4 element-item hover-image photography">
+                      <i class="portfolio-icon hover-zoom">
+                          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                      </i>
+                      <div class="hover-image-item">
+                        <img src="build/images/body/freeimages/mobile-1530816-1280x960.jpg" />
+                      </div>
+                  </div> <!-- /element-item -->
+                  <div class="col-md-4 element-item hover-image web">
+                      <i class="portfolio-icon hover-zoom">
+                          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                      </i>
+                      <div class="hover-image-item">
+                        <img src="build/images/body/freeimages/recipe-1538714-1280x960.jpg" />
+                      </div> 
+                  </div> <!-- /element-item -->
+                  <div class="col-md-4 element-item hover-image web">
+                      <i class="portfolio-icon hover-zoom">
+                          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                      </i>
+                      <div class="hover-image-item">
+                        <img src="build/images/body/freeimages/business-1239202-1280x960.jpg" />
+                      </div>  
+                  </div> <!-- /element-item -->
+                  <div class="col-sm-12 col-md-4 element-item hover-image video">
+                      <h3>Video</h3>
+                  </div> <!-- /element-item -->
               </div>
 
           </div>
@@ -383,9 +419,9 @@
             <div class="row">
               <div class="col-md-3 col-sm-6">
                   <!--Begins Team Member-->
-                  <div class="team-member">
-                    <div class="member-thumbnail">
-                      <img src="build/images/body/freeimages/in-the-dark-1251229-1280x1280.jpg" alt="John Doe" class="member-pic transition-fast" />
+                  <div class="team-member hover-image">
+                    <div class="member-thumbnail hover-image-item">
+                      <img src="build/images/body/freeimages/in-the-dark-1251229-1280x1280.jpg" alt="John Doe" class="member-pic" />
                     </div>
                     <div class="member-data">
                         <h3 class="member-name">John Doe</h3>
@@ -404,8 +440,8 @@
               </div> <!-- /col-md-3 -->
 
               <div class="col-md-3 col-sm-6">
-                  <div class="team-member">
-                    <div class="member-thumbnail"><img src="build/images/body/freeimages/man-1153421-1280x1280.jpg" alt="Joseph Doe" class="member-pic transition-fast" /></div>
+                  <div class="team-member hover-image">
+                    <div class="member-thumbnail hover-image-item"><img src="build/images/body/freeimages/man-1153421-1280x1280.jpg" alt="Joseph Doe" class="member-pic" /></div>
                     <div class="member-data">
                         <h3 class="member-name">Joseph Doe</h3>
                         <span class="member-position">Designer</span>
@@ -423,8 +459,8 @@
               </div> <!-- /col-md-3 -->
 
               <div class="col-md-3 col-sm-6">
-                  <div class="team-member">
-                    <div class="member-thumbnail"><img src="build/images/body/freeimages/piecha-1487378-1279x1278.jpg" alt="Jane Doe" class="member-pic transition-fast" /></div>
+                  <div class="team-member hover-image">
+                    <div class="member-thumbnail hover-image-item"><img src="build/images/body/freeimages/piecha-1487378-1279x1278.jpg" alt="Jane Doe" class="member-pic" /></div>
                     <div class="member-data">
                         <h3 class="member-name">Jane Doe</h3>
                         <span class="member-position">UX Architet</span>
@@ -442,8 +478,8 @@
               </div> <!-- /col-md-3 -->
 
               <div class="col-md-3 col-sm-6">
-                  <div class="team-member">
-                    <div class="member-thumbnail"><img src="build/images/body/freeimages/sam-close-up-1239146-1280x1280.jpg" alt="Jane Smith" class="member-pic transition-fast" /></div>
+                  <div class="team-member hover-image">
+                    <div class="member-thumbnail hover-image-item"><img src="build/images/body/freeimages/sam-close-up-1239146-1280x1280.jpg" alt="Jane Smith" class="member-pic" /></div>
                     <div class="member-data">
                         <h3 class="member-name">Jane Smith</h3>
                         <span class="member-position">Web Developer</span>
