@@ -13,7 +13,7 @@
   <script src="build/js/modernizr.custom.js"></script>
 
 </head>
-<body>
+<body class="black-night">
     <div id="main">
       <!--========= HEADER & MAIN MENU ========= -->
       <header id="main-header">
@@ -32,23 +32,23 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                   <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#services">Our Services</a></li>
-                    <li><a href="#works">Our Works</a></li>
+                    <li class="active"><a href="#" data-behavior="scrollNavLink">Home</a></li>
+                    <li><a href="#about" data-behavior="scrollNavLink">About Us</a></li>
+                    <li><a href="#services" data-behavior="scrollNavLink">Our Services</a></li>
+                    <li><a href="#works" data-behavior="scrollNavLink">Our Works</a></li>
 
                     <!-- DROPDOWN ITEM -->
                     <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Elements <span class="caret"></span></a>
                       <ul class="dropdown-menu">
-                        <li><a href="#prices">Pricing Table</a></li>
-                        <li><a href="#team">Team Members</a></li>
-                        <li><a href="#signup">Sign Up</a></li>
+                        <li><a href="#prices" data-behavior="scrollNavLink">Pricing Table</a></li>
+                        <li><a href="#team" data-behavior="scrollNavLink">Team Members</a></li>
+                        <li><a href="#signup" data-behavior="scrollNavLink">Sign Up</a></li>
                       </ul>
                     </li>
                     <!-- / DROPDOWN ITEM -->
 
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#contact">Contact</a></li>
                   </ul> 
                 </div> <!-- /navbar-collapse -->
 
@@ -63,7 +63,7 @@
           <div class="text-box">
             <h1 class="cover-title">A bohemian <strong>business</strong> theme</h1>
             <p>Check the features and possibilities of this brand new and intense theme, and learn how it's easy to use it in your personal projects.</p>
-            <button type="button" class="btn btn-flat big-button"> Get to Know Us </button>
+            <button type="button" class="btn btn-flat big-button" data-location="#about" data-behavior="scrollNavLink"> Get to Know Us </button>
           </div> <!-- /text-box -->
       </section>
       <!-- / COVER -->
@@ -94,7 +94,7 @@
               <p>Lorem ipsum dolor pellentesque sinis ultra. Ipsum dolor pellentesque consectuar gravidae sinis ultra. Isum dolor consectuar gravidae pellentesque sinis ultra. Sinis ultra. Ipsum dolor pellentesque sinis ultra. Isum dolor pellentesque sinis ultra.</p>
               <p>Ipsum dolor pellentesque sinis ultra. Ipsum dolor pellentesque sinis ultra. Isum dolor pellentesque consectuar gravidae sinis ultra. Sinis ultra. Ipsum dolor pellentesque sinis ultra. Isum dolor pellentesque sinis consectuar gravidae.</p>
               <div class="text-center">
-                <button type="button" class="btn btn-flat big-button"> Get in touch </button>
+                <button type="button" class="btn btn-flat big-button" data-location="#contact" data-behavior="scrollNavLink"> Get in touch </button>
               </div> <!-- /text-center -->  
             </div> <!-- /about-us-description -->
 
@@ -253,7 +253,15 @@
                           <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                       </i>
                       <div class="hover-image-item">
-                        <a class="popup-normal" href="build/images/body/freeimages/rock-1577380-1280x960.jpg" title="Item Test 1"><img src="build/images/body/freeimages/rock-1577380-1280x960.jpg" /></a>
+                        <!-- 
+                          ".popup-normal" : Popup Box for regular images
+                          "href": the large version of the image to appear inside a box
+                          "title": project title (appears as part of the caption)
+                          "data-description": project description (appears as part of the caption)
+                          -->
+                        <a class="popup-normal" href="build/images/body/freeimages/rock-1577380-1280x960.jpg" title="Photography 01" data-description="This is the job description for Photography 01." data-effect="mfp-zoom-in">
+                          <img src="build/images/body/freeimages/rock-1577380-1280x960.jpg" />
+                        </a> <!--/ popup-normal -->
                       </div>
                   </div> <!-- /element-item -->
                   <div class="col-md-4 element-item hover-image photography web">
@@ -261,7 +269,9 @@
                           <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                       </i>
                       <div class="hover-image-item">
-                        <img src="build/images/body/freeimages/jellyfish-1188258-1280x960.jpg" />
+                        <a class="popup-normal" href="build/images/body/freeimages/jellyfish-1188258-1280x960.jpg" title="Photography 02" data-description="This is the job description for Photography 02" data-effect="mfp-zoom-in">
+                          <img src="build/images/body/freeimages/jellyfish-1188258-1280x960.jpg" />
+                        </a> <!--/ popup-normal -->
                       </div>  
                   </div> <!-- /element-item -->
                   <div class="col-md-4 element-item hover-image photography">
@@ -269,7 +279,9 @@
                           <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                       </i>
                       <div class="hover-image-item">
-                        <img src="build/images/body/freeimages/mobile-1530816-1280x960.jpg" />
+                        <a class="popup-normal" href="build/images/body/freeimages/mobile-1530816-1280x960.jpg" title="Photography 03" data-description="This is the job description for Photography 03" data-effect="mfp-zoom-in">
+                          <img src="build/images/body/freeimages/mobile-1530816-1280x960.jpg" />
+                        </a> <!--/ popup-normal -->  
                       </div>
                   </div> <!-- /element-item -->
                   <div class="col-md-4 element-item hover-image web">
@@ -277,7 +289,9 @@
                           <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                       </i>
                       <div class="hover-image-item">
-                        <img src="build/images/body/freeimages/recipe-1538714-1280x960.jpg" />
+                        <a class="popup-normal" href="build/images/body/freeimages/recipe-1538714-1280x960.jpg" title="Web 01" data-description="This is the job description for Web 01" data-effect="mfp-zoom-in">
+                          <img src="build/images/body/freeimages/recipe-1538714-1280x960.jpg" />
+                        </a><!--/ popup-normal --> 
                       </div> 
                   </div> <!-- /element-item -->
                   <div class="col-md-4 element-item hover-image web">
@@ -285,11 +299,18 @@
                           <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                       </i>
                       <div class="hover-image-item">
-                        <img src="build/images/body/freeimages/business-1239202-1280x960.jpg" />
+                        <a class="popup-normal" href="build/images/body/freeimages/business-1239202-1280x960.jpg" title="Web 02" data-description="This is the job description for Web 02" data-effect="mfp-zoom-in">
+                          <img src="build/images/body/freeimages/business-1239202-1280x960.jpg" />
+                        </a><!--/ popup-normal --> 
                       </div>  
                   </div> <!-- /element-item -->
                   <div class="col-sm-12 col-md-4 element-item hover-image video">
-                      <h3>Video</h3>
+                      <i class="portfolio-icon hover-zoom">
+                          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                      </i>
+                      <a class="popup-video" href="https://www.youtube.com/watch?v=sGbxmsDFVnE" title="Video 01" data-effect="mfp-zoom-in">
+                          <img src="build/images/body/freeimages/mobile-1530816-1280x960.jpg" />
+                      </a> <!--/ popup-video -->  
                   </div> <!-- /element-item -->
               </div>
 

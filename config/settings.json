@@ -1,8 +1,8 @@
 {
 	"concat": {
 		"scripts": [
-			"src/js/settings.js",
-			"src/js/navbar.js",
+			"src/js/scroll-navigation.js",
+			"src/js/navbar-shrink.js",
 			"src/js/portfolio.js"
 			]
 		},

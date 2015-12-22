@@ -114,10 +114,7 @@ section .section-subtitle {
 }
 
 .hover-zoom {
-	opacity: 1;
-	@media screen and (min-width: $break-large) {
-		opacity: 0;
-	}
+	opacity: 0;
 }
 
 .hover-image:hover {
