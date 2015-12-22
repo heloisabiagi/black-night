@@ -24,6 +24,12 @@ blackNight.portfolio = (function() {
 	function bindEvents(){
 		startIsotope();	
 		filtersIsotope();
+
+		container.magnificPopup({
+		  delegate: 'a.popup-normal', // child items selector, by clicking on it popup will open
+		  type: 'image'
+		  // other options
+		});
 	}
 
 	return {
