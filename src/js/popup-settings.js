@@ -1,28 +1,9 @@
-blackNight.portfolio = (function() {
-	var container = $('.isotope');
-	var filters = $("#portfolio-filters");
-
-	function startIsotope() {
-		  container.isotope({
-		    itemSelector: '.element-item',
-		    layoutMode: blackNight.portfolioLayout,
-		    getSortData: {
-		      category: '[data-category]'
-		    }
-		  });
-	}
-
-	function filtersIsotope(){
-	  filters.on( 'click', 'button', function() {
-	    var filterValue = $(this).attr('data-filter');
-	    container.isotope({ filter: filterValue });
-	  });
-	}
+blackNight.popupSettings = (function() {
 
 	function magnificPopupNormal(){
 		$(".popup-normal").magnificPopup({
 		  type: 'image',
-		  tLoading: blackNight.portfolioLoadingMessage + ' #%curr%...',
+		  tLoading: blackNight.popupLoadingMessage + ' #%curr%...',
 		  image: {
           	titleSrc: function(item) {
 		  		return '<strong>' + item.el.attr('title') + '</strong>' + '<small>' + item.el.attr('data-description') + '</small>';
@@ -55,8 +36,6 @@ blackNight.portfolio = (function() {
 	}
 
 	function bindEvents(){
-		startIsotope();	
-		filtersIsotope();
 		magnificPopupNormal();
 		magnificPopupVideo();
 	}
@@ -69,4 +48,4 @@ blackNight.portfolio = (function() {
 
 })();
 
-blackNight.portfolio.init();
+blackNight.popupSettings.init();

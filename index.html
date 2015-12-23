@@ -48,7 +48,7 @@
                     </li>
                     <!-- / DROPDOWN ITEM -->
 
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#contact" data-behavior="scrollNavLink">Contact</a></li>
                   </ul> 
                 </div> <!-- /navbar-collapse -->
 
@@ -212,6 +212,23 @@
                 </div> <!-- /col-sm-6 -->
 
               </div> <!-- /row -->
+
+              <div class="row">
+                  <div class="col-md-8">
+                      <h3 class="section-subtitle"> Our values</h3>
+                      <p>Cras interdum orci lectus, quis congue nibh consectetur eget. Morbi nulla tortor, ultricies a neque eu, porttitor egestas orci. Nam posuere ultricies metus, in consectetur ligula vestibulum non. Quisque vel nulla metus. Aenean et felis at odio aliquet mattis sed sagittis tellus. Donec vitae metus turpis.</p>
+                  </div>
+
+                  <div class="col-md-4">
+                      <h3 class="section-subtitle"> Why choosing us?</h3>
+                      <ul>
+                        <li>Cras interdum </li>
+                        <li>Nam posuere ultricies </li>
+                        <li>Lorem Ipsum </li>
+                        <li>Quisque vel nulla </li>
+                      </ul>
+                  </div>
+              </div> <!--/row-->
           </div> <!-- /container -->
       </section>
       <!-- / SERVICES -->
@@ -308,9 +325,11 @@
                       <i class="portfolio-icon hover-zoom">
                           <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                       </i>
-                      <a class="popup-video" href="https://www.youtube.com/watch?v=sGbxmsDFVnE" title="Video 01" data-effect="mfp-zoom-in">
-                          <img src="build/images/body/freeimages/mobile-1530816-1280x960.jpg" />
-                      </a> <!--/ popup-video -->  
+                      <div class="hover-image-item">
+                        <a class="popup-video" href="https://www.youtube.com/watch?v=sGbxmsDFVnE" title="Video 01" data-effect="mfp-zoom-in">
+                            <img src="build/images/body/freeimages/mobile-1530816-1280x960.jpg" />
+                        </a> <!--/ popup-video -->  
+                      </div>
                   </div> <!-- /element-item -->
               </div>
 
@@ -419,7 +438,7 @@
           <!-- Class "text-box": mandatory for vertical centering and darkening background -->
           <div class="text-box">
                 <h2 class="section-title"><a name="signup">Subscribe to our newsletter</a></h2>
-                  <form class="fast-form" id="newsletter-form">
+                  <form class="fast-form" id="newsletter-form" name="newsletter_form">
                       <input type="email" name="newsletter_email" class="fast-form-field" placeholder="Your email here"></input>
                       <input type="submit" class="btn btn-flat fast-form-submit" value="Sign Up"></input>
                   </form>
@@ -518,9 +537,48 @@
               </div> <!-- /col-md-3 -->
 
             </div> <!-- /row -->
-
           </div> <!--/container-->
-      </section>      
+      </section>
+
+      <!--========= CONTACT ========= -->
+      <section id="contact">
+          <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <h2 class="section-title"><a name="contact">Contact</a></h2>
+                  <p>Lorem ipsum dolor pellentesque sinis ultra. Ipsum dolor pellentesque sinis ultra. Isum dolor pellentesque sinis ultra. Sinis ultra. Ipsum dolor pellentesque sinis ultra. Isum dolor pellentesque sinis ultra.</p>
+                </div> <!-- /col-md-12 -->
+              </div> <!-- /row -->
+
+              <div class="row">
+                  <div class="col-md-8">
+                      <form id="contact-form" class="contact-form">
+                        <input type="text" placeholder="Your name" name="contact_name"></input>
+                        <input type="text" placeholder="Your email" name="contact_email"></input>
+                        <textarea placeholder="Message" name="contact_message" rows="10"></textarea>
+                        <input type="submit" class="btn btn-flat big-button" value="Submit"></input>
+                      </form>
+                  </div>
+
+                  <div class="col-md-4">
+                      <h3 class="section-subtitle"> <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Find Us </h3>
+                      
+                      <p class="address">
+                        <address>
+                          <span>299 Mario Augusto Street</span>
+                          <span>São Paulo, Brazil</span>
+                        </address>
+                      </p>
+                      <p class="tel">
+                          <a href="tel:">+55 11 2341 2289</a>
+                      </p>
+
+                  </div>
+              </div> <!-- /row -->
+
+          </div><!-- /container -->
+      </section>
+      <!-- / NEWSLETTER -->      
 
     </div> <!-- /main -->
 

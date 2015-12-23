@@ -3,7 +3,8 @@
 		"scripts": [
 			"src/js/scroll-navigation.js",
 			"src/js/navbar-shrink.js",
-			"src/js/portfolio.js"
+			"src/js/portfolio-isotope.js",
+			"src/js/popup-settings.js"
 			]
 		},
 	"sass": {

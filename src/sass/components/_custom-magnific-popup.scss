@@ -1,3 +1,7 @@
+/**
+	_custom-magnific-popup: this file contains some style overrides for the Nagnific Popup (the lightbox)
+*/
+
 .black-night {
 	.mfp-bottom-bar {
 		background: $medium-gray;
@@ -11,7 +15,8 @@
 	.mfp-figure small {
 		font-size: 14px;
 		line-height: 18px;
-		margin-top: 6px;		
+		margin-top: 6px;
+		color: #FFF;		
 	}
 
 	.mfp-counter {
