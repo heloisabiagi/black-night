@@ -23,7 +23,7 @@ Write the usage of the mixin
 }
 
 @mixin cover-background {
-  background-attachment: scroll;
+  background-attachment: fixed;
   background-repeat: no-repeat; 
   background-position: center center;
   @include background-size('cover');

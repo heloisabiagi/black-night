@@ -7,7 +7,15 @@ blackNight.popupSettings = (function() {
 		  image: {
           	titleSrc: function(item) {
 		  		return '<strong>' + item.el.attr('title') + '</strong>' + '<small>' + item.el.attr('data-description') + '</small>';
-		  	}
+		  	},
+		  	markup: '<div class="mfp-figure">'+
+            '<div class="mfp-close"></div>'+
+            '<div class="mfp-img"></div>'+
+            '<div class="mfp-bottom-bar">'+
+              '<div class="mfp-title"></div>'+
+              '<div class="mfp-counter"></div>'+
+            '</div>'+
+          '</div>', 
 		  },
 		  gallery: {
 				enabled: true,

@@ -3,12 +3,26 @@
 */
 
 .black-night {
+	button.mfp-close {
+		position: absolute;
+	    right: 0;
+	    width: 30px;
+	    height: 30px;
+	    line-height: 30px;
+	    background: $main-color;
+	    top: 41px;
+	    opacity: 1;
+	    	&:hover {
+	    		background-color: $darker-main-color;
+	    	}
+	}
+
 	.mfp-bottom-bar {
 		background: $medium-gray;
 	    padding: 12px;
 	    margin-top: 0;
 	    margin-top: 0;
-	    bottom: 0;
+	    bottom: 40px;
 	    top: auto;
 	}
 

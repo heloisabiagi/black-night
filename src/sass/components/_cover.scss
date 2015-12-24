@@ -11,23 +11,27 @@
   
  	background-image: $cover-image;
 
-
-     @media screen and (min-width: $break-tablet) and (max-width: $break-large) {
-      font-size: 1.5em;
-     }
-
-  	 @media screen and (min-width: $break-large) {
-    	font-size: 1.7em;
-  	 }
-
   	.cover-title {
   		font-weight: 300;
   		font-size: 2em;
   		margin-bottom: $base-spacing;
+             @media screen and (min-width: $break-tablet) and (max-width: $break-large) {
+              font-size: 3em;
+             }
+
+             @media screen and (min-width: $break-large) {
+              font-size: 3.4em;
+             }
   	}
 
-    .big-button {
-      margin-top: ($base-spacing * 2);
+    .cover-subtitle {
+        @media screen and (min-width: $break-tablet) and (max-width: $break-large) {
+          font-size: 1.5em;
+         }
+
+         @media screen and (min-width: $break-large) {
+          font-size: 1.7em;
+         }
     }
 
 }

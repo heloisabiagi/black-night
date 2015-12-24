@@ -3,7 +3,6 @@
 */
 
 .isotope-filters {
-	margin-top: $base-spacing;
 	button {
 		margin-bottom: $base-spacing/2;
 
@@ -11,7 +10,9 @@
 }
 
 .element-item {
-	margin: $base-spacing 0 $base-spacing/2 0;
+	@media screen and (min-width: $break-large) {
+		margin: $base-spacing 0 $base-spacing/2 0;
+	}
 	cursor: pointer;
 }
 

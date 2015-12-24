@@ -1,6 +1,7 @@
 {
 	"concat": {
 		"scripts": [
+			"src/js/parallax.js",
 			"src/js/scroll-navigation.js",
 			"src/js/navbar-shrink.js",
 			"src/js/portfolio-isotope.js",

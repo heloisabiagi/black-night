@@ -8,12 +8,16 @@ $pricing-border-color: #999;
   background-color: #CCC;
   color: #333;
   padding: $base-spacing 0;
-  margin: $base-spacing*1.5 0;
+  margin: 0;
+
+  @media screen and (min-width: $break-tablet) {
+      margin: $base-spacing 0;
+  }
 
   @include box-sizing(border-box);
 
   &.featured {
-      margin: $base-spacing 0;
+      margin: 0;
       font-size: 1.2em; 
 
       .pricing-value {
