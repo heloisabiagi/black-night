@@ -7,7 +7,7 @@
 }
 
 #navigation-top {
-  font-family: "Dosis", sans-serif;
+  font-family: "Raleway", sans-serif;
   -webkit-font-smoothing: antialiased;
   color: #FFF;
   @include box-sizing("border-box");
@@ -25,17 +25,25 @@
     border-bottom: solid 1px #666;
     
   	@media screen and (min-width: $break-tablet) {
-      font-size: 0.875em;
       padding: 10px 0px;
   	}
   }
 
   .navbar-nav a {
-  	text-transform: uppercase;
+      font-size: 0.9em;
+
+      @media screen and (min-width: $break-large) {
+       font-size: 1em;
+      }
   }
 
   .navbar-brand {
-  	font-size: 1.5em;
+    font-family: "News Cycle", sans-serif;
+    font-size: 1.5em;
+
+    @media screen and (min-width: $break-large) {
+  	   font-size: 1.7em;
+    }
   }
 
 
@@ -57,7 +65,8 @@
 	.nav .open>a, 
 	.nav .open>a:focus, 
 	.nav .open>a:hover {
-	  	background-color: $main-color;
+	  	background-color: transparent;
+      color: $light-gray;
 	}
 
 	.dropdown-menu>li>a {
@@ -66,7 +75,7 @@
 
 	.dropdown-menu>li>a:focus, 
 	.dropdown-menu>li>a:hover {
-		background-color: $medium-gray;
+		background-color: transparent;
 	}
   	
 }

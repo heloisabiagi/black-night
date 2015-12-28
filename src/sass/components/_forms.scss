@@ -23,7 +23,7 @@ textarea {
 }
 
 button, input[type="submit"] {
-  font-family: "Dosis", sans-serif;
+  font-family: "News Cycle", sans-serif;
   text-transform: uppercase;
 }
 
@@ -32,7 +32,7 @@ button, input[type="submit"] {
   color: #FFF;
   border: none;
   border-radius: 0;
-  font-weight: 600;
+  font-weight: 700;
 
   &:hover {
     color: #FFF;
@@ -68,6 +68,7 @@ button, input[type="submit"] {
       position: absolute;
       top: 0;
       right: 0;
+      font-size: 1em;
   }
 
 }

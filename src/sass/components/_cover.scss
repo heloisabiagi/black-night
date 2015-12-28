@@ -11,6 +11,24 @@
   
  	background-image: $cover-image;
 
+  .cover-container {
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (min-width: 1200px) {
+        max-width: 1170px;
+    }  
+    
+    @media screen and (min-width: 992px) and  (max-width: 1199px){
+        max-width: 970px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 991px){
+        max-width: 750px;
+    }  
+  }
+
+
   	.cover-title {
   		font-weight: 300;
   		font-size: 2em;

@@ -68,6 +68,7 @@ ul {
 }
 
 .content-row {
+	position: relative;
 	margin-bottom: $base-spacing;
 	@media screen and (min-width: $break-large) {
 		margin-bottom: $base-spacing*2;
@@ -111,25 +112,36 @@ section:nth-child(even) {
 }
 
 section .section-title {
-	font-family: "Dosis", sans-serif;
+	font-family: "News Cycle", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	text-transform: uppercase;
-	font-weight: 500;
+	font-weight: 400;
 	text-align: center;
 	font-size: 2em;
-	margin-top: $base-spacing/2;
-	margin-bottom: $base-spacing;
+	margin-top: $base-spacing;
+	margin-bottom: $base-spacing*2;
 
-	@media screen and (min-width: $break-large) {
-		margin-top: $base-spacing;
-		margin-bottom: $base-spacing*2;
+	&:after {
+		content: "";
+		display: block;
+		width: 50px;
+		height: 1px;
+		background-color: $main-color;
+		left: 50%;
+		margin-left: -25px;
+		position: absolute;
+		margin-top: 15px;
+	}
+
+	a:hover {
+		text-decoration: none;
 	}
 }
 
 section .section-subtitle {
-	font-family: "Dosis", sans-serif;
+	font-family: "News Cycle", sans-serif;
 	font-weight: 700;
-	font-size: 1.4em;
+	font-size: 1.5em;
 	margin-bottom: ($base-spacing/2);
 	margin-top: ($base-spacing/4);
 }

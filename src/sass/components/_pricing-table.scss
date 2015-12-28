@@ -5,7 +5,7 @@
 $pricing-border-color: #999;
 
 .pricing-item {
-  background-color: #CCC;
+  background-color: $light-gray;
   color: #333;
   padding: $base-spacing 0;
   margin: 0;
@@ -36,8 +36,12 @@ $pricing-border-color: #999;
   margin: 0 $base-spacing;
 }
 
+.pricing-header {
+    padding-bottom: $base-spacing/2;
+}
+
 .pricing-title {
-  font-family: "Dosis", sans-serif;
+  font-family: "News Cycle", sans-serif;
   -webkit-font-smoothing: antialiased;
   text-transform: uppercase;
   font-weight: 700;
