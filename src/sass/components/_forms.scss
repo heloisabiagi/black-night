@@ -33,10 +33,15 @@ button, input[type="submit"] {
   border: none;
   border-radius: 0;
   font-weight: 700;
+  @include transition(all 200ms ease-in);
 
   &:hover {
     color: #FFF;
     background-color: $darker-main-color;
+  }
+
+  &:active {
+    color: #FFF;
   }
 }
 
