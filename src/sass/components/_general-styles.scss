@@ -169,11 +169,21 @@ section .section-subtitle {
 				opacity: 0.4;
 			}
 	}
+}
 
-	.hover-zoom {
-		@media screen and (min-width: $break-large) {
-				opacity: 1;
-			}
+.databox {
+	text-align: center;
+
+	.databox-title {
+		font-family: "News Cycle", sans-serif;
+		margin-bottom: 6px;
+		margin-top: 0;
+		font-weight: 700;
+	}
+
+	.databox-info {
+		display: block;
+		font-size: 0.8em;
 	}
 }
 

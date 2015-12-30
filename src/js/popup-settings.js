@@ -6,7 +6,13 @@ blackNight.popupSettings = (function() {
 		  tLoading: blackNight.popupLoadingMessage + ' #%curr%...',
 		  image: {
           	titleSrc: function(item) {
-		  		return '<strong>' + item.el.attr('title') + '</strong>' + '<small>' + item.el.attr('data-description') + '</small>';
+                var _html = '<div class="databox job-data">';
+                _html +=  '<h3 class="databox-title">' + item.el.attr('title') + '</h3>';
+                _html += '<span class="databox-info">' +item.el.attr('data-description') + '</small>';
+                _html += '</div<';
+
+                return _html;
+		  		// return '<strong>' + item.el.attr('title') + '</strong>' + '<small>' + item.el.attr('data-description') + '</small>';
 		  	},
 		  	markup: '<div class="mfp-figure">'+
             '<div class="mfp-close"></div>'+

@@ -123,10 +123,10 @@
                     <!-- Begins List Icon -->
                     <li>
                       <div class="icon-box">
-                        <i class="list-icon">
+                        <span class="list-icon">
                           <!-- This is where you change the icon. See http://getbootstrap.com/components/ for the available options -->
-                          <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-                        </i>
+                          <i class="glyphicon glyphicon-user" aria-hidden="true"></i>
+                        </span>
                       </div>
                       <div class="list-text">
                         <strong>Customer Relationship</strong>
@@ -137,9 +137,9 @@
                     <!-- Begins List Icon -->  
                     <li>
                       <div class="icon-box">
-                        <i class="list-icon">
-                          <span class="glyphicon glyphicon-signal" aria-hidden="true"></span>
-                        </i>
+                        <span class="list-icon">
+                          <i class="glyphicon glyphicon-signal" aria-hidden="true"></i>
+                        </span>
                       </div>
                       <div class="list-text">
                         <strong>Performance Study</strong>
@@ -150,9 +150,9 @@
                     <!-- Begins List Icon -->
                     <li>
                       <div class="icon-box">
-                        <i class="list-icon">
-                          <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
-                        </i>
+                        <span class="list-icon">
+                          <i class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></i>
+                        </span>
                       </div>
                       <div class="list-text">
                         <strong>Social Media Integration</strong>
@@ -167,9 +167,9 @@
                     <!-- Begins List Icon -->
                     <li>
                       <div class="icon-box">
-                        <i class="list-icon">
-                          <span class="glyphicon glyphicon-signal" aria-hidden="true"></span>
-                        </i>
+                        <span class="list-icon">
+                          <i class="glyphicon glyphicon-signal" aria-hidden="true"></i>
+                        </span>
                       </div>
                       <div class="list-text">
                         <strong>Performance Study</strong>
@@ -180,9 +180,9 @@
                     <!-- Begins List Icon -->  
                     <li>
                       <div class="icon-box">
-                        <i class="list-icon">
-                          <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
-                        </i>
+                        <span class="list-icon">
+                          <i class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></i>
+                        </span>
                       </div>
                       <div class="list-text">
                         <strong>Social Media Integration</strong>
@@ -193,10 +193,10 @@
                     <!-- Begins List Icon -->  
                     <li>
                       <div class="icon-box">
-                        <i class="list-icon">
+                        <span class="list-icon">
                           <!-- This is where you change the icon. See http://getbootstrap.com/components/ for the available options -->
-                          <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-                        </i>
+                          <i class="glyphicon glyphicon-user" aria-hidden="true"></i>
+                        </span>
                       </div>
                       <div class="list-text">
                         <strong>Customer Relationship</strong>
@@ -256,71 +256,170 @@
               <div class="isotope row content-row">
                   <!-- ".element-item": the portfolio container div. Add the 'data-filter' parameters set in the buttons as classes for the element -->
                   <div class="col-md-4 element-item hover-image photography">
-                      <i class="portfolio-icon hover-zoom">
-                          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                      </i>
-                      <div class="hover-image-item">
-                        <!-- 
-                          ".popup-normal" : Popup Box for regular images
+                      <!-- 
+                          ".popup-normal": triggers the lightbox for regular images 
                           "href": the large version of the image to appear inside a box
                           "title": project title (appears as part of the caption)
                           "data-description": project description (appears as part of the caption)
-                          -->
-                        <a class="popup-normal" href="build/images/body/freeimages/rock-1577380-1280x960.jpg" title="Photography 01" data-description="This is the job description for Photography 01." data-effect="mfp-zoom-in">
-                          <img src="build/images/body/freeimages/rock-1577380-1280x960.jpg" />
-                        </a> <!--/ popup-normal -->
-                      </div>
+                        -->
+                      <a class="popup-normal" href="build/images/body/freeimages/rock-1577380-1280x960.jpg" title="Photography 01" data-description="This is the job description for Photography 01." data-effect="mfp-zoom-in">                        
+                      <!-- "portfolio-thumbnail": major container for thumbnail and hidden caption -->  
+                      <div class="portfolio-thumbnail">
+                          <!-- ".portfolio-icon": the zoom icon -->
+                        <span class="portfolio-icon hover-zoom">
+                            <i class="glyphicon glyphicon-search" aria-hidden="true"></i>
+                        </span>                        
+                        <!-- "hover-image-item": image-container -->
+                        <div class="hover-image-item">
+                          <!-- minimal image width: 740px for mobile and smaller screens -->
+                          <img class="jumper-thumbnail" src="build/images/body/freeimages/rock-1577380-1280x960.jpg" />
+                        </div>
+                        <!-- "portfolio-caption": project caption -->  
+                        <div class="portfolio-caption">
+                          <span class="project-title">Photography 01</span>
+                        </div>
+                      </div> <!--portfolio-thumbnail-->
+                    </a> <!--/ popup-normal -->
+
                   </div> <!-- /element-item -->
+
                   <div class="col-md-4 element-item hover-image photography web">
-                      <i class="portfolio-icon hover-zoom">
-                          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                      </i>
-                      <div class="hover-image-item">
-                        <a class="popup-normal" href="build/images/body/freeimages/jellyfish-1188258-1280x960.jpg" title="Photography 02" data-description="This is the job description for Photography 02" data-effect="mfp-zoom-in">
-                          <img src="build/images/body/freeimages/jellyfish-1188258-1280x960.jpg" />
-                        </a> <!--/ popup-normal -->
-                      </div>  
+                      <!-- 
+                          ".popup-normal": triggers the lightbox for regular images 
+                          "href": the large version of the image to appear inside a box
+                          "title": project title (appears as part of the caption)
+                          "data-description": project description (appears as part of the caption)
+                        -->
+                      <a class="popup-normal" href="build/images/body/freeimages/jellyfish-1188258-1280x960.jpg" title="Photography 02" data-description="This is the job description for Photography 02." data-effect="mfp-zoom-in">                        
+                      <!-- "portfolio-thumbnail": major container for thumbnail and hidden caption -->  
+                      <div class="portfolio-thumbnail">
+                          <!-- ".portfolio-icon": the zoom icon -->
+                        <span class="portfolio-icon hover-zoom">
+                            <i class="glyphicon glyphicon-search" aria-hidden="true"></i>
+                        </span>                        
+                        <!-- "hover-image-item": image-container -->
+                        <div class="hover-image-item">
+                          <!-- minimal image width: 740px for mobile and smaller screens -->
+                          <img class="jumper-thumbnail" src="build/images/body/freeimages/jellyfish-1188258-1280x960.jpg" />
+                        </div>
+                        <!-- "portfolio-caption": project caption -->  
+                        <div class="portfolio-caption">
+                          <span class="project-title">Photography 02</span>
+                        </div>
+                      </div> <!--portfolio-thumbnail-->
+                    </a> <!--/ popup-normal -->
                   </div> <!-- /element-item -->
+
                   <div class="col-md-4 element-item hover-image photography">
-                      <i class="portfolio-icon hover-zoom">
-                          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                      </i>
-                      <div class="hover-image-item">
-                        <a class="popup-normal" href="build/images/body/freeimages/mobile-1530816-1280x960.jpg" title="Photography 03" data-description="This is the job description for Photography 03" data-effect="mfp-zoom-in">
-                          <img src="build/images/body/freeimages/mobile-1530816-1280x960.jpg" />
-                        </a> <!--/ popup-normal -->  
-                      </div>
+                      <!-- 
+                          ".popup-normal": triggers the lightbox for regular images 
+                          "href": the large version of the image to appear inside a box
+                          "title": project title (appears as part of the caption)
+                          "data-description": project description (appears as part of the caption)
+                        -->
+                      <a class="popup-normal" href="build/images/body/freeimages/mobile-1530816-1280x960.jpg" title="Photography 03" data-description="This is the job description for Photography 03." data-effect="mfp-zoom-in">                        
+                      <!-- "portfolio-thumbnail": major container for thumbnail and hidden caption -->  
+                      <div class="portfolio-thumbnail">
+                          <!-- ".portfolio-icon": the zoom icon -->
+                        <span class="portfolio-icon hover-zoom">
+                            <i class="glyphicon glyphicon-search" aria-hidden="true"></i>
+                        </span>                        
+                        <!-- "hover-image-item": image-container -->
+                        <div class="hover-image-item">
+                          <!-- minimal image width: 740px for mobile and smaller screens -->
+                          <img class="jumper-thumbnail" src="build/images/body/freeimages/mobile-1530816-1280x960.jpg" />
+                        </div>
+                        <!-- "portfolio-caption": project caption -->  
+                        <div class="portfolio-caption">
+                          <span class="project-title">Photography 03</span>
+                        </div>
+                      </div> <!--portfolio-thumbnail-->
+                    </a> <!--/ popup-normal -->
                   </div> <!-- /element-item -->
+
                   <div class="col-md-4 element-item hover-image web">
-                      <i class="portfolio-icon hover-zoom">
-                          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                      </i>
-                      <div class="hover-image-item">
-                        <a class="popup-normal" href="build/images/body/freeimages/recipe-1538714-1280x960.jpg" title="Web 01" data-description="This is the job description for Web 01" data-effect="mfp-zoom-in">
-                          <img src="build/images/body/freeimages/recipe-1538714-1280x960.jpg" />
-                        </a><!--/ popup-normal --> 
-                      </div> 
+                      <!-- 
+                          ".popup-normal": triggers the lightbox for regular images 
+                          "href": the large version of the image to appear inside a box
+                          "title": project title (appears as part of the caption)
+                          "data-description": project description (appears as part of the caption)
+                        -->
+                      <a class="popup-normal" href="build/images/body/freeimages/recipe-1538714-1280x960.jpg" title="Web 01" data-description="This is the job description for Web 01." data-effect="mfp-zoom-in">                        
+                      <!-- "portfolio-thumbnail": major container for thumbnail and hidden caption -->  
+                      <div class="portfolio-thumbnail">
+                          <!-- ".portfolio-icon": the zoom icon -->
+                        <span class="portfolio-icon hover-zoom">
+                            <i class="glyphicon glyphicon-search" aria-hidden="true"></i>
+                        </span>                        
+                        <!-- "hover-image-item": image-container -->
+                        <div class="hover-image-item">
+                          <!-- minimal image width: 740px for mobile and smaller screens -->
+                          <img class="jumper-thumbnail" src="build/images/body/freeimages/recipe-1538714-1280x960.jpg" />
+                        </div>
+                        <!-- "portfolio-caption": project caption -->  
+                        <div class="portfolio-caption">
+                          <span class="project-title">Web 01</span>
+                        </div>
+                      </div> <!--portfolio-thumbnail-->
+                    </a> <!--/ popup-normal -->
+
                   </div> <!-- /element-item -->
+
                   <div class="col-md-4 element-item hover-image web">
-                      <i class="portfolio-icon hover-zoom">
-                          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                      </i>
-                      <div class="hover-image-item">
-                        <a class="popup-normal" href="build/images/body/freeimages/business-1239202-1280x960.jpg" title="Web 02" data-description="This is the job description for Web 02" data-effect="mfp-zoom-in">
-                          <img src="build/images/body/freeimages/business-1239202-1280x960.jpg" />
-                        </a><!--/ popup-normal --> 
-                      </div>  
+                      <!-- 
+                          ".popup-normal": triggers the lightbox for regular images 
+                          "href": the large version of the image to appear inside a box
+                          "title": project title (appears as part of the caption)
+                          "data-description": project description (appears as part of the caption)
+                        -->
+                      <a class="popup-normal" href="build/images/body/freeimages/business-1239202-1280x960.jpg" title="Web 02" data-description="This is the job description for Web 02." data-effect="mfp-zoom-in">                        
+                      <!-- "portfolio-thumbnail": major container for thumbnail and hidden caption -->  
+                      <div class="portfolio-thumbnail">
+                          <!-- ".portfolio-icon": the zoom icon -->
+                        <span class="portfolio-icon hover-zoom">
+                            <i class="glyphicon glyphicon-search" aria-hidden="true"></i>
+                        </span>                        
+                        <!-- "hover-image-item": image-container -->
+                        <div class="hover-image-item">
+                          <!-- minimal image width: 740px for mobile and smaller screens -->
+                          <img class="jumper-thumbnail" src="build/images/body/freeimages/business-1239202-1280x960.jpg" />
+                        </div>
+                        <!-- "portfolio-caption": project caption -->  
+                        <div class="portfolio-caption">
+                          <span class="project-title">Web 02</span>
+                        </div>
+                      </div> <!--portfolio-thumbnail-->
+                    </a> <!--/ popup-normal -->
+
                   </div> <!-- /element-item -->
                   <div class="col-sm-12 col-md-4 element-item hover-image video">
-                      <i class="portfolio-icon hover-zoom">
-                          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                      </i>
-                      <div class="hover-image-item">
-                        <a class="popup-video" href="https://www.youtube.com/watch?v=sGbxmsDFVnE" title="Video 01" data-effect="mfp-zoom-in">
-                            <img src="build/images/body/freeimages/mobile-1530816-1280x960.jpg" />
-                        </a> <!--/ popup-video -->  
-                      </div>
+                      <!-- 
+                          ".popup-video": triggers the lightbox for video iframes 
+                          "href": the video URL
+                          "title": project title (appears as part of the caption)
+                          "data-description": project description (appears as part of the caption)
+                        -->
+                      <a class="popup-video" href="https://www.youtube.com/watch?v=sGbxmsDFVnE" title="Video 01" data-description="This is the job description for Video 01." data-effect="mfp-zoom-in">                        
+                      <!-- "portfolio-thumbnail": major container for thumbnail and hidden caption -->  
+                      <div class="portfolio-thumbnail">
+                          <!-- ".portfolio-icon": the zoom icon -->
+                        <span class="portfolio-icon hover-zoom">
+                            <i class="glyphicon glyphicon-search" aria-hidden="true"></i>
+                        </span>                        
+                        <!-- "hover-image-item": image-container -->
+                        <div class="hover-image-item">
+                          <!-- minimal image width: 740px for mobile and smaller screens -->
+                          <img class="jumper-thumbnail" src="build/images/body/freeimages/mobile-1530816-1280x960.jpg" />
+                        </div>
+                        <!-- "portfolio-caption": project caption -->  
+                        <div class="portfolio-caption">
+                          <span class="project-title">Video 01</span>
+                        </div>
+                      </div> <!--portfolio-thumbnail-->
+                    </a> <!--/ popup-normal -->
+
                   </div> <!-- /element-item -->
+
               </div>
 
           </div>
@@ -332,7 +431,7 @@
         <!-- Class "text-box": mandatory for vertical centering and darkening background -->
         <div class="text-box">
           <h2 class="quote">
-            <span class="quote-sign"><i class="fa fa-quote-left"></i></span> Innovation distinguishes between a leader and a follower <span class="quote-sign"><i class="fa fa-quote-right"></i></span> 
+            <span class="quote-icon"><i class="fa fa-quote-left"></i></span> Innovation distinguishes between a leader and a follower <span class="quote-icon"><i class="fa fa-quote-right"></i></span> 
             <span class="quote-author"> - Steve Jobs - </span>
           </h2>
         </div><!-- /text-box -->
@@ -451,11 +550,12 @@
                   <!--Begins Team Member-->
                   <div class="team-member hover-image">
                     <div class="member-thumbnail hover-image-item">
+                      <!-- image size: 740px x 740px in order to fit on mobile and smaller screens -->
                       <img src="build/images/body/freeimages/in-the-dark-1251229-1280x1280.jpg" alt="John Doe" class="member-pic" />
                     </div>
-                    <div class="member-data">
-                        <h3 class="member-name">John Doe</h3>
-                        <span class="member-position">Project Manager</span>
+                    <div class="member-data databox">
+                        <h3 class="databox-title">John Doe</h3>
+                        <span class="databox-info">Project Manager</span>
                     </div>
                     <div class="member-profile transition-fast">
                         <p class="member-testimonial">"Lorem ipsum dolor pellentesque sinis ultra. Ipsum dolor pellentesque sinis ultra ipsum."</p>
@@ -472,9 +572,9 @@
               <div class="col-md-3 col-sm-6">
                   <div class="team-member hover-image">
                     <div class="member-thumbnail hover-image-item"><img src="build/images/body/freeimages/man-1153421-1280x1280.jpg" alt="Joseph Doe" class="member-pic" /></div>
-                    <div class="member-data">
-                        <h3 class="member-name">Joseph Doe</h3>
-                        <span class="member-position">Designer</span>
+                    <div class="databox member-data">
+                        <h3 class="databox-title">Joseph Doe</h3>
+                        <span class="databox-info">Designer</span>
                     </div>
                     <div class="member-profile transition-fast">
                         <p class="member-testimonial">"Lorem ipsum dolor pellentesque sinis ultra. Ipsum dolor pellentesque sinis ultra sinis ."</p>
@@ -491,9 +591,9 @@
               <div class="col-md-3 col-sm-6">
                   <div class="team-member hover-image">
                     <div class="member-thumbnail hover-image-item"><img src="build/images/body/freeimages/piecha-1487378-1279x1278.jpg" alt="Jane Doe" class="member-pic" /></div>
-                    <div class="member-data">
-                        <h3 class="member-name">Jane Doe</h3>
-                        <span class="member-position">UX Architet</span>
+                    <div class="databox member-data">
+                        <h3 class="databox-title">Jane Doe</h3>
+                        <span class="databox-info">UX Architet</span>
                     </div>
                     <div class="member-profile transition-fast">
                         <p class="member-testimonial">"Lorem ipsum dolor pellentesque sinis ultra. Ipsum dolor pellentesque sinis ultra."</p>
@@ -510,9 +610,9 @@
               <div class="col-md-3 col-sm-6">
                   <div class="team-member hover-image">
                     <div class="member-thumbnail hover-image-item"><img src="build/images/body/freeimages/sam-close-up-1239146-1280x1280.jpg" alt="Jane Smith" class="member-pic" /></div>
-                    <div class="member-data">
-                        <h3 class="member-name">Jane Smith</h3>
-                        <span class="member-position">Web Developer</span>
+                    <div class="databox member-data">
+                        <h3 class="databox-title">Jane Smith</h3>
+                        <span class="databox-info">Web Developer</span>
                     </div>
                     <div class="member-profile transition-fast">
                         <p class="member-testimonial">"Lorem ipsum dolor pellentesque sinis ultra. Ipsum dolor pellentesque sinis ultra pellentesque."</p>
@@ -551,7 +651,7 @@
                   </div>
 
                   <div class="col-md-4">
-                      <h3 class="section-subtitle"> <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Find Us </h3>
+                      <h3 class="section-subtitle"> <i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i> Find Us </h3>
                       
                       <p class="address">
                         <address>

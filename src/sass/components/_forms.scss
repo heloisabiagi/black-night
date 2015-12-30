@@ -27,13 +27,29 @@ button, input[type="submit"] {
   text-transform: uppercase;
 }
 
+::-webkit-input-placeholder { 
+    color: $placeholder;
+  }
+
+  :-moz-placeholder { 
+     color: $placeholder;
+  }
+
+  ::-moz-placeholder { 
+     color: $placeholder;
+  }
+
+  :-ms-input-placeholder { 
+     color: $placeholder;
+  }
+
 .btn-flat {
   background-color: $main-color;
   color: #FFF;
   border: none;
   border-radius: 0;
   font-weight: 700;
-  @include transition(all 200ms ease-in);
+  @include transition(all 100ms ease-in);
 
   &:hover {
     color: #FFF;
@@ -80,23 +96,27 @@ button, input[type="submit"] {
 
 /** CONTACT FORM */
 
-.contact-form input[type="text"],
-.contact-form input[type="email"] {
-    height: 60px;
-}
+.contact-form {
 
-.contact-form input[type="submit"] {
-    min-width: 30%;
-}
+  input[type="text"],
+  input[type="email"] {
+      height: 60px;
+  }
 
-.contact-form textarea {
-    min-height: 200px;
-}
+  input[type="submit"] {
+      min-width: 30%;
+  }
 
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
-    color: #FFF;
-    background-color: #666;
-    margin-bottom: 6px;
+  textarea {
+      min-height: 200px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+      color: $dark-text;
+      background-color: $lightest-gray;
+      margin-bottom: 6px;
+  }
+
 }

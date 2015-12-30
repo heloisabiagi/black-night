@@ -5,8 +5,8 @@
 $pricing-border-color: #999;
 
 .pricing-item {
-  background-color: $light-gray;
-  color: #333;
+  background-color: $lightest-gray;
+  color: $dark-text;
   padding: $base-spacing 0;
   margin: 0;
 
@@ -54,7 +54,7 @@ $pricing-border-color: #999;
   text-align: center;
   margin: $base-spacing/2 0;
   padding: $base-spacing/2 0;
-  background-color: #BBB;
+  background-color: $light-gray;
 
   small {
     font-size: 1em;

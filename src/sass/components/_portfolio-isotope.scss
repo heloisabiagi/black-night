@@ -11,10 +11,52 @@
 }
 
 .element-item {
+	overflow: hidden;
+
 	@media screen and (min-width: $break-large) {
 		margin: $base-spacing 0 $base-spacing/2 0;
 	}
 	cursor: pointer;
+
+	&:hover {
+		@media screen and (min-width: $break-large) {
+			.hover-zoom {
+				opacity: 1;
+			}
+
+			.portfolio-caption {
+				bottom: 0;
+			}
+
+			.jumper-thumbnail {
+				@include transform(translate(0,-40px));
+			}
+		}	
+	}
+}
+
+.portfolio-caption {
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	position: absolute;
+	bottom: -40px;
+	padding-right: 30px;
+	width: 100%;
+
+	@include box-sizing(border-box);
+
+	@include transition(all 200ms ease-in);
+
+	.project-title {
+		background: $main-color;
+		display: inline-block;
+    	width: 100%;
+	}
+}
+
+.portfolio-icon, .portfolio-caption {
+	z-index: 99;
 }
 
 .filter-by-type {
@@ -56,4 +98,9 @@
 		display: none;
 	}
 	
+}
+
+.jumper-thumbnail {
+	@include transition(all 200ms ease-in);
+	position: relative;
 }
