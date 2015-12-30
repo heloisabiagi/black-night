@@ -17,7 +17,7 @@
 	    height: 400px;
 	  }
 
-	  .split-image-container {
+	  .bulb-container {
 	  		position: absolute;
 	  		bottom: 0;
 	  		left: 0;
@@ -40,7 +40,7 @@
 }
 
 section:nth-child(odd) {
-	.split-block-description {
+	.split-block-row {
 		@media screen and (min-width: $break-large) {
 			background: image-url('bg/design/fold-dark.png') no-repeat bottom right $medium-gray;
 		}
@@ -48,7 +48,7 @@ section:nth-child(odd) {
 }
 
 section:nth-child(even) {
-	.split-block-description {
+	.split-block-row {
 		@media screen and (min-width: $break-large) {
 			background: image-url('bg/design/fold-light.png') no-repeat bottom right $dark-gray;
 		}

@@ -8,6 +8,13 @@
   	color: #FFF;
   }
 
+  .navbar-right {
+    @media screen and (max-width: $break-large) {
+        max-width: 575px;
+    }
+
+  }
+
   #navigation-top {
     font-family: "Raleway", sans-serif;
     -webkit-font-smoothing: antialiased;
