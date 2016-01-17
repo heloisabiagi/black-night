@@ -1,0 +1,43 @@
+// Mixins
+@import "globals/globals";
+
+.documentation {
+
+  .table-of-contents {
+    padding: $base-spacing/2;
+    border: solid 1px #FFF;
+  }    
+
+  ol {
+    list-style-type: none;
+    counter-reset: item;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  li {
+    display: table;
+    counter-increment: item;
+    margin-bottom: $base-spacing/2;
+  }
+
+  li:before {
+      content: counters(item, ".") ". ";
+      display: table-cell;
+      padding-right: 0.6em;    
+  }
+
+  li li {
+      margin: 0;
+  }
+
+  li li li {
+      margn-left: 20px;
+  }
+
+  li li:before {
+      content: counters(item, ".") " ";
+  }
+
+}

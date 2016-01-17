@@ -10,17 +10,13 @@ module.exports = function(grunt) {
     // Concatenate JS files
      concat: {
       scripts: {
-        src:  config.concat.scripts,
+        src:  "src/js/components/*",
         dest: "build/js/scripts.js"
         },
       vendor: {
         src: "src/js/vendor/*",
         dest: "build/js/vendor.js"
-      },  
-      cssLibs: {
-        src: "src/libs/*.css",
-        dest: "build/libs/libs.min.css"
-        }           	
+      }         	
     },
 
     // Uglify JS files
@@ -77,6 +73,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-rename');
 
   // Define tasks
-  grunt.registerTask("default", ["copy", "concat", "uglify", "compass"]);
-  grunt.registerTask("devJs", ["concat:scripts", "uglify:scripts"]);
+  grunt.registerTask("build", ["copy", "concat", "uglify", "compass", "cssmin"]);
+  grunt.registerTask("devScriptsJs", ["copy:settings", "concat:scripts", "uglify:scripts"]);
+  grunt.registerTask("devVendorJs", ["copy:settings","concat:vendor", "uglify:vendor"]);
+  grunt.registerTask("devCSS", ["copy:images", "copy:fonts" ,"compass", "cssmin"]);
 };

@@ -3,6 +3,7 @@
 */
 
 .quote { 
+  font-size: 1.5em;
   text-transform: uppercase;
   font-weight: bold;
 
@@ -12,7 +13,7 @@
 
   .quote-author {
       display: block;
-      margin-top: $base-spacing*2;
+      margin-top: $base-spacing;
       text-transform: none;
       font-weight: none;
       font-size: 0.5em;

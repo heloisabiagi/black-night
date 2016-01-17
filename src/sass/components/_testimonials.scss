@@ -1,0 +1,16 @@
+/**
+  _testimonials: this file contain style declarations for the Testimonials, a section with a carousel full of clients' testimonials
+*/
+
+#testimonials {
+  height: 420px;
+
+  .testimonials-wrapper {
+      text-align: center;
+      overflow: hidden;
+  }
+
+  #owl-testimonials {
+    overflow: hidden;
+  }
+}
