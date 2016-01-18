@@ -54,6 +54,9 @@ module.exports = function(grunt) {
       settings: {
         files: [{expand: true, flatten: true, src: ['src/js/settings.js'], dest: 'build/js'}]
       },
+      colorSwitcher: {
+        files: [{expand: true, flatten: true, src: ['src/js/color-switcher.js'], dest: 'build/js'}]
+      },
       images: {
         files: [{expand: true, cwd: 'src/images', src: ['**'], dest: 'build/images/'}]
       },
@@ -74,7 +77,7 @@ module.exports = function(grunt) {
 
   // Define tasks
   grunt.registerTask("build", ["copy", "concat", "uglify", "compass", "cssmin"]);
-  grunt.registerTask("devScriptsJs", ["copy:settings", "concat:scripts", "uglify:scripts"]);
+  grunt.registerTask("devScriptsJs", ["copy:settings", "copy:colorSwitcher", "concat:scripts", "uglify:scripts"]);
   grunt.registerTask("devVendorJs", ["copy:settings","concat:vendor", "uglify:vendor"]);
   grunt.registerTask("devCSS", ["copy:images", "copy:fonts" ,"compass", "cssmin"]);
 };

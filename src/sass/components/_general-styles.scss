@@ -90,6 +90,7 @@ ul {
 /** GLOBAL STYLES */
 
 section  {
+	overflow: hidden;
 	@include section-dimensions;
 
 	&.full-dimensions {
@@ -110,9 +111,12 @@ section:nth-child(even) {
 	background-color: $dark-gray;
 }
 
-section .section-title {
+.title-1, .title-2, .title-3, .title-4 {
 	font-family: "News Cycle", sans-serif;
 	-webkit-font-smoothing: antialiased;
+}
+
+.title-1 {
 	text-transform: uppercase;
 	font-weight: 400;
 	text-align: center;
@@ -137,12 +141,23 @@ section .section-title {
 	}
 }
 
-section .section-subtitle {
-	font-family: "News Cycle", sans-serif;
+.title-2, .title-3, .title-4 {
 	font-weight: 700;
-	font-size: 1.5em;
 	margin-bottom: ($base-spacing/2);
 	margin-top: ($base-spacing/4);
+}
+
+.title-2 {
+	font-size: 1.6em;
+}
+
+
+.title-3 {
+	font-size: 1.4em;
+}
+
+.title-4 {
+	font-size: 1.2em;
 }
 
 .text-box {

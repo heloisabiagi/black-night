@@ -8,16 +8,36 @@
 
   <meta name="viewport" content="width=device-width,user-scalable=yes">
   <link rel="stylesheet" type="text/css" href="build/style/vendors.min.css">
-  <link rel="stylesheet" type="text/css" href="build/style/styles.min.css">
+  <link rel="stylesheet" type="text/css" href="build/style/style-blue.min.css">
+  <!-- color-switcher.min.css - DEMO ONLY -->
+  <link rel="stylesheet" type="text/css" href="build/style/color-switcher.min.css">
   <link href='https://fonts.googleapis.com/css?family=News+Cycle:400,700|Raleway:400,300,500,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
   <script src="build/js/modernizr.custom.js"></script>
 
 </head>
 <body class="black-night">
     <div id="main">
+
+      <!--========= COLOR SWITCHER (DEMO ONLY) ========= -->
+      <div class="color-switcher transition">
+          <div class="colors">
+              <ul class="color-list">
+                  <li><span class="color-sample blue" data-color="blue">Blue</span></li>
+                  <li><span class="color-sample green" data-color="green">Green</span></li>
+                  <li><span class="color-sample pink" data-color="pink">Pink</span></li>
+                  <li><span class="color-sample orange" data-color="orange">Orane</span></li>
+                  <li><span class="color-sample purple" data-color="purple">Purple</span></li>
+              </ul>
+          </div>
+          <div class="switcher-label">
+              <i class="fa fa-paint-brush"></i>
+          </div>
+      </div>
+      <!-- / COLOR SWITCHER -->
+
       <!--========= HEADER & MAIN MENU ========= -->
       <header id="main-header">
-          <nav id ="navigation-top" class="navbar navbar-fixed-top transition-fast" data-behavior="navShrink">
+          <nav id ="navigation-top" class="navbar navbar-fixed-top transition-fast animated bounceInDown" data-behavior="navShrink">
             <div class="container">
               <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -62,7 +82,7 @@
       <section class="cover full-dimensions">
           <!-- ### Class "text-box": mandatory for vertical centering and darkening background -->
           <div class="text-box">
-            <div class="cover-container content-row">
+            <div class="cover-container content-row animated bounceInUp">
               <!-- 
               ### "cover-title": the big title
               ### "cover-subtitle": the big subtitle
@@ -72,7 +92,7 @@
             </div>
 
             <!-- ### data-behavior="scrollNavLink": an example of scroll navigation on a button element. Pay attention to the 'data-location' attribute -->
-            <button type="button" class="btn btn-flat big-button" data-location="#about" data-behavior="scrollNavLink"> Get to Know Us </button>
+            <button type="button" class="btn btn-flat big-button animated bounceInUp" data-location="#about" data-behavior="scrollNavLink"> Get to Know Us </button>
           </div> <!-- /text-box -->
       </section>
       <!-- / COVER -->
@@ -93,8 +113,8 @@
 
             <div class="split-block-description" class="table-col">
               <div class="content-row">
-                <!-- ### "section-title": the big title with blue line -->
-                <h2 class="section-title"><a name="about">About Us</a></h2>
+                <!-- ### "title-1": the big title with blue line -->
+                <h2 class="title-1"><a name="about">About Us</a></h2>
                 <!-- ### Text limit: 450 characters with the original font size, 18px (if you're using the Bulbs image). -->
                 <p>Lorem ipsum dolor pellentesque sinis ultra. Ipsum dolor pellentesque consectuar gravidae sinis ultra. Isum dolor consectuar gravidae pellentesque sinis ultra. Sinis ultra. Ipsum dolor pellentesque sinis ultra. Isum dolor pellentesque sinis ultra.</p>
                 <p>Ipsum dolor pellentesque sinis ultra. Ipsum dolor pellentesque sinis ultra. Isum dolor pellentesque consectuar gravidae sinis ultra. Sinis ultra. Ipsum dolor pellentesque sinis ultra. Isum dolor pellentesque sinis consectuar gravidae.</p>
@@ -111,17 +131,18 @@
       <!--========= SERVICES ========= -->
       <section id="services" class="services">
           <div class="container">
-              <div class="row content-row">
+              <!-- ## .data-animation: triggers an animation when the window scroll reaches the element. To see all the animations available, check the Animate.css library website: https://daneden.github.io/animate.css/ -->
+              <div class="row content-row" data-animation="bounceInDown">
                 <div class="col-md-12">
-                  <h2 class="section-title"><a name="services">Our Services</a></h2>
-                  <h3 class="section-subtitle">What we do best</h3>
+                  <h2 class="title-1"><a name="services">Our Services</a></h2>
+                  <h3 class="title-2">What we do best</h3>
                   <p>Lorem ipsum dolor pellentesque sinis ultra. Ipsum dolor pellentesque sinis ultra. Isum dolor pellentesque sinis ultra. Sinis ultra. Ipsum dolor pellentesque sinis ultra. Isum dolor pellentesque sinis ultra.</p>
                 </div> <!-- /col-md-12 -->
               </div> <!-- /row -->
 
 
               <div class="row content-row">
-                <div class="col-sm-6">
+                <div class="col-sm-6" data-animation="bounceInLeft">
                   <!-- 
                   ### Icon List.
                   ### Class "icon-list-1": white icons within a colored circle.
@@ -170,7 +191,7 @@
                   </ul>
 
                 </div> <!-- /col-sm-6 -->
-                <div class="col-sm-6">
+                <div class="col-sm-6" data-animation="bounceInRight">
                   <ul class="icon-list icon-list-1">
                     <!-- Begins List Icon -->
                     <li>
@@ -216,13 +237,13 @@
               </div> <!-- /row -->
 
               <div class="row content-row">
-                  <div class="col-md-8">
-                      <h3 class="section-subtitle"> Our values</h3>
+                  <div class="col-md-8" data-animation="bounceInLeft">
+                      <h3 class="title-2"> Our values</h3>
                       <p>Cras interdum orci lectus, quis congue nibh consectetur eget. Morbi nulla tortor, ultricies a neque eu, porttitor egestas orci. Nam posuere ultricies metus, in consectetur ligula vestibulum non. Quisque vel nulla metus. Aenean et felis at odio aliquet mattis sed sagittis tellus. Donec vitae metus turpis.</p>
                   </div>
 
-                  <div class="col-md-4">
-                      <h3 class="section-subtitle"> Why choosing us?</h3>
+                  <div class="col-md-4" data-animation="bounceInRight">
+                      <h3 class="title-2"> Why choosing us?</h3>
                       <ul>
                         <li>Cras interdum </li>
                         <li>Nam posuere ultricies </li>
@@ -239,15 +260,15 @@
       <section id="works" class="portfolio">
           <div class="container">
               <div class="row content-row">
-                <div class="col-md-12">
-                  <h2 class="section-title"><a name="works">Our Works</a></h2>
-                  <h3 class="section-subtitle">Creativity is our business</h3>
+                <div class="col-md-12" data-animation="bounceInDown">
+                  <h2 class="title-1"><a name="works">Our Works</a></h2>
+                  <h3 class="title-2">Creativity is our business</h3>
                   <p>Donec convallis ante dui, a egestas libero consectetur sed. Donec et finibus turpis, sed tincidunt lectus. Aliquam et felis rutrum, varius neque ac, rhoncus velit. Sed aliquet massa ac sem congue, et egestas odio ullamcorper. Etiam pellentesque a leo vel accumsan. Aenean scelerisque tempor massa eu volutpat. Nulla ac nulla arcu. Proin consectetur sapien enim, malesuada molestie neque condimentum vel. Sed suscipit iaculis enim. Donec convallis sollicitudin luctus.</p>
                 </div>
               </div>
               <!-- Filters -->
               <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12" data-animation="bounceInDown">
                     <div id="portfolio-filters" class="isotope-filters button-group">
                       <span class="filter-by-type">Filter By Type</span>
                       <!-- ### Filter Buttons. Change the data-filter parameter to set the button action. Don't forget the "." (class symbol) -->
@@ -260,7 +281,7 @@
               </div><!-- /row -->
 
               <!-- Works -->
-              <div class="isotope row content-row">
+              <div class="isotope row content-row" data-animation="fadeIn">
                   <!-- ### ".element-item": the portfolio container div. Add the 'data-filter' parameters set in the buttons as classes for the element -->
                   <div class="col-md-4 element-item hover-image photography">
                       <!-- 
@@ -394,7 +415,7 @@
       <section class="image-box box01 full-dimensions">
         <!-- ### Class "text-box": mandatory for vertical centering and darkening background -->
         <div class="text-box">
-            <p class="quote">
+            <p class="quote" data-animation="fadeIn">
               <span class="quote-icon"><i class="fa fa-quote-left"></i></span> Innovation distinguishes between a leader and a follower <span class="quote-icon"><i class="fa fa-quote-right"></i></span> 
               <span class="quote-author"> - Steve Jobs - </span>
             </p>
@@ -406,13 +427,13 @@
       <section id="prices" class="prices">
           <div class="container">
             <div class="row content-row">
-                <div class="col-md-12">
-                  <h2 class="section-title"><a name="prices">Our Prices</a></h2>
+                <div class="col-md-12" data-animation="bounceInDown">
+                  <h2 class="title-1"><a name="prices">Our Prices</a></h2>
                   <p>Lorem ipsum dolor pellentesque sinis ultra. Ipsum dolor pellentesque sinis ultra. Isum dolor pellentesque sinis ultra. Sinis ultra. Ipsum dolor pellentesque sinis ultra. Isum dolor pellentesque sinis ultra.</p>
                 </div>
             </div>
             <div class="row content-row">
-              <div class="col-sm-4">
+              <div class="col-sm-4" data-animation="bounceInLeft">
                 <!-- ### Begins Table Item -->
                   <div class="pricing-item">
                     <div class="pricing-header">
@@ -437,7 +458,7 @@
                   <!-- Ends Table Item -->
               </div> <!-- /col-sm-4 -->
 
-              <div class="col-sm-4">
+              <div class="col-sm-4" data-animation="bounceInTop">
                   <!-- ### Featured Table Item - add "featured" class for the featured item (different colours, bigger font and box) -->
                   <div class="pricing-item featured">
                     <div class="pricing-header">
@@ -459,7 +480,7 @@
                   <!-- Ends Table Item -->
               </div> <!-- /col-sm-4 -->
 
-              <div class="col-sm-4">
+              <div class="col-sm-4" data-animation="bounceInRight">
                   <!-- Begins Table Item -->
                   <div class="pricing-item">
                     <div class="pricing-header">
@@ -490,8 +511,8 @@
       <section id="signup" class="image-box box02 full-dimensions">
           <!-- Class "text-box": mandatory for vertical centering and darkening background -->
           <div class="text-box">
-                <h2 class="section-title"><a name="signup">Subscribe to our newsletter</a></h2>
-                  <form class="fast-form" id="newsletter-form" name="newsletter_form">
+                <h2 class="title-1" data-animation="fadeIn"><a name="signup">Subscribe to our newsletter</a></h2>
+                  <form class="fast-form" id="newsletter-form" name="newsletter_form" data-animation="fadeIn">
                       <input type="email" name="newsletter_email" class="fast-form-field" placeholder="Your email here"></input>
                       <input type="submit" class="btn btn-flat fast-form-submit" value="Sign Up"></input>
                   </form>
@@ -502,15 +523,15 @@
       <!--========= TEAM MEMBERS ========= -->
       <section id="team" class="team">
           <div class="container">
-            <div class="row content-row">
+            <div class="row content-row" data-animation="bounceInDown">
                 <div class="col-md-12">
-                  <h2 class="section-title"><a name="team">Our Team</a></h2>
+                  <h2 class="title-1"><a name="team">Our Team</a></h2>
                   <p>Lorem ipsum dolor pellentesque sinis ultra. Ipsum dolor pellentesque sinis ultra. Isum dolor pellentesque sinis ultra. Sinis ultra. Ipsum dolor pellentesque sinis ultra. Isum dolor pellentesque sinis ultra.</p>
                 </div> <!-- /col-md-12 -->
               </div> <!-- /row -->
 
             <div class="row content-row">
-              <div class="col-md-3 col-sm-6">
+              <div class="col-md-3 col-sm-6" data-animation="bounceInLeft">
                   <!-- ### Begins Team Member-->
                   <div class="team-member hover-image">
                     <div class="member-thumbnail hover-image-item">
@@ -534,7 +555,7 @@
                   </div>
               </div> <!-- /col-md-3 -->
 
-              <div class="col-md-3 col-sm-6">
+              <div class="col-md-3 col-sm-6" data-animation="bounceInLeft">
                   <div class="team-member hover-image">
                     <div class="member-thumbnail hover-image-item"><img src="build/images/body/freeimages/man-1153421-1280x1280.jpg" alt="Joseph Doe" class="member-pic" /></div>
                     <div class="databox member-data">
@@ -553,7 +574,9 @@
                   </div>
               </div> <!-- /col-md-3 -->
 
-              <div class="col-md-3 col-sm-6">
+              <div class="clearfix visible-sm-block"></div>
+
+              <div class="col-md-3 col-sm-6" data-animation="bounceInRight">
                   <div class="team-member hover-image">
                     <div class="member-thumbnail hover-image-item"><img src="build/images/body/freeimages/piecha-1487378-1279x1278.jpg" alt="Jane Doe" class="member-pic" /></div>
                     <div class="databox member-data">
@@ -572,7 +595,7 @@
                   </div>
               </div> <!-- /col-md-3 -->
 
-              <div class="col-md-3 col-sm-6">
+              <div class="col-md-3 col-sm-6" data-animation="bounceInRight">
                   <div class="team-member hover-image">
                     <div class="member-thumbnail hover-image-item"><img src="build/images/body/freeimages/sam-close-up-1239146-1280x1280.jpg" alt="Jane Smith" class="member-pic" /></div>
                     <div class="databox member-data">
@@ -611,15 +634,15 @@
       <!--========= CONTACT ========= -->
       <section id="contact">
           <div class="container">
-              <div class="row content-row">
+              <div class="row content-row" data-animation="bounceInDown">
                 <div class="col-md-12">
-                  <h2 class="section-title"><a name="contact">Contact</a></h2>
+                  <h2 class="title-1"><a name="contact">Contact</a></h2>
                   <p>Lorem ipsum dolor pellentesque sinis ultra. Ipsum dolor pellentesque sinis ultra. Isum dolor pellentesque sinis ultra. Sinis ultra. Ipsum dolor pellentesque sinis ultra. Isum dolor pellentesque sinis ultra.</p>
                 </div> <!-- /col-md-12 -->
               </div> <!-- /row -->
 
               <div class="row content-row">
-                  <div class="col-md-8">
+                  <div class="col-md-8" data-animation="bounceInLeft">
                       <form id="contact-form" class="contact-form">
                         <input type="text" placeholder="Your name" name="contact_name"></input>
                         <input type="text" placeholder="Your email" name="contact_email"></input>
@@ -628,8 +651,8 @@
                       </form>
                   </div>
 
-                  <div class="col-md-4">
-                      <h3 class="section-subtitle"> <i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i> Find Us </h3>
+                  <div class="col-md-4" data-animation="bounceInRight">
+                      <h3 class="title-2"> <i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i> Find Us </h3>
                       
                       <p class="address">
                         <address>
@@ -655,6 +678,8 @@
 <script src="build/js/vendor.js"></script>
 <script src="build/js/settings.js"></script>
 <script src="build/js/scripts.min.js"></script>
+<!-- color-switcher.js: demo-only -->
+<script src="build/js/color-switcher.js"></script>
 
 </body>
 </html>
