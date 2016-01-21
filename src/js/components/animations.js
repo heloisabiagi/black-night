@@ -3,6 +3,8 @@ blackNight.animations = (function() {
 
 
 	function bindEvents(){
+		new WOW().init();
+		/*
 		$(window).on("scroll", function(){
 			var scrollTop = $(window).scrollTop();
 			var screenHeight = $(window).height();
@@ -18,6 +20,7 @@ blackNight.animations = (function() {
 					
 			});
 		});
+		*/
 
 	}
 

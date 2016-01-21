@@ -1,0 +1,67 @@
+// Mixins
+@import "globals/globals";
+
+
+/**
+  _preloader
+*/
+
+html, body, #main {
+ 	width: 100%;
+ 	height: 100%;
+}
+
+.preloader {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	background-color: #000;
+	z-index: 10000;
+
+	.loading {
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  @include transform (translate(-50%, -50%));
+	  width: 190px;
+
+		.loading-text {
+			font-family: "News Cycle", sans-serif;
+			color: #FFF;
+			text-transform: uppercase;
+			font-size: 44px;
+		}
+
+		.loading-message {
+			float: left;
+		}
+
+		.animate-points {
+			width: 19px;
+			overflow: hidden;
+			position: relative;
+			display: block;
+			float: left;
+			height: 60px;
+			@include animation-name(preloader);
+		    @include animation-duration(2s);
+		    @include animation-iteration-count(infinite);
+
+			.points{
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+
+		}
+	}
+}
+
+@keyframes preloader {
+	0% {width: 0px;}
+    33%   {width: 8px;}
+    66%  {width: 13px}
+    100%  {width: 19px}
+
+}

@@ -20,8 +20,11 @@ blackNight.portfolioIsotope = (function() {
 	}
 
 	function bindEvents(){
-		startIsotope();	
-		filtersIsotope();
+		$(window).load(function() {
+			$("#portfolio-filters").addClass("active");	
+		    startIsotope();	
+			filtersIsotope();
+		});
 	}
 
 	return {

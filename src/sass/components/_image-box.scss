@@ -11,23 +11,43 @@
   @include cover-background;
 
   &.box01 {
-    background-image: $image-box-01;
+    background-image: $image-box-01-sm;
+
+    @media screen and (min-width: $break-tablet) {
+        background-image: $image-box-01;
+    }
   }
 
   &.box02 {
-    background-image: $image-box-02;
+    background-image: $image-box-02-sm;
+
+    @media screen and (min-width: $break-tablet) {
+        background-image: $image-box-02;
+    }
   }
 
   &.box03 {
-    background-image: $image-box-03;
+    background-image: $image-box-03-sm;
+
+    @media screen and (min-width: $break-tablet) {
+        background-image: $image-box-02;
+    }
   }
 
   &.box04 {
-    background-image: $image-box-04;
+    background-image: $image-box-04-sm;
+
+    @media screen and (min-width: $break-tablet) {
+        background-image: $image-box-04;
+    }
   }
 
   &.box05 {
-    background-image: $image-box-05;
+    background-image: $image-box-05-sm;
+
+    @media screen and (min-width: $break-tablet) {
+        background-image: $image-box-05;
+    }
   }
 
 

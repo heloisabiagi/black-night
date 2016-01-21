@@ -13,10 +13,11 @@
 	position: fixed;
 	z-index: 99;
 	top: 100px;
-	margin-left: -45px;
+	@include translateX(-45px);
+
 
 	&.open {
-		margin-left:0;
+		@include translateX(0px);
 	}
 
 	&:after {
@@ -73,6 +74,14 @@
 
 				&.pink {
 					background-color: #E80C7A;
+				}
+
+				&.purple {
+					background-color: #8502c9;
+				}
+
+				&.orange {
+					background-color: #ff7800;
 				}
 			}
 		}

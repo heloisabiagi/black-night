@@ -9,7 +9,11 @@
  	position: relative;
   @include cover-background;
   
- 	background-image: $cover-image;
+ 	background-image: $cover-image-sm;
+
+  @media screen and (min-width: $break-tablet) {
+        background-image: $cover-image;
+    }
 
   .cover-container {
     margin-left: auto;

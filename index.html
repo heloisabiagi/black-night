@@ -7,25 +7,46 @@
   <title>Black Night - One Page Corporate Layout</title>
 
   <meta name="viewport" content="width=device-width,user-scalable=yes">
+  <link href='https://fonts.googleapis.com/css?family=News+Cycle:400,700|Raleway:400,300,500,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="build/style/preloader.min.css">
   <link rel="stylesheet" type="text/css" href="build/style/vendors.min.css">
   <link rel="stylesheet" type="text/css" href="build/style/style-blue.min.css">
-  <!-- color-switcher.min.css - DEMO ONLY -->
+  <!-- ### OTHER AVAILABLE STYLESHEETS
+  <link rel="stylesheet" type="text/css" href="build/style/style-green.min.css">
+  <link rel="stylesheet" type="text/css" href="build/style/style-pink.min.css">
+  <link rel="stylesheet" type="text/css" href="build/style/style-purple.min.css">
+  <link rel="stylesheet" type="text/css" href="build/style/style-orange.min.css">
+  -->
+  <!-- color-switcher.min.css - DEMO PURPOSES ONLY -->
   <link rel="stylesheet" type="text/css" href="build/style/color-switcher.min.css">
-  <link href='https://fonts.googleapis.com/css?family=News+Cycle:400,700|Raleway:400,300,500,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
   <script src="build/js/modernizr.custom.js"></script>
 
 </head>
 <body class="black-night">
+    <!--========= PRELOADER ========= -->
+    <div id="preloader" class="preloader">
+        <div class="loading">
+          <p class="loading-text"> 
+            <span class="loading-message">Loading</span> 
+            <span class="animate-points">
+              <span class="points">...</span>
+            </span>
+          </p>
+      </div>
+    </div>
+    <!-- / COLOR SWITCHER -->
+
+
     <div id="main">
 
-      <!--========= COLOR SWITCHER (DEMO ONLY) ========= -->
-      <div class="color-switcher transition">
+      <!--========= COLOR SWITCHER - DEMO PURPOSES ONLY ========= -->
+      <div id="color-switcher" class="color-switcher transition-fast">
           <div class="colors">
               <ul class="color-list">
                   <li><span class="color-sample blue" data-color="blue">Blue</span></li>
                   <li><span class="color-sample green" data-color="green">Green</span></li>
                   <li><span class="color-sample pink" data-color="pink">Pink</span></li>
-                  <li><span class="color-sample orange" data-color="orange">Orane</span></li>
+                  <li><span class="color-sample orange" data-color="orange">Orange</span></li>
                   <li><span class="color-sample purple" data-color="purple">Purple</span></li>
               </ul>
           </div>
@@ -37,7 +58,7 @@
 
       <!--========= HEADER & MAIN MENU ========= -->
       <header id="main-header">
-          <nav id ="navigation-top" class="navbar navbar-fixed-top transition-fast animated bounceInDown" data-behavior="navShrink">
+          <nav id ="navigation-top" class="navbar navbar-fixed-top transition-fast wow bounceInDown" data-behavior="navShrink">
             <div class="container">
               <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -63,8 +84,9 @@
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Elements <span class="caret"></span></a>
                       <ul class="dropdown-menu">
                         <li><a href="#prices" data-behavior="scrollNavLink">Pricing Table</a></li>
+                        <li><a href="#signup" data-behavior="scrollNavLink">Sign Up Form</a></li>
                         <li><a href="#team" data-behavior="scrollNavLink">Team Members</a></li>
-                        <li><a href="#signup" data-behavior="scrollNavLink">Sign Up</a></li>
+                        <li><a href="#testimonials" data-behavior="scrollNavLink">Testimonials</a></li>
                       </ul>
                     </li>
                     <!-- / DROPDOWN ITEM -->
@@ -82,7 +104,7 @@
       <section class="cover full-dimensions">
           <!-- ### Class "text-box": mandatory for vertical centering and darkening background -->
           <div class="text-box">
-            <div class="cover-container content-row animated bounceInUp">
+            <div class="cover-container content-row wow bounceInUp">
               <!-- 
               ### "cover-title": the big title
               ### "cover-subtitle": the big subtitle
@@ -92,7 +114,7 @@
             </div>
 
             <!-- ### data-behavior="scrollNavLink": an example of scroll navigation on a button element. Pay attention to the 'data-location' attribute -->
-            <button type="button" class="btn btn-flat big-button animated bounceInUp" data-location="#about" data-behavior="scrollNavLink"> Get to Know Us </button>
+            <button type="button" class="btn btn-flat big-button wow bounceInUp" data-location="#about" data-behavior="scrollNavLink"> Get to Know Us </button>
           </div> <!-- /text-box -->
       </section>
       <!-- / COVER -->
@@ -102,10 +124,12 @@
           <div class="split-block-row table-row">
               
             <!-- ### About Us Image. Keeo the "bulb-container" class if you intend to use the original bulbs image -->  
-            <div class="split-block-image table-col">               
-                <div class="text-center bulb-container">
+            <div class="split-block-image bulb-container table-col">   
+
+                <!-- ### About Us Image. Keeo the "bulb-image" class if you intend to use the original bulbs image --> 
+                <div class="text-center bulb-image">
                     <!-- ### Original image exclusive for Black Night Template. The image stretches itself to fit if the text from the 'About Us' section (aside the header) doesn't exceed 450 characters  -->
-                    <img src="build/images/body/original/about-bulbs-flat.png" alt="About Us" />
+                    <img src="build/images/body/original/about-bulbs-flat-v2.png" alt="About Us" />
                 </div>
               
             </div> 
@@ -131,8 +155,8 @@
       <!--========= SERVICES ========= -->
       <section id="services" class="services">
           <div class="container">
-              <!-- ## .data-animation: triggers an animation when the window scroll reaches the element. To see all the animations available, check the Animate.css library website: https://daneden.github.io/animate.css/ -->
-              <div class="row content-row" data-animation="bounceInDown">
+              <!-- ## .wow: triggers an animation when the window scroll reaches the element. To see all the animations available, check the Animate.css library website: https://daneden.github.io/animate.css/ -->
+              <div class="row content-row wow bounceInDown">
                 <div class="col-md-12">
                   <h2 class="title-1"><a name="services">Our Services</a></h2>
                   <h3 class="title-2">What we do best</h3>
@@ -142,7 +166,7 @@
 
 
               <div class="row content-row">
-                <div class="col-sm-6" data-animation="bounceInLeft">
+                <div class="col-sm-6 wow bounceInLeft">
                   <!-- 
                   ### Icon List.
                   ### Class "icon-list-1": white icons within a colored circle.
@@ -153,7 +177,10 @@
                     <li>
                       <div class="icon-box">
                         <span class="list-icon">
-                          <!-- ### This is where you change the icon. See http://getbootstrap.com/components/ for the available options -->
+                          <!-- ### This is where you change the icon. This layout accepts both Glyphicon and Font Awesome icons. 
+                              ### Glyphicon options: http://getbootstrap.com/components
+                              ### Font Aweosme options: http://fortawesome.github.io/Font-Awesome/icons/
+                               -->
                           <i class="glyphicon glyphicon-user" aria-hidden="true"></i>
                         </span>
                       </div>
@@ -191,7 +218,7 @@
                   </ul>
 
                 </div> <!-- /col-sm-6 -->
-                <div class="col-sm-6" data-animation="bounceInRight">
+                <div class="col-sm-6 wow bounceInRight">
                   <ul class="icon-list icon-list-1">
                     <!-- Begins List Icon -->
                     <li>
@@ -237,12 +264,12 @@
               </div> <!-- /row -->
 
               <div class="row content-row">
-                  <div class="col-md-8" data-animation="bounceInLeft">
+                  <div class="col-md-8 wow bounceInLeft" >
                       <h3 class="title-2"> Our values</h3>
                       <p>Cras interdum orci lectus, quis congue nibh consectetur eget. Morbi nulla tortor, ultricies a neque eu, porttitor egestas orci. Nam posuere ultricies metus, in consectetur ligula vestibulum non. Quisque vel nulla metus. Aenean et felis at odio aliquet mattis sed sagittis tellus. Donec vitae metus turpis.</p>
                   </div>
 
-                  <div class="col-md-4" data-animation="bounceInRight">
+                  <div class="col-md-4 wow bounceInRight">
                       <h3 class="title-2"> Why choosing us?</h3>
                       <ul>
                         <li>Cras interdum </li>
@@ -259,8 +286,8 @@
       <!--========= WORKS ========= -->
       <section id="works" class="portfolio">
           <div class="container">
-              <div class="row content-row">
-                <div class="col-md-12" data-animation="bounceInDown">
+              <div class="row content-row wow bounceInDown">
+                <div class="col-md-12">
                   <h2 class="title-1"><a name="works">Our Works</a></h2>
                   <h3 class="title-2">Creativity is our business</h3>
                   <p>Donec convallis ante dui, a egestas libero consectetur sed. Donec et finibus turpis, sed tincidunt lectus. Aliquam et felis rutrum, varius neque ac, rhoncus velit. Sed aliquet massa ac sem congue, et egestas odio ullamcorper. Etiam pellentesque a leo vel accumsan. Aenean scelerisque tempor massa eu volutpat. Nulla ac nulla arcu. Proin consectetur sapien enim, malesuada molestie neque condimentum vel. Sed suscipit iaculis enim. Donec convallis sollicitudin luctus.</p>
@@ -268,7 +295,7 @@
               </div>
               <!-- Filters -->
               <div class="row">
-                <div class="col-md-12" data-animation="bounceInDown">
+                <div class="col-md-12">
                     <div id="portfolio-filters" class="isotope-filters button-group">
                       <span class="filter-by-type">Filter By Type</span>
                       <!-- ### Filter Buttons. Change the data-filter parameter to set the button action. Don't forget the "." (class symbol) -->
@@ -281,9 +308,9 @@
               </div><!-- /row -->
 
               <!-- Works -->
-              <div class="isotope row content-row" data-animation="fadeIn">
+              <div class="isotope row content-row transition-fast">
                   <!-- ### ".element-item": the portfolio container div. Add the 'data-filter' parameters set in the buttons as classes for the element -->
-                  <div class="col-md-4 element-item hover-image photography">
+                  <div class="col-md-4 col-sm-6 element-item hover-image photography">
                       <!-- 
                           ### ".popup-normal": triggers the lightbox for regular images 
                           ### "href": the large version of the image to appear inside a box
@@ -299,7 +326,8 @@
                         </span>                        
                         <!-- ### "hover-image-item": image-container -->
                         <div class="hover-image-item">
-                          <!-- ### minimal image width: 740px for mobile and smaller screens -->
+                          <!-- ### minimal image width: 740px for mobile and smaller screens. If possible, use 4:3 images.
+                           -->
                           <img class="jumper-thumbnail" src="build/images/body/freeimages/rock-1577380-1280x960.jpg" />
                         </div>
                         <!-- ### "portfolio-caption": project caption -->  
@@ -312,7 +340,7 @@
 
                   </div> <!-- /element-item -->
 
-                  <div class="col-md-4 element-item hover-image photography web">
+                  <div class="col-md-4 col-sm-6 element-item hover-image photography web">
                       <a class="popup-normal" href="build/images/body/freeimages/jellyfish-1188258-1280x960.jpg" title="Photography 02" data-description="This is the job description for Photography 02." data-effect="mfp-zoom-in">                        
                       <div class="portfolio-thumbnail">
                         <span class="portfolio-icon hover-zoom">
@@ -328,7 +356,9 @@
                     </a> <!--/ popup-normal -->
                   </div> <!-- /element-item -->
 
-                  <div class="col-md-4 element-item hover-image photography">
+                  <div class="clearfix visible-sm-block"></div>
+
+                  <div class="col-md-4 col-sm-6 element-item hover-image photography">
                       <a class="popup-normal" href="build/images/body/freeimages/mobile-1530816-1280x960.jpg" title="Photography 03" data-description="This is the job description for Photography 03." data-effect="mfp-zoom-in">                          
                       <div class="portfolio-thumbnail">
                         <span class="portfolio-icon hover-zoom">
@@ -344,7 +374,7 @@
                     </a> <!--/ popup-normal -->
                   </div> <!-- /element-item -->
 
-                  <div class="col-md-4 element-item hover-image web">
+                  <div class="col-md-4 col-sm-6 element-item hover-image web">
                       <a class="popup-normal" href="build/images/body/freeimages/recipe-1538714-1280x960.jpg" title="Web 01" data-description="This is the job description for Web 01." data-effect="mfp-zoom-in">                          
                       <div class="portfolio-thumbnail">
                         <span class="portfolio-icon hover-zoom">
@@ -359,9 +389,11 @@
                       </div> <!--portfolio-thumbnail-->
                     </a> <!--/ popup-normal -->
 
+                  <div class="clearfix visible-md-block"></div>  
+
                   </div> <!-- /element-item -->
 
-                  <div class="col-md-4 element-item hover-image web">
+                  <div class="col-md-4 col-sm-6 element-item hover-image web">
                       <a class="popup-normal" href="build/images/body/freeimages/business-1239202-1280x960.jpg" title="Web 02" data-description="This is the job description for Web 02." data-effect="mfp-zoom-in">                        
                       <div class="portfolio-thumbnail">
                         <span class="portfolio-icon hover-zoom">
@@ -377,7 +409,7 @@
                     </a> <!--/ popup-normal -->
 
                   </div> <!-- /element-item -->
-                  <div class="col-sm-12 col-md-4 element-item hover-image video">
+                  <div class="col-md-4 col-sm-6 element-item hover-image video">
                       <!-- 
                           ### ".popup-video": triggers the lightbox for video iframes 
                           ### "href": the video URL
@@ -394,7 +426,7 @@
                         <!-- "hover-image-item": image-container -->
                         <div class="hover-image-item">
                           <!-- minimal image width: 740px for mobile and smaller screens -->
-                          <img class="jumper-thumbnail" src="build/images/body/freeimages/mobile-1530816-1280x960.jpg" />
+                          <img class="jumper-thumbnail" src="build/images/body/original/video.jpg" />
                         </div>
                         <!-- "portfolio-caption": project caption -->  
                         <div class="portfolio-caption">
@@ -412,10 +444,10 @@
       <!-- / WORKS -->
 
       <!--========= QUOTE========= -->
-      <section class="image-box box01 full-dimensions">
+      <section id="quote-section" class="image-box box01 full-dimensions">
         <!-- ### Class "text-box": mandatory for vertical centering and darkening background -->
         <div class="text-box">
-            <p class="quote" data-animation="fadeIn">
+            <p class="quote wow fadeIn">
               <span class="quote-icon"><i class="fa fa-quote-left"></i></span> Innovation distinguishes between a leader and a follower <span class="quote-icon"><i class="fa fa-quote-right"></i></span> 
               <span class="quote-author"> - Steve Jobs - </span>
             </p>
@@ -427,13 +459,13 @@
       <section id="prices" class="prices">
           <div class="container">
             <div class="row content-row">
-                <div class="col-md-12" data-animation="bounceInDown">
+                <div class="col-md-12 wow bounceInDown">
                   <h2 class="title-1"><a name="prices">Our Prices</a></h2>
                   <p>Lorem ipsum dolor pellentesque sinis ultra. Ipsum dolor pellentesque sinis ultra. Isum dolor pellentesque sinis ultra. Sinis ultra. Ipsum dolor pellentesque sinis ultra. Isum dolor pellentesque sinis ultra.</p>
                 </div>
             </div>
             <div class="row content-row">
-              <div class="col-sm-4" data-animation="bounceInLeft">
+              <div class="col-sm-4 wow bounceInLeft">
                 <!-- ### Begins Table Item -->
                   <div class="pricing-item">
                     <div class="pricing-header">
@@ -458,7 +490,7 @@
                   <!-- Ends Table Item -->
               </div> <!-- /col-sm-4 -->
 
-              <div class="col-sm-4" data-animation="bounceInTop">
+              <div class="col-sm-4 wow bounceInTop">
                   <!-- ### Featured Table Item - add "featured" class for the featured item (different colours, bigger font and box) -->
                   <div class="pricing-item featured">
                     <div class="pricing-header">
@@ -480,7 +512,7 @@
                   <!-- Ends Table Item -->
               </div> <!-- /col-sm-4 -->
 
-              <div class="col-sm-4" data-animation="bounceInRight">
+              <div class="col-sm-4 wow bounceInRight">
                   <!-- Begins Table Item -->
                   <div class="pricing-item">
                     <div class="pricing-header">
@@ -511,8 +543,8 @@
       <section id="signup" class="image-box box02 full-dimensions">
           <!-- Class "text-box": mandatory for vertical centering and darkening background -->
           <div class="text-box">
-                <h2 class="title-1" data-animation="fadeIn"><a name="signup">Subscribe to our newsletter</a></h2>
-                  <form class="fast-form" id="newsletter-form" name="newsletter_form" data-animation="fadeIn">
+                <h2 class="title-1 wow fadeIn"><a name="signup">Subscribe to our newsletter</a></h2>
+                  <form class="fast-form wow fadeIn" id="newsletter-form" name="newsletter_form">
                       <input type="email" name="newsletter_email" class="fast-form-field" placeholder="Your email here"></input>
                       <input type="submit" class="btn btn-flat fast-form-submit" value="Sign Up"></input>
                   </form>
@@ -523,7 +555,7 @@
       <!--========= TEAM MEMBERS ========= -->
       <section id="team" class="team">
           <div class="container">
-            <div class="row content-row" data-animation="bounceInDown">
+            <div class="row content-row wow bounceInDown">
                 <div class="col-md-12">
                   <h2 class="title-1"><a name="team">Our Team</a></h2>
                   <p>Lorem ipsum dolor pellentesque sinis ultra. Ipsum dolor pellentesque sinis ultra. Isum dolor pellentesque sinis ultra. Sinis ultra. Ipsum dolor pellentesque sinis ultra. Isum dolor pellentesque sinis ultra.</p>
@@ -531,7 +563,7 @@
               </div> <!-- /row -->
 
             <div class="row content-row">
-              <div class="col-md-3 col-sm-6" data-animation="bounceInLeft">
+              <div class="col-md-3 col-sm-6 wow bounceInLeft">
                   <!-- ### Begins Team Member-->
                   <div class="team-member hover-image">
                     <div class="member-thumbnail hover-image-item">
@@ -555,7 +587,7 @@
                   </div>
               </div> <!-- /col-md-3 -->
 
-              <div class="col-md-3 col-sm-6" data-animation="bounceInLeft">
+              <div class="col-md-3 col-sm-6 wow bounceInLeft">
                   <div class="team-member hover-image">
                     <div class="member-thumbnail hover-image-item"><img src="build/images/body/freeimages/man-1153421-1280x1280.jpg" alt="Joseph Doe" class="member-pic" /></div>
                     <div class="databox member-data">
@@ -576,7 +608,7 @@
 
               <div class="clearfix visible-sm-block"></div>
 
-              <div class="col-md-3 col-sm-6" data-animation="bounceInRight">
+              <div class="col-md-3 col-sm-6 wow bounceInRight">
                   <div class="team-member hover-image">
                     <div class="member-thumbnail hover-image-item"><img src="build/images/body/freeimages/piecha-1487378-1279x1278.jpg" alt="Jane Doe" class="member-pic" /></div>
                     <div class="databox member-data">
@@ -595,7 +627,7 @@
                   </div>
               </div> <!-- /col-md-3 -->
 
-              <div class="col-md-3 col-sm-6" data-animation="bounceInRight">
+              <div class="col-md-3 col-sm-6 wow bounceInRight">
                   <div class="team-member hover-image">
                     <div class="member-thumbnail hover-image-item"><img src="build/images/body/freeimages/sam-close-up-1239146-1280x1280.jpg" alt="Jane Smith" class="member-pic" /></div>
                     <div class="databox member-data">
@@ -620,12 +652,52 @@
       <!-- / TEAM MEMBERS -->
 
       <!--========= TESTIMONIALS ========= -->
-      <section id="testimonials" class="carousel">
-          <div class="testimonials-wrapper container">
+      <section id="testimonials" class="carousel-testimonials">
+          <div class="testimonials-wrapper container wow fadeIn">
             <div id="owl-testimonials" class="owl-carousel">
-              <div class="item">"A great company to work with"</div>
-              <div class="item">"Very successful partners"</div>
-              <div class="item">"We were really amazed with Black Night's competence and skills."</div>
+              <!-- ### .testimonial-item -->
+              <div class="item testimonial-item">
+                <div class="testimonial-sentence">
+                  <h3 class="title-3 testimonial-title">"Magnific work"</h3>
+                  <p>"Ut tristique orci ipsum, vitae volutpat leo pellentesque at. Cras dapibus lorem id purus condimentum aliquam. Donec sit amet dictum eros. Phasellus ut ultricies diam. Aenean eu dolor et purus mollis rhoncus. Sed vehicula nulla vel sapien porta porttitor" </p>
+                </div>
+
+                <div class="testimonial-credits">
+                    <span class="testimonial-quote"><i class="fa fa-quote-left"></i></span>
+                    <span class="testimonial-author"> Sarah Riley, CEO of Profnet</span>
+                </div>
+
+              </div>
+              <!-- /testimonial-item -->
+
+              <!-- ### .testimonial-item -->
+              <div class="item testimonial-item">
+                <div class="testimonial-sentence">
+                  <h3 class="title-3 testimonial-title">"Creative and innovative team"</h3>
+                  <p>"Ut tristique orci ipsum, vitae volutpat leo pellentesque at. Cras dapibus lorem id purus condimentum aliquam. Donec sit amet dictum eros. Phasellus ut ultricies diam. Aenean eu dolor et purus mollis rhoncus. Sed vehicula nulla vel sapien porta porttitor" </p>
+                </div>
+
+                <div class="testimonial-credits">
+                    <span class="testimonial-quote"><i class="fa fa-quote-left"></i></span>
+                    <span class="testimonial-author"> John Smith, CEO of High Tech</span>
+                </div>
+
+              </div>
+
+              <!-- ### .testimonial-item -->
+              <div class="item testimonial-item">
+                <div class="testimonial-sentence">
+                  <h3 class="title-3 testimonial-title">"Great professionals and people"</h3>
+                  <p>"Ut tristique orci ipsum, vitae volutpat leo pellentesque at. Cras dapibus lorem id purus condimentum aliquam. Donec sit amet dictum eros. Phasellus ut ultricies diam. Aenean eu dolor et purus mollis rhoncus. Sed vehicula nulla vel sapien porta porttitor" </p>
+                </div>
+
+                <div class="testimonial-credits">
+                    <span class="testimonial-quote"><i class="fa fa-quote-left"></i></span>
+                    <span class="testimonial-author"> Jane Smith, CEO of CrowTech</span>
+                </div>
+
+              </div>
+              
             </div>
           </div>
       </section>
@@ -634,7 +706,7 @@
       <!--========= CONTACT ========= -->
       <section id="contact">
           <div class="container">
-              <div class="row content-row" data-animation="bounceInDown">
+              <div class="row content-row wow BounceInDown">
                 <div class="col-md-12">
                   <h2 class="title-1"><a name="contact">Contact</a></h2>
                   <p>Lorem ipsum dolor pellentesque sinis ultra. Ipsum dolor pellentesque sinis ultra. Isum dolor pellentesque sinis ultra. Sinis ultra. Ipsum dolor pellentesque sinis ultra. Isum dolor pellentesque sinis ultra.</p>
@@ -642,8 +714,8 @@
               </div> <!-- /row -->
 
               <div class="row content-row">
-                  <div class="col-md-8" data-animation="bounceInLeft">
-                      <form id="contact-form" class="contact-form">
+                  <div class="col-md-8 wow bounceInLeft">
+                      <form id="contact-form" class="contact-form" action="mailer.php">
                         <input type="text" placeholder="Your name" name="contact_name"></input>
                         <input type="text" placeholder="Your email" name="contact_email"></input>
                         <textarea placeholder="Message" name="contact_message" rows="10"></textarea>
@@ -651,7 +723,7 @@
                       </form>
                   </div>
 
-                  <div class="col-md-4" data-animation="bounceInRight">
+                  <div class="col-md-4 wow bounceInRight">
                       <h3 class="title-2"> <i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i> Find Us </h3>
                       
                       <p class="address">
@@ -669,16 +741,39 @@
 
           </div><!-- /container -->
       </section>
-      <!-- / CONTACT -->      
+      <!-- / CONTACT -->
 
-      <footer></footer>
+      <!--========= CONTACT ========= -->
+      <section id="social-contact" class="social-contact">
+          <div class="container">
+              <ul class="social-list inline-list wow fadeIn">
+                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                  <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+              </ul>
+          </div>
+      </section>
+      <!-- / SOCIAL -->
+
+      <!--========= FOOTER ========= -->
+      <section id="page-footer" class="page-footer">
+          <footer>
+              <div class="container">
+                <p><i class="fa fa-copyright"></i> Copyright 2016. <a href="http://www.heloisabiagi.com" target="_blank">Heloisa Biagi</a>. All Rights Reserved</p>
+              </div>
+          </footer>
+      </section>
+      <!-- / FOOTER -->
+
     </div> <!-- /main -->
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="build/js/vendor.js"></script>
 <script src="build/js/settings.js"></script>
 <script src="build/js/scripts.min.js"></script>
-<!-- color-switcher.js: demo-only -->
+<!-- color-switcher.js: DEMO PURPOSES ONLY -->
 <script src="build/js/color-switcher.js"></script>
 
 </body>

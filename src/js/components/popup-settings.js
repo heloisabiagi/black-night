@@ -12,7 +12,6 @@ blackNight.popupSettings = (function() {
                 _html += '</div<';
 
                 return _html;
-		  		// return '<strong>' + item.el.attr('title') + '</strong>' + '<small>' + item.el.attr('data-description') + '</small>';
 		  	},
 		  	markup: '<div class="mfp-figure">'+
             '<div class="mfp-close"></div>'+
@@ -26,7 +25,11 @@ blackNight.popupSettings = (function() {
 		  gallery: {
 				enabled: true,
 				navigateByImgClick: true,
-				preload: [0,1]
+				preload: [0,1],
+				arrowMarkup: '<button title="%title%" type="button" class="btn-flat btn-nav arrow-%dir% mfp-arrow mfp-arrow-%dir%"><span class="glyphicon glyphicon-menu-%dir%" aria-hidden="true"></span></button>',
+				tPrev: blackNight.popupPrevMessage, 
+			  	tNext: blackNight.popupNextMessage, 
+			  	tCounter: '<span class="mfp-counter">%curr% '+ blackNight.popupCounterMessage +' %total%</span>' 
 			},
 		  callbacks: {
 		    beforeOpen: function() {

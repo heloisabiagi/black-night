@@ -4,15 +4,15 @@
 
 .black-night {
 	button.mfp-close {
-		@include border-radius(50px);
+		// @include border-radius(50px);
 		position: absolute;
 	    right: 0;
 	    width: 30px;
 	    height: 30px;
 	    line-height: 30px;
 	    background: $main-color;
-	    top: 35px;
-	    right: -5px;
+	    top: 40px;
+	    right: 0;
 	    opacity: 1;
 	    @include transition(all 100ms ease-in);
 
@@ -32,6 +32,28 @@
 	    .mfp-title {
 	    	color: $dark-text;
 	    }
+
+	    .mfp-counter {
+	    	color: $dark-text;
+	    }
+	}
+
+	/* Custom nav button */
+	.mfp-arrow-left:before,
+	.mfp-arrow-left:after,
+	.mfp-arrow-right:before,
+	.mfp-arrow-right:after {
+		display: none;
+	}
+
+	button.mfp-arrow {
+		opacity: 1;
+		background: $main-color;
+
+		 &:hover {
+		    color: #FFF;
+		    background-color: $darker-main-color;
+		  }
 	}
 
 	.mfp-figure small {

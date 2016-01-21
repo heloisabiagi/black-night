@@ -61,6 +61,26 @@ button, input[type="submit"] {
   }
 }
 
+.btn-nav {
+    width: 30px;
+    height: 100px;
+    line-height: 100px;
+
+    &.arrow-left, &.arrow-right {
+      position: absolute;
+      top: 50%;
+      margin-top: -50px;
+    }
+
+    &.arrow-left {
+      left:0;
+    }
+
+    &.arrow-right {
+      right: 0;
+    }
+}
+
 .big-button {
   @media screen and (min-width: $break-tablet) {
     font-size: 20px;    

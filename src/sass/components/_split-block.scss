@@ -6,18 +6,22 @@
 	position: relative;
 	overflow: hidden;
 	padding: 0;
-	height: 300px;
-	vertical-align: bottom;
+	vertical-align: middle;
 
 	background-color: $lighter-main-color; // Old browsers
-	@include background-image(linear-gradient(left, $darker-main-color 0%, $lighter-main-color 50%, $darker-main-color 100%));
+	@include background-image(linear-gradient(left, $darker-main-color 0%, darken($lighter-main-color, 6%) 30%, darken($lighter-main-color, 4%) 42%, darken($lighter-main-color, 2%) 46%, $lighter-main-color 48%, $lighter-main-color 50%, $lighter-main-color 52%, darken($lighter-main-color, 2%) 54%, darken($lighter-main-color, 4%) 58%, darken($lighter-main-color, 6%) 70%, $darker-main-color 100%));
 
 
-	 @media screen and (min-width: $break-tablet) {
-	    height: 400px;
+	  &.bulb-container {
+	  	height: 300px;
+	  	vertical-align: bottom;
+	  	
+	  	@media screen and (min-width: $break-tablet) {
+		    height: 400px;
+		  }
 	  }
 
-	  .bulb-container {
+	  .bulb-image {
 	  		position: absolute;
 	  		bottom: 0;
 	  		left: 0;

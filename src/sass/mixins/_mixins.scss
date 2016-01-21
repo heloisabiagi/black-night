@@ -22,10 +22,14 @@
 }
 
 @mixin cover-background {
-  background-attachment: fixed;
-  background-repeat: no-repeat; 
+  @media screen and (min-width: 620px) {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    @include background-size('cover');
+  }
+
+  @include background-size(100% 100%);
   background-position: center center;
-  @include background-size('cover');
 }
 
 @mixin animation-name($name) {

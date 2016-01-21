@@ -26,8 +26,19 @@ $base-spacing: 24px;
 
 // IMAGES
 $cover-image: image-url('bg/freeimages/city-1532248-1600x1200.jpg'); // 'Cover' (Home) section background
+$cover-image-sm: image-url('bg/freeimages/city-1532248-620x465.jpg'); // 'Cover' (Home) for small devices
+
 $image-box-01: image-url('bg/freeimages/gallery-1526795.jpg'); // 'Quote' section background 
+$image-box-01-sm: image-url('bg/freeimages/gallery-1526795-620x400.jpg'); // 'Quote' for small devices
+
 $image-box-02: image-url('bg/freeimages/high-rise-1234517-1599x797.jpg'); ; // Newsletter section
+$image-box-02-sm: image-url('bg/freeimages/high-rise-1234517-620x310.jpg'); ; // Newsletter for small devices
+
 $image-box-03: "";
+$image-box-03-sm: "";
+
 $image-box-04: "";
-$image-box-05: "";    
+$image-box-04-sm: "";
+
+$image-box-05: "";
+$image-box-05-sm: "";    

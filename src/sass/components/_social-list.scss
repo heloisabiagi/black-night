@@ -1,0 +1,27 @@
+/**
+	_social-list: styles for the Social List (list of Social Media Icons after the Contact Form)
+*/
+
+.social-contact {
+	text-align: center;
+}
+
+.social-list {
+	display: inline-block;
+	position: relative;
+	font-size: 2em;
+	margin: $base-spacing/2 auto 0 auto;
+
+	li {
+		margin-right: 24px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&:hover {
+			color: $main-color;
+		}
+	}
+	
+}
