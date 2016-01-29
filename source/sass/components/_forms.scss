@@ -1,0 +1,177 @@
+/**
+  _forms: this file contain style declarations for the form elements, Newsletter and Contact forms
+*/
+
+input, select, textarea {
+  color: #333;
+}
+
+input, textarea {
+    padding: 0;
+    margin: 0;
+    height: 48px;
+    line-height: 48px;
+    font-size: 0.9em;  
+    border: none;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+   width: 100%; 
+   text-indent: 12px;
+}
+
+button, input[type="submit"] {
+  font-family: "News Cycle", sans-serif;
+  text-transform: uppercase;
+}
+
+::-webkit-input-placeholder { 
+    color: $placeholder;
+  }
+
+  :-moz-placeholder { 
+     color: $placeholder;
+  }
+
+  ::-moz-placeholder { 
+     color: $placeholder;
+  }
+
+  :-ms-input-placeholder { 
+     color: $placeholder;
+  }
+
+.btn-flat {
+  background-color: $main-color;
+  color: #FFF;
+  border: none;
+  border-radius: 0;
+  font-weight: 700;
+  @include transition(all 100ms ease-in);
+
+  &:hover {
+    color: #FFF;
+    background-color: $darker-main-color;
+  }
+
+  &:active {
+    color: #FFF;
+  }
+}
+
+.mfp-container .btn-nav {
+    @include box-shadow(0px 0px 50px -5px rgba(0, 0, 0, 0.5));
+}
+
+.btn-nav {
+    width: 30px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+
+    .glyphicon {
+      position: absolute;
+      top: 40px;
+      left: 7px;
+    }
+
+    &.arrow-left, &.arrow-right {
+      position: absolute;
+      top: 50%;
+      margin-top: -50px;
+    }
+
+    &.arrow-left {
+      left:0;
+    }
+
+    &.arrow-right {
+      right: 0;
+    }
+}
+
+.big-button {
+  @media screen and (min-width: $break-tablet) {
+    font-size: 20px;    
+    padding: 10px 20px;
+  }
+
+  font-size: 18px;
+  padding: 9px 18px;
+} 
+
+/** FAST FORM: one field, submit button (Newsletter, Search etc) */
+
+.fast-form {
+    max-width: 480px;
+    position: relative;
+    margin: 0 auto;
+
+  .fast-form-field {
+      padding-right: 100px;
+      @include box-sizing(border-box);
+  }
+
+  .fast-form-submit {
+      width: 96px;
+      text-align: center;
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 1em;
+  }
+
+}
+
+/** CONTACT FORM */
+
+.contact-form {
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    font-size: 0.9em; 
+    padding-left: 0px;
+  }
+
+  input[type="text"],
+  input[type="email"] {
+      height: 60px;
+      font-size: 0.9em; 
+  }
+
+  input[type="submit"] {
+      min-width: 30%;
+  }
+
+  textarea {
+      min-height: 200px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+      color: $dark-text;
+      background-color: $lightest-gray;
+      margin-bottom: 6px;
+  }
+
+}
+
+/* FORM BEHAVIOR */
+.black-night {
+  .form-control {
+    @include border-radius(0px);
+    margin-bottom: 0;
+  }
+
+  .has-error .form-control {
+    border-width: 2px;
+  }
+
+  .alert {
+    @include border-radius(0px);
+  }
+}

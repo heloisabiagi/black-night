@@ -1,0 +1,21 @@
+/**
+  _quote: the quote text. To change the background and Quotes section appearance, you might as well check the ".text-box" at the "_general-styles" file.
+*/
+
+.quote { 
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+
+  .quote-icon {
+      color: $main-color;
+    }
+
+  .quote-author {
+      display: block;
+      margin-top: $base-spacing;
+      text-transform: none;
+      font-weight: none;
+      font-size: 0.5em;
+    }  
+}

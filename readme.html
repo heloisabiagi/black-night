@@ -8,10 +8,10 @@
 
   <meta name="viewport" content="width=device-width,user-scalable=yes">
   <link href='https://fonts.googleapis.com/css?family=News+Cycle:400,700|Raleway:400,300,500,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" type="text/css" href="build/style/vendors.min.css">
-  <link rel="stylesheet" type="text/css" href="build/style/style-blue.min.css">
-  <link rel="stylesheet" type="text/css" href="build/style/documentation.min.css">
-  <script src="build/js/modernizr.custom.js"></script>
+  <link rel="stylesheet" type="text/css" href="assets/style/vendors.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/style/style-blue.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/style/documentation.min.css">
+  <script src="assets/js/modernizr.custom.js"></script>
 
 </head>
 <body class="black-night">
@@ -21,74 +21,107 @@
               <div class="row content-row">
                   <div class="col-md-12">
                       <h1 class="title-1">Black Night - Documentation</h1>
-                      <p>Thanks for purchasing Black Night. You've just purchased a modern and well structured theme. This file will guide you through the theme's structure and help you to use it and customize it as you wish. Here's a list of contents:</p>
                   </div>
               </div> <!--row-->    
-              <div class="row content-row">    
-                  <div class="col-md-6"> 
+              <div class="row content-row">          
+                  <div class="col-md-8">
+                      <div class="content-row">
+                        <p>Thanks for purchasing Black Night. This document will provide usage instructions so you can enjoy Black Night theme at its best. If you find any errors or bugs, please contact us here.</p>
+                      </div>
+
+                      <div class="content-row">  
+                        <h2 class="title-2"><a name="step-1">1. Starting point - Installing, Files and Folders</a></h2>
+                        <p>Once you've downloaded and unzipped the theme, you'll find a bunch of files and folders. The main files of the theme are <code>demo-original.html</code>, <code>demo-alternate.html</code>, which contain the source code for the theme's pages and can be customized with your own data. The <code>assets</code> folder contains the styles, scripts, fonts, images and other sources referenced in the html files.</p> 
+
+                        <p><strong>The only files/folders needed to be put in production for the theme to work properly are the html file that contains your sites's data and the 'assets' folder</strong>. All the other files and folders are settings files with no need to be put in production (unless you intend to use 'Grunt.js' or SASS compilers in production environment), and will be explored later in this tutorial.</p>
+
+                        <p>If you intend to use 'Grunt.js', you have to install the modules listed in the <code>package.json</code> file. To command line and 'npm' users, it's a pretty simple proccess:</p>
+                        <pre>npm i</pre>
+                        <p>A new folder, <code>node_modules</code>, will be installed in the theme's directory.</p>
+                        <p>Next, let's have a look at the <code>assets</code> and <code>source</code> folders in order to understand how to make a better use of the theme's funcionalities.</p>
+                      </div>
+
+                      <div class="content-row">
+                        <h3 class="title-3"><a name="step-1-1">1.1 The 'assets' folder: files, images and fonts</a></h3>
+                        <p>As mentioned before, the <code>assets</code> folder is the main folder which contains all the files called inside the html files. If you use 'Grunt.js' or 'SASS/Compass', this is also the final destination for the compiled files. Once you open the folder, you can find the following subfolders: 'fonts', 'images', 'inc', 'js' and 'styles'. </p>
+                        <p>The <code>fonts</code> folder contains the <strong>icon fonts</strong> used in this theme. The theme fonts itself are Google fonts downloaded directly from the Google Fonts api. This theme supports two icon fonts libraries: 'Glyphicon', default to Bootstrap, and 'Font Awesome'.</p>
+                        <p>The <code>images</code> folder contains the images used in this theme, which are split in 2 directories: 'bg' (for CSS background images) and 'body' (for images used in the html files). The 'original' folders contain original artwork for this theme, and the 'freeimages' contain images from 'Freeimages.com'. <strong>In order to use the images from Freeimages.com, you need to create an account and get your own copy of the desired images. The ones used in this layout are for demonstration purposes only.</strong></p>
+                        <p>The <code>inc</code> folder contains some special files, like the 'mailer.php' called through AJAX to send emails.</p>
+                        <p>The <code>js</code> and <code>style</code> folders contain the Javascript and CSS files. Both folders have the original and the minified versions of the files, and it's the <strong>minified</strong> versions that are used in the theme. You can change the original files, however, if you wish to use them instead of the minified version, you have to replace the calls in the html files.</p>
+                      </div>
+
+                      <div class="content-row">
+                        <h3 class="title-3"><a name="step-1-2">1.2 The 'source' folder and 'Gruntfile.js'</a></h3>
+                        <p></p>
+                      </div>
+
+                      <div class="content-row">
+                        <h2 class="title-2"><a name="step-2">2. Theme features</a></h2>
+                        <p></p>
+                      </div>
+
+                      <div class="content-row">
+                        <h3 class="title-3"><a name="step-2-1">2.1 Color schemes</a></h3>
+                        <p>Black Night has 5 built in color schemes ready to use: blue, green, orange, pink and purple. In order to change the theme color, you have to locate the default stylesheet (blue) in your html file:</p>
+                        <pre>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;assets/style/style-blue.min.css&quot;&gt;</pre>
+                        
+                        <p>And change it for the desired color scheme:</p>
+                        
+                        <pre>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;assets/style/style-pink.min.css&quot;&gt;</pre>
+
+                        <p>If you're using 'SASS/Compass', you can create infinite possibilities of color schemes for your site. All you need to do is to go to the <code>source/sass</code> folder, open any of the <code>style-*.scss</code> files, save it again with the desired color name and then, inside the file, replace the <code>$main-color</code> variable with your new desired color. The variations (darker and lighter) are automatically generated, but you still can set them manually if you wish by changing the <code>$darker-main-color</code> and <code>$lighter-main-color</code> variables with new values. Once you compile this brand new file (that will be generated at the <code>assets</code> folder, don't forget to replace the stylesheet code in your html file.</p>
+                      </div>
+
+                      <div class="content-row">
+                        <h3 class="title-3"><a name="step-2-1">2.1 Plugins</a></h3>
+                        <p>In order to enhance user experience, Black Night makes use of the following Javascript plugins:</p>
+                        <ul>
+                          <li><strong>ScrollTo:</strong> makes scroll navigation easier.</li>  
+                          <li><strong>Isotope:</strong> a fancy way to display and filter data. Used in the Portfolio section.</li>
+                          <li><strong>Magnific Popup:</strong> responsive lightbox plugin. Also used in the Portfolio section.</li>
+                          <li><strong>Owl Carousel:</strong> fancy responsive carousel. You can find it in action at the Testimonials section.</li>
+                          <li><strong>Wow:</strong> a plugin to reveal animations during scrolling.</li>
+                        </ul>
+                        <p>The final compiled version of these libraries ('vendors.js' and 'vendors.min.js') can be found at the 'assets' folder, while the original individual files are located at the <code>source/js/vendors</code> directory.</p>
+                      </div>
+                  </div>
+
+                  <div class="col-md-4"> 
                       <div class="table-of-contents">
                         <ol>
-                            <li><a href="#step-1">Starting Point - Installing, Files and Folders</a>
+                            <li><a href="#step-1">Starting Point - Installing and Files</a>
                               <ol>  
-                                  <li><a href="#step-1-1"><strong>Gruntfile.js</strong> and the <strong>src folder</strong> - for developers familiar with Grunt.js and SASS</a>
-                                      <ol>
-                                          <li>Styles</li>
-                                          <li>Scripts</li>
-                                          <li>Fonts</li>
-                                          <li>Images</li>
-                                          <li>The Gruntfile.js</li>
-                                      </ol>
+                                  <li><a href="#step-1-1"><strong>Assets</strong> folder: main files </a>
                                   </li>
-                                  <li>The <strong>build folder</strong> - compiled files for clients and developers unfamiliar with Grunt.js
-                                      <ol>
-                                          <li>Styles</li>
-                                          <li>Scripts</li>
-                                          <li>Fonts</li>
-                                          <li>Images</li>
-                                      </ol>
+                                  <li><a href="#step-1-2"><strong>Source</strong> folder and <strong>Gruntfile.js</strong></a>
                                   </li>
                               </ol>
                             </li>
-                            <li>Theme sections
+                            <li>Theme features
                               <ol>
                                   <li>General instructions</li>
-                                  <li>Main menu</li>
-                                  <li>Cover</li>
-                                  <li>About Us</li>
-                                  <li>Our Services</li>
-                                  <li>Our Works</li>
-                                  <li>Quote</li>
-                                  <li>Pricing Table</li>
-                                  <li>Newsletter</li>
-                                  <li>Our Team</li>
-                                  <li>Testimonials</li>
-                                  <li>Contact Form</li>
+                                  <li>Color schemes</li>
+                                  <li>Plugins</li>
+                                  <li>Javascript Settings</li>
+                                  <li>Theme coding</li>
+                                  <li>Image backgrounds</li>
+                                  <li>Alternate styling: About Us</li>
+                                  <li>Alternate styling: Services</li>
                               </ol>
                             </li> 
                         </ol>
                       </div>
-                  </div>        
-              </div> <!--row-->
-              <div class="row content-row">
-                  <div class="col-md-12">
-                      <h2 class="title-2"><a name="step-1">1. Starting point - Installing, Files and Folders</a></h2>
-                      <p>So, you've just unzipped your brand new <strong>Black Night</strong>, and you've got a bunch of files and folders: some .html files, a file named <strong>package.json</strong>, another file named <strong>Gruntfile.js</strong>, and folders <strong>config</strong>, <strong>src</strong> and <strong>build</strong>. The .html files contains the theme demos, and both the <strong>package.json</strong> and the <strong>Gruntfile.js</strong> are destinated to the clients who'll use the Front-End task automator Grunt.js. If you don't know a thing about Grunt.js, no problem, just skip the next lines.</p>
-                      <p>If you intend to use Grunt.js, you probably know what to do next: you need to install the modules. They're specified at the <strong>package.json</strong> file and if you use <strong>npm</strong>, all you have to do is:</p>
-                      <pre>npm i</pre>
-                      <p>And you're now enabled to use the Grunt.js tasks. For further Grunt.js instructions, read the <strong>The Gruntfile.js</strong> section.</p>
-                      <p>Moving on, the folders: the <strong>config</strong> contains a json file with settings for those who will use Grunt.js. Then, we have the <strong>src</strong>, with the not compiled versions of SASS and Javascript files. If you're a developer who knows how to work with Grunt.js and SASS, this folder contains the source files that will be later compiled, concatenated and minified. And last, we have the <strong>build</strong> folder, which contains the final versions of the files (compiled and minified versions of SASS and Javascript files) that are referenced in the .html files, as well as the images and fonts used in this layout (though the <strong>src</strong> folder also contains copies of the images and fonts, the .html files point to the ones in the <strong>build</strong> folder).</p>
-                      <p>Next, </p>
-                  </div>
-              </div>
+                  </div>  
+              </div> <!--row -->
           </div>
       </section>
 
     </div> <!-- /main -->
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="build/js/vendor.js"></script>
-<script src="build/js/settings.js"></script>
-<script src="build/js/scripts.min.js"></script>
+<script src="assets/js/vendor.js"></script>
+<script src="assets/js/settings.js"></script>
+<script src="assets/js/scripts.min.js"></script>
 
 </body>
 </html>

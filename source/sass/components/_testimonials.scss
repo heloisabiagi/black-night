@@ -1,0 +1,70 @@
+/**
+  _testimonials: this file contain style declarations for the Testimonials, a section with a carousel full of clients' testimonials
+*/
+
+#testimonials {	
+
+  .testimonials-wrapper {
+      text-align: center;
+      overflow: hidden;
+  }
+
+  .testimonial-item {
+  		margin: 0 60px;
+      position: relative;
+
+  		@media screen and (min-width:$break-large) {
+  			margin: 0 100px;
+  		}
+  }
+
+  .testimonial-sentence {
+
+  		@include box-sizing(border-box);
+  		margin-bottom: $base-spacing;
+
+	  	.testimonial-title {
+	  		margin-bottom: $base-spacing*2;
+
+	  		&:after {
+				content: "";
+				display: block;
+				width: 50px;
+				height: 1px;
+				background-color: $main-color;
+				left: 50%;
+				margin-left: -25px;
+				position: absolute;
+				margin-top: 15px;
+			}
+	  	}
+  }
+
+  .testimonial-credits {
+  		display: inline-block;
+      text-align: center;
+
+		.testimonial-quotes {
+			color: $main-color;
+			font-size: 1em;
+			display: inline-block;
+			margin-right: 12px;
+      width: 40px;
+      height: 40px;
+      @include border-radius(60px);
+      border: solid 2px $main-color;
+      line-height: 35px;
+		}
+
+		.testimonial-author {
+			  font-size: 0.8em;
+  			font-weight: bold;
+  			display: block;
+  			margin-top: $base-spacing;
+		}
+  }
+
+  #owl-testimonials {
+    overflow: hidden;
+  }
+}

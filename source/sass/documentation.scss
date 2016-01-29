@@ -1,0 +1,65 @@
+// Mixins
+@import "globals/globals";
+
+// Blue colors
+$main-color: #00a1c4;
+$darker-main-color: darken($main-color, 10%);
+$lighter-main-color: lighten($main-color, 30%);
+
+/**
+  _documentation: README file styles
+*/
+
+.documentation {
+  
+  code {
+    color: $main-color;
+    background-color: lighten($medium-gray, 10%);
+  }
+
+  pre {
+    background-color: lighten($medium-gray, 10%);
+    border: none;
+    @include border-radius(0);
+    color: #FFF;
+    margin-bottom: $base-spacing;
+  }
+
+  .table-of-contents {
+    padding: $base-spacing/2;
+    border: solid 1px #FFF;
+  }    
+
+  ol {
+    list-style-type: none;
+    counter-reset: item;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  li {
+    display: table;
+    counter-increment: item;
+    margin-bottom: $base-spacing/2;
+  }
+
+  li:before {
+      content: counters(item, ".") ". ";
+      display: table-cell;
+      padding-right: 0.6em;    
+  }
+
+  li li {
+      margin: 0;
+  }
+
+  li li li {
+      margn-left: 20px;
+  }
+
+  li li:before {
+      content: counters(item, ".") " ";
+  }
+
+}

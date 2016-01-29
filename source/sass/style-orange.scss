@@ -1,0 +1,10 @@
+// Mixins
+@import "globals/globals";
+
+// Orange colors
+$main-color: #ff7800;
+$darker-main-color: darken($main-color, 10%);
+$lighter-main-color: #ffa200;
+
+// Components
+@import "components/components";

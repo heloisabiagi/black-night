@@ -1,6 +1,25 @@
 /*global module:false*/
 module.exports = function(grunt) {
-  var config = grunt.file.readJSON("config/settings.json");
+
+  // SASS settings
+  var SASSconfigs = {
+      "default": {
+        "sassDir": "source/sass",
+        "cssDir": "assets/style",
+        "imagesDir": "assets/images",
+        "imagesPath": "source/images",
+        "generatedImagesDir": "assets/images",
+        "javascriptsDir": "assets/js",
+        "fontsDir": "assets/fonts",
+        "httpImagesPath": "../images",
+        "httpGeneratedImagesPath": "../images",
+        "require": [
+          "compass-normalize"
+        ],
+        "force": true,
+        "noLineComments": true
+      }
+    }
 
   // Settings
   grunt.initConfig({
@@ -10,12 +29,12 @@ module.exports = function(grunt) {
     // Concatenate JS files
      concat: {
       scripts: {
-        src:  "src/js/components/*",
-        dest: "build/js/scripts.js"
+        src:  "source/js/components/*",
+        dest: "assets/js/scripts.js"
         },
-      vendor: {
-        src: "src/js/vendor/*",
-        dest: "build/js/vendor.js"
+      vendors: {
+        src: "source/js/vendors/*",
+        dest: "assets/js/vendors.js"
       }         	
     },
 
@@ -23,11 +42,11 @@ module.exports = function(grunt) {
 	   uglify: {
       scripts: {
         src: "<%= concat.scripts.dest %>",
-        dest: "build/js/scripts.min.js"
+        dest: "assets/js/scripts.min.js"
         },
-      vendor: {
-        src: "<%= concat.vendor.dest %>",
-        dest: "build/js/vendor.min.js"
+      vendors: {
+        src: "<%= concat.vendors.dest %>",
+        dest: "assets/js/vendors.min.js"
       }      
 
     },
@@ -35,7 +54,7 @@ module.exports = function(grunt) {
     // Processes CSS files
     compass: {
       default: {
-        options: config.sass.default
+        options: SASSconfigs.default
       }
     },
 
@@ -43,25 +62,28 @@ module.exports = function(grunt) {
     cssmin: {
       home: {
         expand: true,
-        cwd: config.sass.default.cssDir,
+        cwd: SASSconfigs.default.cssDir,
         src: ["*.css", "!*.min.css"],
-        dest: config.sass.default.cssDir,
+        dest: SASSconfigs.default.cssDir,
         ext: ".min.css"
       }
     },
 
     copy: {      
       settings: {
-        files: [{expand: true, flatten: true, src: ['src/js/settings.js'], dest: 'build/js'}]
-      },
-      colorSwitcher: {
-        files: [{expand: true, flatten: true, src: ['src/js/color-switcher.js'], dest: 'build/js'}]
+        files: [
+        {expand: true, flatten: true, src: ['source/js/settings.js'], dest: 'assets/js'},
+        {expand: true, flatten: true, src: ['source/js/color-switcher.js'], dest: 'assets/js'},
+        {expand: true, flatten: true, src: ['source/js/modernizr.custom.js'], dest: 'assets/js'},
+        {expand: true, flatten: true, src: ['source/js/user-customs.js'], dest: 'assets/js'},
+        {expand: true, flatten: true, src: ['source/inc/mailer.php'], dest: 'assets/inc'}
+        ]
       },
       images: {
-        files: [{expand: true, cwd: 'src/images', src: ['**'], dest: 'build/images/'}]
+        files: [{expand: true, cwd: 'source/images', src: ['**'], dest: 'assets/images/'}]
       },
       fonts: {
-        files: [{expand: true, cwd: 'src/fonts', src: ['**'], dest: 'build/fonts'}]
+        files: [{expand: true, cwd: 'source/fonts', src: ['**'], dest: 'assets/fonts'}]
       }
     }
 
@@ -77,7 +99,7 @@ module.exports = function(grunt) {
 
   // Define tasks
   grunt.registerTask("build", ["copy", "concat", "uglify", "compass", "cssmin"]);
-  grunt.registerTask("devScriptsJs", ["copy:settings", "copy:colorSwitcher", "concat:scripts", "uglify:scripts"]);
-  grunt.registerTask("devVendorJs", ["copy:settings","concat:vendor", "uglify:vendor"]);
+  grunt.registerTask("devScriptsJs", ["copy:settings", "concat:scripts", "uglify:scripts"]);
+  grunt.registerTask("devVendorsJs", ["copy:settings","concat:vendors", "uglify:vendors"]);
   grunt.registerTask("devCSS", ["copy:images", "copy:fonts" ,"compass", "cssmin"]);
 };
