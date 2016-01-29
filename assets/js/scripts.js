@@ -110,25 +110,6 @@ blackNight.contactForm = (function() {
 })();
 
 blackNight.contactForm.init();
-blackNight.customComponent = (function() {
-
-	function bindEvents(){
-		/**
-		 *
-		 * You can insert your events and customized code right here
-		 */
-
-	}
-
-	return {
-		init: function(){
-			bindEvents();	
-		}
-	}
-
-})();
-
-blackNight.customComponent.init();
 blackNight.navbarShrink = (function() {
 
 	var navbar = $("[data-behavior='navShrink']");
