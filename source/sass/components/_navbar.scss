@@ -6,27 +6,28 @@
 .black-night {
 
   #main-header {
+      a {
+        color: #FFF;
+        @include transition(all 100ms ease-in);
 
-    .navbar-brand {
+      &.navbar-brand {
+        position: relative; 
 
-      color: #FFF;
-      @include transition(all 100ms ease-in);
-      position: relative; 
+        &:hover {
+            color: $lightest-gray;
+        }
 
-      &:hover {
-          color: $lightest-gray;
-      }
-
-      .brand-logo:before {
-        @media screen and (min-width: $break-tablet) {
-          content: "";
-          display: block;
-          height: 4px;
-          background-color: $main-color;
-          position: absolute;
-          top: -15px;
-          width: 100%;
-          left: 0;
+        .brand-logo:before {
+          @media screen and (min-width: $break-tablet) {
+            content: "";
+            display: block;
+            height: 4px;
+            background-color: $main-color;
+            position: absolute;
+            top: -15px;
+            width: 100%;
+            left: 0;
+          }
         }
       }
     }
