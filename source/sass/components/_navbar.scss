@@ -41,7 +41,7 @@
   }
 
   #navigation-top {
-    font-family: "Raleway", sans-serif;
+    font-family: $base-font;
     -webkit-font-smoothing: antialiased;
     color: #FFF;
     @include box-sizing("border-box");
@@ -73,7 +73,7 @@
     }
 
     .navbar-brand {
-      font-family: "News Cycle", sans-serif;
+      font-family: $special-font;
       font-size: 1.5em;
 
       @media screen and (min-width: $break-large) {

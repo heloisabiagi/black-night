@@ -41,7 +41,7 @@ $pricing-border-color: #999;
 }
 
 .pricing-title {
-  font-family: "News Cycle", sans-serif;
+  font-family: $special-font;
   -webkit-font-smoothing: antialiased;
   text-transform: uppercase;
   font-weight: 700;
