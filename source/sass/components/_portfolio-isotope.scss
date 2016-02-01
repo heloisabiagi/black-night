@@ -20,11 +20,11 @@
 
 .isotope {
 	.element-item {
-		overflow: hidden;
 		margin: 0 0 $base-spacing/2 0;
 		cursor: pointer;
 
 		@media screen and (min-width: $break-large) {
+			overflow: hidden;
 			margin:	$base-spacing 0 $base-spacing/2 0;
 		}
 
@@ -95,6 +95,7 @@
 	z-index: 20;
 	opacity: 1;
 	text-align: center;
+	min-width: 45px;
 
 	@media screen and (min-width: $break-large) {			
 		width: 120px;

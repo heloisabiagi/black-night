@@ -11,6 +11,7 @@ input, textarea {
   margin: 0;
   padding: 0;
   border: none;
+  @include border-radius(0px);
   font-size: 0.9em; 
   line-height: 48px; 
 }
@@ -92,7 +93,7 @@ button, input[type="submit"] {
   }
 }
 
-.big-button {
+.btn-lg {
   font-size: 18px;
   padding: 9px 18px;
 
@@ -102,27 +103,8 @@ button, input[type="submit"] {
   }
 } 
 
-/** FAST FORM: one field, submit button (Newsletter, Search etc) */
-
-.fast-form {
-  position: relative;
+.signup-email {
   max-width: 480px;
-  margin: 0 auto;
-
-  .fast-form-field {
-    padding-right: 100px;
-    @include box-sizing(border-box);
-  }
-
-  .fast-form-submit {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 96px;
-    text-align: center;
-    font-size: 1em;
-  }
-
 }
 
 /** CONTACT FORM */

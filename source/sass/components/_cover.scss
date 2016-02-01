@@ -47,13 +47,15 @@ _cover: this file contain style declarations for the main section (big image wit
     }
 
     &:after {
-      content: "";
-      display: inline-block;
-      width: 10px;
-      height: 10px;
-      margin-left: 10px;
-      background: $main-color;
-      color: #2cb07b;
+      @media screen and (min-width: $break-large) {
+        content: "";
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        margin-left: 10px;
+        background: $main-color;
+        color: #2cb07b;
+      }
     }   
 
   }

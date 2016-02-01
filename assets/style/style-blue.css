@@ -433,14 +433,16 @@ _cover: this file contain style declarations for the main section (big image wit
     font-size: 3.4em;
   }
 }
-.cover .cover-title:after {
-  content: "";
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin-left: 10px;
-  background: #00a1c4;
-  color: #2cb07b;
+@media screen and (min-width: 992px) {
+  .cover .cover-title:after {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-left: 10px;
+    background: #00a1c4;
+    color: #2cb07b;
+  }
 }
 @media screen and (min-width: 620px) and (max-width: 992px) {
   .cover .cover-subtitle {
@@ -605,12 +607,12 @@ _cover: this file contain style declarations for the main section (big image wit
 }
 
 .isotope .element-item {
-  overflow: hidden;
   margin: 0 0 12px 0;
   cursor: pointer;
 }
 @media screen and (min-width: 992px) {
   .isotope .element-item {
+    overflow: hidden;
     margin: 24px 0 12px 0;
   }
 }
@@ -694,6 +696,7 @@ _cover: this file contain style declarations for the main section (big image wit
   z-index: 20;
   opacity: 1;
   text-align: center;
+  min-width: 45px;
 }
 @media screen and (min-width: 992px) {
   .portfolio-icons-container {
@@ -1012,6 +1015,11 @@ input, textarea {
   margin: 0;
   padding: 0;
   border: none;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
+  border-radius: 0px;
   font-size: 0.9em;
   line-height: 48px;
 }
@@ -1092,36 +1100,19 @@ button, input[type="submit"] {
   right: 0;
 }
 
-.big-button {
+.btn-lg {
   font-size: 18px;
   padding: 9px 18px;
 }
 @media screen and (min-width: 620px) {
-  .big-button {
+  .btn-lg {
     font-size: 20px;
     padding: 10px 20px;
   }
 }
 
-/** FAST FORM: one field, submit button (Newsletter, Search etc) */
-.fast-form {
-  position: relative;
+.signup-email {
   max-width: 480px;
-  margin: 0 auto;
-}
-.fast-form .fast-form-field {
-  padding-right: 100px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-.fast-form .fast-form-submit {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 96px;
-  text-align: center;
-  font-size: 1em;
 }
 
 /** CONTACT FORM */
