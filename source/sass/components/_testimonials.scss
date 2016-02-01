@@ -27,16 +27,15 @@
 	  		margin-bottom: $base-spacing*2;
 
 	  		&:after {
-				content: "";
-				display: block;
-				width: 50px;
-				height: 1px;
-				background-color: $main-color;
-				left: 50%;
-				margin-left: -25px;
-				position: absolute;
-				margin-top: 15px;
-			}
+  				@include el-clearfix;
+
+  				width: 50px;
+  				height: 1px;
+  				background-color: $main-color;
+  				margin-top: 15px;
+          
+          @include center-absolute(50px);
+  			 }
 	  	}
   }
 

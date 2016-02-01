@@ -19,8 +19,8 @@
 
         .brand-logo:before {
           @media screen and (min-width: $break-tablet) {
-            content: "";
-            display: block;
+            @include el-clearfix;
+
             height: 4px;
             background-color: $main-color;
             position: absolute;

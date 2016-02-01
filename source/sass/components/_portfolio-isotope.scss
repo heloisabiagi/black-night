@@ -11,7 +11,6 @@
 }
 
 .isotope-filters {
-
 	button {
 		margin-bottom: $base-spacing/2;
 		font-size: 0.9em;
@@ -19,29 +18,36 @@
 	}
 }
 
-.element-item {
-	overflow: hidden;
+.isotope {
+	.element-item {
+		overflow: hidden;
+		margin: 0 0 $base-spacing/2 0;
+		cursor: pointer;
 
-	@media screen and (min-width: $break-large) {
-		margin: $base-spacing 0 $base-spacing/2 0;
-	}
-	cursor: pointer;
-
-	&:hover {
 		@media screen and (min-width: $break-large) {
-			.hover-zoom {
-				opacity: 1;
-			}
+			margin:	$base-spacing 0 $base-spacing/2 0;
+		}
 
-			.portfolio-caption {
-				@include transform(rotateX(0deg));			
-			}
+		&:hover {
+			@media screen and (min-width: $break-large) {
+				.hover-zoom {
+					opacity: 1;
+				}
 
-			.jumper-thumbnail {
-				@include transform(translate(0,-40px));
-			}
-		}	
+				.portfolio-caption {
+					@include transform(rotateX(0deg));			
+				}
+
+				.jumper-thumbnail {
+					@include transform(translate(0,-40px));
+				}
+			}	
+		}
 	}
+}
+
+.portfolio-thumbnail {
+	position: relative;
 }
 
 .portfolio-caption {
@@ -49,17 +55,12 @@
 	text-align: center;
 	line-height: 40px;
 	position: absolute;
-	bottom: 0;
-	padding-right: 30px;
+	bottom: -1px;
 	width: 100%;
 
 	@include box-sizing(border-box);
 	@include transition(all 200ms ease-in);
-
-	-webkit-transform-origin: 0% 100%;
-	-moz-transform-origin: 0% 100%;
-	-ms-transform-origin: 0% 100%;
-	transform-origin: 0% 100%;
+	@include el-transform-origin(0,100%);
 
 	@media screen and (min-width: $break-large) {
 		@include transform(rotateX(90deg));
@@ -87,34 +88,40 @@
 
 }
 
-.portfolio-icon {
+.portfolio-icons-container {
+	position: relative;
+	background-color: transparent;
+	z-index: 20;
+	opacity: 1;
+	text-align: center;
+	margin: $base-spacing/2 0 $base-spacing/4 0;
 
-	@media screen and (min-width: $break-large) {
-		position: absolute;
-		font-size: 54px;
-		color: #FFF;
-		width: 55px;
-		height: 75px;
-		left: 50%;
-		margin-left: -23px;
+	@media screen and (min-width: $break-large) {			
+		width: 120px;
+		@include center-absolute(120px);
 		top: 50%;
 		margin-top: -37px;
-		background-color: transparent;
+		opacity: 0;
 	}
-}
 
-.portfolio-icon-mobile {
-	position: absolute;
-	background-color: $main-color;
-	bottom: -1px;
-	right: 15px;
-    padding: 5px 10px;
-    font-size: 16px;
+	.portfolio-icon {
+		font-size: 32px;
+		color: #FFF;
 
-    @media screen and (min-width: $break-large) {
-		display: none;
+		@media screen and (min-width: $break-large) {
+			font-size: 44px;
+		}
+
+		a:hover {
+			text-decoration: none;
+			color: $main-color;
+		}
+
+		&.first {
+			border-right: solid 1px $main-color;
+			margin-right: 12px;
+		}
 	}
-	
 }
 
 .jumper-thumbnail {

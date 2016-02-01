@@ -62,7 +62,7 @@ button, input[type="submit"] {
 }
 
 .mfp-container .btn-nav {
-    @include box-shadow(0px 0px 50px -5px rgba(0, 0, 0, 0.5));
+    @include el-box-shadow;
 }
 
 .btn-nav {

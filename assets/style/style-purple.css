@@ -124,13 +124,14 @@ section:nth-child(even) {
 .title-1:after {
   content: "";
   display: block;
+  clear: both;
   width: 50px;
   height: 1px;
   background-color: #a700ff;
+  margin-top: 15px;
+  position: absolute;
   left: 50%;
   margin-left: -25px;
-  position: absolute;
-  margin-top: 15px;
 }
 .title-1 a:hover {
   text-decoration: none;
@@ -289,6 +290,7 @@ address span {
   .black-night #main-header a.navbar-brand .brand-logo:before {
     content: "";
     display: block;
+    clear: both;
     height: 4px;
     background-color: #a700ff;
     position: absolute;
@@ -603,27 +605,28 @@ address span {
   font-size: 0.9em;
 }
 
-.element-item {
+.isotope .element-item {
   overflow: hidden;
+  margin: 0 0 12px 0;
   cursor: pointer;
 }
 @media screen and (min-width: 992px) {
-  .element-item {
+  .isotope .element-item {
     margin: 24px 0 12px 0;
   }
 }
 @media screen and (min-width: 992px) {
-  .element-item:hover .hover-zoom {
+  .isotope .element-item:hover .hover-zoom {
     opacity: 1;
   }
-  .element-item:hover .portfolio-caption {
+  .isotope .element-item:hover .portfolio-caption {
     -webkit-transform: rotateX(0deg);
     -moz-transform: rotateX(0deg);
     -ms-transform: rotateX(0deg);
     -o-transform: rotateX(0deg);
     transform: rotateX(0deg);
   }
-  .element-item:hover .jumper-thumbnail {
+  .isotope .element-item:hover .jumper-thumbnail {
     -webkit-transform: translate(0, -40px);
     -moz-transform: translate(0, -40px);
     -ms-transform: translate(0, -40px);
@@ -632,13 +635,16 @@ address span {
   }
 }
 
+.portfolio-thumbnail {
+  position: relative;
+}
+
 .portfolio-caption {
   height: 40px;
   text-align: center;
   line-height: 40px;
   position: absolute;
-  bottom: 0;
-  padding-right: 30px;
+  bottom: -1px;
   width: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -647,10 +653,10 @@ address span {
   -moz-transition: all 200ms ease-in;
   -o-transition: all 200ms ease-in;
   transition: all 200ms ease-in;
-  -webkit-transform-origin: 0% 100%;
-  -moz-transform-origin: 0% 100%;
-  -ms-transform-origin: 0% 100%;
-  transform-origin: 0% 100%;
+  -webkit-transform-origin: 0 100%;
+  -moz-transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  transform-origin: 0 100%;
 }
 @media screen and (min-width: 992px) {
   .portfolio-caption {
@@ -682,33 +688,41 @@ address span {
   }
 }
 
+.portfolio-icons-container {
+  position: relative;
+  background-color: transparent;
+  z-index: 20;
+  opacity: 1;
+  text-align: center;
+  margin: 12px 0 6px 0;
+}
 @media screen and (min-width: 992px) {
-  .portfolio-icon {
+  .portfolio-icons-container {
+    width: 120px;
     position: absolute;
-    font-size: 54px;
-    color: #FFF;
-    width: 55px;
-    height: 75px;
     left: 50%;
-    margin-left: -23px;
+    margin-left: -60px;
     top: 50%;
     margin-top: -37px;
-    background-color: transparent;
+    opacity: 0;
   }
 }
-
-.portfolio-icon-mobile {
-  position: absolute;
-  background-color: #a700ff;
-  bottom: -1px;
-  right: 15px;
-  padding: 5px 10px;
-  font-size: 16px;
+.portfolio-icons-container .portfolio-icon {
+  font-size: 32px;
+  color: #FFF;
 }
 @media screen and (min-width: 992px) {
-  .portfolio-icon-mobile {
-    display: none;
+  .portfolio-icons-container .portfolio-icon {
+    font-size: 44px;
   }
+}
+.portfolio-icons-container .portfolio-icon a:hover {
+  text-decoration: none;
+  color: #a700ff;
+}
+.portfolio-icons-container .portfolio-icon.first {
+  border-right: solid 1px #a700ff;
+  margin-right: 12px;
 }
 
 .jumper-thumbnail {
@@ -949,13 +963,14 @@ address span {
 #testimonials .testimonial-sentence .testimonial-title:after {
   content: "";
   display: block;
+  clear: both;
   width: 50px;
   height: 1px;
   background-color: #a700ff;
+  margin-top: 15px;
+  position: absolute;
   left: 50%;
   margin-left: -25px;
-  position: absolute;
-  margin-top: 15px;
 }
 #testimonials .testimonial-credits {
   display: inline-block;
