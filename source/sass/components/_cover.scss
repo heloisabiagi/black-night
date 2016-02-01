@@ -1,72 +1,72 @@
 /**
-  _cover: this file contain style declarations for the main section (big image with text)
+_cover: this file contain style declarations for the main section (big image with text)
 */
 
 .cover {
-	display: table;
- 	width: 100%;
- 	height: 100%;
- 	position: relative;
-  @include cover-background;
+  position: relative;
+  display: table;
+  width: 100%;
+  height: 100%;
   min-height: 480px;
-  
- 	background-image: $cover-image-sm;
+  @include cover-background;
+  background-image: $cover-image-sm;
 
   @media screen and (min-width: $break-tablet) {
-        background-image: $cover-image;
-    }
+    background-image: $cover-image;
+  }
 
   .cover-container {
     margin-left: auto;
     margin-right: auto;
 
     @media screen and (min-width: 1200px) {
-        max-width: 1170px;
+      max-width: 1170px;
     }  
-    
+
     @media screen and (min-width: 992px) and  (max-width: 1199px){
-        max-width: 970px;
+      max-width: 970px;
     }
 
     @media screen and (min-width: 768px) and (max-width: 991px){
-        max-width: 750px;
+      max-width: 750px;
     }  
   }
 
 
-  	.cover-title {
-  		font-weight: 300;
-  		font-size: 2em;
-  		margin-bottom: $base-spacing;
-         @media screen and (min-width: $break-tablet) and (max-width: $break-large) {
-          font-size: 3em;
-         }
+  .cover-title {
+    margin-bottom: $base-spacing;
+    font-weight: 300;
+    font-size: 2em;
 
-         @media screen and (min-width: $break-large) {
-          font-size: 3.4em;
-         }
-
-      &:after {
-        content: "";
-        display: inline-block;
-        color: #2cb07b;
-        width: 10px;
-        height: 10px;
-        background: $main-color;
-        margin-left: 10px;
-      }   
-
-  	}
-
-    .cover-subtitle {
-        @media screen and (min-width: $break-tablet) and (max-width: $break-large) {
-          font-size: 1.5em;
-         }
-
-         @media screen and (min-width: $break-large) {
-          font-size: 1.7em;
-         }
+    @media screen and (min-width: $break-tablet) and (max-width: $break-large) {
+      font-size: 3em;
     }
+
+    @media screen and (min-width: $break-large) {
+      font-size: 3.4em;
+    }
+
+    &:after {
+      content: "";
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin-left: 10px;
+      background: $main-color;
+      color: #2cb07b;
+    }   
+
+  }
+
+  .cover-subtitle {
+    @media screen and (min-width: $break-tablet) and (max-width: $break-large) {
+      font-size: 1.5em;
+    }
+
+    @media screen and (min-width: $break-large) {
+      font-size: 1.7em;
+    }
+  }
 
 }
 

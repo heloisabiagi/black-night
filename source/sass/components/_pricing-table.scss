@@ -5,10 +5,10 @@
 $pricing-border-color: #999;
 
 .pricing-item {
-  background-color: $lightest-gray;
-  color: $dark-text;
   padding: $base-spacing 0;
   margin: 0;
+  background-color: $lightest-gray;
+  color: $dark-text;
 
   @media screen and (min-width: $break-tablet) {
       margin: $base-spacing 0;
@@ -51,10 +51,10 @@ $pricing-border-color: #999;
 }
 
 .pricing-value {
-  text-align: center;
   margin: $base-spacing/2 0;
   padding: $base-spacing/2 0;
   background-color: $light-gray;
+  text-align: center;
 
   small {
     font-size: 1em;
@@ -70,10 +70,10 @@ $pricing-border-color: #999;
   padding-left: 0;
 
   li {
-    text-align: center;
     padding: 6px;
-    list-style: none;
+    text-align: center;
     border-bottom: dotted 1px $pricing-border-color;
+    list-style: none;
 
     &:last-child {
       border: none;

@@ -10,8 +10,8 @@
   }
 
   .testimonial-item {
+    position: relative;
   		margin: 0 60px;
-      position: relative;
 
   		@media screen and (min-width:$break-large) {
   			margin: 0 100px;
@@ -31,8 +31,8 @@
 
   				width: 50px;
   				height: 1px;
+          margin-top: 15px;
   				background-color: $main-color;
-  				margin-top: 15px;
           
           @include center-absolute(50px);
   			 }
@@ -44,22 +44,22 @@
       text-align: center;
 
 		.testimonial-quotes {
-			color: $main-color;
-			font-size: 1em;
-			display: inline-block;
-			margin-right: 12px;
+      display: inline-block;
       width: 40px;
       height: 40px;
-      @include border-radius(60px);
+      margin-right: 12px;
       border: solid 2px $main-color;
+      @include border-radius(60px);
+			color: $main-color;
+			font-size: 1em;
       line-height: 35px;
 		}
 
 		.testimonial-author {
+        display: block;
+        margin-top: $base-spacing;
 			  font-size: 0.8em;
   			font-weight: bold;
-  			display: block;
-  			margin-top: $base-spacing;
 		}
   }
 

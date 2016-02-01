@@ -3,14 +3,14 @@
 */
 
 .icon-list {
-  padding-left: 0;
   margin: 0;
+  padding-left: 0;
 
   li {
-    list-style: none;
     position: relative;
     margin-bottom: $base-spacing;
     text-align: left;
+    list-style: none;
 
     .icon-box {
       position: absolute;
@@ -24,11 +24,11 @@
 
   .list-icon {
       display: block;
+      width: 42px;
+      height: 42px;
       background-color: $main-color;
       @include border-radius(60px);
       text-align: center;
-      width: 42px;
-      height: 42px;
       line-height: 42px;
 
       @include transition(all 200ms ease-in);
