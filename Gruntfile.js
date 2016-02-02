@@ -32,10 +32,14 @@ module.exports = function(grunt) {
         src:  "source/js/components/*",
         dest: "assets/js/scripts.js"
         },
-      vendors: {
-        src: "source/js/vendors/*",
-        dest: "assets/js/vendors.js"
-      }         	
+      jsLibs: {
+        src: ["source/js-libs/*", "!source/js-libs/modernizr.custom.js"],
+        dest: "assets/js/libs.js"
+      },
+      cssLibs: {
+        src: ["source/css-libs/*", "source/css-libs/owl/*.css"],
+        dest: "assets/style/libs.css"
+      }          	
     },
 
     // Uglify JS files
@@ -44,9 +48,9 @@ module.exports = function(grunt) {
         src: "<%= concat.scripts.dest %>",
         dest: "assets/js/scripts.min.js"
         },
-      vendors: {
-        src: "<%= concat.vendors.dest %>",
-        dest: "assets/js/vendors.min.js"
+      jsLibs: {
+        src: "<%= concat.jsLibs.dest %>",
+        dest: "assets/js/libs.min.js"
       }      
 
     },
@@ -60,11 +64,18 @@ module.exports = function(grunt) {
 
     // Minifies CSS Files
     cssmin: {
-      home: {
+      main: {
         expand: true,
         cwd: SASSconfigs.default.cssDir,
-        src: ["*.css", "!*.min.css"],
+        src: ["*.css", "!*.min.css", "!libs.css"],
         dest: SASSconfigs.default.cssDir,
+        ext: ".min.css"
+      },
+      libs: {
+        expand: true,
+        cwd: "assets/style",
+        src: ["libs.css"],
+        dest: "assets/style",
         ext: ".min.css"
       }
     },
@@ -74,7 +85,7 @@ module.exports = function(grunt) {
         files: [
         {expand: true, flatten: true, src: ['source/js/settings.js'], dest: 'assets/js'},
         {expand: true, flatten: true, src: ['source/js/color-switcher.js'], dest: 'assets/js'},
-        {expand: true, flatten: true, src: ['source/js/modernizr.custom.js'], dest: 'assets/js'},
+        {expand: true, flatten: true, src: ['source/js-libs/modernizr.custom.js'], dest: 'assets/js'},
         {expand: true, flatten: true, src: ['source/js/user-customs.js'], dest: 'assets/js'},
         {expand: true, flatten: true, src: ['source/inc/mailer.php'], dest: 'assets/inc'}
         ]
@@ -99,7 +110,8 @@ module.exports = function(grunt) {
 
   // Define tasks
   grunt.registerTask("build", ["copy", "concat", "uglify", "compass", "cssmin"]);
-  grunt.registerTask("devScriptsJs", ["copy:settings", "concat:scripts", "uglify:scripts"]);
-  grunt.registerTask("devVendorsJs", ["copy:settings","concat:vendors", "uglify:vendors"]);
-  grunt.registerTask("devCSS", ["copy:images", "copy:fonts" ,"compass", "cssmin"]);
+  grunt.registerTask("devJs", ["copy:settings", "concat:scripts", "uglify:scripts"]);
+  grunt.registerTask("devJsLibs", ["copy:settings","concat:jsLibs", "uglify:jsLibs"]);
+  grunt.registerTask("devCSS", ["copy:images", "copy:fonts" ,"compass", "cssmin:main"]);
+  grunt.registerTask("devCSSLibs", ["concat:cssLibs", "cssmin:libs"]);
 };
