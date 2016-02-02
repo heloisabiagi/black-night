@@ -62,9 +62,15 @@ button, input[type="submit"] {
   }
 }
 
-.mfp-container .btn-nav {
-  @include el-box-shadow;
-}
+.btn-lg {
+  font-size: 18px;
+  padding: 9px 18px;
+
+  @media screen and (min-width: $break-tablet) {
+    font-size: 20px;    
+    padding: 10px 20px;
+  }
+} 
 
 .btn-nav {
   width: 30px;
@@ -93,18 +99,23 @@ button, input[type="submit"] {
   }
 }
 
-.btn-lg {
-  font-size: 18px;
-  padding: 9px 18px;
+.mfp-container .btn-nav {
+  @include el-box-shadow;
+}
 
-  @media screen and (min-width: $break-tablet) {
-    font-size: 20px;    
-    padding: 10px 20px;
+/** SIGNUP FORM */
+
+.short-form {
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    padding-left: 0px;
   }
-} 
 
-.signup-email {
-  max-width: 480px;
+  input, button {
+    height: 36px;
+  }
+  
 }
 
 /** CONTACT FORM */

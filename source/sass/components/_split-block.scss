@@ -43,18 +43,18 @@
 	@include section-dimensions;
 }
 
-section:nth-child(odd) {
+section:nth-child(even) {
 	.split-block-row {
 		@media screen and (min-width: $break-large) {
-			background: image-url('bg/design/fold-dark.png') no-repeat bottom right $medium-gray;
+			background: image-url('bg/original/fold-dark.png') no-repeat bottom right $medium-gray;
 		}
 	}
 }
 
-section:nth-child(even) {
+section:nth-child(odd) {
 	.split-block-row {
 		@media screen and (min-width: $break-large) {
-			background: image-url('bg/design/fold-light.png') no-repeat bottom right $dark-gray;
+			background: image-url('bg/original/fold-light.png') no-repeat bottom right $dark-gray;
 		}
 	}
 }

@@ -104,11 +104,11 @@ section  {
 	}
 }
 
-section:nth-child(odd) {
+section:nth-child(even) {
 	background-color: $medium-gray;
 }
 
-section:nth-child(even) {
+section:nth-child(odd) {
 	background-color: $dark-gray;
 }
 
@@ -205,8 +205,10 @@ address span {
 	display: block;
 }
 
-.page-footer footer {
-	text-align: center;
-	font-size: 0.8em;	
+.page-footer {
+	footer {
+		text-align: center;
+		font-size: 0.8em;
+	}	
 }
     

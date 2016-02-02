@@ -2,21 +2,14 @@
   _icon-list: this file contain style declarations for the icon list, which appears in Main and Our Services section
 */
 
-.icon-list {
-  margin: 0;
-  padding-left: 0;
+.media-list {
 
   li {
-    position: relative;
     margin-bottom: $base-spacing;
-    text-align: left;
-    list-style: none;
+  }
 
-    .icon-box {
-      position: absolute;
-      left: 0;
-      top: 0;
-    }
+  .media-heading {
+      font-weight: 700;
   }
 } 
 
@@ -45,14 +38,6 @@
       }
     }
 
-    .list-text {
-      padding-left: 54px;
-
-      @media screen and (min-width: $break-tablet) {
-        padding-left: 72px;
-      }
-    }
-
 }
 
 .icon-list-2 {
@@ -60,15 +45,7 @@
     color: $main-color;
   }
 
-  .list-text {
-    padding-left: 30px;
-
-    @media screen and (min-width: $break-tablet) {
-      padding-left:48px;
-    }
-
-    strong {
-      color: $main-color;
-    }
+  .media-heading {
+    color: $main-color;
   }
 }

@@ -100,11 +100,11 @@ section p {
   margin-bottom: 12px;
 }
 
-section:nth-child(odd) {
+section:nth-child(even) {
   background-color: #353535;
 }
 
-section:nth-child(even) {
+section:nth-child(odd) {
   background-color: #202020;
 }
 
@@ -501,34 +501,25 @@ _cover: this file contain style declarations for the main section (big image wit
 }
 
 @media screen and (min-width: 992px) {
-  section:nth-child(odd) .split-block-row {
-    background: url('../images/bg/design/fold-dark.png?1451360390') no-repeat bottom right #353535;
+  section:nth-child(even) .split-block-row {
+    background: url('../images/bg/original/fold-dark.png?1454038048') no-repeat bottom right #353535;
   }
 }
 
 @media screen and (min-width: 992px) {
-  section:nth-child(even) .split-block-row {
-    background: url('../images/bg/design/fold-light.png?1451360349') no-repeat bottom right #202020;
+  section:nth-child(odd) .split-block-row {
+    background: url('../images/bg/original/fold-light.png?1454038048') no-repeat bottom right #202020;
   }
 }
 
 /**
   _icon-list: this file contain style declarations for the icon list, which appears in Main and Our Services section
 */
-.icon-list {
-  margin: 0;
-  padding-left: 0;
-}
-.icon-list li {
-  position: relative;
+.media-list li {
   margin-bottom: 24px;
-  text-align: left;
-  list-style: none;
 }
-.icon-list li .icon-box {
-  position: absolute;
-  left: 0;
-  top: 0;
+.media-list .media-heading {
+  font-weight: 700;
 }
 
 .icon-list-1 .list-icon {
@@ -567,27 +558,11 @@ _cover: this file contain style declarations for the main section (big image wit
   -o-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
-.icon-list-1 .list-text {
-  padding-left: 54px;
-}
-@media screen and (min-width: 620px) {
-  .icon-list-1 .list-text {
-    padding-left: 72px;
-  }
-}
 
 .icon-list-2 .list-icon {
   color: #2cb07b;
 }
-.icon-list-2 .list-text {
-  padding-left: 30px;
-}
-@media screen and (min-width: 620px) {
-  .icon-list-2 .list-text {
-    padding-left: 48px;
-  }
-}
-.icon-list-2 .list-text strong {
+.icon-list-2 .media-heading {
   color: #2cb07b;
 }
 
@@ -1071,10 +1046,15 @@ button, input[type="submit"] {
   color: #FFF;
 }
 
-.mfp-container .btn-nav {
-  -webkit-box-shadow: 0px 0px 50px -5px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0px 0px 50px -5px rgba(0, 0, 0, 0.5);
-  box-shadow: 0px 0px 50px -5px rgba(0, 0, 0, 0.5);
+.btn-lg {
+  font-size: 18px;
+  padding: 9px 18px;
+}
+@media screen and (min-width: 620px) {
+  .btn-lg {
+    font-size: 20px;
+    padding: 10px 20px;
+  }
 }
 
 .btn-nav {
@@ -1100,19 +1080,20 @@ button, input[type="submit"] {
   right: 0;
 }
 
-.btn-lg {
-  font-size: 18px;
-  padding: 9px 18px;
-}
-@media screen and (min-width: 620px) {
-  .btn-lg {
-    font-size: 20px;
-    padding: 10px 20px;
-  }
+.mfp-container .btn-nav {
+  -webkit-box-shadow: 0px 0px 50px -5px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 50px -5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 50px -5px rgba(0, 0, 0, 0.5);
 }
 
-.signup-email {
-  max-width: 480px;
+/** SIGNUP FORM */
+.short-form input[type="text"],
+.short-form input[type="email"],
+.short-form textarea {
+  padding-left: 0px;
+}
+.short-form input, .short-form button {
+  height: 36px;
 }
 
 /** CONTACT FORM */
