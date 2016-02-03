@@ -105,20 +105,10 @@
 		opacity: 0;
 	}
 
-	.portfolio-icon {
-		font-size: 32px;
-		color: #FFF;
-
-		@media screen and (min-width: $break-large) {
-			font-size: 44px;
-		}
-
-		a:hover {
-			text-decoration: none;
-			color: $main-color;
-		}
-
+	.icon-holder {
+		display: inline-block;
 		&.first {
+			padding-right: 12px;
 			border-right: solid 1px $main-color;
 			margin-right: 12px;
 		}

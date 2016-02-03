@@ -1,0 +1,40 @@
+/**
+  _accordion: custom Black Night's Accordion
+*/
+
+.black-night {
+  .panel-theme {
+      border: none;
+      background: transparent;
+
+      .panel-heading {
+        color: #FFF;
+        background-color: $main-color;
+        font-weight: 700;
+        @include border-radius(0px);
+
+        @include transition(all 100ms ease-in);
+
+        &:hover {
+          color: #FFF;
+          background-color: $darker-main-color;
+        }
+
+        &:active {
+          color: #FFF;
+        }
+      }
+
+      .panel-title a {
+          font-weight: bold;
+          &:hover {
+            text-decoration: none;
+          }
+      }
+
+      .panel-body {
+        border: none!important;
+      }
+  }
+}
+

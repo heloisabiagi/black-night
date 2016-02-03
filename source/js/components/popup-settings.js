@@ -26,7 +26,7 @@ blackNight.popupSettings = (function() {
 				enabled: true,
 				navigateByImgClick: true,
 				preload: [0,1],
-				arrowMarkup: '<button title="%title%" type="button" class="btn-flat btn-nav arrow-%dir% mfp-arrow mfp-arrow-%dir%"><span class="glyphicon glyphicon-menu-%dir%" aria-hidden="true"></span></button>',
+				arrowMarkup: '<button title="%title%" type="button" class="btn-flat btn-nav arrow-%dir% mfp-arrow mfp-arrow-%dir%"><span class="icon-holder"><span class="icon nav-icon"><i class="glyphicon glyphicon-menu-%dir%" aria-hidden="true"></i></span></span></button>',
 				tPrev: blackNight.popupPrevMessage, 
 			  	tNext: blackNight.popupNextMessage, 
 			  	tCounter: '<span class="mfp-counter">%curr% '+ blackNight.popupCounterMessage +' %total%</span>' 

@@ -2,159 +2,154 @@
   _forms: this file contain style declarations for the form elements, Newsletter and Contact forms
 */
 
-input, select, textarea {
-  color: #333;
-}
-
-input, textarea {
-  height: 48px;
-  margin: 0;
-  padding: 0;
-  border: none;
-  @include border-radius(0px);
-  font-size: 0.9em; 
-  line-height: 48px; 
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-  width: 100%; 
-  text-indent: 12px;
-}
-
-button, input[type="submit"] {
-  font-family: $special-font;
-  text-transform: uppercase;
-}
-
-::-webkit-input-placeholder { 
-  color: $placeholder;
-}
-
-:-moz-placeholder { 
-  color: $placeholder;
-}
-
-::-moz-placeholder { 
-  color: $placeholder;
-}
-
-:-ms-input-placeholder { 
-  color: $placeholder;
-}
-
-.btn-flat {
-  border: none;
-  border-radius: 0;
-  background-color: $main-color;
-  color: #FFF;
-  font-weight: 700;
-  @include transition(all 100ms ease-in);
-
-  &:hover {
-    color: #FFF;
-    background-color: $darker-main-color;
+.black-night {
+  input, select, textarea {
+    color: #333;
   }
-
-  &:active {
-    color: #FFF;
-  }
-}
-
-.btn-lg {
-  font-size: 18px;
-  padding: 9px 18px;
-
-  @media screen and (min-width: $break-tablet) {
-    font-size: 20px;    
-    padding: 10px 20px;
-  }
-} 
-
-.btn-nav {
-  width: 30px;
-  height: 100px;
-  text-align: center;
-  line-height: 100px;
-
-  .glyphicon {
-    position: absolute;
-    top: 40px;
-    left: 7px;
-  }
-
-  &.arrow-left, &.arrow-right {
-    position: absolute;
-    top: 50%;
-    margin-top: -50px;
-  }
-
-  &.arrow-left {
-    left:0;
-  }
-
-  &.arrow-right {
-    right: 0;
-  }
-}
-
-.mfp-container .btn-nav {
-  @include el-box-shadow;
-}
-
-/** SIGNUP FORM */
-
-.short-form {
-  input[type="text"],
-  input[type="email"],
-  textarea {
-    padding-left: 0px;
-  }
-
-  input, button {
-    height: 36px;
-  }
-  
-}
-
-/** CONTACT FORM */
-
-.contact-form {
 
   input[type="text"],
-  input[type="email"],
+  input[type="email"], 
   textarea {
-    padding-left: 0px;
+    height: 46px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    @include border-radius(0px);
     font-size: 0.9em; 
-  }
-
-  input[type="text"],
-  input[type="email"] {
-    height: 60px;
-    font-size: 0.9em; 
-  }
-
-  input[type="submit"] {
-    min-width: 30%;
-  }
-
-  textarea {
-    min-height: 200px;
+    line-height: 48px; 
   }
 
   input[type="text"],
   input[type="email"],
   textarea {
-    margin-bottom: 6px;
-    background-color: $lightest-gray;
-    color: $dark-text;
+    width: 100%; 
+    text-indent: 12px;
   }
 
-}
+  button, input[type="submit"] {
+    font-family: $special-font;
+    text-transform: uppercase;
+  }
+
+  ::-webkit-input-placeholder { 
+    color: $placeholder;
+  }
+
+  :-moz-placeholder { 
+    color: $placeholder;
+  }
+
+  ::-moz-placeholder { 
+    color: $placeholder;
+  }
+
+  :-ms-input-placeholder { 
+    color: $placeholder;
+  }
+
+  .btn-flat {
+    border: none;
+    border-radius: 0;
+    background-color: $main-color;
+    color: #FFF;
+    font-weight: 700;
+    @include transition(all 100ms ease-in);
+
+    &:hover {
+      color: #FFF;
+      background-color: $darker-main-color;
+    }
+
+    &:active {
+      color: #FFF;
+    }
+  }
+
+  .btn-lg {
+    font-size: 18px;
+    padding: 9px 18px;
+
+    @media screen and (min-width: $break-tablet) {
+      font-size: 20px;    
+      padding: 10px 20px;
+    }
+  } 
+
+  .btn-nav {
+    width: 30px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+
+    .icon-holder {
+      position: absolute;
+      top: 0px;
+      left: 7px;
+    }
+
+    &.arrow-left, &.arrow-right {
+      position: absolute;
+      top: 50%;
+      margin-top: -50px;
+    }
+
+    &.arrow-left {
+      left:0;
+    }
+
+    &.arrow-right {
+      right: 0;
+    }
+  }
+
+  .mfp-container .btn-nav {
+    @include el-box-shadow;
+  }
+
+  /** SIGNUP FORM **/
+
+  .short-form input[type="text"],
+  .short-form input[type="email"] {
+    height: 32px;
+    line-height: 32px;
+  }
+
+  /** CONTACT FORM */
+
+  .contact-form {
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      padding-left: 0px;
+      font-size: 0.9em; 
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      height: 60px;
+      font-size: 0.9em; 
+    }
+
+    input[type="submit"] {
+      min-width: 30%;
+    }
+
+    textarea {
+      min-height: 200px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      margin-bottom: 6px;
+      background-color: $lightest-gray;
+      color: $dark-text;
+    }
+
+  }
 
 /* FORM BEHAVIOR */
-.black-night {
   .form-control {
     @include border-radius(0px);
     margin-bottom: 0;
@@ -167,4 +162,5 @@ button, input[type="submit"] {
   .alert {
     @include border-radius(0px);
   }
+
 }

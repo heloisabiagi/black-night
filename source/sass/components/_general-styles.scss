@@ -201,6 +201,20 @@ section:nth-child(odd) {
 	}
 }
 
+.owl-carousel {
+  overflow: hidden;
+
+  .item {
+    position: relative;
+    margin: 0 60px;
+
+    @media screen and (min-width:$break-large) {
+      margin: 0 100px;
+    }
+  }
+}
+
+
 address span {
 	display: block;
 }

@@ -9,15 +9,6 @@
       overflow: hidden;
   }
 
-  .testimonial-item {
-    position: relative;
-  		margin: 0 60px;
-
-  		@media screen and (min-width:$break-large) {
-  			margin: 0 100px;
-  		}
-  }
-
   .testimonial-sentence {
 
   		@include box-sizing(border-box);
@@ -43,27 +34,11 @@
   		display: inline-block;
       text-align: center;
 
-		.testimonial-quotes {
-      display: inline-block;
-      width: 40px;
-      height: 40px;
-      margin-right: 12px;
-      border: solid 2px $main-color;
-      @include border-radius(60px);
-			color: $main-color;
-			font-size: 1em;
-      line-height: 35px;
-		}
-
 		.testimonial-author {
         display: block;
         margin-top: $base-spacing;
 			  font-size: 0.8em;
   			font-weight: bold;
 		}
-  }
-
-  #owl-testimonials {
-    overflow: hidden;
   }
 }

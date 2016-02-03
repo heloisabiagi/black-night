@@ -1,0 +1,83 @@
+/**
+  _icons: styles for all the different icons used in the layout
+*/
+
+.icon {
+  &:hover {
+    color: $main-color;
+    text-decoration: none;
+  }
+
+  &.color-icon {
+    color: $main-color;
+  }
+
+  &.nav-icon {
+      &:hover {
+        color: #FFF;
+      }
+  }
+
+  &.small-icon {
+    font-size: 11px;
+
+    @media screen and (min-width: $break-large) {
+      font-size: 13px;
+    } 
+  }
+
+  &.regular-icon {
+    font-size: 16px;
+
+    @media screen and (min-width: $break-large) {
+      font-size: 16px;
+    } 
+  }
+
+  &.big-icon {
+    font-size: 32px;
+
+    @media screen and (min-width: $break-large) {
+      font-size: 44px;
+    }
+  }
+
+  &.rounded-icon {
+      display: inline-block;
+      width: 42px;
+      height: 42px;
+      background-color: $main-color;
+      @include border-radius(60px);
+      text-align: center;
+      line-height: 42px;
+
+      @include transition(all 200ms ease-in);
+      @include transform(rotateY(0deg));
+
+      @media screen and (min-width: $break-tablet) {
+        width: 54px;
+        height: 54px;
+        line-height: 54px;
+      }
+
+      &:hover {
+        color: #FFF;
+        @include transform(rotateY(180deg));
+      }
+  }
+
+  &.contour-icon {
+      display: inline-block;
+      width: 42px;
+      height: 42px;
+      border: solid 2px $main-color;
+      @include border-radius(60px);
+      color: $main-color;
+      font-size: 1em;
+      line-height: 37px;
+      text-align: center;
+  }
+
+}
+
+

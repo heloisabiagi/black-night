@@ -1,0 +1,74 @@
+/**
+  _shortcodes: this file contain style declarations for the Shortcodes section
+*/
+
+
+.shortcode-grid {
+    display: table;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 5px;
+    margin-bottom: 54px;
+
+    @media screen and (min-width: break-large) {
+      margin-bottom: 30px;
+    }
+
+    .shortcode-grid-item {
+      position: relative;
+      display: table-cell;
+      vertical-align: middle;
+      height: 100px;
+      text-align: center;
+    }
+
+    .icon-holder {
+        display: block;
+    }
+
+    .item-label {
+        position: absolute;
+        bottom: -31px;
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 3px;
+        font-size: 0.8em;
+    }
+
+  &.item-3 {
+    .shortcode-grid-item {
+        width: 33%;
+    }
+  }
+
+  &.item-4 {
+    .shortcode-grid-item {
+        width: 25%;
+    }
+  }
+
+  &.item-5 {
+    .shortcode-grid-item {
+        width: 20%;
+    }
+  }
+}
+
+.shortcode-carousel-wrapper {
+    padding: 20px;
+    margin-top: 18px;
+    min-height: 225px;
+}
+
+section:nth-child(even) {
+  .shortcode-grid-item, .item-label, .shortcode-carousel-wrapper  {
+      background-color: lighten($medium-gray, 10%);
+  }
+}
+
+section:nth-child(odd) {
+  .shortcode-grid-item, .item-label, .shortcode-carousel-wrapper   {
+      background-color: lighten($dark-gray, 10%);
+  }
+}

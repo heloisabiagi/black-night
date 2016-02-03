@@ -2,50 +2,21 @@
   _icon-list: this file contain style declarations for the icon list, which appears in Main and Our Services section
 */
 
-.media-list {
+.black-night {
+  .media-list {
 
-  li {
-    margin-bottom: $base-spacing;
-  }
-
-  .media-heading {
-      font-weight: 700;
-  }
-} 
-
-.icon-list-1 {
-
-  .list-icon {
-      display: block;
-      width: 42px;
-      height: 42px;
-      background-color: $main-color;
-      @include border-radius(60px);
-      text-align: center;
-      line-height: 42px;
-
-      @include transition(all 200ms ease-in);
-      @include transform(rotateY(0deg));
-
-      @media screen and (min-width: $break-tablet) {
-        width: 54px;
-        height: 54px;
-        line-height: 54px;
-      }
-
-      &:hover {
-        @include transform(rotateY(180deg));
-      }
+    li {
+      margin-bottom: $base-spacing;
     }
 
+    .media-heading {
+        font-weight: 700;
+
+        &.color {
+          color: $main-color;
+        }
+    }
+  } 
 }
 
-.icon-list-2 {
-  .list-icon {
-    color: $main-color;
-  }
 
-  .media-heading {
-    color: $main-color;
-  }
-}

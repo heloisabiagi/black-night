@@ -1,0 +1,18 @@
+/**
+  _progress: custom Black Night's Progress Bar
+*/
+
+.black-night {
+  .progress {
+      background-color: transparent;
+      @include box-shadow(none);
+      @include border-radius(0px);
+  }
+
+  .progress-bar {
+      @include border-radius(0px);
+      background-color: $main-color;
+      font-weight: 700;
+  }
+}
+
