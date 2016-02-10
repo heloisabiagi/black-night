@@ -2,15 +2,13 @@
 	_portfolio-isotope: this file contain style declarations for the portfolio 'isotope' (the thumbnails and filtering function)
 */
 
-#portfolio-filters {
+.portfolio-filters {
 	display: none;
 
 	&.active {
 		display: block;
 	}	
-}
 
-.isotope-filters {
 	button {
 		margin-bottom: $base-spacing/2;
 		font-size: 0.9em;

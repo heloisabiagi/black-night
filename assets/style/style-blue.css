@@ -610,12 +610,12 @@ _cover: this file contain style declarations for the main section (big image wit
   }
 }
 @media screen and (min-width: 620px) and (max-width: 992px) {
-  .cover .cover-subtitle {
+  .cover .cover-lead {
     font-size: 1.5em;
   }
 }
 @media screen and (min-width: 992px) {
-  .cover .cover-subtitle {
+  .cover .cover-lead {
     font-size: 1.7em;
   }
 }
@@ -693,14 +693,13 @@ _cover: this file contain style declarations for the main section (big image wit
 /**
 	_portfolio-isotope: this file contain style declarations for the portfolio 'isotope' (the thumbnails and filtering function)
 */
-#portfolio-filters {
+.portfolio-filters {
   display: none;
 }
-#portfolio-filters.active {
+.portfolio-filters.active {
   display: block;
 }
-
-.isotope-filters button {
+.portfolio-filters button {
   margin-bottom: 12px;
   font-size: 0.9em;
 }

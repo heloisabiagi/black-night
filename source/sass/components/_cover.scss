@@ -60,7 +60,7 @@ _cover: this file contain style declarations for the main section (big image wit
 
   }
 
-  .cover-subtitle {
+  .cover-lead {
     @media screen and (min-width: $break-tablet) and (max-width: $break-large) {
       font-size: 1.5em;
     }
