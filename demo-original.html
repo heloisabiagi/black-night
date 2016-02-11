@@ -99,14 +99,14 @@
       <section class="cover full-dimensions">
           <!-- ### Class "text-box": mandatory for vertical centering and darkening background -->
           <div class="text-box">
-            <div class="cover-container content-row wow bounceInUp">
+            <div class="cover-wrapper content-row wow bounceInUp">
               <!-- 
               ### "cover-title": the big title
               ### "cover-lead": the lead
                -->
               <h1 class="cover-title">A bohemian <strong>business</strong> theme</h1>
               <p class="cover-lead">Check the features and possibilities of this brand new and intense theme, and learn how it's easy to use it in your personal projects.</p> 
-            </div> <!-- /cover-container -->
+            </div> <!-- /cover-wrapper -->
 
             <!-- ### data-behavior="scrollNavLink": an example of scroll navigation on a button element. Pay attention to the 'data-location' attribute -->
             <button type="button" class="btn btn-flat btn-lg wow bounceInUp" data-location="#about" data-behavior="scrollNavLink"> Get to Know Us </button>
@@ -118,8 +118,8 @@
       <section id="about" class="split-block full-dimensions">
           <div class="split-block-row table-row">
               
-            <!-- ### About Us Image. Keeo the "bulb-container" class if you intend to use the original bulbs image -->  
-            <div class="split-block-image bulb-container table-col">   
+            <!-- ### About Us Image. Keeo the "bulb-wrapper" class if you intend to use the original bulbs image -->  
+            <div class="split-block-image bulb-wrapper table-col">   
 
                 <!-- ### About Us Image. Keeo the "bulb-image" class if you intend to use the original bulbs image --> 
                 <div class="text-center bulb-image">
@@ -313,9 +313,9 @@
               </div><!-- /row -->
 
               <!-- Works -->
-              <div class="isotope row content-row transition-fast">
+              <div class="portfolio-wrapper row content-row transition-fast">
                   <!-- ### ".element-item": the portfolio container div. Add the 'data-filter' parameters set in the buttons as classes for the element -->
-                  <div class="col-md-4 col-sm-6 element-item hover-image photography">
+                  <div class="portfolio-item hover-image photography">
                                            
                       <!-- ### "portfolio-thumbnail": major container for thumbnail and hidden caption -->  
                       <div class="portfolio-thumbnail"> 
@@ -358,7 +358,7 @@
 
                   </div> <!-- /element-item -->
 
-                  <div class="col-md-4 col-sm-6 element-item hover-image photography web">                     
+                  <div class="portfolio-item hover-image photography web">                     
                       <div class="portfolio-thumbnail">                   
                         <div class="hover-image-item">
                           <img class="jumper-thumbnail" src="assets/images/body/freeimages/jellyfish-1188258-1280x960.jpg" alt="Photography 02" />
@@ -386,9 +386,7 @@
                         </div><!--portfolio-icons-container-->     
                   </div> <!-- /element-item -->
 
-                  <div class="clearfix visible-sm-block"></div>
-
-                  <div class="col-md-4 col-sm-6 element-item hover-image photography">                         
+                  <div class="portfolio-item hover-image photography">                         
                       <div class="portfolio-thumbnail">                
                         <div class="hover-image-item">
                           <img class="jumper-thumbnail" src="assets/images/body/freeimages/mobile-1530816-1280x960.jpg" alt="Photography 03" />
@@ -414,10 +412,9 @@
                             </span>
                           </span>
                       </div> <!--portfolio-icons-container-->       
-
                   </div> <!-- /element-item -->
-
-                  <div class="col-md-4 col-sm-6 element-item hover-image web">                        
+ 
+                  <div class="portfolio-item hover-image web">                        
                       <div class="portfolio-thumbnail">                            
                         <div class="hover-image-item">
                           <img class="jumper-thumbnail" src="assets/images/body/freeimages/recipe-1538714-1280x960.jpg" alt="Web 01" />
@@ -444,12 +441,9 @@
                             </span>
                           </span>
                       </div>  <!-- portfolio-icons-container -->
-
-                  <div class="clearfix visible-md-block"></div>  
-
                   </div> <!-- /element-item -->
-
-                  <div class="col-md-4 col-sm-6 element-item hover-image web">                     
+                 
+                  <div class="portfolio-item hover-image web">                     
                       <div class="portfolio-thumbnail">                      
                         <div class="hover-image-item">
                           <img class="jumper-thumbnail" src="assets/images/body/freeimages/business-1239202-1280x960.jpg" alt="Web 02" />
@@ -475,9 +469,9 @@
                             </span>
                           </span>
                       </div>  <!-- portfolio-icons-container -->  
-
                   </div> <!-- /element-item -->
-                  <div class="col-md-4 col-sm-6 element-item hover-image video">                       
+                
+                  <div class="portfolio-item hover-image video">                       
                       <!-- "portfolio-thumbnail": major container for thumbnail and hidden caption -->  
                       <div class="portfolio-thumbnail">                 
                         <!-- "hover-image-item": image-container -->
@@ -514,12 +508,9 @@
                             </span>
                           </span>
                       </div> <!--portfolio-icons-container-->       
-
                   </div> <!-- /element-item -->
-
-              </div>
-
-          </div>
+                </div> <!-- /row -->  
+          </div> <!-- /container -->
       </section>
       <!-- / WORKS -->
 
@@ -1037,7 +1028,7 @@
       </section>
       <!-- / CONTACT -->
 
-      <!--========= CONTACT ========= -->
+      <!--========= FOLLOW US ========= -->
       <section id="social-contact" class="social-contact">
           <div class="container">
             <div class="row">
@@ -1075,8 +1066,6 @@
 <script src="assets/js/libs.min.js"></script>
 <script src="assets/js/settings.js"></script>
 <script src="assets/js/scripts.min.js"></script>
-<!--Place your own customizations in this file, remove it if you haven't done any-->
-<script src="assets/js/user-customs.js"></script>
 <!-- color-switcher.js: DEMO PURPOSES ONLY -->
 <script src="assets/js/color-switcher.js"></script>
 

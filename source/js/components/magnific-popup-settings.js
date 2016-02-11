@@ -4,6 +4,7 @@ blackNight.popupSettings = (function() {
 		$(".popup-normal").magnificPopup({
 		  type: 'image',
 		  tLoading: blackNight.popupLoadingMessage + ' #%curr%...',
+		  closeOnBgClick: false,
 		  image: {
           	titleSrc: function(item) {
                 var _html = '<div class="databox job-data">';
@@ -35,6 +36,16 @@ blackNight.popupSettings = (function() {
 		    beforeOpen: function() {
 		       this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
 		       this.st.mainClass = this.st.el.attr('data-effect');
+
+		       $(".arrow-right .icon-holder, .arrow-right .icon, .arrow-right .glyphicon").on("click", function(e){
+					e.preventDefault();
+					magnificPopup.next();
+				});
+
+				$(".arrow-left .icon-holder, .arrow-left .icon, .arrow-left .glyphicon").on("click", function(e){
+					e.preventDefault();
+					magnificPopup.prev();
+				});
 		    }
 		}
 		});

@@ -62,6 +62,15 @@ module.exports = function(grunt) {
       }
     },
 
+    // Combine Media Queries
+    cmq: {
+      your_target: {
+        files: {
+          'assets/style': ["assets/style/style-*.css", "!assets/style/*.min.css"]
+        }
+      }
+    },
+
     // Minifies CSS Files
     cssmin: {
       main: {
@@ -107,11 +116,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks("grunt-contrib-cssmin");
   grunt.loadNpmTasks("grunt-contrib-copy");
   grunt.loadNpmTasks('grunt-contrib-rename');
+  grunt.loadNpmTasks('grunt-combine-media-queries');
 
   // Define tasks
   grunt.registerTask("build", ["copy", "concat", "uglify", "compass", "cssmin"]);
   grunt.registerTask("devJs", ["copy:settings", "concat:scripts", "uglify:scripts"]);
   grunt.registerTask("devJsLibs", ["copy:settings","concat:jsLibs", "uglify:jsLibs"]);
-  grunt.registerTask("devCSS", ["copy:images", "copy:fonts" ,"compass", "cssmin:main"]);
+  grunt.registerTask("devCSS", ["copy:images", "copy:fonts" ,"compass", "cmq", "cssmin:main"]);
   grunt.registerTask("devCSSLibs", ["concat:cssLibs", "cssmin:libs"]);
 };

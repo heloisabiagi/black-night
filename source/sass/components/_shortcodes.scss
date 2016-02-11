@@ -14,28 +14,6 @@
       margin-bottom: 30px;
     }
 
-    .shortcode-grid-item {
-      position: relative;
-      display: table-cell;
-      vertical-align: middle;
-      height: 100px;
-      text-align: center;
-    }
-
-    .icon-holder {
-        display: block;
-    }
-
-    .item-label {
-        position: absolute;
-        bottom: -31px;
-        display: block;
-        width: 100%;
-        text-align: center;
-        padding: 3px;
-        font-size: 0.8em;
-    }
-
   &.item-3 {
     .shortcode-grid-item {
         width: 33%;
@@ -52,6 +30,28 @@
     .shortcode-grid-item {
         width: 20%;
     }
+  }
+}
+
+.shortcode-grid-item {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  height: 100px;
+  text-align: center;
+
+  .icon-holder {
+      display: block;
+  }
+
+  .item-label {
+      position: absolute;
+      bottom: -31px;
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 3px;
+      font-size: 0.8em;
   }
 }
 

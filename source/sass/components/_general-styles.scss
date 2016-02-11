@@ -1,5 +1,5 @@
 /**
-	_general-styles: this file contain style declarations used across the whole layout
+	_general-styles: this file contain style declarations used in the whole layout
 */
 
 html, body, #main {
@@ -76,13 +76,13 @@ ul {
 }
 
 [class*="col-"] {
-	@media screen and (max-width: $break-large) {
+	@media screen and (max-width: $break-tablet-max) {
 		margin-bottom: $base-spacing;
 	}
 }
 
 .isotope [class*="col-"] {
-	@media screen and (max-width: $break-large) {
+	@media screen and (max-width: $break-tablet-max) {
 		margin-bottom: 0;
 	}
 }

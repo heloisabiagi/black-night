@@ -16,36 +16,61 @@
 	}
 }
 
-.isotope {
-	.element-item {
-		margin: 0 0 $base-spacing/2 0;
-		cursor: pointer;
+.filter-by-type {
+	margin-right: $base-spacing/2;
+	font-weight: 700;
 
+	@media screen and (max-width: $break-mobile) {
+		display: block;
+		margin-bottom: $base-spacing/2;
+	}
+
+}
+
+.portfolio-item {
+	position: relative;
+	float: left;
+	width: 100%;
+	min-height: 1px;
+	margin: 0 0 $base-spacing/2 0;
+	padding-right: 15px;
+	padding-left: 15px;
+	cursor: pointer;
+
+	@media screen and (min-width: $break-tablet) and (max-width: $break-tablet-max){
+		width: 50%;
+	}
+
+	@media screen and (min-width: $break-large) {
+		width: 33.33333333%;
+		overflow: hidden;
+		margin:	$base-spacing 0 $base-spacing/2 0;
+	}
+
+	&:hover {
 		@media screen and (min-width: $break-large) {
-			overflow: hidden;
-			margin:	$base-spacing 0 $base-spacing/2 0;
-		}
+			.hover-zoom {
+				opacity: 1;
+			}
 
-		&:hover {
-			@media screen and (min-width: $break-large) {
-				.hover-zoom {
-					opacity: 1;
-				}
+			.portfolio-caption {
+				@include transform(rotateX(0deg));			
+			}
 
-				.portfolio-caption {
-					@include transform(rotateX(0deg));			
-				}
-
-				.jumper-thumbnail {
-					@include transform(translate(0,-40px));
-				}
-			}	
-		}
+			.jumper-thumbnail {
+				@include transform(translate(0,-40px));
+			}
+		}	
 	}
 }
 
 .portfolio-thumbnail {
 	position: relative;
+
+	.jumper-thumbnail {
+		@include transition(all 200ms ease-in);
+		position: relative;
+	}
 }
 
 .portfolio-caption {
@@ -75,17 +100,6 @@
 	z-index: 20;
 }
 
-.filter-by-type {
-	margin-right: $base-spacing/2;
-	font-weight: 700;
-
-	@media screen and (max-width: $break-mobile) {
-		display: block;
-		margin-bottom: $base-spacing/2;
-	}
-
-}
-
 .portfolio-icons-container {
 	position: relative;
 	background-color: transparent;
@@ -111,9 +125,4 @@
 			margin-right: 12px;
 		}
 	}
-}
-
-.jumper-thumbnail {
-	@include transition(all 200ms ease-in);
-	position: relative;
 }

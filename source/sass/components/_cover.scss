@@ -15,60 +15,60 @@ _cover: this file contain style declarations for the main section (big image wit
     background-image: $cover-image;
   }
 
-  .cover-container {
-    margin-left: auto;
-    margin-right: auto;
+}
 
-    @media screen and (min-width: 1200px) {
-      max-width: 1170px;
-    }  
+.cover-wrapper {
+  margin-left: auto;
+  margin-right: auto;
 
-    @media screen and (min-width: 992px) and  (max-width: 1199px){
-      max-width: 970px;
-    }
+  @media screen and (min-width: $break-largest) {
+    max-width: 1170px;
+  }  
 
-    @media screen and (min-width: 768px) and (max-width: 991px){
-      max-width: 750px;
-    }  
+  @media screen and (min-width: $break-large) and  (max-width: $break-large-max){
+    max-width: 970px;
   }
 
+  @media screen and (min-width: $break-tablet) and (max-width: $break-tablet-max){
+    max-width: 750px;
+  }  
+}
 
-  .cover-title {
-    margin-bottom: $base-spacing;
-    font-weight: 300;
-    font-size: 2em;
 
-    @media screen and (min-width: $break-tablet) and (max-width: $break-large) {
-      font-size: 3em;
-    }
+.cover-title {
+  margin-bottom: $base-spacing;
+  font-weight: 300;
+  font-size: 2em;
 
+  @media screen and (min-width: $break-tablet) and (max-width: $break-tablet-max) {
+    font-size: 3em;
+  }
+
+  @media screen and (min-width: $break-large) {
+    font-size: 3.4em;
+  }
+
+  &:after {
     @media screen and (min-width: $break-large) {
-      font-size: 3.4em;
+      content: "";
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin-left: 10px;
+      background: $main-color;
+      color: #2cb07b;
     }
+  }   
 
-    &:after {
-      @media screen and (min-width: $break-large) {
-        content: "";
-        display: inline-block;
-        width: 10px;
-        height: 10px;
-        margin-left: 10px;
-        background: $main-color;
-        color: #2cb07b;
-      }
-    }   
+}
 
+.cover-lead {
+  @media screen and (min-width: $break-tablet) and (max-width: $break-tablet-max) {
+    font-size: 1.5em;
   }
 
-  .cover-lead {
-    @media screen and (min-width: $break-tablet) and (max-width: $break-large) {
-      font-size: 1.5em;
-    }
-
-    @media screen and (min-width: $break-large) {
-      font-size: 1.7em;
-    }
+  @media screen and (min-width: $break-large) {
+    font-size: 1.7em;
   }
-
 }
 

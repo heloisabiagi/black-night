@@ -3,6 +3,8 @@
 */
 
 .icon {
+  @include transition(all 100ms ease-in);
+  
   &:hover {
     color: $main-color;
     text-decoration: none;

@@ -1,5 +1,5 @@
 /**
-  _navbar: this file contain style declarations for the top navigation bar
+  _custom-navbar: Bootstrap overrides for the Navigation Bar in order to fit the theme's appearance
 */
 
 
@@ -35,8 +35,8 @@
   }
 
   .navbar-right {
-    @media screen and (max-width: $break-large) {
-        max-width: 575px;
+    @media screen and (max-width: $break-tablet-max) {
+        max-width: 580px;
     }
 
   }

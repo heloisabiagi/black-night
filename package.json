@@ -12,6 +12,10 @@
     "grunt-contrib-jshint": "latest",
     "grunt-contrib-rename": "latest",
     "grunt-contrib-uglify": "latest",
-    "grunt-contrib-watch": "latest"
+    "grunt-contrib-watch": "latest",
+    "grunt-combine-media-queries": "latest"
+  },
+  "devDependencies": {
+    "grunt-combine-media-queries": "^1.0.19"
   }
 }

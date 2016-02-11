@@ -1,10 +1,10 @@
 blackNight.portfolioIsotope = (function() {
-	var container = $('.isotope');
-	var filters = $("#portfolio-filters");
+	var container = $('.portfolio-wrapper');
+	var filters = $(".portfolio-filters");
 
 	function startIsotope() {
 		  container.isotope({
-		    itemSelector: '.element-item',
+		    itemSelector: '.portfolio-item',
 		    layoutMode: blackNight.portfolioLayout,
 		    getSortData: {
 		      category: '[data-category]'
@@ -21,7 +21,7 @@ blackNight.portfolioIsotope = (function() {
 
 	function bindEvents(){
 		$(window).load(function() {
-			$("#portfolio-filters").addClass("active");	
+			$(".portfolio-filters").addClass("active");	
 		    startIsotope();	
 			filtersIsotope();
 		});

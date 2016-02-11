@@ -11,52 +11,52 @@
 			opacity: 1;
 		}
 	}
-			
-	.member-thumbnail {	
-		.member-pic {
-			width: 100%;
-		}
-	}
+}
 
-	.member-profile {
-		display: table;
+.member-thumbnail {	
+	.member-pic {
 		width: 100%;
-		margin-top: $base-spacing;
-		opacity: 1;
+	}
+}
 
-		@media screen and (min-width: $break-large) {
-			position: absolute;
-			top:0;
-			margin-top: 0;
-			padding: $base-spacing;
-			opacity: 0;
-		}
+.member-profile {
+	display: table;
+	width: 100%;
+	margin-top: $base-spacing;
+	opacity: 1;
 
-		.member-testimonial {
-			font-size: 0.85em;
-			font-style: italic;
-		}
+	@media screen and (min-width: $break-large) {
+		position: absolute;
+		top:0;
+		margin-top: 0;
+		padding: $base-spacing;
+		opacity: 0;
+	}
+}
 
-		.member-contact-list {
-			padding-left: 0;
-			float: right;
+.member-testimonial {
+	font-size: 0.85em;
+	font-style: italic;
+}
 
-			li {
-				margin-right: 10px;
-				&:hover {
-					color: $lighter-main-color;
-				}
-			}
+.member-contact-list {
+	padding-left: 0;
+	float: right;
+
+	li {
+		margin-right: 10px;
+		&:hover {
+			color: $lighter-main-color;
 		}
 	}
+}
 
-	.member-data {
-		.databox-title {
-			margin-top: $base-spacing;
-		}
+.member-data {
+	.databox-title {
+		margin-top: $base-spacing;
+	}
 
-		.databox-info {
-			color: $main-color;
-		}
+	.databox-info {
+		color: $main-color;
 	}
 }

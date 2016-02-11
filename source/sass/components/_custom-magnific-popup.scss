@@ -3,15 +3,17 @@
 */
 
 .black-night {
-	button.mfp-close {
+	.mfp-close {
 		position: absolute;
-		top: 30px;
-		right: -5px;
 		width: 30px;
 		height: 30px;
+		margin-top: 28px;
 		background: $main-color;
 		opacity: 1;
-		line-height: 30px;
+		padding: 0;
+		line-height: 28px;
+		text-align: center;
+		font-size: 28px;
 
 		@include box-shadow(0px 0px 20px 0px rgba(0, 0, 0, 0.5));
 		@include transition(all 100ms ease-in);

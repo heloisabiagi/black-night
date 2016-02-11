@@ -12,22 +12,22 @@
 	@include background-image(linear-gradient(left, $darker-main-color 0%, darken($lighter-main-color, 6%) 30%, darken($lighter-main-color, 4%) 42%, darken($lighter-main-color, 2%) 46%, $lighter-main-color 48%, $lighter-main-color 50%, $lighter-main-color 52%, darken($lighter-main-color, 2%) 54%, darken($lighter-main-color, 4%) 58%, darken($lighter-main-color, 6%) 70%, $darker-main-color 100%));
 
 
-	  &.bulb-container {
+	&.bulb-wrapper {
 	  	height: 300px;
 	  	vertical-align: bottom;
 	  	
 	  	@media screen and (min-width: $break-tablet) {
 		    height: 400px;
-		  }
-	  }
+		}
+	}
 
-	  .bulb-image {
-	  		position: absolute;
-	  		bottom: 0;
-	  		left: 0;
-	  		right: 0;
-	  		margin: 0 auto;
-	  }
+	.bulb-image {
+	  	position: absolute;
+	  	bottom: 0;
+	  	left: 0;
+	  	right: 0;
+	  	margin: 0 auto;
+	}
 
 }
 
