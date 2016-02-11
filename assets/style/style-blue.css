@@ -875,6 +875,18 @@ _cover: this file contain style declarations for the main section (big image wit
 	color: #00a1c4;
 }
 
+.member-skills {
+	margin-top: 24px;
+}
+
+.member-skills .member-skill-title {
+	display: block;
+	font-size: 0.8em;
+	text-transform: uppercase;
+	margin-bottom: 6px;
+	font-weight: bold;
+}
+
 /**
   _testimonials: this file contain style declarations for the Testimonials, a section with a carousel full of clients' testimonials
 */
