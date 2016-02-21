@@ -1,7 +1,7 @@
 blackNight.navbarShrink = (function() {
 
 	var navbar = $("[data-behavior='navShrink']");
-	var scrollAmount = blackNight.scrollToShrink;
+	var scrollAmount = "100";
 
 	function manageHeaderScrolling(scrolledTop) {
 		if(scrolledTop > scrollAmount) {

@@ -1,7 +1,9 @@
 blackNight.animations = (function() {
 
 	function bindEvents(){
-		new WOW().init();
+		new WOW({
+        	mobile: blackNight.mobileAnimations
+      	}).init();
 	}
 
 	return {

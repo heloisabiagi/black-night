@@ -1,8 +1,8 @@
-// Mixins
-@import "globals/globals";
+// Settings
+@import "settings/settings";
 
-// Blue colors
-$main-color: #00a1c4;
+// Blue colors 
+$main-color: #00A1c4;
 $darker-main-color: darken($main-color, 10%);
 $lighter-main-color: lighten($main-color, 30%);
 

@@ -1,7 +1,9 @@
 blackNight.animations = (function() {
 
 	function bindEvents(){
-		new WOW().init();
+		new WOW({
+        	mobile: blackNight.mobileAnimations
+      	}).init();
 	}
 
 	return {
@@ -23,11 +25,11 @@ blackNight.carousel = (function() {
 	      '<button type="button" class="btn-flat btn-nav arrow-left"><span class="icon-holder"><span class="icon nav-icon"><i class="glyphicon glyphicon-menu-left" aria-hidden="true"></i></span></span></button>',
 	      '<button type="button" class="btn-flat btn-nav arrow-right"><span class="icon-holder"><span class="icon nav-icon"><i class="glyphicon glyphicon-menu-right" aria-hidden="true"></i></span></span></button>'
 	      ],
-	      items : 1,
-	      itemsDesktop : [1180,1],
-	      itemsDesktopSmall : [960,1],
-	      itemsTablet : [768,1],
-	      itemsMobile : [480,1]
+	      items : blackNight.carouselItems,
+	      itemsDesktop : [1180, blackNight.carouselItemsDesktop],
+	      itemsDesktopSmall : [960, blackNight.carouselItemsDesktopSmall],
+	      itemsTablet : [768, blackNight.carouselItemsTablet],
+	      itemsMobile : [480, blackNight.carouselItemsMobile]
 
 	  });
 	}
@@ -143,7 +145,7 @@ blackNight.contactForm = (function() {
 })();
 
 blackNight.contactForm.init();
-blackNight.popupSettings = (function() {
+blackNight.magnificPopupCustom = (function() {
 
 	function magnificPopupNormal(){
 		$(".popup-normal").magnificPopup({
@@ -221,11 +223,11 @@ blackNight.popupSettings = (function() {
 
 })();
 
-blackNight.popupSettings.init();
+blackNight.magnificPopupCustom .init();
 blackNight.navbarShrink = (function() {
 
 	var navbar = $("[data-behavior='navShrink']");
-	var scrollAmount = blackNight.scrollToShrink;
+	var scrollAmount = "100";
 
 	function manageHeaderScrolling(scrolledTop) {
 		if(scrolledTop > scrollAmount) {
@@ -347,7 +349,7 @@ blackNight.userCustoms = (function() {
 	function bindEvents(){
 		/**
 		 *
-		 * You can insert your events and customized code right here
+		 * You can insert customized code right here
 		 */
 
 	}

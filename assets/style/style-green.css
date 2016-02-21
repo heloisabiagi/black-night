@@ -148,7 +148,7 @@ section:nth-child(odd) {
 	text-align: center;
 	display: table-cell;
 	vertical-align: middle;
-	background: url('../images/bg/original/bg-cover.png?1454038048') repeat;
+	background: url('../images/layout/bg-cover.png?1454038048') repeat;
 	padding: 0 10%;
 	box-sizing: border-box;
 }
@@ -530,7 +530,7 @@ _cover: this file contain style declarations for the main section (big image wit
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	background-image: url('../images/bg/freeimages/city-1532248-620x465.jpg?1453254404');
+	background-image: url('../images/creative-commons/city-1532248-620x465.jpg?1453254404');
 }
 
 .cover-wrapper {
@@ -643,7 +643,7 @@ _cover: this file contain style declarations for the main section (big image wit
 }
 
 .portfolio-caption {
-	position: absolute;
+	position: relative;
 	bottom: -1px;
 	width: 100%;
 	height: 40px;
@@ -710,11 +710,11 @@ _cover: this file contain style declarations for the main section (big image wit
 }
 
 .image-box.box01 {
-	background-image: url('../images/bg/freeimages/gallery-1526795-620x400.jpg?1453254442');
+	background-image: url('../images/creative-commons/german.jpg?1455851321');
 }
 
 .image-box.box02 {
-	background-image: url('../images/bg/freeimages/high-rise-1234517-620x310.jpg?1453254370');
+	background-image: url('../images/creative-commons/dvd.jpg?1455854393');
 }
 
 .image-box.box03 {
@@ -873,18 +873,6 @@ _cover: this file contain style declarations for the main section (big image wit
 
 .member-data .databox-info {
 	color: #2cb07b;
-}
-
-.member-skills {
-	margin-top: 24px;
-}
-
-.member-skills .member-skill-title {
-	display: block;
-	font-size: 0.8em;
-	text-transform: uppercase;
-	margin-bottom: 6px;
-	font-weight: bold;
 }
 
 /**
@@ -1226,7 +1214,7 @@ section:nth-child(odd) .shortcode-carousel-wrapper {
 }
 
 .cover {
-	background-image: url('../images/bg/freeimages/city-1532248-1600x1200.jpg?1453249357');
+	background-image: url('../images/creative-commons/city-1532248-1600x1200.jpg?1453249357');
 }
 
 .split-block-image.bulb-wrapper {
@@ -1239,15 +1227,15 @@ section:nth-child(odd) .shortcode-carousel-wrapper {
 }
 
 .image-box.box01 {
-	background-image: url('../images/bg/freeimages/gallery-1526795.jpg?1453249423');
+	background-image: url('../images/creative-commons/german.jpg?1455851321');
 }
 
 .image-box.box02 {
-	background-image: url('../images/bg/freeimages/high-rise-1234517-1599x797.jpg?1453249395');
+	background-image: url('../images/creative-commons/dvd.jpg?1455854393');
 }
 
 .image-box.box03 {
-	background-image: url('../images/bg/freeimages/high-rise-1234517-1599x797.jpg?1453249395');
+	background-image: url('../images/creative-commons/dvd.jpg?1455854393');
 }
 
 .image-box.box04 {
@@ -1343,11 +1331,11 @@ section:nth-child(odd) .shortcode-carousel-wrapper {
 }
 
 section:nth-child(even) .split-block-row {
-	background: url('../images/bg/original/fold-dark.png?1454038048') no-repeat bottom right #353535;
+	background: url('../images/layout/fold-dark.png?1454038048') no-repeat bottom right #353535;
 }
 
 section:nth-child(odd) .split-block-row {
-	background: url('../images/bg/original/fold-light.png?1454038048') no-repeat bottom right #202020;
+	background: url('../images/layout/fold-light.png?1454038048') no-repeat bottom right #202020;
 }
 
 .portfolio-item {
@@ -1377,6 +1365,7 @@ section:nth-child(odd) .split-block-row {
 }
 
 .portfolio-caption {
+	position: absolute;
 	-webkit-transform: rotateX(90deg);
 	-moz-transform: rotateX(90deg);
 	-ms-transform: rotateX(90deg);

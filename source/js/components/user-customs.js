@@ -3,7 +3,7 @@ blackNight.userCustoms = (function() {
 	function bindEvents(){
 		/**
 		 *
-		 * You can insert your events and customized code right here
+		 * You can insert customized code right here
 		 */
 
 	}

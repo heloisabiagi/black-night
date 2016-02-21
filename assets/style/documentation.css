@@ -1,9 +1,12 @@
 /**
-  _documentation: README file styles
+  _documentation: README file stylesheet
 */
+.documentation .documentation-text a:link {
+  text-decoration: underline;
+}
 .documentation code {
-  color: #00a1c4;
-  background-color: #4f4f4f;
+  color: #5ee2ff;
+  background-color: transparent;
 }
 .documentation pre {
   background-color: #4f4f4f;
@@ -20,28 +23,28 @@
   padding: 12px;
   border: solid 1px #FFF;
 }
-.documentation ol {
+.documentation .table-of-contents ol {
   list-style-type: none;
   counter-reset: item;
   margin: 0;
   padding: 0;
 }
-.documentation li {
+.documentation .table-of-contents li {
   display: table;
   counter-increment: item;
   margin-bottom: 12px;
 }
-.documentation li:before {
+.documentation .table-of-contents li:before {
   content: counters(item,".") ". ";
   display: table-cell;
   padding-right: 0.6em;
 }
-.documentation li li {
+.documentation .table-of-contents li li {
   margin: 0;
 }
-.documentation li li li {
+.documentation .table-of-contents li li li {
   margn-left: 20px;
 }
-.documentation li li:before {
+.documentation .table-of-contents li li:before {
   content: counters(item,".") " ";
 }

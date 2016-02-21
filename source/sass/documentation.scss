@@ -1,5 +1,5 @@
-// Mixins
-@import "globals/globals";
+// Settings
+@import "settings/settings";
 
 // Blue colors
 $main-color: #00a1c4;
@@ -7,14 +7,20 @@ $darker-main-color: darken($main-color, 10%);
 $lighter-main-color: lighten($main-color, 30%);
 
 /**
-  _documentation: README file styles
+  _documentation: README file stylesheet
 */
 
 .documentation {
   
+  .documentation-text {
+    a:link {
+      text-decoration: underline;
+    }
+  }
+  
   code {
-    color: $main-color;
-    background-color: lighten($medium-gray, 10%);
+    color: $lighter-main-color;
+    background-color: transparent;
   }
 
   pre {
@@ -28,38 +34,38 @@ $lighter-main-color: lighten($main-color, 30%);
   .table-of-contents {
     padding: $base-spacing/2;
     border: solid 1px #FFF;
-  }    
 
-  ol {
-    list-style-type: none;
-    counter-reset: item;
-    margin: 0;
-    padding: 0;
-  }
-
-
-  li {
-    display: table;
-    counter-increment: item;
-    margin-bottom: $base-spacing/2;
-  }
-
-  li:before {
-      content: counters(item, ".") ". ";
-      display: table-cell;
-      padding-right: 0.6em;    
-  }
-
-  li li {
+    ol {
+      list-style-type: none;
+      counter-reset: item;
       margin: 0;
-  }
+      padding: 0;
+    }
 
-  li li li {
-      margn-left: 20px;
-  }
 
-  li li:before {
-      content: counters(item, ".") " ";
-  }
+    li {
+      display: table;
+      counter-increment: item;
+      margin-bottom: $base-spacing/2;
+    }
+
+    li:before {
+        content: counters(item, ".") ". ";
+        display: table-cell;
+        padding-right: 0.6em;    
+    }
+
+    li li {
+        margin: 0;
+    }
+
+    li li li {
+        margn-left: 20px;
+    }
+
+    li li:before {
+        content: counters(item, ".") " ";
+    }
+  }    
 
 }

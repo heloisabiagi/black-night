@@ -8,11 +8,11 @@ blackNight.carousel = (function() {
 	      '<button type="button" class="btn-flat btn-nav arrow-left"><span class="icon-holder"><span class="icon nav-icon"><i class="glyphicon glyphicon-menu-left" aria-hidden="true"></i></span></span></button>',
 	      '<button type="button" class="btn-flat btn-nav arrow-right"><span class="icon-holder"><span class="icon nav-icon"><i class="glyphicon glyphicon-menu-right" aria-hidden="true"></i></span></span></button>'
 	      ],
-	      items : 1,
-	      itemsDesktop : [1180,1],
-	      itemsDesktopSmall : [960,1],
-	      itemsTablet : [768,1],
-	      itemsMobile : [480,1]
+	      items : blackNight.carouselItems,
+	      itemsDesktop : [1180, blackNight.carouselItemsDesktop],
+	      itemsDesktopSmall : [960, blackNight.carouselItemsDesktopSmall],
+	      itemsTablet : [768, blackNight.carouselItemsTablet],
+	      itemsMobile : [480, blackNight.carouselItemsMobile]
 
 	  });
 	}

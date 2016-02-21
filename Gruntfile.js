@@ -7,7 +7,6 @@ module.exports = function(grunt) {
         "sassDir": "source/sass",
         "cssDir": "assets/style",
         "imagesDir": "assets/images",
-        "imagesPath": "source/images",
         "generatedImagesDir": "assets/images",
         "javascriptsDir": "assets/js",
         "fontsDir": "assets/fonts",
@@ -95,8 +94,7 @@ module.exports = function(grunt) {
         {expand: true, flatten: true, src: ['source/js/settings.js'], dest: 'assets/js'},
         {expand: true, flatten: true, src: ['source/js/color-switcher.js'], dest: 'assets/js'},
         {expand: true, flatten: true, src: ['source/js-libs/modernizr.custom.js'], dest: 'assets/js'},
-        {expand: true, flatten: true, src: ['source/js/user-customs.js'], dest: 'assets/js'},
-        {expand: true, flatten: true, src: ['source/inc/mailer.php'], dest: 'assets/inc'}
+        {expand: true, flatten: true, src: ['source/inc/*'], dest: 'assets/inc'}
         ]
       },
       images: {
@@ -104,6 +102,46 @@ module.exports = function(grunt) {
       },
       fonts: {
         files: [{expand: true, cwd: 'source/fonts', src: ['**'], dest: 'assets/fonts'}]
+      }
+    },
+
+    // Watch for changes in the development directories and process them into the final assets folder
+    watch: {
+      devJs: {
+        files: ['source/js/**'],
+        tasks: ['copy:settings', 'concat:scripts', 'uglify:scripts'],
+        options: {
+          spawn: false,
+        }
+      },
+      devJsLibs: {
+        files: ['source/js-libs/**'],
+        tasks: ['copy:settings','concat:jsLibs', 'uglify:jsLibs'],
+        options: {
+          spawn: false,
+        }
+      },
+      devCSS: {
+        files: ['source/sass/**'],
+        tasks: ['copy:images', 'copy:fonts' ,'compass', 'cmq', 'cssmin:main'],
+        options: {
+          spawn: false,
+        }
+      },
+
+      devCSSLibs: {
+        files: ['source/css-libs/**'],
+        tasks: ['concat:cssLibs', 'cssmin:libs'],
+        options: {
+          spawn: false,
+        },
+      },
+      phpForm: {
+        files: ['source/inc/**'],
+        tasks: ['copy:settings'],
+        options: {
+          spawn: false,
+        },
       }
     }
 
@@ -117,6 +155,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks("grunt-contrib-copy");
   grunt.loadNpmTasks('grunt-contrib-rename');
   grunt.loadNpmTasks('grunt-combine-media-queries');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Define tasks
   grunt.registerTask("build", ["copy", "concat", "uglify", "compass", "cssmin"]);

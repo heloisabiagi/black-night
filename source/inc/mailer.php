@@ -1,7 +1,7 @@
 <?php
 
-$to = "heloisa.biagi@gmail.com"; 
-$subject = "Results from your Contact Form";
+$to = "your@email.com"; // insert your email here.
+$subject = "Results from Contact Form";
 $headers = "From: Black Night Form Mailer". "\r\n";
 $headers .= "Reply-To: ". strip_tags($_POST['contact_email']) . "\r\n";
 $headers .= "MIME-Version: 1.0\r\n";
