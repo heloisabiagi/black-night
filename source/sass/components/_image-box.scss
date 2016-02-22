@@ -11,17 +11,21 @@
   @include cover-background;
 
   &.box01 {
+    /** 'Quote' section background (small devices) */
     background-image: $image-box-01-sm;
 
     @media screen and (min-width: $break-tablet) {
+        /** 'Quote' section background */
         background-image: $image-box-01;
     }
   }
 
   &.box02 {
+    /** 'Newsletter' section background (small devices) */
     background-image: $image-box-02-sm;
 
     @media screen and (min-width: $break-tablet) {
+      /** 'Newsletter' section background */
         background-image: $image-box-02;
     }
   }

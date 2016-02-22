@@ -35,6 +35,12 @@ $lighter-main-color: lighten($main-color, 30%);
     padding: $base-spacing/2;
     border: solid 1px #FFF;
 
+    &.scrolled {
+      position: fixed;
+      width: 360px;
+      top: $base-spacing;
+    }
+
     ol {
       list-style-type: none;
       counter-reset: item;

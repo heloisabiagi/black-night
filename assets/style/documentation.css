@@ -23,6 +23,11 @@
   padding: 12px;
   border: solid 1px #FFF;
 }
+.documentation .table-of-contents.scrolled {
+  position: fixed;
+  width: 360px;
+  top: 24px;
+}
 .documentation .table-of-contents ol {
   list-style-type: none;
   counter-reset: item;

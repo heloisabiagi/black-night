@@ -9,10 +9,10 @@ _cover: this file contain style declarations for the main section (big image wit
   height: 100%;
   min-height: 480px;
   @include cover-background;
-  background-image: $cover-image-sm;
+  background-image: $cover-image-sm; /** 'Cover' (Home) section background (small devices) */
 
   @media screen and (min-width: $break-tablet) {
-    background-image: $cover-image;
+    background-image: $cover-image; /** 'Cover' (Home) section background */
   }
 
 }

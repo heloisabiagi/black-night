@@ -152,6 +152,7 @@ blackNight.magnificPopupCustom = (function() {
 		  type: 'image',
 		  tLoading: blackNight.popupLoadingMessage + ' #%curr%...',
 		  closeOnBgClick: false,
+		  fixedContentPos: true,
 		  image: {
           	titleSrc: function(item) {
                 var _html = '<div class="databox job-data">';
@@ -193,7 +194,19 @@ blackNight.magnificPopupCustom = (function() {
 					e.preventDefault();
 					magnificPopup.prev();
 				});
-		    }
+		    },
+			 resize: function() {
+			    $(".mfp-img").each(function(){
+			    	var bottomBar = $(this).closest(".mfp-content").find(".mfp-bottom-bar");
+			    	$(this).css({ maxHeight: $(window).height() - bottomBar.height() });
+			    });
+			 },
+			 imageLoadComplete: function() {
+			    $(".mfp-img").each(function(){
+			    	var bottomBar = $(this).closest(".mfp-content").find(".mfp-bottom-bar");
+			    	$(this).css({ maxHeight: $(window).height() - bottomBar.height() });
+			    });
+			 }
 		}
 		});
 	}
@@ -224,6 +237,44 @@ blackNight.magnificPopupCustom = (function() {
 })();
 
 blackNight.magnificPopupCustom .init();
+blackNight.navbarHighlightItem = (function() {
+
+
+	function highlightItem() {
+		$("section").each(function(){
+            var value = $(this).attr("id");
+            var start = $(this).offset().top - $("#navigation-top").height();
+            var end = start + $(this).height();
+
+            var scrollTop = $(window).scrollTop();
+            if(scrollTop >= start) {
+                $("#main-nav a").not("a." + value).removeClass("active");
+                $("#main-nav a." + value).addClass("active");
+            }
+
+            if(scrollTop > end) {
+                $("#main-nav a." + value).removeClass("active");
+            }
+        });
+
+	}
+
+	function bindEvents(){
+		$(window).scroll(function(){
+            highlightItem();
+        });
+
+	}
+
+	return {
+		init: function(){
+			bindEvents();	
+		}
+	}
+
+})();
+
+blackNight.navbarHighlightItem.init(); 
 blackNight.navbarShrink = (function() {
 
 	var navbar = $("[data-behavior='navShrink']");

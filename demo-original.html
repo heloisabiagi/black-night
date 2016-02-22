@@ -50,7 +50,7 @@
                 <nav id ="navigation-top" class="navbar navbar-fixed-top transition-fast wow bounceInDown" data-behavior="navShrink">
                     <div class="container">
                         <div class="navbar-header">
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav" aria-expanded="false">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
@@ -58,21 +58,21 @@
                             </button>
                             <a class="navbar-brand" href="#main" data-behavior="scrollNavLink"><span class="brand-logo">Black Night</span></a>
                         </div> <!-- /navbar-header -->
-                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <div class="collapse navbar-collapse" id="main-nav">
                             <ul class="nav navbar-nav navbar-right">
                                 <!-- ### data-behavior="scrollNavLink": triggers the scroll navigation. If the element is an anchor, it will use the 'href' attribute. For any other element, you must set the 'data-location' attribute the same way you'd use it as an anchor (with the # + anchor name) -->
-                                <li><a href="#about" data-behavior="scrollNavLink">About Us</a></li>
-                                <li><a href="#services" data-behavior="scrollNavLink">Our Services</a></li>
-                                <li><a href="#works" data-behavior="scrollNavLink">Our Works</a></li>
-                                <li><a href="#team" data-behavior="scrollNavLink">Our Team</a></li>
+                                <li><a class="about" href="#about" data-behavior="scrollNavLink">About Us</a></li>
+                                <li><a class="services" href="#services" data-behavior="scrollNavLink">Our Services</a></li>
+                                <li><a class="works" href="#works" data-behavior="scrollNavLink">Our Works</a></li>
+                                <li><a class="team" href="#team" data-behavior="scrollNavLink">Our Team</a></li>
                                 <!-- Dropdown item -->
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Extras <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="#prices" data-behavior="scrollNavLink">Pricing Table</a></li>
-                                        <li><a href="#signup" data-behavior="scrollNavLink">Sign Up Form</a></li>
-                                        <li><a href="#testimonials" data-behavior="scrollNavLink">Testimonials</a></li>
-                                        <li><a href="#shortcodes" data-behavior="scrollNavLink">Shortcodes</a></li>
+                                        <li><a class="prices" href="#prices" data-behavior="scrollNavLink">Pricing Table</a></li>
+                                        <li><a class="signup" href="#signup" data-behavior="scrollNavLink">Sign Up Form</a></li>
+                                        <li><a class="testimonials" href="#testimonials" data-behavior="scrollNavLink">Testimonials</a></li>
+                                        <li><a class="shortcodes" href="#shortcodes" data-behavior="scrollNavLink">Shortcodes</a></li>
                                     </ul>
                                 </li> <!-- / Dropdown item -->
                                 <li><a href="#contact" data-behavior="scrollNavLink">Contact</a></li>
@@ -323,13 +323,6 @@
                                         </a> <!--/ popup-normal -->  
                                     </span>
                                 </span>
-                                <span class="icon-holder last">
-                                    <span class="icon big-icon">
-                                        <a href="#" title="View Project" target="_blank">
-                                            <i class="glyphicon glyphicon-new-window" aria-hidden="true"></i>
-                                        </a>
-                                    </span>
-                                </span>
                             </div> <!-- /portfolio-icons-container-->
                         </div>
                         <!-- /portfolio-item -->
@@ -351,13 +344,6 @@
                                         </a> <!--/ popup-normal -->  
                                     </span>
                                 </span>
-                                <span class="icon-holder last">  
-                                    <span class="icon big-icon">
-                                        <a href="#" title="View Project" target="_blank">
-                                            <i class="glyphicon glyphicon-new-window" aria-hidden="true"></i>
-                                        </a>
-                                    </span>
-                                </span>
                             </div><!--portfolio-icons-container-->     
                         </div><!-- /portfolio-item -->
 
@@ -376,13 +362,6 @@
                                         <a class="popup-normal" href="assets/images/original/portfolio03-pic.jpg" title="Photography 03" data-description="This is the job description for Photography 03." data-effect="mfp-zoom-in">  
                                             <i class="glyphicon glyphicon-search" aria-hidden="true"></i>
                                         </a>  
-                                    </span>
-                                </span>
-                                <span class="icon-holder last">
-                                    <span class="icon big-icon">
-                                        <a href="#" title="View Project" target="_blank">
-                                            <i class="glyphicon glyphicon-new-window" aria-hidden="true"></i>
-                                        </a>
                                     </span>
                                 </span>
                             </div><!-- /portfolio-icons-container-->       
@@ -498,7 +477,7 @@
             <!-- / QUOTE -->
 
             <!--========= PRICES ========= -->
-            <section id="prices" class="prices">
+            <section id="prices" class="prices image-box">
                 <div class="container">
                     <div class="row content-row">
                         <div class="col-md-12 wow bounceInDown">
@@ -616,7 +595,7 @@
                             <div class="team-member hover-image">
                                 <div class="member-thumbnail hover-image-item">
                                     <!-- ### Member thumbnail image size: 740px x 740px in order to fit on mobile and smaller screens -->
-                                    <img src="assets/images/creative-commons/in-the-dark-1251229-1280x1280.jpg" alt="John Doe" class="member-pic" />
+                                    <img src="assets/images/creative-commons/16143899316_73c1a7303b_k.jpg" alt="John Doe" class="member-pic" />
                                 </div> <!-- /member-thumbnail -->
                                 <div class="member-data databox">
                                     <h3 class="databox-title">John Doe</h3>
@@ -637,7 +616,7 @@
 
                         <div class="col-md-3 col-sm-6 wow bounceInLeft">
                             <div class="team-member hover-image">
-                                <div class="member-thumbnail hover-image-item"><img src="assets/images/creative-commons/man-1153421-1280x1280.jpg" alt="Joseph Doe" class="member-pic" /></div>
+                                <div class="member-thumbnail hover-image-item"><img src="assets/images/creative-commons/6848801076_c06bbbcd97_k.jpg" alt="Joseph Doe" class="member-pic" /></div>
                                 <div class="databox member-data">
                                     <h3 class="databox-title">Joseph Doe</h3>
                                     <span class="databox-info">Designer</span>
@@ -658,7 +637,7 @@
 
                         <div class="col-md-3 col-sm-6 wow bounceInRight">
                             <div class="team-member hover-image">
-                                <div class="member-thumbnail hover-image-item"><img src="assets/images/creative-commons/piecha-1487378-1279x1278.jpg" alt="Jane Doe" class="member-pic" /></div>
+                                <div class="member-thumbnail hover-image-item"><img src="assets/images/creative-commons/7338350692_58f4cee50e_o.jpg" alt="Jane Doe" class="member-pic" /></div>
                                 <div class="databox member-data">
                                     <h3 class="databox-title">Jane Doe</h3>
                                     <span class="databox-info">UX Architet</span>
@@ -677,7 +656,7 @@
 
                         <div class="col-md-3 col-sm-6 wow bounceInRight">
                             <div class="team-member hover-image">
-                                <div class="member-thumbnail hover-image-item"><img src="assets/images/creative-commons/sam-close-up-1239146-1280x1280.jpg" alt="Jane Smith" class="member-pic" /></div>
+                                <div class="member-thumbnail hover-image-item"><img src="assets/images/creative-commons/5388738458_c979c8c2a5_o.jpg" alt="Jane Smith" class="member-pic" /></div>
                                 <div class="databox member-data">
                                     <h3 class="databox-title">Jane Smith</h3>
                                     <span class="databox-info">Web Developer</span>
@@ -1023,7 +1002,7 @@
         <script src="assets/js/libs.min.js"></script>
         <script src="assets/js/settings.js"></script>
         <script src="assets/js/scripts.min.js"></script>
-        <!-- color-switcher.js: DEMO PURPOSES ONLY -->
+        <!-- COLOR SWITCHER - DEMO ONLY -->
         <script src="assets/js/color-switcher.js"></script>
     </body>
 </html>

@@ -8,7 +8,7 @@
 	padding: 0;
 	vertical-align: middle;
 
-	background-color: $lighter-main-color; // Old browsers
+	background-color: $main-color; // Old browsers
 	@include background-image(linear-gradient(left, $darker-main-color 0%, darken($lighter-main-color, 6%) 30%, darken($lighter-main-color, 4%) 42%, darken($lighter-main-color, 2%) 46%, $lighter-main-color 48%, $lighter-main-color 50%, $lighter-main-color 52%, darken($lighter-main-color, 2%) 54%, darken($lighter-main-color, 4%) 58%, darken($lighter-main-color, 6%) 70%, $darker-main-color 100%));
 
 

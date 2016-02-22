@@ -94,6 +94,7 @@ module.exports = function(grunt) {
         {expand: true, flatten: true, src: ['source/js/settings.js'], dest: 'assets/js'},
         {expand: true, flatten: true, src: ['source/js/color-switcher.js'], dest: 'assets/js'},
         {expand: true, flatten: true, src: ['source/js-libs/modernizr.custom.js'], dest: 'assets/js'},
+        {expand: true, flatten: true, src: ['source/js/documentation.js'], dest: 'assets/js'},
         {expand: true, flatten: true, src: ['source/inc/*'], dest: 'assets/inc'}
         ]
       },

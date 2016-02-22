@@ -120,10 +120,10 @@
 
 	.icon-holder {
 		display: inline-block;
-		&.first {
-			padding-right: 12px;
-			border-right: solid 1px $main-color;
-			margin-right: 12px;
+		&.last {
+			padding-left: 12px;
+			border-left: solid 1px $main-color;
+			margin-left: 12px;
 		}
 	}
 }

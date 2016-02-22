@@ -5,6 +5,7 @@ blackNight.magnificPopupCustom = (function() {
 		  type: 'image',
 		  tLoading: blackNight.popupLoadingMessage + ' #%curr%...',
 		  closeOnBgClick: false,
+		  fixedContentPos: true,
 		  image: {
           	titleSrc: function(item) {
                 var _html = '<div class="databox job-data">';
@@ -46,7 +47,19 @@ blackNight.magnificPopupCustom = (function() {
 					e.preventDefault();
 					magnificPopup.prev();
 				});
-		    }
+		    },
+			 resize: function() {
+			    $(".mfp-img").each(function(){
+			    	var bottomBar = $(this).closest(".mfp-content").find(".mfp-bottom-bar");
+			    	$(this).css({ maxHeight: $(window).height() - bottomBar.height() });
+			    });
+			 },
+			 imageLoadComplete: function() {
+			    $(".mfp-img").each(function(){
+			    	var bottomBar = $(this).closest(".mfp-content").find(".mfp-bottom-bar");
+			    	$(this).css({ maxHeight: $(window).height() - bottomBar.height() });
+			    });
+			 }
 		}
 		});
 	}

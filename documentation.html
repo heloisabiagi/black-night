@@ -34,7 +34,7 @@
                         <h2 class="title-2"><a name="step-1">1. Starting point</a></h2>
                         <p>First, let's start with the files within the theme folder and how to use them.</p>
                         <p>
-                        Once you've downloaded and unzipped the theme, you'll find a bunch of files and folders. The main HTML files are <code>demo-original.html</code> and <code>demo-alternate.html</code>, which contain the source code for the theme's pages and can be customized with your own data. The <code>assets</code> folder contains the final concatenated and minified styles, scripts, fonts, images and other sources referenced in the HTML files, while the <code>source</code> folder contains the original files (SASS files, CSS libraries, Javascript libraries, plugins and separate files etc) used for development purposes.
+                        Once you've downloaded and unzipped the theme, you'll find a bunch of files and folders. The main HTML files are the <code>demo-[type].html</code>, which contain the source code for the theme's pages and can be customized with your own data. The <code>assets</code> folder contains the final concatenated and minified styles, scripts, fonts, images and other sources referenced in the HTML files, while the <code>source</code> folder contains the original files (SASS files, CSS libraries, Javascript libraries, plugins and separate files etc) used for development purposes.
                         </p>
 
                         <p>
@@ -87,11 +87,11 @@ source
                         </p>
 
                         <p>
-                        Black Night theme makes use of SASS/Compass, so, the CSS files inside the <code>assets/style</code> folder are the compiled versions of the files from the <code>source</code> folder. It’s ok if you’re not familiar with SASS, you may edit the <code>assets</code> files directly. The <code>libs.css</code> , and its minified version <code>libs.min.css</code>  (which is the one used in the HTML file) contain the third-party libraries from the <code>source/css-libs</code> folder (Bootstrap included),  <code>style-[color].css</code>  and <code>style-[color].min.css </code> (again, the theme uses the minified versions) files contain the main CSS files (for more information, check item <a href="#step-2-1" title="Color Schemes">2.1 Color Schemes</a>), and other CSS files (<code>color-switcher.css</code>, <code>documentation.css</code> and <code>preloader.css</code>) are separated files for specific areas.
+                        Black Night theme makes use of SASS/Compass, so, the CSS files inside the <code>assets/style</code> folder are the compiled versions of the files from the <code>source</code> folder. If you’re not using SASS/Compass, you must edit the <code>assets</code> files directly in order to perform changes. The <code>libs.css</code> , and its minified version <code>libs.min.css</code>  (which is the one used in the HTML file) contain the third-party libraries from the <code>source/css-libs</code> folder (Bootstrap included),  <code>style-[color].css</code>  and <code>style-[color].min.css </code> (again, the theme uses the minified versions) files contain the main CSS files (for more information, check item <a href="#step-2-1" title="Color Schemes">2.1 Color Schemes</a>), and other CSS files (<code>color-switcher.css</code>, <code>documentation.css</code> and <code>preloader.css</code>) are separated files for specific areas.
                         </p>
 
                         <p>
-                        The <code>assets/js</code> folder is similar to the <code>style</code> folder: it also contains processed files from the <code>source</code> folder, being <code>libs.js</code> and <code>libs.min.js</code> the files with the third-party libraries and plugins generated from the <code>source/js-libs</code>, the <code>scripts.js</code> and <code>scripts.min.js</code> the ones with the theme’s settings, and the other js files (<code>color-switcher.js</code>, <code>modernizr.custom.js</code> and <code>settings.js</code> ) for specific settings (check item <a href="step-2-4" title="Javascript Settings">2.4 Javascript Settings</a>). 
+                        The <code>assets/js</code> folder is similar to the <code>style</code> folder: it also contains processed files from the <code>source</code> folder (and if you're not using Grunt to compile tehse files, you ust edit the files in the assets folder), being <code>libs.js</code> and <code>libs.min.js</code> the files with the third-party libraries and plugins generated from the <code>source/js-libs</code>, the <code>scripts.js</code> and <code>scripts.min.js</code> the ones with the theme’s settings, and the other js files (<code>color-switcher.js</code>, <code>modernizr.custom.js</code> and <code>settings.js</code> ) for specific settings (check item <a href="step-2-4" title="Javascript Settings">2.4 Javascript Settings</a>). 
                         </p>
 
                         <p>
@@ -121,7 +121,14 @@ source
 
                       <div class="content-row">
                         <h2 class="title-2"><a name="step-2">2. Theme features</a></h2>
-                        <p></p>
+                        <p>In the next steps, we will have a look at the theme's features and facilities.</p>
+                      </div>
+
+                      <div class="content-row">
+                        <h2 class="title-2"><a name="step-2-1">2.1 General Instructions</a></h2>
+                        <p>As mentioned before, the main theme files are the <code>demo-[type].html</code> files and the <code>assets</code> folder, which contains all the CSS, Javascript files, images, fonts and extra files used in this theme. </p>
+                        <p>Once ypu open any of the HTML demo files, you'll notice they're heavily commented. These comments contain usage instructions for the layout and tags, and it's pretty important to read them first before making any changes to the layout in order to prevent malfunction or unexpected behaviors. </p>
+                        <p>If you have any doubts don't hesitate to contact us.</p>
                       </div>
 
                       <div class="content-row">
@@ -151,7 +158,7 @@ source
                       </div>
 
                       <div class="content-row">
-                        <h3 class="title-3"><a name="step-2-1">2.4 Plugins</a></h3>
+                        <h3 class="title-3"><a name="step-2-4">2.4 Plugins</a></h3>
                         <p>In order to enhance user experience, Black Night makes use of the following Javascript plugins:</p>
                         <ul>
                           <li><strong><a href="https://github.com/flesler/jquery.scrollTo" title="More about ScrollTo" taret="_blank">ScrollTo</a>:</strong> makes scroll navigation easier.</li>  
@@ -166,7 +173,7 @@ source
                       <div class="content-row">
                         <h3 class="title-3"><a name="step-2-5">2.5 Javascript Settings</a></h3>
                         <p>For those who do not feel comfortable with opening a Javascript file and editting messages or changing settings, Black Night offers a <code>settings.js</code> file where you can customize things like animations on mobile devices, carousel items, portfolio grid or form feedack messages. If you're working with Grunt, you can edit the file in the <code>source</code> directory; if not, you should directly edit the one in the <code>assets</code> folder.</p>
-                        <p>If you need to add any extra code to Black Night's scripts, you can use the <code>userCustoms</code> module (Black Night uses <a href="https://carldanley.com/js-revealing-module-pattern/" title="What is Revealing Module Pattern?" target="_blank">revealing module pattern</a> for development. It's not mandatory to know design patterns to work with Black Night though) and place it where the message "You can insert customized code right here" stands. For Grunt users, the module is located inside the <code>source/js/components</code> folder; else, it can be found at <code>assets/js/scripts.js</code> and <code>assets/js/scripts.min.js</code>.</p>
+                        <p>If you need to add any extra code to Black Night's scripts, you can use the <code>userCustoms</code> module (Black Night uses <a href="https://carldanley.com/js-revealing-module-pattern/" title="What is Revealing Module Pattern?" target="_blank">revealing module pattern</a> for development. You don't need to know design patterns to work with Black Night though) and place it where the message "You can insert customized code right here" stands. For Grunt users, the module is located inside the <code>source/js/components</code> folder; else, it can be found at <code>assets/js/scripts.js</code> and <code>assets/js/scripts.min.js</code>.</p>
                       </div>
 
                       <div class="content-row">
@@ -177,7 +184,70 @@ source
 
                       <div class="content-row">
                         <h3 class="title-3"><a name="step-2-7">2.7 Image Backgrounds</a></h3>
-                        <p></p>
+                        <p>Some sections (like Quote and Newsletter) contain images as backgrounds. If you wish to add background to any section, you just have to add the class <code>image-box</code> to the desired section, and then define the background-image in a new class. For example:</p>
+<pre>
+// HTML
+&lt;section id=&quot;quote-section&quot; class=&quot;image-box box01&quot;&gt;
+
+// CSS
+.image-box.box01 {
+  background-image: url('../images/creative-commons/german.jpg?1456034411');
+}
+</pre> 
+
+                      <p>The example above is taken from the Quote section, where besides the <code>image-box</code> class, another class containing the background-image data (<code>.box01</code>) was added to the section. The classes <code>box-01</code> and <code>box-02</code> are already in use for the 'Quotes' and 'Newsletter' sections respectively (if you wish to change these section's backgrounds, just edit these classes), however, you can create new classes starting with <code>box-03</code> (in the <code>assets/style-[color].css</code> and <code>assets/style-[color].min.css</code>, you'll notice that the classes .box-03-05 are already created, with empty image background to make it easy to set up).</p>
+                      <p>For SASS/Compass users, filling the new box classes is pretty simple: just open the <code>source/settings/settings.scss</code> files and edit/fill the <code>$image-box-[number]</code> variables.</p>
+
+                      </div>
+
+                      <div class="content-row">
+                        <h3 class="title-3"><a name="step-2-8">2.8 Image Credits</a></h3>
+                        <p>All the images used in this theme are under the <a href="https://creativecommons.org/licenses/by/2.0/" title="Creative Commons License">Creative Commons</a> license. The following are the proper credits for the images.</p>
+                        <table class="table">
+                          <thead>
+                              <tr>
+                                <th>Picture</th>
+                                <th>Credit</th>
+                              </tr>
+                          </thead>
+                          
+                          <tbody>
+                              <tr>
+                                <td>/creative-commons/dvd.jpg</td>
+                                <td><a href="http://www.littlevisuals.co/" title="Little Visuals">Little Visuals</a></td>
+                              </tr>
+                              <tr>
+                                <td>/creative-commons/german.jpg</td>
+                                <td><a href="http://www.littlevisuals.co/" title="Little Visuals">Little Visuals</a></td>
+                              </tr>
+                              <tr>
+                                <td>/creative-commons/89191870_1da83135a3_o.jpg</td>
+                                <td><a href="https://www.flickr.com/photos/benzado/" title="Benjamin Ragheb on Flickr<">Flickr - Benjamin Ragheb</a></td>
+                              </tr>
+
+                              <tr>
+                                <td>/creative-commons/7338350692_58f4cee50e_o.jpg</td>
+                                <td><a href="http://www.flickr.com/photos/yetiphotos/" title="Yeti Photos on Flickr<">Flickr - Yeti Photos</a></td>
+                              </tr>
+
+                              <tr>
+                                <td>/creative-commons/5388738458_c979c8c2a5_o.jpg</td>
+                                <td><a href="https://www.flickr.com/photos/58842866@N08" title="tommerton2010 on Flickr<">Flickr - tommerton2010</a></td>
+                              </tr>
+
+                              <tr>
+                                <td>/creative-commons/16143899316_73c1a7303b_k.jpg</td>
+                                <td><a href="http://www.flickr.com/photos/arturtula" title="Artur (RUS) Potosi on Flickr<">Flickr - Artur (RUS) Potosi</a></td>
+                              </tr>
+
+                              <tr>
+                                <td>/creative-commons/6848801076_c06bbbcd97_k.jpg</td>
+                                <td><a href="https://www.flickr.com/photos/78428166@N00" title="Tony Alter on Flickr<">Flickr - Tony Alter</a></td>
+                              </tr>
+                    
+                          </tbody>
+
+                        </table>
                       </div>
 
                   </div>
@@ -194,13 +264,14 @@ source
                             </li>
                             <li>Theme features
                               <ol>
-                                  <li>General instructions</li>
-                                  <li>Color schemes</li>
-                                  <li>Fonts and Icons</li>
-                                  <li>Plugins</li>
-                                  <li>Javascript Settings</li>
-                                  <li>Contact Form</li>
-                                  <li>Image backgrounds</li>
+                                  <li><a href="#step-2-1">General instructions</a></li>
+                                  <li><a href="#step-2-2">Color schemes</a></li>
+                                  <li><a href="#step-2-3">Fonts and Icons</a></li>
+                                  <li><a href="#step-2-4">Plugins</a></li>
+                                  <li><a href="#step-2-5">Javascript Settings</a></li>
+                                  <li><a href="#step-2-6">Contact Form</a></li>
+                                  <li><a href="#step-2-7">Image backgrounds</a></li>
+                                  <li><a href="#step-2-8">Image credits</a></li>
                               </ol>
                             </li> 
                         </ol>
@@ -215,7 +286,7 @@ source
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="assets/js/libs.js"></script>
 <script src="assets/js/settings.js"></script>
-<script src="assets/js/scripts.min.js"></script>
+<script src="assets/js/documentation.js"></script>
 
 </body>
 </html>
