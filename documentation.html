@@ -220,19 +220,10 @@
 
                           <div class="content-row">
                             <h3 class="title-3"><a name="step-2-7">2.7 Image Backgrounds</a></h3>
-                            <p>Some sections (like Quote and Newsletter) contain images as backgrounds. If you wish to add background to any section, you just have to add the class <code>image-box</code> to the desired section, and then define the background-image in a new class. For example:</p>
-    <pre>
-    // HTML
-    &lt;section id=&quot;quote-section&quot; class=&quot;image-box box01&quot;&gt;
-
-    // CSS
-    .image-box.box01 {
-      background-image: url('../images/creative-commons/german.jpg?1456034411');
-    }
-    </pre> 
-
-                          <p>The example above is taken from the Quote section, where besides the <code>image-box</code> class, another class containing the background-image data (<code>.box01</code>) was added to the section. The classes <code>box-01</code> and <code>box-02</code> are already in use for the 'Quotes' and 'Newsletter' sections respectively (if you wish to change these section's backgrounds, just edit these classes), however, you can create new classes starting with <code>box-03</code> (in the <code>assets/style-[color].css</code> and <code>assets/style-[color].min.css</code>, you'll notice that the classes .box-03-05 are already created, with empty image background to make it easy to set up).</p>
-                          <p>For SASS/Compass users, filling the new box classes is pretty simple: just open the <code>source/settings/settings.scss</code> files and edit/fill the <code>$image-box-[number]</code> variables.</p>
+                            <p>Some sections (like Quote and Newsletter) contain images as backgrounds, which are declared <strong>directly in the HTML file</strong>. If you wish to add background to any section, you just have to add the class <code>image-box</code> to the desired section, and then add the background-image in a style declaration. For example:</p>
+<pre>
+&lt;section id=&quot;services&quot; class=&quot;image-box&quot; style=&quot;background-image: url(assets/images/[your-folder]/[your-image.jpg]);&quot;&gt;
+</pre> 
 
                           </div>
 

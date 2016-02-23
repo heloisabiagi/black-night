@@ -537,7 +537,6 @@ _cover: this file contain style declarations for the main section (big image wit
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	background-image: url('../images/creative-commons/89191870_1da83135a3_o.jpg?1456034253'); /** 'Cover' (Home) section background (small devices) */
 }
 
 .cover.cover-carousel {
@@ -739,26 +738,6 @@ _cover: this file contain style declarations for the main section (big image wit
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-}
-
-.image-box.box01 { /** 'Quote' section background (small devices) */
-	background-image: url('../images/creative-commons/german.jpg?1456034411');
-}
-
-.image-box.box02 { /** 'Newsletter' section background (small devices) */
-	background-image: url('../images/creative-commons/dvd.jpg?1456034322');
-}
-
-.image-box.box03 {
-	background-image: "";
-}
-
-.image-box.box04 {
-	background-image: "";
-}
-
-.image-box.box05 {
-	background-image: "";
 }
 
 /**
@@ -1240,10 +1219,6 @@ section:nth-child(odd) .shortcode-carousel-wrapper {
 	padding: 10px 0px;
 }
 
-.cover {
-	background-image: url('../images/creative-commons/89191870_1da83135a3_o.jpg?1456034253'); /** 'Cover' (Home) section background */
-}
-
 .split-block-image.bulb-wrapper {
 	height: 400px;
 }
@@ -1251,26 +1226,6 @@ section:nth-child(odd) .shortcode-carousel-wrapper {
 .split-block-description {
 	padding-left: 24px;
 	padding-right: 24px;
-}
-
-.image-box.box01 { /** 'Quote' section background */
-	background-image: url('../images/creative-commons/german.jpg?1456034411');
-}
-
-.image-box.box02 { /** 'Newsletter' section background */
-	background-image: url('../images/creative-commons/dvd.jpg?1456034322');
-}
-
-.image-box.box03 {
-	background-image: url('../images/creative-commons/dvd.jpg?1456034322');
-}
-
-.image-box.box04 {
-	background-image: "";
-}
-
-.image-box.box05 {
-	background-image: "";
 }
 
 .pricing-item {
