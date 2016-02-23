@@ -181,6 +181,11 @@ section:nth-child(odd) {
 	font-size: 0.8em;
 }
 
+.carousel-wrapper {
+	text-align: center;
+	overflow: hidden;
+}
+
 .owl-carousel {
 	overflow: hidden;
 }
@@ -535,6 +540,11 @@ _cover: this file contain style declarations for the main section (big image wit
 	background-image: url('../images/creative-commons/89191870_1da83135a3_o.jpg?1456034253'); /** 'Cover' (Home) section background (small devices) */
 }
 
+.cover.cover-carousel {
+	background-image: none;
+	background-color: #000;
+}
+
 .cover-wrapper {
 	margin-left: auto;
 	margin-right: auto;
@@ -556,6 +566,9 @@ _cover: this file contain style declarations for the main section (big image wit
 	padding: 0;
 	vertical-align: middle;
 	background-color: #00a1c4;
+}
+
+.split-block-image.bg-gradient {
 	background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #007791), color-stop(30%, #3fddff), color-stop(42%, #4adfff), color-stop(46%, #54e0ff), color-stop(48%, #5ee2ff), color-stop(50%, #5ee2ff), color-stop(52%, #5ee2ff), color-stop(54%, #54e0ff), color-stop(58%, #4adfff), color-stop(70%, #3fddff), color-stop(100%, #007791));
 	background-image: -webkit-linear-gradient(left, #007791 0%, #3fddff 30%, #4adfff 42%, #54e0ff 46%, #5ee2ff 48%, #5ee2ff 50%, #5ee2ff 52%, #54e0ff 54%, #4adfff 58%, #3fddff 70%, #007791 100%);
 	background-image: -moz-linear-gradient(left, #007791 0%, #3fddff 30%, #4adfff 42%, #54e0ff 46%, #5ee2ff 48%, #5ee2ff 50%, #5ee2ff 52%, #54e0ff 54%, #4adfff 58%, #3fddff 70%, #007791 100%);
@@ -668,6 +681,23 @@ _cover: this file contain style declarations for the main section (big image wit
 	display: inline-block;
 	width: 100%;
 	background: #00a1c4;
+}
+
+.portfolio-caption .project-title:after {
+	content: "";
+	position: absolute;
+	display: block;
+	width: 10px;
+	height: 10px;
+	left: 50%;
+	top: -5px;
+	margin-left: -5px;
+	background: #00a1c4;
+	-webkit-transform: rotateZ(45deg);
+	-moz-transform: rotateZ(45deg);
+	-ms-transform: rotateZ(45deg);
+	-o-transform: rotateZ(45deg);
+	transform: rotateZ(45deg);
 }
 
 .portfolio-icon,
@@ -880,11 +910,6 @@ _cover: this file contain style declarations for the main section (big image wit
 /**
   _testimonials: this file contain style declarations for the Testimonials, a section with a carousel full of clients' testimonials
 */
-
-.testimonials-wrapper {
-	text-align: center;
-	overflow: hidden;
-}
 
 .testimonial-sentence {
 	-webkit-box-sizing: border-box;

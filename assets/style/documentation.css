@@ -26,7 +26,7 @@
 .documentation .table-of-contents.scrolled {
   position: fixed;
   width: 360px;
-  top: 24px;
+  top: 80px;
 }
 .documentation .table-of-contents ol {
   list-style-type: none;

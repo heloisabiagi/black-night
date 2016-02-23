@@ -92,8 +92,22 @@
 
 	.project-title {
 		display: inline-block;
-    	width: 100%;
-    	background: $main-color;
+    width: 100%;
+    background: $main-color;
+
+    &:after {
+    	content: "";
+	    position: absolute;
+	    display: block;
+	    width: 10px;
+	    height: 10px;
+	    left: 50%;
+	    top: -5px;
+	    margin-left: -5px;
+	    background: $main-color;
+  		@include transform(rotateZ(45deg));
+  	}
+
 	}
 }
 

@@ -15,6 +15,11 @@ _cover: this file contain style declarations for the main section (big image wit
     background-image: $cover-image; /** 'Cover' (Home) section background */
   }
 
+  &.cover-carousel {
+      background-image: none;
+      background-color: #000;
+  }
+
 }
 
 .cover-wrapper {

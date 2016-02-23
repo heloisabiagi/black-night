@@ -113,7 +113,7 @@ section:nth-child(odd) {
 	clear: both;
 	width: 50px;
 	height: 1px;
-	background-color: #e80c7a;
+	background-color: #d02c7e;
 	margin-top: 15px;
 	position: absolute;
 	left: 50%;
@@ -181,6 +181,11 @@ section:nth-child(odd) {
 	font-size: 0.8em;
 }
 
+.carousel-wrapper {
+	text-align: center;
+	overflow: hidden;
+}
+
 .owl-carousel {
 	overflow: hidden;
 }
@@ -211,12 +216,12 @@ address span {
 }
 
 .icon:hover {
-	color: #e80c7a;
+	color: #d02c7e;
 	text-decoration: none;
 }
 
 .icon.color-icon {
-	color: #e80c7a;
+	color: #d02c7e;
 }
 
 .icon.nav-icon:hover {
@@ -239,7 +244,7 @@ address span {
 	display: inline-block;
 	width: 42px;
 	height: 42px;
-	background-color: #e80c7a;
+	background-color: #d02c7e;
 	-webkit-border-radius: 60px;
 	-moz-border-radius: 60px;
 	-ms-border-radius: 60px;
@@ -271,13 +276,13 @@ address span {
 	display: inline-block;
 	width: 42px;
 	height: 42px;
-	border: solid 2px #e80c7a;
+	border: solid 2px #d02c7e;
 	-webkit-border-radius: 60px;
 	-moz-border-radius: 60px;
 	-ms-border-radius: 60px;
 	-o-border-radius: 60px;
 	border-radius: 60px;
-	color: #e80c7a;
+	color: #d02c7e;
 	font-size: 1em;
 	line-height: 37px;
 	text-align: center;
@@ -305,7 +310,7 @@ address span {
 	-ms-border-radius: 0px;
 	-o-border-radius: 0px;
 	border-radius: 0px;
-	background-color: #e80c7a;
+	background-color: #d02c7e;
 	font-weight: 700;
 }
 
@@ -320,7 +325,7 @@ address span {
 
 .black-night .panel-theme .panel-heading {
 	color: #FFF;
-	background-color: #e80c7a;
+	background-color: #d02c7e;
 	font-weight: 700;
 	-webkit-border-radius: 0px;
 	-moz-border-radius: 0px;
@@ -335,7 +340,7 @@ address span {
 
 .black-night .panel-theme .panel-heading:hover {
 	color: #FFF;
-	background-color: #b80961;
+	background-color: #a62365;
 }
 
 .black-night .panel-theme .panel-heading:active {
@@ -366,7 +371,7 @@ address span {
 	width: 30px;
 	height: 30px;
 	margin-top: 28px;
-	background: #e80c7a;
+	background: #d02c7e;
 	opacity: 1;
 	padding: 0;
 	line-height: 28px;
@@ -382,7 +387,7 @@ address span {
 }
 
 .black-night .mfp-close:hover {
-	background-color: #b80961;
+	background-color: #a62365;
 }
 
 .black-night .mfp-bottom-bar {
@@ -412,12 +417,12 @@ address span {
 
 .black-night button.mfp-arrow {
 	opacity: 1;
-	background: #e80c7a;
+	background: #d02c7e;
 }
 
 .black-night button.mfp-arrow:hover {
 	color: #FFF;
-	background-color: #b80961;
+	background-color: #a62365;
 }
 
 .black-night .mfp-figure small {
@@ -535,6 +540,11 @@ _cover: this file contain style declarations for the main section (big image wit
 	background-image: url('../images/creative-commons/89191870_1da83135a3_o.jpg?1456034253'); /** 'Cover' (Home) section background (small devices) */
 }
 
+.cover.cover-carousel {
+	background-image: none;
+	background-color: #000;
+}
+
 .cover-wrapper {
 	margin-left: auto;
 	margin-right: auto;
@@ -555,12 +565,15 @@ _cover: this file contain style declarations for the main section (big image wit
 	overflow: hidden;
 	padding: 0;
 	vertical-align: middle;
-	background-color: #e80c7a;
-	background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #b80961), color-stop(30%, #f876b7), color-stop(42%, #f880bc), color-stop(46%, #f98ac1), color-stop(48%, #f994c7), color-stop(50%, #f994c7), color-stop(52%, #f994c7), color-stop(54%, #f98ac1), color-stop(58%, #f880bc), color-stop(70%, #f876b7), color-stop(100%, #b80961));
-	background-image: -webkit-linear-gradient(left, #b80961 0%, #f876b7 30%, #f880bc 42%, #f98ac1 46%, #f994c7 48%, #f994c7 50%, #f994c7 52%, #f98ac1 54%, #f880bc 58%, #f876b7 70%, #b80961 100%);
-	background-image: -moz-linear-gradient(left, #b80961 0%, #f876b7 30%, #f880bc 42%, #f98ac1 46%, #f994c7 48%, #f994c7 50%, #f994c7 52%, #f98ac1 54%, #f880bc 58%, #f876b7 70%, #b80961 100%);
-	background-image: -o-linear-gradient(left, #b80961 0%, #f876b7 30%, #f880bc 42%, #f98ac1 46%, #f994c7 48%, #f994c7 50%, #f994c7 52%, #f98ac1 54%, #f880bc 58%, #f876b7 70%, #b80961 100%);
-	background-image: linear-gradient(left, #b80961 0%, #f876b7 30%, #f880bc 42%, #f98ac1 46%, #f994c7 48%, #f994c7 50%, #f994c7 52%, #f98ac1 54%, #f880bc 58%, #f876b7 70%, #b80961 100%);
+	background-color: #d02c7e;
+}
+
+.split-block-image.bg-gradient {
+	background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #a62365), color-stop(30%, #e78fbb), color-stop(42%, #e997c0), color-stop(46%, #eba0c5), color-stop(48%, #eda8cb), color-stop(50%, #eda8cb), color-stop(52%, #eda8cb), color-stop(54%, #eba0c5), color-stop(58%, #e997c0), color-stop(70%, #e78fbb), color-stop(100%, #a62365));
+	background-image: -webkit-linear-gradient(left, #a62365 0%, #e78fbb 30%, #e997c0 42%, #eba0c5 46%, #eda8cb 48%, #eda8cb 50%, #eda8cb 52%, #eba0c5 54%, #e997c0 58%, #e78fbb 70%, #a62365 100%);
+	background-image: -moz-linear-gradient(left, #a62365 0%, #e78fbb 30%, #e997c0 42%, #eba0c5 46%, #eda8cb 48%, #eda8cb 50%, #eda8cb 52%, #eba0c5 54%, #e997c0 58%, #e78fbb 70%, #a62365 100%);
+	background-image: -o-linear-gradient(left, #a62365 0%, #e78fbb 30%, #e997c0 42%, #eba0c5 46%, #eda8cb 48%, #eda8cb 50%, #eda8cb 52%, #eba0c5 54%, #e997c0 58%, #e78fbb 70%, #a62365 100%);
+	background-image: linear-gradient(left, #a62365 0%, #e78fbb 30%, #e997c0 42%, #eba0c5 46%, #eda8cb 48%, #eda8cb 50%, #eda8cb 52%, #eba0c5 54%, #e997c0 58%, #e78fbb 70%, #a62365 100%);
 }
 
 .split-block-image.bulb-wrapper {
@@ -596,7 +609,7 @@ _cover: this file contain style declarations for the main section (big image wit
 }
 
 .black-night .media-list .media-heading.color {
-	color: #e80c7a;
+	color: #d02c7e;
 }
 
 /**
@@ -667,7 +680,24 @@ _cover: this file contain style declarations for the main section (big image wit
 .portfolio-caption .project-title {
 	display: inline-block;
 	width: 100%;
-	background: #e80c7a;
+	background: #d02c7e;
+}
+
+.portfolio-caption .project-title:after {
+	content: "";
+	position: absolute;
+	display: block;
+	width: 10px;
+	height: 10px;
+	left: 50%;
+	top: -5px;
+	margin-left: -5px;
+	background: #d02c7e;
+	-webkit-transform: rotateZ(45deg);
+	-moz-transform: rotateZ(45deg);
+	-ms-transform: rotateZ(45deg);
+	-o-transform: rotateZ(45deg);
+	transform: rotateZ(45deg);
 }
 
 .portfolio-icon,
@@ -691,7 +721,7 @@ _cover: this file contain style declarations for the main section (big image wit
 
 .portfolio-icons-container .icon-holder.last {
 	padding-left: 12px;
-	border-left: solid 1px #e80c7a;
+	border-left: solid 1px #d02c7e;
 	margin-left: 12px;
 }
 
@@ -769,7 +799,7 @@ _cover: this file contain style declarations for the main section (big image wit
 }
 
 .pricing-item.featured .pricing-value {
-	background-color: #f994c7;
+	background-color: #eda8cb;
 	color: #FFF;
 	text-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
 }
@@ -866,7 +896,7 @@ _cover: this file contain style declarations for the main section (big image wit
 }
 
 .member-contact-list li:hover {
-	color: #f994c7;
+	color: #eda8cb;
 }
 
 .member-data .databox-title {
@@ -874,17 +904,12 @@ _cover: this file contain style declarations for the main section (big image wit
 }
 
 .member-data .databox-info {
-	color: #e80c7a;
+	color: #d02c7e;
 }
 
 /**
   _testimonials: this file contain style declarations for the Testimonials, a section with a carousel full of clients' testimonials
 */
-
-.testimonials-wrapper {
-	text-align: center;
-	overflow: hidden;
-}
 
 .testimonial-sentence {
 	-webkit-box-sizing: border-box;
@@ -904,7 +929,7 @@ _cover: this file contain style declarations for the main section (big image wit
 	width: 50px;
 	height: 1px;
 	margin-top: 15px;
-	background-color: #e80c7a;
+	background-color: #d02c7e;
 	position: absolute;
 	left: 50%;
 	margin-left: -25px;
@@ -1047,7 +1072,7 @@ section:nth-child(odd) .shortcode-carousel-wrapper {
 .black-night .btn-flat {
 	border: none;
 	border-radius: 0;
-	background-color: #e80c7a;
+	background-color: #d02c7e;
 	color: #FFF;
 	font-weight: 700;
 	-webkit-transition: all 100ms ease-in;
@@ -1058,7 +1083,7 @@ section:nth-child(odd) .shortcode-carousel-wrapper {
 
 .black-night .btn-flat:hover {
 	color: #FFF;
-	background-color: #b80961;
+	background-color: #a62365;
 }
 
 .black-night .btn-flat:active {
@@ -1183,7 +1208,7 @@ section:nth-child(odd) .shortcode-carousel-wrapper {
 }
 
 .social-list li:hover {
-	color: #e80c7a;
+	color: #d02c7e;
 }
 
 @media screen and (min-width: 620px) {
@@ -1203,7 +1228,7 @@ section:nth-child(odd) .shortcode-carousel-wrapper {
 	left: 0;
 	width: 100%;
 	height: 4px;
-	background-color: #e80c7a;
+	background-color: #d02c7e;
 }
 
 .black-night #navigation-top {
@@ -1324,7 +1349,7 @@ section:nth-child(odd) .shortcode-carousel-wrapper {
 	width: 10px;
 	height: 10px;
 	margin-left: 10px;
-	background: #e80c7a;
+	background: #d02c7e;
 	color: #2cb07b;
 }
 

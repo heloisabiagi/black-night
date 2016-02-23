@@ -38,7 +38,7 @@ $lighter-main-color: lighten($main-color, 30%);
     &.scrolled {
       position: fixed;
       width: 360px;
-      top: $base-spacing;
+      top: 80px;
     }
 
     ol {
