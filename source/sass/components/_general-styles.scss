@@ -160,6 +160,16 @@ section:nth-child(odd) {
 	font-size: 1.2em;
 }
 
+.bohemian-text {
+	color: #000;
+    text-shadow: 0px 0px 5px #fff, 0px 0px 50px $main-color;
+    font-weight: bold;
+}
+
+.lt-ie10 .bohemian-text {
+	color: #FFF;
+}
+
 .text-box {
 	text-align: center; 
 		display: table-cell;

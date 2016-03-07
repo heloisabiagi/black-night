@@ -18,8 +18,9 @@ blackNight.carouselItemsTablet = 1;
 blackNight.carouselItemsMobile = 1;
 
 /** Contact Form feedback */
-blackNight.contactField = "Field"; // Word 'field' to be used at the Contact Form's error message
-blackNight.contactIsEmpty = "is empty"; // Sentence 'is empty' to be used at the Contact Form's error message
-blackNight.contactNotValidEmail = "Invalid Email"; // Message to be used at the Contact Form's error message
+blackNight.contactFieldNameEmpty = "Please fill in the 'name' field"; // Message to be used at the Contact Form's error message
+blackNight.contactFieldEmailEmpty = "Please fill in the 'email' field"; // Message to be used at the Contact Form's error message
+blackNight.contactFieldMessageEmpty = "Please fill in the 'message' field"; // Message to be used at the Contact Form's error message
+blackNight.contactInvalidEmail = "Invalid Email"; // Message to be used at the Contact Form's error message
 blackNight.contactMessageSent = "Your message has been sent!"; // Success Message to be used at the Contact Form's submission
 blackNight.contactMessageNotSent= "Unable to send email. Please try again later."; // Error Message to be used at the Contact Form's submission

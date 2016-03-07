@@ -50,36 +50,6 @@ blackNight.carousel = (function() {
 blackNight.carousel.init();
 blackNight.contactForm = (function() {
 
-	function testEmpty(id, field, value) {
-		if(value == "") {
-			if(!$("#"+id).closest(".form-group").hasClass("has-error")) {
-				$("#"+id).closest(".form-group").addClass("has-error");
-			}
-
-			return "<p>" + blackNight.contactField + " " + field + " " + blackNight.contactIsEmpty + "</p>";
-		} else {
-			if(id=="contact-email") { 
-				return testEmail(id, field, value);
-			} else {
-				return "";
-			}
-		}
-	}
-
-	function testEmail(id, field, value) {
-		if(value.indexOf("@") == -1) {
-	
-			if(!$("#"+id).closest(".form-group").hasClass("has-error")) {
-				$("#"+id).closest(".form-group").addClass("has-error");
-			}
-
-			return "<p>" + blackNight.contactNotValidEmail + "</p>";
-		} else {
-			$("#"+id).closest(".form-group").removeClass("has-error");
-			return "";
-		}
-	}
-
 	function sendMail(formData){
 		$.ajax({
 			type: "POST", 
@@ -106,32 +76,42 @@ blackNight.contactForm = (function() {
 		});
 	}
 
-	function formValidate(){
-		var form = $("#contact-form");
-		var formData = form.serialize();
-		var name = $('input[name="contact_name"]').val();
-		var email = $('input[name="contact_email"]').val();
-		var message = $('textarea[name="contact_message"]').val();
-		var errorChecker = "";
-
-		errorChecker += testEmpty("contact-name", "name", name);
-		errorChecker += testEmpty("contact-email","email", email);
-		errorChecker += testEmpty("contact-message","message", message);
-
-		if(errorChecker =="") {
-			$(".message-box").html("");
-			sendMail(formData);
-
-		} else {
-			$(".message-box").addClass("alert alert-danger").html(errorChecker);
-		}
-
-	}
-
 	function bindEvents(){
-		$("#contact-form").on("submit", function(e){
-			e.preventDefault();
-			formValidate();
+		$("#contact-form").validate({
+			rules: {
+				contact_name: {
+					required: true
+				},
+				contact_email: {
+					required: true,
+					email: true
+				},
+				contact_message: {
+					required: true
+				}
+			},
+			messages: {
+				contact_name: { 
+					required: blackNight.contactFieldNameEmpty 
+				},
+				contact_email: { 
+					required: blackNight.contactFieldEmailEmpty,
+					email: blackNight.contactInvalidEmail
+				},
+				contact_message: {
+					required: blackNight.contactFieldMessageEmpty
+				}
+			},
+			errorClass: "has-error",
+			errorPlacement: function(error, element) {
+				$(".message-box").addClass("alert alert-danger");
+		    error.appendTo(".message-box");
+		  },
+			submitHandler: function(form){
+				var formData = $(form).serialize();
+				sendMail(formData);
+				return false;
+			}
 		});
 
 	}

@@ -1,0 +1,55 @@
+/**
+  _documentation: README file stylesheet
+*/
+.documentation .documentation-text a:link {
+  text-decoration: underline;
+}
+.documentation code {
+  color: #5ee2ff;
+  background-color: transparent;
+}
+.documentation pre {
+  background-color: #4f4f4f;
+  border: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  color: #FFF;
+  margin-bottom: 24px;
+}
+.documentation .table-of-contents {
+  padding: 12px;
+  border: solid 1px #FFF;
+}
+.documentation .table-of-contents.scrolled {
+  position: fixed;
+  width: 360px;
+  top: 80px;
+}
+.documentation .table-of-contents ol {
+  list-style-type: none;
+  counter-reset: item;
+  margin: 0;
+  padding: 0;
+}
+.documentation .table-of-contents li {
+  display: table;
+  counter-increment: item;
+  margin-bottom: 12px;
+}
+.documentation .table-of-contents li:before {
+  content: counters(item,".") ". ";
+  display: table-cell;
+  padding-right: 0.6em;
+}
+.documentation .table-of-contents li li {
+  margin: 0;
+}
+.documentation .table-of-contents li li li {
+  margn-left: 20px;
+}
+.documentation .table-of-contents li li:before {
+  content: counters(item,".") " ";
+}

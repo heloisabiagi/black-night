@@ -103,6 +103,13 @@ module.exports = function(grunt) {
       },
       fonts: {
         files: [{expand: true, cwd: 'source/fonts', src: ['**'], dest: 'assets/fonts'}]
+      },
+      documentation: {
+        files: [
+          {expand: true, flatten:true, src: ['assets/style/documentation.css'], dest: 'docs'},
+          {expand: true, flatten:true, src: ['assets/style/documentation.min.css'], dest: 'docs'},
+          {expand: true, flatten:true, src: ['assets/js/documentation.js'], dest: 'docs'}
+        ]
       }
     },
 
@@ -143,8 +150,14 @@ module.exports = function(grunt) {
         options: {
           spawn: false,
         },
+      },
+      documentation: {
+        files: ["source/sass/_documentation.scss", "source/js/documentation.js"],
+        tasks: ["copy:documentation", "clean:documentation"]
       }
-    }
+    },
+
+    clean: ["assets/style/documentation.css", "assets/style/documentation.min.css", "assets/js/documentation.js" ],
 
   });
 
@@ -157,6 +170,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-rename');
   grunt.loadNpmTasks('grunt-combine-media-queries');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-clean');
 
   // Define tasks
   grunt.registerTask("build", ["copy", "concat", "uglify", "compass", "cssmin"]);
@@ -164,4 +178,5 @@ module.exports = function(grunt) {
   grunt.registerTask("devJsLibs", ["copy:settings","concat:jsLibs", "uglify:jsLibs"]);
   grunt.registerTask("devCSS", ["copy:images", "copy:fonts" ,"compass", "cmq", "cssmin:main"]);
   grunt.registerTask("devCSSLibs", ["concat:cssLibs", "cssmin:libs"]);
+  grunt.registerTask("documentation", ["copy:documentation", "clean:documentation"]);
 };

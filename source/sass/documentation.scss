@@ -20,7 +20,7 @@ $lighter-main-color: lighten($main-color, 30%);
   
   code {
     color: $lighter-main-color;
-    background-color: transparent;
+    background-color: transparent; 
   }
 
   pre {

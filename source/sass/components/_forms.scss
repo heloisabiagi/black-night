@@ -153,10 +153,15 @@
   .form-control {
     @include border-radius(0px);
     margin-bottom: 0;
+
+    &.has-error {
+      border: solid 2px #a94442;
+    }
   }
 
-  .has-error .form-control {
-    border-width: 2px;
+  .message-box label {
+    display: block;
+    font-weight: normal;
   }
 
   .alert {

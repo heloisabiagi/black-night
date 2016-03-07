@@ -144,6 +144,16 @@ section:nth-child(odd) {
 	font-size: 1.2em;
 }
 
+.bohemian-text {
+	color: #000;
+	text-shadow: 0px 0px 5px white, 0px 0px 50px #2cb07b;
+	font-weight: bold;
+}
+
+.lt-ie10 .bohemian-text {
+	color: #FFF;
+}
+
 .text-box {
 	text-align: center;
 	display: table-cell;
@@ -357,6 +367,243 @@ address span {
 
 .black-night .panel-theme .panel-body {
 	border: none !important;
+}
+
+/**
+  _tabs-pills: custom Black Night's Tabs & Pills
+*/
+
+.black-night .nav-tabs:after,
+.black-night .nav-pills:after {
+	display: none;
+}
+
+.black-night .nav-tabs,
+.black-night .nav-pills {
+	overflow: hidden;
+	border-bottom-color: #2cb07b;
+}
+
+.black-night .nav-tabs > li.active > a,
+.black-night .nav-tabs > li.active > a:focus,
+.black-night .nav-tabs > li.active > a:hover,
+.black-night .nav-pills > li.active > a,
+.black-night .nav-pills > li.active > a:focus,
+.black-night .nav-pills > li.active > a:hover {
+	background-color: #2cb07b;
+	color: #FFF;
+}
+
+.black-night .nav-tabs li > a,
+.black-night .nav-tabs li > a:hover,
+.black-night .nav-tabs li > a:focus,
+.black-night .nav-pills li > a,
+.black-night .nav-pills li > a:hover,
+.black-night .nav-pills li > a:focus {
+	border: none;
+}
+
+.black-night .nav-tabs > li > a:focus,
+.black-night .nav-tabs > li > a:hover,
+.black-night .nav-pills > li > a:focus,
+.black-night .nav-pills > li > a:hover {
+	color: #353535;
+	background-color: #bbbbbb;
+}
+
+/**
+  _icon-list: this file contain style declarations for the icon list, which appears in Main and Our Services section
+*/
+
+.black-night .media-list li {
+	margin-bottom: 24px;
+}
+
+.black-night .media-list .media-heading {
+	font-weight: 700;
+}
+
+.black-night .media-list .media-heading.color {
+	color: #2cb07b;
+}
+
+/**
+  _forms: this file contain style declarations for the form elements, Newsletter and Contact forms
+*/
+
+.black-night { /** SIGNUP FORM **/ /** CONTACT FORM */ /* FORM BEHAVIOR */
+}
+
+.black-night input,
+.black-night select,
+.black-night textarea {
+	color: #333;
+}
+
+.black-night input[type="text"],
+.black-night input[type="email"],
+.black-night textarea {
+	height: 46px;
+	margin: 0;
+	padding: 0;
+	border: none;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	-ms-border-radius: 0px;
+	-o-border-radius: 0px;
+	border-radius: 0px;
+	font-size: 0.9em;
+	line-height: 48px;
+}
+
+.black-night input[type="text"],
+.black-night input[type="email"],
+.black-night textarea {
+	width: 100%;
+	text-indent: 12px;
+}
+
+.black-night button,
+.black-night input[type="submit"] {
+	font-family: "News Cycle", sans-serif;
+	text-transform: uppercase;
+}
+
+.black-night ::-webkit-input-placeholder {
+	color: #707070;
+}
+
+.black-night :-moz-placeholder {
+	color: #707070;
+}
+
+.black-night ::-moz-placeholder {
+	color: #707070;
+}
+
+.black-night :-ms-input-placeholder {
+	color: #707070;
+}
+
+.black-night .btn-flat {
+	border: none;
+	border-radius: 0;
+	background-color: #2cb07b;
+	color: #FFF;
+	font-weight: 700;
+	-webkit-transition: all 100ms ease-in;
+	-moz-transition: all 100ms ease-in;
+	-o-transition: all 100ms ease-in;
+	transition: all 100ms ease-in;
+}
+
+.black-night .btn-flat:hover {
+	color: #FFF;
+	background-color: #22875e;
+}
+
+.black-night .btn-flat:active {
+	color: #FFF;
+}
+
+.black-night .btn-lg {
+	font-size: 18px;
+	padding: 9px 18px;
+}
+
+.black-night .btn-nav {
+	width: 30px;
+	height: 100px;
+	text-align: center;
+	line-height: 100px;
+}
+
+.black-night .btn-nav .icon-holder {
+	position: absolute;
+	top: 0px;
+	left: 7px;
+}
+
+.black-night .btn-nav.arrow-left,
+.black-night .btn-nav.arrow-right {
+	position: absolute;
+	top: 50%;
+	margin-top: -50px;
+}
+
+.black-night .btn-nav.arrow-left {
+	left: 0;
+}
+
+.black-night .btn-nav.arrow-right {
+	right: 0;
+}
+
+.black-night .mfp-container .btn-nav {
+	-webkit-box-shadow: 0px 0px 50px -5px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0px 0px 50px -5px rgba(0, 0, 0, 0.5);
+	box-shadow: 0px 0px 50px -5px rgba(0, 0, 0, 0.5);
+}
+
+.black-night .short-form input[type="text"],
+.black-night .short-form input[type="email"] {
+	height: 32px;
+	line-height: 32px;
+}
+
+.black-night .contact-form input[type="text"],
+.black-night .contact-form input[type="email"],
+.black-night .contact-form textarea {
+	padding-left: 0px;
+	font-size: 0.9em;
+}
+
+.black-night .contact-form input[type="text"],
+.black-night .contact-form input[type="email"] {
+	height: 60px;
+	font-size: 0.9em;
+}
+
+.black-night .contact-form input[type="submit"] {
+	min-width: 30%;
+}
+
+.black-night .contact-form textarea {
+	min-height: 200px;
+}
+
+.black-night .contact-form input[type="text"],
+.black-night .contact-form input[type="email"],
+.black-night .contact-form textarea {
+	margin-bottom: 6px;
+	background-color: #cccccc;
+	color: #353535;
+}
+
+.black-night .form-control {
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	-ms-border-radius: 0px;
+	-o-border-radius: 0px;
+	border-radius: 0px;
+	margin-bottom: 0;
+}
+
+.black-night .form-control.has-error {
+	border: solid 2px #a94442;
+}
+
+.black-night .message-box label {
+	display: block;
+	font-weight: normal;
+}
+
+.black-night .alert {
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	-ms-border-radius: 0px;
+	-o-border-radius: 0px;
+	border-radius: 0px;
 }
 
 /**
@@ -596,22 +843,6 @@ _cover: this file contain style declarations for the main section (big image wit
 }
 
 /**
-  _icon-list: this file contain style declarations for the icon list, which appears in Main and Our Services section
-*/
-
-.black-night .media-list li {
-	margin-bottom: 24px;
-}
-
-.black-night .media-list .media-heading {
-	font-weight: 700;
-}
-
-.black-night .media-list .media-heading.color {
-	color: #2cb07b;
-}
-
-/**
 	_portfolio-isotope: this file contain style declarations for the portfolio 'isotope' (the thumbnails and filtering function)
 */
 
@@ -697,6 +928,10 @@ _cover: this file contain style declarations for the main section (big image wit
 	-ms-transform: rotateZ(45deg);
 	-o-transform: rotateZ(45deg);
 	transform: rotateZ(45deg);
+}
+
+.lt-ie10 .portfolio-caption .project-title:after {
+	display: none;
 }
 
 .portfolio-icon,
@@ -991,180 +1226,6 @@ section:nth-child(odd) .shortcode-carousel-wrapper {
 }
 
 /**
-  _forms: this file contain style declarations for the form elements, Newsletter and Contact forms
-*/
-
-.black-night { /** SIGNUP FORM **/ /** CONTACT FORM */ /* FORM BEHAVIOR */
-}
-
-.black-night input,
-.black-night select,
-.black-night textarea {
-	color: #333;
-}
-
-.black-night input[type="text"],
-.black-night input[type="email"],
-.black-night textarea {
-	height: 46px;
-	margin: 0;
-	padding: 0;
-	border: none;
-	-webkit-border-radius: 0px;
-	-moz-border-radius: 0px;
-	-ms-border-radius: 0px;
-	-o-border-radius: 0px;
-	border-radius: 0px;
-	font-size: 0.9em;
-	line-height: 48px;
-}
-
-.black-night input[type="text"],
-.black-night input[type="email"],
-.black-night textarea {
-	width: 100%;
-	text-indent: 12px;
-}
-
-.black-night button,
-.black-night input[type="submit"] {
-	font-family: "News Cycle", sans-serif;
-	text-transform: uppercase;
-}
-
-.black-night ::-webkit-input-placeholder {
-	color: #707070;
-}
-
-.black-night :-moz-placeholder {
-	color: #707070;
-}
-
-.black-night ::-moz-placeholder {
-	color: #707070;
-}
-
-.black-night :-ms-input-placeholder {
-	color: #707070;
-}
-
-.black-night .btn-flat {
-	border: none;
-	border-radius: 0;
-	background-color: #2cb07b;
-	color: #FFF;
-	font-weight: 700;
-	-webkit-transition: all 100ms ease-in;
-	-moz-transition: all 100ms ease-in;
-	-o-transition: all 100ms ease-in;
-	transition: all 100ms ease-in;
-}
-
-.black-night .btn-flat:hover {
-	color: #FFF;
-	background-color: #22875e;
-}
-
-.black-night .btn-flat:active {
-	color: #FFF;
-}
-
-.black-night .btn-lg {
-	font-size: 18px;
-	padding: 9px 18px;
-}
-
-.black-night .btn-nav {
-	width: 30px;
-	height: 100px;
-	text-align: center;
-	line-height: 100px;
-}
-
-.black-night .btn-nav .icon-holder {
-	position: absolute;
-	top: 0px;
-	left: 7px;
-}
-
-.black-night .btn-nav.arrow-left,
-.black-night .btn-nav.arrow-right {
-	position: absolute;
-	top: 50%;
-	margin-top: -50px;
-}
-
-.black-night .btn-nav.arrow-left {
-	left: 0;
-}
-
-.black-night .btn-nav.arrow-right {
-	right: 0;
-}
-
-.black-night .mfp-container .btn-nav {
-	-webkit-box-shadow: 0px 0px 50px -5px rgba(0, 0, 0, 0.5);
-	-moz-box-shadow: 0px 0px 50px -5px rgba(0, 0, 0, 0.5);
-	box-shadow: 0px 0px 50px -5px rgba(0, 0, 0, 0.5);
-}
-
-.black-night .short-form input[type="text"],
-.black-night .short-form input[type="email"] {
-	height: 32px;
-	line-height: 32px;
-}
-
-.black-night .contact-form input[type="text"],
-.black-night .contact-form input[type="email"],
-.black-night .contact-form textarea {
-	padding-left: 0px;
-	font-size: 0.9em;
-}
-
-.black-night .contact-form input[type="text"],
-.black-night .contact-form input[type="email"] {
-	height: 60px;
-	font-size: 0.9em;
-}
-
-.black-night .contact-form input[type="submit"] {
-	min-width: 30%;
-}
-
-.black-night .contact-form textarea {
-	min-height: 200px;
-}
-
-.black-night .contact-form input[type="text"],
-.black-night .contact-form input[type="email"],
-.black-night .contact-form textarea {
-	margin-bottom: 6px;
-	background-color: #cccccc;
-	color: #353535;
-}
-
-.black-night .form-control {
-	-webkit-border-radius: 0px;
-	-moz-border-radius: 0px;
-	-ms-border-radius: 0px;
-	-o-border-radius: 0px;
-	border-radius: 0px;
-	margin-bottom: 0;
-}
-
-.black-night .has-error .form-control {
-	border-width: 2px;
-}
-
-.black-night .alert {
-	-webkit-border-radius: 0px;
-	-moz-border-radius: 0px;
-	-ms-border-radius: 0px;
-	-o-border-radius: 0px;
-	border-radius: 0px;
-}
-
-/**
 	_social-list: styles for the Social List (list of Social Media Icons after the Contact Form)
 */
 
@@ -1196,6 +1257,11 @@ section:nth-child(odd) .shortcode-carousel-wrapper {
 	width: 54px;
 	height: 54px;
 	line-height: 54px;
+}
+
+.black-night .btn-lg {
+	font-size: 20px;
+	padding: 10px 20px;
 }
 
 .black-night #main-header .navbar-brand .brand-logo:before {
@@ -1230,11 +1296,6 @@ section:nth-child(odd) .shortcode-carousel-wrapper {
 
 .pricing-item {
 	margin: 24px 0;
-}
-
-.black-night .btn-lg {
-	font-size: 20px;
-	padding: 10px 20px;
 }
 
 }

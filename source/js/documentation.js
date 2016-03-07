@@ -7,7 +7,7 @@ blackNight.documentation = (function() {
 		if(scrolledTop > scrollAmount) {
 			navbar.addClass("scrolled");
 		} else if(scrolledTop < scrollAmount) {
-			navbar.removeClass("scrolled");
+			navbar.removeClass("scrolled"); 
 		}
 	}
 
@@ -21,7 +21,7 @@ blackNight.documentation = (function() {
 
 	return {
 		init: function(){
-			bindEvents();	
+		 	bindEvents();	
 		}
 	}
 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if IE 9]>         <html class="lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -85,17 +86,19 @@
 
             <!--========= COVER (BIG IMAGE) ========= -->  
             <!-- ### sets background-image manually -->
-            <section class="cover full-dimensions" style="background-image: url(assets/images/creative-commons/89191870_1da83135a3_o.jpg?1456034253);">
+            <section class="cover full-dimensions" style="background-image: url(assets/images/creative-commons/pittsburgh-night.jpg);">
                 <!-- ### ".text-box": mandatory for vertical centering and darkening background -->
                 <div class="text-box">
-                    <div class="cover-wrapper content-row wow bounceInUp">
-                        <!-- ### "cover-title": the big title
-                             ### "cover-lead": the lead -->
-                        <h1 class="cover-title">A bohemian <strong>business</strong> theme</h1>
-                        <p class="cover-lead">Check the features and possibilities of this brand new and intense theme, and learn how it's easy to use it in your personal projects.</p>
-                    </div> <!-- /cover-container -->
-                    <!-- ### data-behavior="scrollNavLink": an example of scroll navigation on a button element. Pay attention to the 'data-location' attribute -->
-                    <button type="button" class="btn btn-flat btn-lg wow bounceInUp" data-location="#about" data-behavior="scrollNavLink"> Get to Know Us </button>
+                    <div class="cover-wrapper wow bounceInUp">
+                        <div class="content-row">
+                            <!-- ### "cover-title": the big title
+                                 ### "cover-lead": the lead -->
+                            <h1 class="cover-title">A <span class="bohemian-text">bohemian</span> business theme</h1>
+                            <p class="cover-lead">Check the features and possibilities of this brand new and intense theme, and learn how it's easy to use it in your projects.</p>
+                        </div> <!-- /content-row -->
+                        <!-- ### data-behavior="scrollNavLink": an example of scroll navigation on a button element. Pay attention to the 'data-location' attribute -->
+                        <button type="button" class="btn btn-flat btn-lg wow bounceInUp" data-location="#about" data-behavior="scrollNavLink"> Get to Know Us </button>
+                    </div>    
                 </div> <!-- /text-box -->
             </section>
             <!-- / COVER -->
@@ -368,6 +371,46 @@
                             </div><!-- /portfolio-icons-container-->       
                         </div> <!-- /portfolio-item -->
 
+                        <div class="portfolio-item hover-image photography">
+                            <div class="portfolio-thumbnail">
+                                <div class="hover-image-item">
+                                    <img class="jumper-thumbnail" src="assets/images/original/portfolio04-pic.jpg" alt="Photography 04" />
+                                </div>
+                                <div class="portfolio-caption">
+                                    <span class="project-title">Photography 04</span>
+                                </div>
+                            </div> <!-- /portfolio-thumbnail-->
+                            <div class="portfolio-icons-container hover-zoom">
+                                <span class="icon-holder first">
+                                    <span class="icon big-icon">
+                                        <a class="popup-normal" href="assets/images/original/portfolio04-pic.jpg" title="Photography 04" data-description="This is the job description for Photography 04." data-effect="mfp-zoom-in">  
+                                            <i class="glyphicon glyphicon-search" aria-hidden="true"></i>
+                                        </a>  
+                                    </span>
+                                </span>
+                            </div><!-- /portfolio-icons-container-->       
+                        </div> <!-- /portfolio-item -->
+
+                        <div class="portfolio-item hover-image photography">
+                            <div class="portfolio-thumbnail">
+                                <div class="hover-image-item">
+                                    <img class="jumper-thumbnail" src="assets/images/original/portfolio05-pic.jpg" alt="Photography 05" />
+                                </div>
+                                <div class="portfolio-caption">
+                                    <span class="project-title">Photography 05</span>
+                                </div>
+                            </div> <!-- /portfolio-thumbnail-->
+                            <div class="portfolio-icons-container hover-zoom">
+                                <span class="icon-holder first">
+                                    <span class="icon big-icon">
+                                        <a class="popup-normal" href="assets/images/original/portfolio05-pic.jpg" title="Photography 05" data-description="This is the job description for Photography 05." data-effect="mfp-zoom-in">  
+                                            <i class="glyphicon glyphicon-search" aria-hidden="true"></i>
+                                        </a>  
+                                    </span>
+                                </span>
+                            </div><!-- /portfolio-icons-container-->       
+                        </div> <!-- /portfolio-item -->
+
                         <div class="portfolio-item hover-image web">
                             <div class="portfolio-thumbnail">
                                 <div class="hover-image-item">
@@ -422,6 +465,33 @@
                             </div> <!-- /portfolio-icons-container -->  
                         </div> <!-- /portfolio-item -->
 
+                        <div class="portfolio-item hover-image web">
+                            <div class="portfolio-thumbnail">
+                                <div class="hover-image-item">
+                                    <img class="jumper-thumbnail" src="assets/images/original/portfolio03-web-thumbnail.jpg" alt="Web 03" />
+                                </div>
+                                <div class="portfolio-caption">
+                                    <span class="project-title">Web 02</span>
+                                </div>
+                            </div> <!-- /portfolio-thumbnail-->
+                            <div class="portfolio-icons-container hover-zoom">
+                                <span class="icon-holder first">
+                                    <span class="icon big-icon">
+                                        <a class="popup-normal" href="assets/images/original/portfolio03-web.jpg" title="Web 03" data-description="This is the job description for Web 03." data-effect="mfp-zoom-in">  
+                                            <i class="glyphicon glyphicon-search" aria-hidden="true"></i>
+                                        </a>  
+                                    </span>
+                                </span>
+                                <span class="icon-holder last">
+                                    <span class="icon big-icon">
+                                        <a href="http://wrapbootstrap.com" title="View Project" target="_blank">
+                                            <i class="glyphicon glyphicon-new-window" aria-hidden="true"></i>
+                                        </a>
+                                    </span>
+                                </span>
+                            </div> <!-- /portfolio-icons-container -->  
+                        </div> <!-- /portfolio-item -->
+
                         <div class="portfolio-item hover-image video">
                             <!-- "portfolio-thumbnail": major container for thumbnail and hidden caption -->  
                             <div class="portfolio-thumbnail">
@@ -456,7 +526,7 @@
 
             <!--========= QUOTE========= --> 
             <!-- ### sets background-image manually -->
-            <section id="quote-section" class="image-box full-dimensions" style="background-image: url(assets/images/creative-commons/german.jpg?1456034411);">
+            <section id="quote-section" class="image-box full-dimensions" style="background-image: url(assets/images/creative-commons/german.jpg);">
                 <!-- ### Class "text-box": mandatory for vertical centering and darkening background -->
                 <div class="text-box">
                     <h2 class="quote wow fadeIn">
@@ -554,7 +624,7 @@
 
             <!--========= NEWSLETTER ========= -->
             <!-- ### sets background-image manually -->
-            <section id="signup" class="image-box full-dimensions" style="background-image: url(assets/images/creative-commons/dvd.jpg?1456034322);">
+            <section id="signup" class="image-box full-dimensions" style="background-image: url(assets/images/creative-commons/business-building.jpg);">
                 <!-- Class "text-box": mandatory for vertical centering and darkening background -->
                 <div class="text-box">
                     <h2 class="title-1 wow fadeIn">Subscribe to our newsletter</h2>
@@ -589,7 +659,7 @@
                             <div class="team-member hover-image">
                                 <div class="member-thumbnail hover-image-item">
                                     <!-- ### Member thumbnail image size: 740px x 740px in order to fit on mobile and smaller screens -->
-                                    <img src="assets/images/creative-commons/16143899316_73c1a7303b_k.jpg" alt="John Doe" class="member-pic" />
+                                    <img src="assets/images/creative-commons/john-doe.jpg" alt="John Doe" class="member-pic" />
                                 </div> <!-- /member-thumbnail -->
                                 <div class="member-data databox">
                                     <h3 class="databox-title">John Doe</h3>
@@ -610,9 +680,9 @@
 
                         <div class="col-md-3 col-sm-6 wow bounceInLeft">
                             <div class="team-member hover-image">
-                                <div class="member-thumbnail hover-image-item"><img src="assets/images/creative-commons/6848801076_c06bbbcd97_k.jpg" alt="Joseph Doe" class="member-pic" /></div>
+                                <div class="member-thumbnail hover-image-item"><img src="assets/images/creative-commons/joseph-smith.jpg" alt="Joseph Smith" class="member-pic" /></div>
                                 <div class="databox member-data">
-                                    <h3 class="databox-title">Joseph Doe</h3>
+                                    <h3 class="databox-title">Joseph Smith</h3>
                                     <span class="databox-info">Designer</span>
                                 </div>
                                 <div class="member-profile transition-fast">
@@ -632,7 +702,7 @@
 
                         <div class="col-md-3 col-sm-6 wow bounceInRight">
                             <div class="team-member hover-image">
-                                <div class="member-thumbnail hover-image-item"><img src="assets/images/creative-commons/7338350692_58f4cee50e_o.jpg" alt="Jane Doe" class="member-pic" /></div>
+                                <div class="member-thumbnail hover-image-item"><img src="assets/images/creative-commons/jane-doe.jpg" alt="Jane Doe" class="member-pic" /></div>
                                 <div class="databox member-data">
                                     <h3 class="databox-title">Jane Doe</h3>
                                     <span class="databox-info">UX Architet</span>
@@ -651,7 +721,7 @@
 
                         <div class="col-md-3 col-sm-6 wow bounceInRight">
                             <div class="team-member hover-image">
-                                <div class="member-thumbnail hover-image-item"><img src="assets/images/creative-commons/5388738458_c979c8c2a5_o.jpg" alt="Jane Smith" class="member-pic" /></div>
+                                <div class="member-thumbnail hover-image-item"><img src="assets/images/creative-commons/jane-smith.jpg" alt="Jane Smith" class="member-pic" /></div>
                                 <div class="databox member-data">
                                     <h3 class="databox-title">Jane Smith</h3>
                                     <span class="databox-info">Web Developer</span>
@@ -732,7 +802,7 @@
                                     <input type="text" placeholder="Your name" name="contact_name" id="contact-name" class="form-control" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" placeholder="Your email" name="contact_email" id="contact-email" class="form-control" />
+                                    <input type="email" placeholder="Your email" name="contact_email" id="contact-email" class="form-control" />
                                 </div>
                                 <div class="form-group">
                                     <textarea placeholder="Message" name="contact_message" rows="10" id="contact-message" class="form-control"></textarea>
