@@ -593,6 +593,10 @@ address span {
 	border: solid 2px #a94442;
 }
 
+.black-night .message-box {
+	display: none;
+}
+
 .black-night .message-box label {
 	display: block;
 	font-weight: normal;
@@ -617,16 +621,12 @@ address span {
 	position: absolute;
 	width: 30px;
 	height: 30px;
-	margin-top: 28px;
-	background: #00a1c4;
+	margin-top: 5px;
 	opacity: 1;
 	padding: 0;
 	line-height: 28px;
 	text-align: center;
 	font-size: 28px;
-	-webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
-	-moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
-	box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
 	-webkit-transition: all 100ms ease-in;
 	-moz-transition: all 100ms ease-in;
 	-o-transition: all 100ms ease-in;
@@ -634,7 +634,7 @@ address span {
 }
 
 .black-night .mfp-close:hover {
-	background-color: #007791;
+	color: #cccccc;
 }
 
 .black-night .mfp-bottom-bar {

@@ -53,10 +53,11 @@ blackNight.contactForm = (function() {
 				}
 			},
 			errorClass: "has-error",
+			errorContainer: ".message-box",
 			errorPlacement: function(error, element) {
-				$(".message-box").addClass("alert alert-danger");
-		    error.appendTo(".message-box");
-		  },
+				$(".message-box").show().addClass("alert alert-danger");
+		    	error.appendTo(".message-box");
+		  	},
 			submitHandler: function(form){
 				var formData = $(form).serialize();
 				sendMail(formData);
