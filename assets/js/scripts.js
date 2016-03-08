@@ -56,6 +56,8 @@ blackNight.contactForm = (function() {
 			url: ('assets/inc/mailer.php'), 
 			data: formData, 
 			success: function(msg){
+				$(".message-box").show();
+
 				if($(".message-box").hasClass("alert")) {
 					$(".message-box").removeClass("alert-danger").addClass("alert-success");
 				} else {
@@ -64,6 +66,7 @@ blackNight.contactForm = (function() {
 				$(".form-group").removeClass("has-error");
 				$(".message-box").html(blackNight.contactMessageSent);
 				$("#contact-form").trigger("reset");
+				setTimeout("$('.message-box').hide();", 5000);
 			},
 			error: function(msg) {
 				if(!$(".message-box").hasClass("alert")) {
