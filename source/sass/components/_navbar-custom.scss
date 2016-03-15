@@ -82,6 +82,14 @@
       }
     }
 
+    /* Fallback .png caret for some iPad models */
+    .dropdown .caret {
+      @media screen and (min-width: $break-tablet) and (max-width: $break-largest) {
+        width: 8px;
+        height: 4px;
+        background: image-url('layout/dropdown-caret.png') 4px 0px transparent;
+      }
+    }
 
     .navbar-toggle .icon-bar {
     	background-color: #FFF;

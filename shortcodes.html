@@ -65,25 +65,29 @@
                             <div class="shortcode-grid item-4">
                                 <div class="shortcode-grid-item"> 
                                     <span class="icon-holder">
-                                    <button class="btn btn-flat btn-xs">Very Small</button> 
+                                        <!-- ### 
+                                            .btn-flat: theme button
+                                            .btn-xs: button size
+                                         -->    
+                                        <button class="btn btn-flat btn-xs">Very Small</button> 
                                     </span> 
                                     <span class="item-label">bnt-xs</span>
                                 </div>
                                 <div class="shortcode-grid-item"> 
                                     <span class="icon-holder">
-                                    <button class="btn btn-flat btn-sm">Small</button> 
+                                        <button class="btn btn-flat btn-sm">Small</button> 
                                     </span> 
                                     <span class="item-label">btn-sm</span>
                                 </div>
                                 <div class="shortcode-grid-item"> 
                                     <span class="icon-holder">
-                                    <button class="btn btn-flat btn-md">Medium</button> 
+                                        <button class="btn btn-flat btn-md">Medium</button> 
                                     </span> 
                                     <span class="item-label">btn-md</span>
                                 </div>
                                 <div class="shortcode-grid-item"> 
                                     <span class="icon-holder">
-                                    <button class="btn btn-flat btn-lg">Big</button> 
+                                        <button class="btn btn-flat btn-lg">Big</button> 
                                     </span> 
                                     <span class="item-label">btn-lg</span>
                                 </div>
@@ -95,25 +99,32 @@
                             <div class="shortcode-grid item-4">
                                 <div class="shortcode-grid-item">
                                     <span class="icon-holder">
-                                    <span class="icon"><i class="glyphicon glyphicon-menu-right" aria-hidden="true"></i></span> 
+                                        <!-- ### 
+                                            <span class="icon">: mandatory holder span
+                                            <i class="[library icon type]">: the icon itself. Black Night supports Glyphicons and Font Awesome.
+                                         -->  
+                                        <span class="icon"><i class="glyphicon glyphicon-menu-right" aria-hidden="true"></i></span> 
                                     </span>
                                     <span class="item-label">regular</span>  
                                 </div>
                                 <div class="shortcode-grid-item">  
                                     <span class="icon-holder">
-                                    <span class="icon color-icon"><i class="glyphicon glyphicon-menu-right" aria-hidden="true"></i></span>
+                                        <!-- ### 
+                                            .color-icon : the icon type. Available options: .color-icon, .contour-icon and .rounded-icon
+                                         -->
+                                        <span class="icon color-icon"><i class="glyphicon glyphicon-menu-right" aria-hidden="true"></i></span>
                                     </span>  
                                     <span class="item-label">color</span>
                                 </div>
                                 <div class="shortcode-grid-item">
                                     <span class="icon-holder">  
-                                    <span class="icon contour-icon"><i class="glyphicon glyphicon-menu-right" aria-hidden="true"></i></span>
+                                        <span class="icon contour-icon"><i class="glyphicon glyphicon-menu-right" aria-hidden="true"></i></span>
                                     </span>  
                                     <span class="item-label">contour</span>
                                 </div>
                                 <div class="shortcode-grid-item">  
                                     <span class="icon-holder"> 
-                                    <span class="icon rounded-icon"><i class="glyphicon glyphicon-menu-right" aria-hidden="true"></i></span>
+                                        <span class="icon rounded-icon"><i class="glyphicon glyphicon-menu-right" aria-hidden="true"></i></span>
                                     </span>
                                     <span class="item-label">rounded</span>  
                                 </div>
@@ -127,7 +138,7 @@
                             <h3 class="title-2">Accordion</h3>
                             <div class="shortcode-grid">
                                 <div class="panel-group" id="accordion">
-                                    <!-- starts collapsible element -->
+                                    <!-- accordion item -->
                                     <div class="panel panel-theme">
                                         <!-- accordion label -->
                                         <div class="panel-heading">
@@ -146,7 +157,7 @@
                                     </div>
                                     <!-- /accordion item -->
 
-                                    <!-- starts collapsible element -->
+                                    <!-- accordion item -->
                                     <div class="panel panel-theme">
                                         <!-- accordion label -->
                                         <div class="panel-heading">
@@ -165,7 +176,7 @@
                                     </div>
                                     <!-- /accordion-item -->
 
-                                    <!-- starts collapsible element -->
+                                    <!-- accordion item -->
                                     <div class="panel panel-theme">
                                         <!-- accordion label -->
                                         <div class="panel-heading">
@@ -224,28 +235,39 @@
                             <div class="shortcode-grid">
                                 <div class="shortcode-grid-item">
 
+                                    <!-- tabs menu -->
                                 	<ul class="nav nav-tabs">
-																	  <li class="active"><a data-toggle="tab" href="#tab1">Tab 1</a></li>
-																	  <li><a data-toggle="tab" href="#tab2">Tab 2 </a></li>
-																	  <li><a data-toggle="tab" href="#tab3">Tab 3</a></li>
-																	</ul>
+                                      <!-- href="[tab-id]": the tab id that will be shown -->
+									  <li class="active"><a data-toggle="tab" href="#tab1">Tab 1</a></li>
+									  <li><a data-toggle="tab" href="#tab2">Tab 2 </a></li>
+									  <li><a data-toggle="tab" href="#tab3">Tab 3</a></li>
+									</ul>
+                                    <!-- /tabs-menu -->
 
-																	<div class="tab-content">
-																	  <div id="tab1" class="tab-pane fade in active">
-																	    <h3 class="title-2">Tab 1</h3>
-																	    <p>Lorem ipsum dolor pellentesque sinis ultra. Ipsum dolor pellentesque sinis ultra.</p>
-																	  </div>
-																	  <div id="tab2" class="tab-pane fade">
-																	    <h3 class="title-2">Tab 2</h3>
-																	    <p>Lorem ipsum dolor pellentesque sinis ultra. Ipsum dolor pellentesque sinis ultra.</p>
-																	  </div>
-																	  <div id="tab3" class="tab-pane fade">
-																	    <h3 class="title-2">Tab 3</h3>
-																	    <p>Lorem ipsum dolor pellentesque sinis ultra. Ipsum dolor pellentesque sinis ultra.</p>
-																	  </div>
-																	</div>
+									<div class="tab-content">
+                                      <!-- 'Tab 1' content div. The tab id must match the link href attribute -->
+									  <div id="tab1" class="tab-pane fade in active">
+									    <h3 class="title-2">Tab 1</h3>
+									    <p>Lorem ipsum dolor pellentesque sinis ultra. Ipsum dolor pellentesque sinis ultra.</p>
+									  </div>
+                                      <!-- /tab1 -->
 
-																</div>	
+                                      <!-- Tab 2' content div. The tab id must match the link href attribute -->
+									  <div id="tab2" class="tab-pane fade">
+									    <h3 class="title-2">Tab 2</h3>
+									    <p>Lorem ipsum dolor pellentesque sinis ultra. Ipsum dolor pellentesque sinis ultra.</p>
+									  </div>
+                                      <!-- /tab2 -->
+
+                                      <!-- Tab 3' content div. The tab id must match the link href attribute -->
+									  <div id="tab3" class="tab-pane fade">
+									    <h3 class="title-2">Tab 3</h3>
+									    <p>Lorem ipsum dolor pellentesque sinis ultra. Ipsum dolor pellentesque sinis ultra.</p>
+									  </div>
+                                      <!-- /tab3 -->
+									</div>
+
+								</div>	
                               </div> <!-- /shortcode-grid -->
                         </div> <!-- col-md-6 -->
 
@@ -255,26 +277,37 @@
                             <div class="shortcode-grid">
                                 <div class="shortcode-grid-item">
 
+                                    <!-- pills menu -->
                                 	<ul class="nav nav-pills">
-																	  <li class="active"><a data-toggle="tab" href="#pill1">Pill 1</a></li>
-																	  <li><a data-toggle="tab" href="#pill2">Pill 2 </a></li>
-																	  <li><a data-toggle="tab" href="#pill3">Pill 3</a></li>
-																	</ul>
+                                      <!-- href="[pill-id]": the pill id that will be shown -->
+									  <li class="active"><a data-toggle="tab" href="#pill1">Pill 1</a></li>
+									  <li><a data-toggle="tab" href="#pill2">Pill 2 </a></li>
+									  <li><a data-toggle="tab" href="#pill3">Pill 3</a></li>
+									</ul>
+                                    <!-- /pills menu -->
 
-																	<div class="tab-content">
-																	  <div id="pill1" class="tab-pane fade in active">
-																	    <h3 class="title-2">Pill 1</h3>
-																	    <p>Lorem ipsum dolor pellentesque sinis ultra. Ipsum dolor pellentesque sinis ultra.</p>
-																	  </div>
-																	  <div id="pill2" class="tab-pane fade">
-																	    <h3 class="title-2">Pill 2</h3>
-																	    <p>Lorem ipsum dolor pellentesque sinis ultra. Ipsum dolor pellentesque sinis ultra.</p>
-																	  </div>
-																	  <div id="pill3" class="tab-pane fade">
-																	    <h3 class="title-2">Pill 3</h3>
-																	    <p>Lorem ipsum dolor pellentesque sinis ultra. Ipsum dolor pellentesque sinis ultra.</p>
-																	  </div>
-																	</div>
+									<div class="tab-content">
+                                      <!-- 'Pill 1' content div. The tab id must match the link href attribute -->  
+									  <div id="pill1" class="tab-pane fade in active">
+									    <h3 class="title-2">Pill 1</h3>
+									    <p>Lorem ipsum dolor pellentesque sinis ultra. Ipsum dolor pellentesque sinis ultra.</p>
+									  </div>
+                                      <!-- /pill1 -->
+
+                                      <!-- 'Pill 2' content div. The tab id must match the link href attribute -->
+									  <div id="pill2" class="tab-pane fade">
+									    <h3 class="title-2">Pill 2</h3>
+									    <p>Lorem ipsum dolor pellentesque sinis ultra. Ipsum dolor pellentesque sinis ultra.</p>
+									  </div>
+                                      <!-- /pill3 -->
+
+                                      <!-- 'Pill 3' content div. The tab id must match the link href attribute -->
+									  <div id="pill3" class="tab-pane fade">
+									    <h3 class="title-2">Pill 3</h3>
+									    <p>Lorem ipsum dolor pellentesque sinis ultra. Ipsum dolor pellentesque sinis ultra.</p>
+									  </div>
+                                      <!-- /pill3 -->
+									</div>
 
                                 </div> <!-- /shortcode-grid -->
                             </div> <!-- /shortcode-grid -->
@@ -299,10 +332,12 @@
                             <!-- carousel -->
                             <div class="shortcode-carousel-wrapper">
                                 <div class="owl-carousel">
+                                    <!-- .item: the carousel item container -->
                                     <div class="item">
                                         <span class="title-3">Carousel Item 01</span>
                                         <p>Lorem ipsum dolor pellentesque sinis ultra. Ipsum dolor pellentesque sinis ultra.</p>
                                     </div>
+                                    <!-- /item -->
                                     <div class="item">
                                         <span class="title-3">Carousel Item 02</span>
                                         <p>Lorem ipsum dolor pellentesque sinis ultra. Ipsum dolor pellentesque sinis ultra.</p>
@@ -317,16 +352,26 @@
                     </div> <!-- row -->
 
                     <div class="row content-row">
-                    	<div class="col-md-6">
+                    	<div class="col-md-6 col-md-offset-3">
                     			<h3 class="title-2">Lightbox</h3>
 	                    		<div class="shortcode-grid">
 	                          <div class="shortcode-grid-item">
 	                              <p>
-	                                  <a class="popup-normal" href="assets/images/original/portfolio01-pic.jpg" title="Example 01" data-description="Description for Example 01 goes here." data-effect="mfp-zoom-in"> 
+                                      <!-- 
+                                        ### ".popup-normal": triggers the lightbox for regular images 
+                                        ### "href": the large version of the image to appear inside a box
+                                        ### "title": project title (appears as part of the caption)
+                                        ### "data-description": project description (appears as part of the caption)
+                                        -->  
+	                                  <a class="popup-normal" href="assets/images/body/portfolio01-pic.jpg" title="Example 01" data-description="Description for Example 01 goes here." data-effect="mfp-zoom-in"> 
 	                                      <span class="icon"><i class="fa fa-file-image-o"></i></span> Lightbox with Image 
 	                                  </a>
 	                              </p>
 	                              <p>
+                                    <!-- 
+                                        ### ".popup-video": triggers the lightbox for video iframes 
+                                        ### "href": the video URL
+                                        -->
 	                                <a class="popup-video" href="https://www.youtube.com/watch?v=G_GBwuYuOOs" title="Video 01" data-effect="mfp-zoom-in"> 
 	                                  <span class="icon"><i class="fa fa-play-circle"></i></span> Lightbox with Video
 	                                </a>
@@ -345,7 +390,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-4 col-md-offset-4">
-                                <p><i class="fa fa-copyright"></i> Copyright 2016. <a href="http://www.heloisabiagi.com" target="_blank">Heloisa Biagi</a>. All Rights Reserved</p>
+                                <p><i class="fa fa-copyright"></i> Copyright 2016. <a href="http://www.heligdigital.com/projects/blackNight" target="_blank">Helig Digital</a>. All Rights Reserved</p>
                             </div>
                         </div>
                     </div> <!-- /container -->

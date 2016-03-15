@@ -10,10 +10,8 @@
     "grunt-contrib-copy": "latest",
     "grunt-contrib-cssmin": "latest",
     "grunt-contrib-jshint": "latest",
-    "grunt-contrib-rename": "latest",
     "grunt-contrib-uglify": "latest",
-    "grunt-contrib-watch": "latest",
-    "grunt-combine-media-queries": "latest"
+    "grunt-contrib-watch": "latest"
   },
   "devDependencies": {
     "grunt-combine-media-queries": "^1.0.19"

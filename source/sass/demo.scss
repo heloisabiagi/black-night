@@ -1,0 +1,105 @@
+// Settings
+@import "settings/settings";
+
+
+/**
+  _demo
+*/
+
+
+[class*=col-] {
+	margin-bottom: 0;
+}
+
+.container-fluid, .row, .demo-container {
+	height: 100%;
+}
+
+.demo-container {
+	display: table;
+}
+
+.demo-container:nth-child(even) {
+	background-color: $medium-gray;
+}
+
+.demo-container:nth-child(odd) {
+	background-color: $dark-gray;
+}
+
+.demo-holder {
+	display: table-cell;
+	vertical-align: middle;
+
+	text-align: center;
+	padding-bottom: 24px;
+
+	img {
+		width: 100%;
+		max-width: 600px;
+		display: block;
+		position: relative;
+		margin: auto;
+	}
+}
+
+.btn-demo {
+	font-size: 18px;
+	width: 170px;
+	height: 42px;
+	line-height: 30px;
+
+	&.btn-demo-actions {
+		background-color: #D02C7E;
+
+		&:hover {
+			background-color: #a62365;
+		}
+	}
+}
+
+.demo-container {
+	display: table;
+}
+
+
+@media screen and (max-width:$break-tablet-max){
+
+	.demo-container, .demo-holder {
+		display: block;
+	}
+
+	.demo-container {
+		height: 50%;
+	}
+
+	.demo-holder {
+		height: 100%;
+		img {
+			width: auto;
+			display: inline;
+			height: 100%;
+			max-height: 470px;
+		}
+	}
+
+	.btn-demo {
+		margin-bottom: $base-spacing/2;
+	}
+
+}
+@media screen and (max-width:$break-tablet){
+
+	.demo-holder img {
+		display: block;
+		max-width: 300px;
+		height: auto;
+	}
+
+	.btn-demo {
+		position: absolute;
+		bottom: $base-spacing/2;
+		left: 50%;
+		margin-left: -85px;
+	}
+}

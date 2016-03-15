@@ -593,10 +593,6 @@ address span {
 	border: solid 2px #a94442;
 }
 
-.black-night .message-box {
-	display: none;
-}
-
 .black-night .message-box label {
 	display: block;
 	font-weight: normal;
@@ -712,7 +708,7 @@ address span {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	font-weight: 500;
+	font-weight: 500; /* Fallback .png caret for some iPad models */
 }
 
 .black-night #navigation-top.scrolled {
@@ -1296,6 +1292,16 @@ section:nth-child(odd) .shortcode-carousel-wrapper {
 
 .pricing-item {
 	margin: 24px 0;
+}
+
+}
+
+@media screen and (min-width: 620px) and (max-width: 1200px) {
+
+.black-night #navigation-top .dropdown .caret {
+	width: 8px;
+	height: 4px;
+	background: url('../images/layout/dropdown-caret.png?1458069774') 4px 0px transparent;
 }
 
 }
