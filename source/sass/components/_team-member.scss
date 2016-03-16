@@ -6,7 +6,6 @@
 	position: relative;
 
 	&:hover {
-
 		.member-profile {
 			opacity: 1;
 		}
@@ -24,14 +23,6 @@
 	width: 100%;
 	margin-top: $base-spacing;
 	opacity: 1;
-
-	@media screen and (min-width: $break-large) {
-		position: absolute;
-		top:0;
-		margin-top: 0;
-		padding: $base-spacing;
-		opacity: 0;
-	}
 }
 
 .member-testimonial {
@@ -58,5 +49,16 @@
 
 	.databox-info {
 		color: $main-color;
+	}
+}
+
+/* Special hover effect */
+@media screen and (min-width: $break-large) {
+	.has-hover .member-profile {
+		position: absolute;
+		top:0;
+		margin-top: 0;
+		padding: $base-spacing;
+		opacity: 0;
 	}
 }

@@ -431,42 +431,82 @@ address span {
   _forms: this file contain style declarations for the form elements, Newsletter and Contact forms
 */
 
-.black-night { /** SIGNUP FORM **/ /** CONTACT FORM */ /* FORM BEHAVIOR */
+.black-night { /* iPhone and iPad fix */ /* Carousel buttons */ /** SIGNUP FORM **/ /** CONTACT FORM */ /* FORM BEHAVIOR */
 }
 
 .black-night input,
 .black-night select,
 .black-night textarea {
-	color: #333;
+	color: #353535;
 }
 
 .black-night input[type="text"],
 .black-night input[type="email"],
-.black-night textarea {
-	height: 46px;
+.black-night select {
+	width: 100%;
 	margin: 0;
-	padding: 0;
+	padding: 0 12px;
 	border: none;
+	font-size: 0.9em;
+	background-color: #cccccc;
+	height: 60px;
+	line-height: 60px;
 	-webkit-border-radius: 0px;
 	-moz-border-radius: 0px;
 	-ms-border-radius: 0px;
 	-o-border-radius: 0px;
 	border-radius: 0px;
-	font-size: 0.9em;
-	line-height: 48px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-.black-night input[type="text"],
-.black-night input[type="email"],
+.black-night select.custom {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background-image: url('../images/layout/dropdown-caret-dark.png?1458092495');
+	background-repeat: no-repeat;
+	background-position: right 12px top 50%;
+}
+
 .black-night textarea {
 	width: 100%;
-	text-indent: 12px;
+	margin: 0;
+	border: none;
+	font-size: 0.9em;
+	background-color: #cccccc;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	-ms-border-radius: 0px;
+	-o-border-radius: 0px;
+	border-radius: 0px;
+	padding: 12px;
 }
 
-.black-night button,
-.black-night input[type="submit"] {
-	font-family: "News Cycle", sans-serif;
-	text-transform: uppercase;
+.black-night input[type="number"],
+.black-night input[type="date"] {
+	width: auto;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	-ms-border-radius: 0px;
+	-o-border-radius: 0px;
+	border-radius: 0px;
+	background-color: #cccccc;
+}
+
+.black-night label {
+	display: block;
+}
+
+.black-night label + input[type="checkbox"],
+.black-night label + input[type="radio"] {
+	display: inline-block;
+}
+
+.black-night input[type="checkbox"],
+.black-night input[type="radio"] {
+	margin-right: 12px;
 }
 
 .black-night ::-webkit-input-placeholder {
@@ -483,6 +523,13 @@ address span {
 
 .black-night :-ms-input-placeholder {
 	color: #707070;
+}
+
+.black-night button,
+.black-night input[type="submit"],
+.black-night input[type="reset"] {
+	font-family: "News Cycle", sans-serif;
+	text-transform: uppercase;
 }
 
 .black-night .btn-flat {
@@ -554,30 +601,16 @@ address span {
 .black-night .contact-form input[type="text"],
 .black-night .contact-form input[type="email"],
 .black-night .contact-form textarea {
-	padding-left: 0px;
-	font-size: 0.9em;
+	margin-bottom: 6px;
 }
 
-.black-night .contact-form input[type="text"],
-.black-night .contact-form input[type="email"] {
-	height: 60px;
-	font-size: 0.9em;
-}
-
-.black-night .contact-form input[type="submit"] {
+.black-night .contact-form input[type="submit"],
+.black-night .contact-form input[type="reset"] {
 	min-width: 30%;
 }
 
 .black-night .contact-form textarea {
 	min-height: 200px;
-}
-
-.black-night .contact-form input[type="text"],
-.black-night .contact-form input[type="email"],
-.black-night .contact-form textarea {
-	margin-bottom: 6px;
-	background-color: #cccccc;
-	color: #353535;
 }
 
 .black-night .form-control {
@@ -955,6 +988,8 @@ _cover: this file contain style declarations for the main section (big image wit
 	margin-left: 12px;
 }
 
+/* Special hover effect */
+
 /**
   _image-box: this file contain style declarations for the image box, a section with image background (Main Section, Newsletter Section, Quotes)
 */
@@ -1116,6 +1151,8 @@ _cover: this file contain style declarations for the main section (big image wit
 .member-data .databox-info {
 	color: #9a18df;
 }
+
+/* Special hover effect */
 
 /**
   _testimonials: this file contain style declarations for the Testimonials, a section with a carousel full of clients' testimonials
@@ -1301,7 +1338,7 @@ section:nth-child(odd) .shortcode-carousel-wrapper {
 .black-night #navigation-top .dropdown .caret {
 	width: 8px;
 	height: 4px;
-	background: url('../images/layout/dropdown-caret.png?1458069774') 4px 0px transparent;
+	background: url('../images/layout/dropdown-caret-light.png?1458069774') 4px 0px transparent;
 }
 
 }
@@ -1413,7 +1450,7 @@ section:nth-child(odd) .split-block-row {
 	transform: translate(0, -40px);
 }
 
-.portfolio-caption {
+.has-hover .portfolio-caption {
 	position: absolute;
 	-webkit-transform: rotateX(90deg);
 	-moz-transform: rotateX(90deg);
@@ -1422,7 +1459,7 @@ section:nth-child(odd) .split-block-row {
 	transform: rotateX(90deg);
 }
 
-.portfolio-icons-container {
+.has-hover .portfolio-icons-container {
 	width: 120px;
 	position: absolute;
 	left: 50%;
@@ -1432,7 +1469,7 @@ section:nth-child(odd) .split-block-row {
 	opacity: 0;
 }
 
-.member-profile {
+.has-hover .member-profile {
 	position: absolute;
 	top: 0;
 	margin-top: 0;

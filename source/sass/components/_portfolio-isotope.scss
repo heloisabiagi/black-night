@@ -85,10 +85,6 @@
 	@include transition(all 200ms ease-in);
 	@include el-transform-origin(0,100%);
 
-	@media screen and (min-width: $break-large) {
-		position: absolute;
-		@include transform(rotateX(90deg));
-	}
 
 	.project-title {
 		display: inline-block;
@@ -128,14 +124,6 @@
 	text-align: center;
 	min-width: 45px;
 
-	@media screen and (min-width: $break-large) {			
-		width: 120px;
-		@include center-absolute(120px);
-		top: 50%;
-		margin-top: -37px;
-		opacity: 0;
-	}
-
 	.icon-holder {
 		display: inline-block;
 		&.last {
@@ -145,3 +133,25 @@
 		}
 	}
 }
+
+/* Special hover effect */
+
+@media screen and (min-width: $break-large) {
+
+	.has-hover {
+		.portfolio-caption {
+			position: absolute;
+			@include transform(rotateX(90deg));
+		} 
+
+		.portfolio-icons-container {	
+			width: 120px;
+			@include center-absolute(120px);
+			top: 50%;
+			margin-top: -37px;
+			opacity: 0;
+		}	
+	}
+
+}	
+

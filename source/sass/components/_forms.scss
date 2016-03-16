@@ -4,33 +4,63 @@
 
 .black-night {
   input, select, textarea {
-    color: #333;
+    color: $dark-text;
   }
 
   input[type="text"],
-  input[type="email"], 
-  textarea {
-    height: 46px;
+  input[type="email"],  
+  select {
+    width: 100%; 
     margin: 0;
-    padding: 0;
+    padding: 0 12px;
     border: none;
-    @include border-radius(0px);
     font-size: 0.9em; 
-    line-height: 48px; 
+    background-color: $lightest-gray;
+    height: 60px;
+    line-height: 60px;
+    @include border-radius(0px);
+    @include box-sizing(border-box);
   }
 
-  input[type="text"],
-  input[type="email"],
+ 
+  select.custom {
+    @include appearance(none);
+    background-image: image-url('layout/dropdown-caret-dark.png');
+    background-repeat: no-repeat;
+    background-position: right 12px top 50%;
+  }
+
   textarea {
     width: 100%; 
-    text-indent: 12px;
+    margin: 0;
+    border: none;
+    font-size: 0.9em; 
+    background-color: $lightest-gray;
+    @include border-radius(0px);
+    padding: 12px;
   }
 
-  button, input[type="submit"] {
-    font-family: $special-font;
-    text-transform: uppercase;
+  input[type="number"],
+  input[type="date"] {
+    width: auto;
+    @include border-radius(0px);
+    background-color: $lightest-gray;
   }
 
+  label {
+    display: block;
+  }
+
+  label + input[type="checkbox"],
+  label + input[type="radio"] {
+    display: inline-block;
+  }
+
+  input[type="checkbox"], input[type="radio"] {
+    margin-right: 12px;
+  }
+
+  /* iPhone and iPad fix */
   ::-webkit-input-placeholder { 
     color: $placeholder;
   }
@@ -45,6 +75,12 @@
 
   :-ms-input-placeholder { 
     color: $placeholder;
+  }
+
+
+  button, input[type="submit"], input[type="reset"]  {
+    font-family: $special-font;
+    text-transform: uppercase;
   }
 
   .btn-flat {
@@ -75,6 +111,7 @@
     }
   } 
 
+  /* Carousel buttons */
   .btn-nav {
     width: 30px;
     height: 100px;
@@ -121,30 +158,16 @@
     input[type="text"],
     input[type="email"],
     textarea {
-      padding-left: 0px;
-      font-size: 0.9em; 
+      margin-bottom: 6px;
     }
 
-    input[type="text"],
-    input[type="email"] {
-      height: 60px;
-      font-size: 0.9em; 
-    }
-
-    input[type="submit"] {
+    input[type="submit"],
+    input[type="reset"] {
       min-width: 30%;
     }
 
     textarea {
       min-height: 200px;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    textarea {
-      margin-bottom: 6px;
-      background-color: $lightest-gray;
-      color: $dark-text;
     }
 
   }
