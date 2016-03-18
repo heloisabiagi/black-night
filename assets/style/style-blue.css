@@ -773,7 +773,6 @@ address span {
 
 .black-night #navigation-top .dropdown-menu {
 	font-size: inherit;
-	background-color: rgba(0, 0, 0, 0.7);
 }
 
 .black-night #navigation-top .dropdown-menu > li > a {
@@ -797,6 +796,8 @@ address span {
 .black-night #navigation-top .dropdown-menu > li > a:hover {
 	background-color: transparent;
 }
+
+/* Set the hamburger navigation for tablets as well */
 
 /**
 _cover: this file contain style declarations for the main section (big image with text)
@@ -1284,6 +1285,59 @@ section:nth-child(odd) .shortcode-carousel-wrapper {
 	color: #00a1c4;
 }
 
+@media screen and (min-width: 480px) and (max-width: 991px) {
+
+/* Collapsible menu on tablet */
+
+.navbar-header {
+	float: none;
+}
+
+.navbar-toggle {
+	display: block;
+}
+
+.navbar-collapse.collapse {
+	display: none !important;
+}
+
+.navbar-collapse.collapse.in {
+	display: block !important;
+	overflow-y: auto !important;
+}
+
+.navbar-fixed-bottom .navbar-collapse,
+.navbar-fixed-top .navbar-collapse,
+.pre-scrollable {
+	max-height: 400px;
+}
+
+.navbar-nav .open .dropdown-menu .dropdown-header,
+.navbar-nav .open .dropdown-menu > li > a {
+	padding: 5px 15px 5px 25px;
+}
+
+.navbar-nav {
+	float: none !important;
+}
+
+.navbar-nav > li {
+	float: none;
+}
+
+.black-night .dropdown-menu {
+	left: 0;
+}
+
+.black-night .navbar-nav .open .dropdown-menu {
+	background-color: #000;
+	position: static;
+	width: auto;
+	float: none;
+}
+
+}
+
 @media screen and (min-width: 620px) {
 
 .icon.rounded-icon {
@@ -1311,7 +1365,6 @@ section:nth-child(odd) .shortcode-carousel-wrapper {
 
 .black-night #navigation-top {
 	padding: 15px 0px;
-	background: transparent;
 }
 
 .black-night #navigation-top.scrolled {
@@ -1394,8 +1447,16 @@ section:nth-child(odd) .shortcode-carousel-wrapper {
 	font-size: 44px;
 }
 
+.black-night #navigation-top {
+	background: transparent;
+}
+
 .black-night #navigation-top .navbar-brand {
 	font-size: 1.7em;
+}
+
+.black-night #navigation-top .dropdown-menu {
+	background-color: rgba(0, 0, 0, 0.7);
 }
 
 .cover-title {
@@ -1523,10 +1584,6 @@ body {
 
 .isotope [class*="col-"] {
 	margin-bottom: 0;
-}
-
-.black-night .navbar-right {
-	max-width: 580px;
 }
 
 }

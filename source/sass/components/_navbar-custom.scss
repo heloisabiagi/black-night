@@ -34,13 +34,6 @@
       }
   }
 
-  .navbar-right {
-    @media screen and (max-width: $break-tablet-max) {
-        max-width: 580px;
-    }
-
-  }
-
   #navigation-top {
     background: #000;
     color: #FFF;
@@ -52,6 +45,9 @@
 
     @media screen and (min-width: $break-tablet) {
       padding: 15px 0px;
+    }
+
+    @media screen and (min-width: $break-large) {
       background: transparent;
     }
 
@@ -97,7 +93,9 @@
 
     .dropdown-menu {
     	font-size: inherit;
-    	background-color: $transparent-black;
+      @media screen and (min-width: $break-large) {
+    	   background-color: $transparent-black;
+      }
     }
 
     .dropdown-menu > li > a {
@@ -122,5 +120,56 @@
   		background-color: transparent;
   	}   	
   }
+}
+
+/* Set the hamburger navigation for tablets as well */
+
+@media screen and (min-width: $break-mobile) and (max-width: $break-tablet-max){
+  /* Collapsible menu on tablet */
+
+  .navbar-header {
+    float: none;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-collapse.collapse {
+    display: none!important;
+  }
+
+  .navbar-collapse.collapse.in {
+    display: block!important;
+    overflow-y: auto!important;
+  }
+
+  .navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse, .pre-scrollable {
+    max-height: 400px;
+  }
+
+  .navbar-nav .open .dropdown-menu .dropdown-header, .navbar-nav .open .dropdown-menu>li>a {
+    padding: 5px 15px 5px 25px;
+  }
+
+  .navbar-nav {
+    float: none!important;
+  }
+
+  .navbar-nav>li {
+    float: none;
+  }
+
+  .black-night .dropdown-menu {
+    left:0;
+  }  
+
+  .black-night .navbar-nav .open .dropdown-menu {
+    background-color: #000;
+    position: static;
+    width: auto;
+    float: none;
+  }
+
 }
 

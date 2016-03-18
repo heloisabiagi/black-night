@@ -177,7 +177,7 @@ module.exports = function(grunt) {
       }
     },
 
-    clean: ["assets/style/documentation.css", "assets/style/documentation.min.css", "assets/js/documentation.js" ],
+    clean: ["assets/style/documentation.css", "assets/style/documentation.min.css", "assets/js/documentation.js"],
 
   });
 
