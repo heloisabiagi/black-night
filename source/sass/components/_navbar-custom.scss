@@ -5,17 +5,51 @@
 
 .black-night {
 
-  #main-header {
-      a {
-        color: #FFF;
-        @include transition(all 100ms ease-in);
-      }  
+  /* Navigation bar itself */
+  #navigation-top {
+    background: #000;
+    color: #FFF;
+    font-family: $base-font;
+    -webkit-font-smoothing: antialiased;
+    @include box-sizing("border-box");
+    font-weight: 500;
 
-      .navbar-brand {
+
+    @media screen and (min-width: $break-large) {
+      padding: 15px 0px;
+      background: transparent;
+    }
+
+    /* Behavior after some scrolling */
+    &.scrolled {
+      border-bottom: solid 1px #666;
+      background: #000;
+      
+    	@media screen and (min-width: $break-tablet) {
+        padding: 10px 0px;
+    	}
+    }
+
+    a {
+      color: #FFF;
+      @include transition(all 100ms ease-in);
+
+      &:hover, &.active {
+          color: $lightest-gray; 
+        }
+    }
+
+    .navbar-nav a {
+        font-size: 0.9em;
+    }
+
+    .navbar-brand {
         position: relative; 
+        font-family: $special-font;
+        font-size: 1.5em;
 
-        &:hover {
-            color: $lightest-gray;
+        @media screen and (min-width: $break-large) {
+         font-size: 1.7em;
         }
 
         .brand-logo:before {
@@ -32,60 +66,16 @@
         }
         
       }
-  }
-
-  #navigation-top {
-    background: #000;
-    color: #FFF;
-    font-family: $base-font;
-    -webkit-font-smoothing: antialiased;
-    @include box-sizing("border-box");
-    font-weight: 500;
-
-
-    @media screen and (min-width: $break-tablet) {
-      padding: 15px 0px;
-    }
-
-    @media screen and (min-width: $break-large) {
-      background: transparent;
-    }
-
-    &.scrolled {
-      border-bottom: solid 1px #666;
-      background: #000;
-      
-    	@media screen and (min-width: $break-tablet) {
-        padding: 10px 0px;
-    	}
-    }
-
-    .navbar-nav a {
-        font-size: 0.9em;
-        @include transition(all 100ms ease-in);
-        
-        &:hover, &.active {
-          color: $lightest-gray; 
-        }
-    }
-
-    .navbar-brand {
-      font-family: $special-font;
-      font-size: 1.5em;
-
-      @media screen and (min-width: $break-large) {
-    	   font-size: 1.7em;
-      }
-    }
 
     /* Fallback .png caret for some iPad models */
+    /*
     .dropdown .caret {
       @media screen and (min-width: $break-tablet) and (max-width: $break-largest) {
         width: 8px;
         height: 4px;
         background: image-url('layout/dropdown-caret-light.png') 4px 0px transparent;
       }
-    }
+    } */
 
     .navbar-toggle .icon-bar {
     	background-color: #FFF;
@@ -104,11 +94,12 @@
 
   	.nav>li>a:focus, 
   	.nav>li>a:hover,
-  	.nav .open>a, 
   	.nav .open>a:focus, 
+    .nav .open>a,
   	.nav .open>a:hover {
   	  	background-color: transparent;
         color: $light-gray;
+        border: none;
   	}
 
   	.dropdown-menu>li>a {

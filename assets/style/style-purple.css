@@ -717,20 +717,7 @@ address span {
   _custom-navbar: Bootstrap overrides for the Navigation Bar in order to fit the theme's appearance
 */
 
-.black-night #main-header a {
-	color: #FFF;
-	-webkit-transition: all 100ms ease-in;
-	-moz-transition: all 100ms ease-in;
-	-o-transition: all 100ms ease-in;
-	transition: all 100ms ease-in;
-}
-
-.black-night #main-header .navbar-brand {
-	position: relative;
-}
-
-.black-night #main-header .navbar-brand:hover {
-	color: #cccccc;
+.black-night { /* Navigation bar itself */
 }
 
 .black-night #navigation-top {
@@ -741,7 +728,14 @@ address span {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	font-weight: 500; /* Fallback .png caret for some iPad models */
+	font-weight: 500; /* Behavior after some scrolling */ /* Fallback .png caret for some iPad models */ /*
+  .dropdown .caret {
+    @media screen and (min-width: $break-tablet) and (max-width: $break-largest) {
+      width: 8px;
+      height: 4px;
+      background: image-url('layout/dropdown-caret-light.png') 4px 0px transparent;
+    }
+  } */
 }
 
 .black-night #navigation-top.scrolled {
@@ -749,20 +743,25 @@ address span {
 	background: #000;
 }
 
-.black-night #navigation-top .navbar-nav a {
-	font-size: 0.9em;
+.black-night #navigation-top a {
+	color: #FFF;
 	-webkit-transition: all 100ms ease-in;
 	-moz-transition: all 100ms ease-in;
 	-o-transition: all 100ms ease-in;
 	transition: all 100ms ease-in;
 }
 
-.black-night #navigation-top .navbar-nav a:hover,
-.black-night #navigation-top .navbar-nav a.active {
+.black-night #navigation-top a:hover,
+.black-night #navigation-top a.active {
 	color: #cccccc;
 }
 
+.black-night #navigation-top .navbar-nav a {
+	font-size: 0.9em;
+}
+
 .black-night #navigation-top .navbar-brand {
+	position: relative;
 	font-family: "News Cycle", sans-serif;
 	font-size: 1.5em;
 }
@@ -781,11 +780,12 @@ address span {
 
 .black-night #navigation-top .nav > li > a:focus,
 .black-night #navigation-top .nav > li > a:hover,
-.black-night #navigation-top .nav .open > a,
 .black-night #navigation-top .nav .open > a:focus,
+.black-night #navigation-top .nav .open > a,
 .black-night #navigation-top .nav .open > a:hover {
 	background-color: transparent;
 	color: #bbbbbb;
+	border: none;
 }
 
 .black-night #navigation-top .dropdown-menu > li > a {
@@ -1351,7 +1351,11 @@ section:nth-child(odd) .shortcode-carousel-wrapper {
 	padding: 10px 20px;
 }
 
-.black-night #main-header .navbar-brand .brand-logo:before {
+.black-night #navigation-top.scrolled {
+	padding: 10px 0px;
+}
+
+.black-night #navigation-top .navbar-brand .brand-logo:before {
 	content: "";
 	display: block;
 	clear: both;
@@ -1361,14 +1365,6 @@ section:nth-child(odd) .shortcode-carousel-wrapper {
 	width: 100%;
 	height: 4px;
 	background-color: #9a18df;
-}
-
-.black-night #navigation-top {
-	padding: 15px 0px;
-}
-
-.black-night #navigation-top.scrolled {
-	padding: 10px 0px;
 }
 
 .split-block-image.bulb-wrapper {
@@ -1382,16 +1378,6 @@ section:nth-child(odd) .shortcode-carousel-wrapper {
 
 .pricing-item {
 	margin: 24px 0;
-}
-
-}
-
-@media screen and (min-width: 620px) and (max-width: 1200px) {
-
-.black-night #navigation-top .dropdown .caret {
-	width: 8px;
-	height: 4px;
-	background: url('../images/layout/dropdown-caret-light.png?1458069774') 4px 0px transparent;
 }
 
 }
@@ -1448,6 +1434,7 @@ section:nth-child(odd) .shortcode-carousel-wrapper {
 }
 
 .black-night #navigation-top {
+	padding: 15px 0px;
 	background: transparent;
 }
 
