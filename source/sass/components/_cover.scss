@@ -10,11 +10,6 @@ _cover: this file contain style declarations for the main section (big image wit
   min-height: 480px;
   @include cover-background;
 
-  &.cover-carousel {
-      background-image: none;
-      background-color: #000;
-  }
-
 }
 
 .cover-wrapper {

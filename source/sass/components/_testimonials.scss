@@ -4,9 +4,8 @@
 
 
 .testimonial-sentence {
-
-		@include box-sizing(border-box);
-		margin-bottom: $base-spacing;
+	@include box-sizing(border-box);
+	margin-bottom: $base-spacing;
 
   	.testimonial-title {
   		margin-bottom: $base-spacing*2;
@@ -25,7 +24,7 @@
 }
 
 .testimonial-credits {
-		display: inline-block;
+	display: inline-block;
     text-align: center;
 
 	.testimonial-author {

@@ -116,7 +116,7 @@ module.exports = function(grunt) {
             {expand: true, cwd: '', src: ['source/**', '!source/sass/documentation.scss','!source/sass/color-switcher.scss', '!source/js/documentation.js', '!source/js/color-switcher.js' ], dest: 'black-night'},
             {expand: true, cwd: '', src: ['assets/**', '!assets/style/documentation.css', '!assets/style/documentation.min.css','!assets/style/color-switcher.css', '!assets/style/color-switcher.min.css','!assets/js/documentation.js', '!assets/js/color-switcher.js'], dest: 'black-night'},
             {expand: true, cwd: '', src: ['docs/**'], dest: 'black-night'},
-            {expand: true, cwd: '', src: ['*.html', '!demo-thoughts-cs.html', '!demo-actions-cs.html'], dest: 'black-night'},
+            {expand: true, cwd: '', src: ['*.html', '!demo-thoughts-server.html', '!demo-actions-server.html', '!index-server.html', '!shortcodes-server.html', '!demo-form.html'], dest: 'black-night'},
             {expand: true, cwd: '', src: ['config.rb'], dest: 'black-night'},
             {expand: true, cwd: '', src: ['Gruntfile-build.js'], dest: 'black-night'},
             {expand: true, cwd: '', src: ['package.json'], dest: 'black-night'},

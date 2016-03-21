@@ -14,8 +14,6 @@ $pricing-border-color: #999;
       margin: $base-spacing 0;
   }
 
-  @include box-sizing(border-box);
-
   &.featured {
       margin: 0;
       font-size: 1.2em; 
