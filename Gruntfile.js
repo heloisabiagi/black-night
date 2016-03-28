@@ -198,6 +198,6 @@ module.exports = function(grunt) {
   grunt.registerTask("devJsLibs", ["copy:settings","concat:jsLibs", "uglify:jsLibs"]);
   grunt.registerTask("devCSS", ["copy:images", "copy:fonts" ,"compass", "cmq", "cssmin:main"]);
   grunt.registerTask("devCSSLibs", ["concat:cssLibs", "cssmin:libs"]);
-  grunt.registerTask("documentation", ["copy:documentation", "clean:documentation"]);
+  grunt.registerTask("documentation", ["copy:documentation", "clean"]);
   grunt.registerTask("buildTheme", ["copy:build", "rename"]);
 };
