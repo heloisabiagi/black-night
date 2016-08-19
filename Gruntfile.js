@@ -103,33 +103,6 @@ module.exports = function(grunt) {
       },
       fonts: {
         files: [{expand: true, cwd: 'source/fonts', src: ['**'], dest: 'assets/fonts'}]
-      },
-      documentation: {
-        files: [
-          {expand: true, flatten:true, src: ['assets/style/documentation.css'], dest: 'docs'},
-          {expand: true, flatten:true, src: ['assets/style/documentation.min.css'], dest: 'docs'},
-          {expand: true, flatten:true, src: ['assets/js/documentation.js'], dest: 'docs'}
-        ]
-      },
-      build: {
-         files: [
-            {expand: true, cwd: '', src: ['source/**', '!source/sass/documentation.scss','!source/sass/color-switcher.scss', '!source/js/documentation.js', '!source/js/color-switcher.js' ], dest: 'black-night'},
-            {expand: true, cwd: '', src: ['assets/**', '!assets/style/documentation.css', '!assets/style/documentation.min.css','!assets/style/color-switcher.css', '!assets/style/color-switcher.min.css','!assets/js/documentation.js', '!assets/js/color-switcher.js'], dest: 'black-night'},
-            {expand: true, cwd: '', src: ['docs/**'], dest: 'black-night'},
-            {expand: true, cwd: '', src: ['*.html', '!demo-thoughts-server.html', '!demo-actions-server.html', '!index-server.html', '!shortcodes-server.html', '!demo-form.html'], dest: 'black-night'},
-            {expand: true, cwd: '', src: ['config.rb'], dest: 'black-night'},
-            {expand: true, cwd: '', src: ['Gruntfile-build.js'], dest: 'black-night'},
-            {expand: true, cwd: '', src: ['package.json'], dest: 'black-night'},
-            {expand: true, cwd: '', src: ['screenshot.png'], dest: 'black-night'}
-         ]
-      }
-    },
-
-    rename: {
-      main: {
-        files: [
-            {src: ['black-night/Gruntfile-build.js'], dest: 'black-night/Gruntfile.js'},
-            ]
       }
     },
 
@@ -170,14 +143,8 @@ module.exports = function(grunt) {
         options: {
           spawn: false,
         },
-      },
-      documentation: {
-        files: ["source/sass/_documentation.scss", "source/js/documentation.js"],
-        tasks: ["copy:documentation", "clean:documentation"]
       }
-    },
-
-    clean: ["assets/style/documentation.css", "assets/style/documentation.min.css", "assets/js/documentation.js"],
+    }
 
   });
 
@@ -187,10 +154,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks("grunt-contrib-compass");
   grunt.loadNpmTasks("grunt-contrib-cssmin");
   grunt.loadNpmTasks("grunt-contrib-copy");
-  grunt.loadNpmTasks('grunt-contrib-rename');
   grunt.loadNpmTasks('grunt-combine-media-queries');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-clean');
 
   // Define tasks
   grunt.registerTask("build", ["copy", "concat", "uglify", "compass", "cssmin"]);
@@ -198,6 +163,4 @@ module.exports = function(grunt) {
   grunt.registerTask("devJsLibs", ["copy:settings","concat:jsLibs", "uglify:jsLibs"]);
   grunt.registerTask("devCSS", ["copy:images", "copy:fonts" ,"compass", "cmq", "cssmin:main"]);
   grunt.registerTask("devCSSLibs", ["concat:cssLibs", "cssmin:libs"]);
-  grunt.registerTask("documentation", ["copy:documentation", "clean"]);
-  grunt.registerTask("buildTheme", ["copy:build", "rename"]);
 };
