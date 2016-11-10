@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Black Night - Documentation</title>
+        <meta name="viewport" content="width=device-width,user-scalable=no">
+        <link href='http://fonts.googleapis.com/css?family=News+Cycle:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,500,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="../assets/style/libs.min.css">
+        <link rel="stylesheet" type="text/css" href="../assets/style/style-blue.min.css">
+        <link rel="stylesheet" type="text/css" href="documentation.min.css">
+        <script src="../assets/js/modernizr.custom.js"></script>
+    </head>
+    <body class="black-night">
+            <!--========= HEADER & MAIN MENU ========= -->
+            <header id="main-header">
+                <nav id ="navigation-top" class="navbar navbar-fixed-top transition-fast wow bounceInDown" data-behavior="navShrink">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="#main" data-behavior="scrollNavLink"><span class="brand-logo">Black Night</span></a>
+                        </div> <!-- /navbar-header -->
+                    </div> <!-- /container -->
+                </nav>
+            </header>
+            <!-- / HEADER -->
+
+            <!--========= COVER (BIG IMAGE) ========= -->  
+            <section class="cover full-dimensions" style="background-image: url(../assets/images/creative-commons/pittsburgh-night.jpg);">
+                <!-- ### ".text-box": mandatory for vertical centering and darkening background -->
+                <div class="text-box">
+                    <div class="cover-wrapper content-row wow bounceInUp">
+                        <!-- ### "cover-title": the big title
+                             ### "cover-lead": the lead -->
+                        <h1 class="cover-title">Theme <strong>Documentation</strong></h1>
+                        <p class="cover-lead">Check the features and possibilities of this brand new and intense theme, and learn how it's easy to use it in your projects.</p>
+                    </div> <!-- /cover-container -->
+                    <!-- ### data-behavior="scrollNavLink": an example of scroll navigation on a button element. Pay attention to the 'data-location' attribute -->
+                    <button type="button" class="btn btn-flat btn-lg wow bounceInUp" data-location="#documentation" data-behavior="scrollNavLink"> Go to docs </button>
+                </div> <!-- /text-box -->
+            </section>
+            <!-- / COVER -->
+
+            <!--========= DOCUMENTATION ========= -->
+            <section id="documentation" class="documentation">
+              <div class="container">
+                  <div class="row content-row">
+                      <div class="col-md-12">
+                          <h1 class="title-1">Black Night - Documentation</h1>
+                      </div>
+                  </div> <!--row-->    
+                  <div class="row content-row">          
+                      <div class="col-md-8 documentation-text">
+                          <div class="content-row">
+                            <p>Thanks for purchasing Black Night, a theme built on the Bootstrap framework. This document will provide usage instructions so you can enjoy Black Night at its best. If you find any errors or bugs, you may contact us directly on our <a href="http://wrapbootstrap.com/user/heligdigital" title="Helig Digital on WrapBootstrap">WrapBootstrap's user page</a>.</p>
+                          </div>
+
+                          <div class="content-row">  
+                            <h2 class="title-2"><a name="step-1">1. Starting point</a></h2>
+                            <p>First, let's start with the files in the theme folder and how to use them.</p>
+                            <p>
+                            Once you've downloaded and unzipped the theme, you'll find a set of files and folders. The main HTML files are the ones named <code>demo-[type].html</code>, which contain the source code for the theme's pages and can be customized with your own data. The <code>assets</code> folder contains the final concatenated and minified styles, scripts, fonts, images and other sources referenced in the HTML files, while the <code>source</code> folder contains the original files (SASS files, CSS libraries, Javascript libraries, plugins and separate files etc) used for development.
+                            </p>
+
+                            <p>
+                            In case you intend to use Grunt, you'll need to install the modules listed in the <code>package.json file</code>. For command line and npm users, it's a pretty simple process:
+
+                            <pre>npm i</pre>
+
+                            <p>
+                            A new folder, <code>node_modules</code>, will be installed in the theme's directory.
+                            </p>
+
+                            <p>
+                            For SASS/Compass users, the <code>config.rb</code> file contains all the necessary data to compile Black Night’s files. Grunt users will find predefined tasks in <code>Gruntfile.js</code> (see <a href="#step-1-3" title="Working with Grunt">1.3 Working with Grunt</a> for more instructions).
+                            </p>
+
+                            <p>
+                            Next, let's have a look at the directories in order to understand how to make a better use of Black Night’s functionalities.
+                            </p>
+                          </div>
+
+                          <div class="content-row">  
+                            <h2 class="title-3"><a name="step-1-2">1.2 Files and Folders</a></h2>
+                            <p>
+                              As mentioned before, in addition to the HTML files and other specific settings files (<code>package.json</code>, <code>config.rb</code> and <code>Gruntfile.js</code>), Black Night has two major folders where files are stored: <code>source</code> and <code>assets</code>. The files in the <code>source</code> folder are development files which can be edited and processed with SASS/Compass and Grunt, while the <code>assets</code> files are the final compiled files, so, if you're not using any development processing tool (like SASS/Compass or Grunt), this is your folder.
+                            </p>
+    <pre>
+    package.json
+    config.rb
+    Gruntfile.js
+    .html files
+
+    assets
+    |- fonts
+    |- images
+    |- inc
+    |- js
+    |- style
+
+    source
+    |- css-libs
+    |- js-libs
+    |- fonts
+    |- images
+    |- inc
+    |- style
+    |- js
+    </pre>  
+                            <h3 class="title-4"><a name="step-1-2-1">1.2.1 Assets Folder - editting theme files</a></h3>
+
+                            <p>  
+                            The <code>assets</code> folder contains the final sources used in the theme. It’s the only folder that needs to be put in production along with the HTML files. All the external files referenced in the HTML files point to this folder, which is is subdivided in 5 directories: <code>style</code>, <code>js</code>, <code>images</code>, <code>fonts</code> and <code>inc</code>.  
+                            </p>
+
+                            <p>
+                            Black Night is built on <a href="http://compass-style.org/" title="Compass Website" target="_blank"> SASS/Compass</a> frameworks , so, the CSS files inside the <code>assets/style</code> folder are the compiled versions of the files from the <code>source</code> folder. If you’re not using SASS/Compass, you must directly edit the <code>assets</code> files in order to perform changes to the CSS files. The <code>libs.css</code> , and its minified version <code>libs.min.css</code> contain the third-party libraries from the <code>source/css-libs</code> folder (Bootstrap included),  while <code>style-[color].css</code>  and <code>style-[color].min.css </code> files contain the main CSS files (for more information, check item <a href="#step-2-1" title="Color Schemes">2.1 Color Schemes</a>). The CSS files referenced in the HTML files are the <code>.min.css</code> ones, so, you can either edit them directly or edit the original <code>.css</code> files and <a href="https://cssminifier.com/" title="CSS minifier" target="_blank">minify</a> them later.
+                            </p>
+
+                            <p>
+                            The <code>assets/js</code> folder is similar to the <code>style</code> folder: it contains processed files from the <code>source</code> folder (if you're not using Grunt to compile these files, you must edit them in the <code>assets</code> folder): <code>libs.js</code> and <code>libs.min.js</code> are the files with the third-party libraries and plugins generated from the <code>source/js-libs</code>, while the <code>scripts.js</code> and <code>scripts.min.js</code> are the ones with the theme’s settings, and , finally, the other js files (<code>modernizr.custom.js</code> and <code>settings.js</code> ) are used for specific settings (check item <a href="step-2-4" title="Javascript Settings">2.4 Javascript Settings</a>). Just like the CSS files, Black Night uses the <code>.min.js</code> files in the HTML files, so you can edit the original <code>.js</code> files and <a href="https://skalman.github.io/UglifyJS-online/" title="Javascript minifier" target="_blank">minify</a> them later.
+                            </p>
+
+                            <p>
+                            Both folders <code>assets/images</code> and <code>assets/fonts</code> contain the corresponding file types, while the <code>assets/inc</code> folder contains other miscellaneous files.
+                            </p>
+
+                            <h3 class="title-4"><a name="step-1-2-2">1.2.2 Source Folder - development files</a></h3>
+
+                            <p>
+                            The <code>source</code> folder contains the original development files, and it’s targeted for SASS and Grunt.js users. Inside this folder, you’ll find the following subdirectories: <code>images</code>, <code>fonts</code> and <code>inc</code> (which are actually just safe copies from the ones in the <code>assets</code> equivalent folders), <code>css-libs</code> (which, as mentioned before, contains the original and separated third-party CSS libraries), <code>js-libs</code> (same as  <code>css-libs</code>, with Javascript and jQuery plugins), and the folders <code>js</code> and <code>sass</code>, where the actual development files are stored. You can edit these files and then use SASS/Compass and Grunt (check item <a href="#step-1-3" title="Working with Grunt">1.3 Working with Grunt</a> to see the available tasks) to recompile them in the <code>assets</code> folder.
+                            </p>
+                          </div>
+
+                          <div class="content-row">
+
+                            <h2 class="title-3"><a name="step-1-3">1.3 Working with Grunt</a></h2>
+                            <p>
+                            If you’re a Grunt user, know that Black Night makes use of this powerful tasks runner to build its files. The <code>grunt watch</code> task will check for changes in the files from the <code>source</code> folder and process them correctly in the corresponding <code>assets</code> file, so, it’s pretty handy since you don’t have to worry about which files to compile and where to put them. Black Night has also some custom tasks to manually build files:
+                            </p>
+                            <ul>
+                                <li><code>build</code>: the default task that compiles development, settings and third-party scripts and styles</li>
+                                <li><code>devJs</code>: manages changes to the development Javascript files located in <code>source/js</code></li>
+                                <li><code>devJsLibs</code>: if you need to add new plugins to the <code>source/js-libs</code> directory, use this task to recreate the <code>assets/js/libs.js</code> and <code>assets/js/libs.min.js</code> files</li>
+                                <li><code>devCSS</code>: manages changes to the SCSS files inside <code>source/sass</code> directory and rebuilds them as CSS files to the <code>assets/style</code> folder</li>
+                                <li><code>devCSSLibs</code>: concatenates third-party CSS Libraries from the <code>source/css-libs</code> and generates unique files, <code>assets/style/libs.css</code> and <code>assets/style/libs.min.css</code></li>
+                            </ul>
+                          </div>
+
+
+                          <div class="content-row">
+                            <h2 class="title-2"><a name="step-2">2. Theme features</a></h2>
+                            <p>In the following steps, we will have a look at the theme's features and facilities.</p>
+                          </div>
+
+                          <div class="content-row">
+                            <h2 class="title-2"><a name="step-2-1">2.1 General Instructions</a></h2>
+                            <p>As mentioned before, the main theme files are the <code>demo-[type].html</code> files and the <code>assets</code> folder, which contains all the CSS, Javascript files, images, fonts and extra files used in this theme. </p>
+                            <p>Once you've opened any of the HTML demo files, you'll notice they're heavily commented. These comments contain usage instructions for the layout and tags (like classes usages, tags start and end, character limits etc), and it's pretty important to read them first before making any changes to the layout in order to prevent malfunction or unexpected behaviors. </p>
+                            <p>If you have any doubts don't hesitate to <a href="http://wrapbootstrap.com/user/heligdigital" title="Helig Digital on WrapBootstrap">contact us</a>.</p>
+                          </div>
+
+                          <div class="content-row">
+                            <h3 class="title-3"><a name="step-2-2">2.2 Color schemes</a></h3>
+                            <p>Black Night has 5 built-in color schemes ready to use: blue, green, orange, pink and purple. In order to change the theme color, you have to locate the default stylesheet tag (blue) in your HTML file:</p>
+                            <pre>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;assets/style/style-blue.min.css&quot;&gt;</pre>
+                            
+                            <p>And replace it with the desired color scheme:</p>
+                            
+                            <pre>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;assets/style/style-pink.min.css&quot;&gt;</pre>
+
+                            <p>If you're using SASS/Compass, you can create countless possibilities of color schemes for your site. All you need to do is to go to the <code>source/sass</code> folder, open <code>style-blue.scss</code> file, save it again with the desired color name (i.e <code>style-aqua.scss</code>) and then, inside the file, replace the <code>$main-color</code> variable with your new desired color. The variations (darker and lighter) are automatically generated, but you can still set them manually if you wish, by replacing the <code>$darker-main-color</code> and <code>$lighter-main-color</code> variables with new values. Once you've compiled this brand new file (that will be generated in the <code>assets</code> folder), don't forget to replace the stylesheet code in your HTML file.</p>
+                          </div>
+
+                          <div class="content-row">
+                            <h3 class="title-3"><a name="step-2-3">2.3 Fonts and Icons</a></h3>
+                            <p>Black Night is powered by two Google Fonts: <strong>Raleway</strong> (main font) and <strong>News Cycle</strong> (headers and buttons). If you wish to use different Google Fonts, you have to replace the following tags: </p>
+                            <pre>&lt;link href='http://fonts.googleapis.com/css?family=News+Cycle:400,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'&gt;<br/><br/>&lt;link href='http://fonts.googleapis.com/css?family=Raleway:400,300,500,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'&gt; </pre>
+
+                            <p>Then, replace the fonts in the CSS files. If you're using SASS/Compass, all you'll have to do is open the <code>source/sass/settings/_settings.scss</code> file, replace the <code>$base-font</code> and <code>$special-font</code> variables and recompile the files.</p>
+
+                            <p>As for the icons, Black Night supports two icon font libraries: <strong><a href="http://getbootstrap.com/components/#glyphicons" title="More about Glyphicons and available icons" target="_blank">Glyphicons</a></strong> (default to Bootstrap) and <strong><a href="https://fortawesome.github.io/Font-Awesome/icons/" title="More about Font Awesome and available icons" target="_blank">Font Awesome 4.5</a></strong>. Some usage examples:</p>
+                            <pre>&lt;span class=&quot;icon&quot;&gt;&lt;i class=&quot;glyphicon glyphicon-menu-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;</pre>
+                            <p>(Glyphicons example. Note the <code>icon</code> span before the icon itself).</p>
+                            <pre>&lt;span class=&quot;icon color-icon&quot;&gt;&lt;i class=&quot;fa fa-quote-left&quot;&gt;&lt;/i&gt;&lt;/span&gt;</pre>
+                            <p>(Font Awesome example)</p>
+                          </div>
+
+                          <div class="content-row">
+                            <h3 class="title-3"><a name="step-2-4">2.4 Plugins</a></h3>
+                            <p>In order to enhance user's experience, Black Night makes use of the following Javascript plugins:</p>
+                            <ul>
+                              <li><strong><a href="https://github.com/flesler/jquery.scrollTo" title="More about ScrollTo" taret="_blank">ScrollTo</a>:</strong> makes scroll navigation easier.</li>  
+                              <li><strong><a href="http://isotope.metafizzy.co/" title="More about Isotope" target="_blank">Isotope</a>:</strong> a fancy way to display and filter data. Used in the Portfolio section.</li>
+                              <li><strong><a href="http://dimsemenov.com/plugins/magnific-popup/" title="More about Magnific Popup" target="_blank">Magnific Popup</a>:</strong> responsive lightbox plugin. Also used in the Portfolio section.</li>
+                              <li><strong><a href="http://owlgraphic.com/owlcarousel/" title="More about Owl Carousel" target="_blank">Owl Carousel</a>:</strong> responsive carousel. You can find it in action at the Testimonials section.</li>
+                              <li><strong><a href="http://jqueryvalidation.org/" title="More about jQuery validate" target="_blank">jQuery Validate</a></strong>: an easy-to-use jQuery validation plugin. </li>
+                              <li><strong><a href="http://mynameismatthieu.com/WOW/" title="More about Wow" target="_blank">Wow</a>:</strong> a plugin to reveal animations during scrolling.</li>
+                            </ul>
+                            <p>The final compiled version of these libraries (<code>libs.js</code> and <code>libs.min.js</code>) can be found at the <code>assets</code> folder, while the original individual files are located at the <code>source/js-libs</code> directory.</p>
+                          </div>
+
+                          <div class="content-row">
+                            <h3 class="title-3"><a name="step-2-5">2.5 Javascript Settings</a></h3>
+                            <p>For those who do not feel comfortable with opening a Javascript file and editing messages or changing settings, Black Night offers a <code>settings.js</code> file where you can customize things like animations on mobile devices, carousel items, portfolio grid or form feedback messages. If you're working with Grunt, you can edit the file in the <code>source</code> directory; if not, you should directly edit the one in the <code>assets</code> folder.</p>
+                            <p>If you need to add any extra code to Black Night's scripts, you can use the <code>userCustoms</code> module and place it where the message "You can insert customized code right here" stands (Black Night uses <a href="https://carldanley.com/js-revealing-module-pattern/" title="What is Revealing Module Pattern?" target="_blank">revealing module pattern</a> for development. You don't need to know design patterns to work with Black Night though). For Grunt users, the module is located inside the <code>source/js/components</code> folder; else, it can be found at <code>assets/js/scripts.js</code> and <code>assets/js/scripts.min.js</code>.</p>
+                          </div>
+
+                          <div class="content-row">
+                            <h3 class="title-3"><a name="step-2-6">2.6 Contact Form</a></h3>
+                            <p>Black Night has a working Contact Form, and customizing it is pretty simple: all you have to do is open the <code>assets/inc/mailer.php</code> file and change the <code>$to</code> variable name to the desired email.</p>
+                            <p>For Grunt users, if you use <code>grunt watch</code> task and edit the original source file located at <code>source/inc</code>, it will automatically create a new copy at <code>assets/inc</code>.</p>
+                          </div>
+
+                          <div class="content-row">
+                            <h3 class="title-3"><a name="step-2-7">2.7 Image Backgrounds</a></h3>
+                            <p>Some sections (like Quote and Newsletter) contain images as backgrounds, which are declared <strong>directly in the HTML file</strong>. If you wish to add background to any section, you just need to add the class <code>image-box</code> to the desired section, and then add the background-image in a style declaration. For example:</p>
+<pre>
+&lt;section id=&quot;services&quot; class=&quot;image-box&quot; style=&quot;background-image: url(assets/images/[your-folder]/[your-image.jpg]);&quot;&gt;
+</pre> 
+
+                          </div>
+
+                          <div class="content-row">
+                            <h3 class="title-3"><a name="step-2-8">2.8 Image Credits</a></h3>
+                            <p>All the images in the <code>images/creative-commons</code> directories are under the <a href="https://creativecommons.org/licenses/by/2.0/" title="Creative Commons License">Creative Commons</a> license, for <strong>demonstration purposes only</strong>.  If you want to use any of these images, make sure to check the attribution requirements first. 
+                            <p>The ones in the <code>images/body</code> directory belong to the theme's authors and are used <strong>for demonstration purposes only</strong>.</p>
+                            <p>You're <strong>free to use</strong> the images in the <code>original</code> directory.</p>
+                            <p>Here are the proper credits for the <code>images/creative-commons</code> images.</p>
+                            <table class="table">
+                              <thead>
+                                  <tr>
+                                    <th>Picture</th>
+                                    <th>Credit</th>
+                                  </tr>
+                              </thead>
+                              
+                              <tbody>
+                                  <tr>
+                                    <td>/creative-commons/german.jpg</td>
+                                    <td><a href="http://littlevisuals.co/tagged/week-nine" title="Little Visuals" target="_blank">Little Visuals</a></td>
+                                  </tr>
+                                  <tr>
+                                    <td>/creative-commons/business-building.jpg</td>
+                                    <td><a href="https://www.flickr.com/photos/davebloggs007/9186356478/sies/l" title="davebloggs007 on Flickr" target="_blank">Flickr - davebloggs007</a></td>
+                                  </tr>
+                                  <tr>
+                                    <td>/creative-commons/pittsburgh-night</td>
+                                    <td><a href="https://www.flickr.com/photos/benzado/89191870/sizes/l" title="Benjamin Ragheb on Flickr" target="_blank">Flickr - Benjamin Ragheb</a></td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>/creative-commons/jane-doe.jpg</td>
+                                    <td><a href="http://www.flickr.com/photos/yetiphotos/7338350692/sizes/l" title="Yeti Photos on Flickr" target="_blank">Flickr - Yeti Photos</a></td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>/creative-commons/jane-smith.jpg</td>
+                                    <td><a href="https://www.flickr.com/photos/58842866@N08/5388738458/sizes/l" title="tommerton2010 on Flickr" target="_blank">Flickr - tommerton2010</a></td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>/creative-commons/john-doe.jpg</td>
+                                    <td><a href="http://www.flickr.com/photos/arturtula/16143899316/sizes/l" title="Artur (RUS) Potosi on Flickr" target="_blank">Flickr - Artur (RUS) Potosi</a></td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>/creative-commons/joseph-smith.jpg</td>
+                                    <td><a href="https://www.flickr.com/photos/78428166@N00/6848801076/sizes/l" title="Tony Alter on Flickr" target="_blank">Flickr - Tony Alter</a></td>
+                                  </tr>
+                        
+                              </tbody>
+
+                            </table>
+                          </div>
+
+                      </div>
+
+                      <div class="col-md-4"> 
+                          <div class="table-of-contents">
+                            <ol>
+                                <li><a href="#step-1">Starting Point</a>
+                                  <ol>  
+                                      <li><a href="#step-1-1">Installation</a></li>
+                                      <li><a href="#step-1-2">Files and folders</a>
+                                        <ol>
+                                            <li><a href="#step-1-2-1">Assets folder: theme files</a></li>
+                                            <li><a href="#step-1-2-2">Source folder: dev files</a></li>
+                                        </ol>
+                                      </li>
+                                      <li><a href="#step-1-3">Working with Grunt</a></li>
+                                  </ol>
+                                </li>
+                                <li>Theme features
+                                  <ol>
+                                      <li><a href="#step-2-1">General instructions</a></li>
+                                      <li><a href="#step-2-2">Color schemes</a></li>
+                                      <li><a href="#step-2-3">Fonts and Icons</a></li>
+                                      <li><a href="#step-2-4">Plugins</a></li>
+                                      <li><a href="#step-2-5">Javascript Settings</a></li>
+                                      <li><a href="#step-2-6">Contact Form</a></li>
+                                      <li><a href="#step-2-7">Image backgrounds</a></li>
+                                      <li><a href="#step-2-8">Image credits</a></li>
+                                  </ol>
+                                </li> 
+                            </ol>
+                          </div>
+                      </div>  
+                  </div> <!--row -->
+              </div>
+          </section>
+
+            <!--========= FOOTER ========= -->
+            <section id="page-footer" class="page-footer">
+                <footer>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4 col-md-offset-4">
+                                <p><i class="fa fa-copyright"></i> Copyright 2016. <a href="http://www.heligdigital.com/projects/blackNight" target="_blank">Helig Digital</a>. All Rights Reserved</p>
+                            </div>
+                        </div>
+                    </div> <!-- /container -->
+                </footer>
+            </section>
+            <!-- / FOOTER -->
+
+        </div><!-- /main -->
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="../assets/js/libs.min.js"></script>
+        <script src="../assets/js/settings.js"></script>
+        <script src="../assets/js/scripts.min.js"></script>
+        <script src="documentation.js"></script>
+    </body>
+</html>
